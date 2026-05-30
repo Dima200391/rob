@@ -1,0 +1,219 @@
+{% liquid
+  assign primary_link = section.settings.primary_link | default: '/collections/all'
+  assign secondary_link = section.settings.secondary_link | default: '/pages/contact'
+%}
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<section
+  class="astranova-shell astranova-hero section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+  style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
+  {{ section.shopify_attributes }}
+>
+  <div class="astranova-hero__grid">
+    <div class="astranova-hero__content">
+      <p class="astranova-eyebrow">{{ 'astranova.hero.eyebrow' | t }}</p>
+      <h1 class="astranova-hero__title">{{ 'astranova.hero.title' | t }}</h1>
+      <p class="astranova-section-copy">{{ 'astranova.hero.body' | t }}</p>
+
+      <div class="astranova-hero__actions">
+        <a href="{{ primary_link }}" class="button">{{ 'astranova.hero.primary_cta' | t }}</a>
+        <a href="{{ secondary_link }}" class="button-secondary">{{ 'astranova.hero.secondary_cta' | t }}</a>
+      </div>
+
+      <ul class="astranova-hero__chips" role="list">
+        {% for item in 'shipping,warranty,checkout' | split: ',' %}
+          {% assign chip_key = 'astranova.hero.chips.' | append: item %}
+          <li class="astranova-tag">{{ chip_key | t }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="astranova-panel astranova-hero__panel">
+      <div class="astranova-hero__panel-copy">
+        <p class="astranova-eyebrow">{{ 'astranova.hero.panel_eyebrow' | t }}</p>
+        <h2 class="astranova-hero__panel-title">{{ 'astranova.hero.panel_title' | t }}</h2>
+        <p class="astranova-section-copy">{{ 'astranova.hero.panel_body' | t }}</p>
+      </div>
+
+      <div class="astranova-card-grid astranova-card-grid--3 astranova-hero__stats">
+        {% for item in 'catalog,delivery,support' | split: ',' %}
+          <div class="astranova-stat">
+            <div class="astranova-stat__value">{{ 'astranova.hero.stats.' | append: item | append: '.value' | t }}</div>
+            <div class="astranova-stat__label">{{ 'astranova.hero.stats.' | append: item | append: '.label' | t }}</div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="astranova-hero__signal">
+        <div class="astranova-hero__signal-orbit"></div>
+        <div class="astranova-hero__signal-core"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .astranova-hero__grid {
+    position: relative;
+    display: grid;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+
+  .astranova-hero__content,
+  .astranova-hero__panel {
+    position: relative;
+    z-index: 1;
+  }
+
+  .astranova-hero__content {
+    display: grid;
+    gap: 1.25rem;
+    padding: clamp(1.5rem, 4vw, 4rem);
+    border: 1px solid var(--astranova-border);
+    border-radius: var(--astranova-radius);
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72)),
+      radial-gradient(circle at top right, rgba(98, 130, 162, 0.18), transparent 30%);
+    box-shadow: var(--astranova-shadow);
+  }
+
+  .astranova-hero__title {
+    margin: 0;
+    color: var(--astranova-foreground);
+    font-size: clamp(2.8rem, 7vw, 5.8rem);
+    line-height: 0.92;
+    letter-spacing: -0.06em;
+    max-width: 11ch;
+  }
+
+  .astranova-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .astranova-hero__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .astranova-hero__panel {
+    overflow: hidden;
+    display: grid;
+    gap: 1.5rem;
+    padding: clamp(1.5rem, 3vw, 2.4rem);
+    min-height: 100%;
+  }
+
+  .astranova-hero__panel-title {
+    margin: 0.5rem 0 0;
+    color: var(--astranova-foreground);
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+  }
+
+  .astranova-hero__stats {
+    align-items: start;
+  }
+
+  .astranova-hero__signal {
+    position: absolute;
+    right: -2.5rem;
+    bottom: -2.5rem;
+    width: 12rem;
+    height: 12rem;
+    border-radius: 999px;
+    opacity: 0.9;
+  }
+
+  .astranova-hero__signal-orbit,
+  .astranova-hero__signal-core {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+  }
+
+  .astranova-hero__signal-orbit {
+    border: 1px solid rgba(98, 130, 162, 0.25);
+    transform: scale(0.72);
+  }
+
+  .astranova-hero__signal-core {
+    inset: 35%;
+    background: radial-gradient(circle, rgba(98, 130, 162, 0.95), rgba(98, 130, 162, 0.2));
+    box-shadow: 0 0 55px rgba(98, 130, 162, 0.3);
+  }
+
+  @media screen and (min-width: 990px) {
+    .astranova-hero__grid {
+      grid-template-columns: minmax(0, 1.1fr) minmax(24rem, 0.9fr);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Astranova Hero",
+  "settings": [
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Primary button link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Secondary button link",
+      "default": "/pages/contact"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "Top padding",
+      "min": 24,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "default": 44
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "Bottom padding",
+      "min": 24,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "default": 72
+    }
+  ],
+  "presets": [
+    {
+      "name": "Astranova Hero"
+    }
+  ]
+}
+{% endschema %}

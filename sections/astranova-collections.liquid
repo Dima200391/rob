@@ -1,0 +1,161 @@
+{% liquid
+  assign collection_link_audio = section.settings.audio_link | default: '/collections/audio'
+  assign collection_link_accessories = section.settings.accessories_link | default: '/collections/mobile-accessories'
+  assign collection_link_desk = section.settings.desk_link | default: '/collections/desk-setup'
+  assign collection_link_gadgets = section.settings.gadgets_link | default: '/collections/smart-gadgets'
+%}
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<section
+  class="astranova-collections section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+  style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
+  {{ section.shopify_attributes }}
+>
+  <div class="astranova-collections__header">
+    <p class="astranova-eyebrow">{{ 'astranova.collections.eyebrow' | t }}</p>
+    <h2 class="astranova-section-heading">{{ 'astranova.collections.title' | t }}</h2>
+    <p class="astranova-section-copy">{{ 'astranova.collections.body' | t }}</p>
+  </div>
+
+  <div class="astranova-card-grid astranova-card-grid--4">
+    {% for item in 'audio,accessories,desk,gadgets' | split: ',' %}
+      {% liquid
+        case item
+          when 'audio'
+            assign link = collection_link_audio
+          when 'accessories'
+            assign link = collection_link_accessories
+          when 'desk'
+            assign link = collection_link_desk
+          else
+            assign link = collection_link_gadgets
+        endcase
+      %}
+      <a href="{{ link }}" class="astranova-panel astranova-panel--compact astranova-collections__card">
+        <span class="astranova-tag">{{ 'astranova.collections.' | append: item | append: '.tag' | t }}</span>
+        <div class="astranova-collections__number">0{{ forloop.index }}</div>
+        <h3 class="astranova-collections__card-title">{{ 'astranova.collections.' | append: item | append: '.title' | t }}</h3>
+        <p class="astranova-collections__card-copy">{{ 'astranova.collections.' | append: item | append: '.body' | t }}</p>
+        <span class="astranova-link">{{ 'astranova.collections.cta' | t }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+{% stylesheet %}
+  .astranova-collections__header {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .astranova-collections__card {
+    display: grid;
+    gap: 0.9rem;
+    padding: 1.4rem;
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+
+  .astranova-collections__card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(98, 130, 162, 0.34);
+  }
+
+  .astranova-collections__number {
+    color: rgba(23, 32, 45, 0.2);
+    font-family: var(--font-heading--family);
+    font-size: clamp(2.2rem, 4vw, 3.3rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.06em;
+  }
+
+  .astranova-collections__card-title {
+    margin: 0;
+    color: var(--astranova-foreground);
+    font-size: 1.25rem;
+    line-height: 1.08;
+    letter-spacing: -0.04em;
+  }
+
+  .astranova-collections__card-copy {
+    margin: 0;
+    color: var(--astranova-muted);
+    line-height: 1.6;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Astranova Collections",
+  "settings": [
+    {
+      "type": "url",
+      "id": "audio_link",
+      "label": "Audio link",
+      "default": "/collections/audio"
+    },
+    {
+      "type": "url",
+      "id": "accessories_link",
+      "label": "Mobile accessories link",
+      "default": "/collections/mobile-accessories"
+    },
+    {
+      "type": "url",
+      "id": "desk_link",
+      "label": "Desk setup link",
+      "default": "/collections/desk-setup"
+    },
+    {
+      "type": "url",
+      "id": "gadgets_link",
+      "label": "Smart gadgets link",
+      "default": "/collections/smart-gadgets"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "Top padding",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    }
+  ],
+  "presets": [
+    {
+      "name": "Astranova Collections"
+    }
+  ]
+}
+{% endschema %}

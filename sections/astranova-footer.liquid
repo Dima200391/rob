@@ -1,0 +1,268 @@
+{% liquid
+  assign shop_menu = section.settings.shop_menu
+  assign support_menu = section.settings.support_menu
+  assign show_footer_localization = false
+
+  if section.settings.show_localization and localization.available_languages.size > 1
+    assign show_footer_localization = true
+  elsif section.settings.show_localization and localization.available_countries.size > 1
+    assign show_footer_localization = true
+  endif
+%}
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<section
+  class="astranova-footer section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+  style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
+  {{ section.shopify_attributes }}
+>
+  <div class="astranova-footer__grid">
+    <div class="astranova-panel astranova-footer__newsletter">
+      <p class="astranova-eyebrow">{{ 'astranova.footer.eyebrow' | t }}</p>
+      <h2 class="astranova-footer__title">{{ 'astranova.footer.title' | t }}</h2>
+      <p class="astranova-section-copy">{{ 'astranova.footer.body' | t }}</p>
+
+      {%- form 'customer', class: 'astranova-footer__form' -%}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <label class="visually-hidden" for="AstranovaFooterEmail">{{ 'blocks.email_signup.label' | t }}</label>
+        <div class="astranova-footer__form-row">
+          <input
+            id="AstranovaFooterEmail"
+            class="astranova-footer__input"
+            type="email"
+            name="contact[email]"
+            placeholder="{{ 'blocks.email_signup.placeholder' | t }}"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            required
+          >
+          <button class="button" type="submit">{{ 'astranova.footer.submit' | t }}</button>
+        </div>
+
+        {% if form.posted_successfully? %}
+          <p class="astranova-footer__message">{{ 'blocks.email_signup.success' | t }}</p>
+        {% elsif form.errors %}
+          <p class="astranova-footer__message">{{ form.errors.translated_fields.email | capitalize }} {{ form.errors.messages.email }}</p>
+        {% endif %}
+      {%- endform -%}
+
+      {% if show_footer_localization %}
+        <div class="astranova-footer__localization">
+          {% render 'localization-form',
+            show_country: localization.available_countries.size > 1,
+            show_language: localization.available_languages.size > 1,
+            form_id: section.id,
+            localization_style: 'footer',
+            back: request.path
+          %}
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="astranova-footer__menus">
+      <div class="astranova-panel astranova-panel--compact astranova-footer__menu-panel">
+        <p class="astranova-footer__menu-heading">{{ 'astranova.footer.shop_heading' | t }}</p>
+        {% if shop_menu != blank %}
+          <ul class="astranova-footer__menu-list">
+            {% for link in shop_menu.links %}
+              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+
+      <div class="astranova-panel astranova-panel--compact astranova-footer__menu-panel">
+        <p class="astranova-footer__menu-heading">{{ 'astranova.footer.support_heading' | t }}</p>
+        {% if support_menu != blank %}
+          <ul class="astranova-footer__menu-list">
+            {% for link in support_menu.links %}
+              <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .astranova-footer__grid {
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .astranova-footer__newsletter {
+    display: grid;
+    gap: 1rem;
+    padding: clamp(1.5rem, 3vw, 2rem);
+  }
+
+  .astranova-footer__title {
+    margin: 0;
+    color: var(--astranova-foreground);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+  }
+
+  .astranova-footer__form {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .astranova-footer__form-row {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .astranova-footer__input {
+    min-height: 3.5rem;
+    padding: 0 1.1rem;
+    border: 1px solid var(--astranova-border);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.75);
+    color: var(--astranova-foreground);
+  }
+
+  .astranova-footer__message {
+    margin: 0;
+    color: var(--astranova-muted);
+  }
+
+  .astranova-footer__menus {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .astranova-footer__menu-panel {
+    padding: 1.4rem;
+  }
+
+  .astranova-footer__menu-heading {
+    margin: 0 0 0.9rem;
+    color: var(--astranova-foreground);
+    font-family: var(--font-heading--family);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  .astranova-footer__menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.7rem;
+  }
+
+  .astranova-footer__menu-list a {
+    color: var(--astranova-muted);
+    text-decoration: none;
+  }
+
+  .astranova-footer__menu-list a:hover {
+    color: var(--astranova-foreground);
+  }
+
+  .astranova-footer__localization {
+    margin-top: 0.5rem;
+  }
+
+  .astranova-footer__localization localization-form-component .localization-form {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .astranova-footer__localization .localization-form__select,
+  .astranova-footer__localization .button {
+    border-radius: 999px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .astranova-footer__form-row {
+      grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .astranova-footer__menus {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (min-width: 990px) {
+    .astranova-footer__grid {
+      grid-template-columns: minmax(0, 1.3fr) minmax(24rem, 0.9fr);
+      align-items: start;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Astranova Footer",
+  "enabled_on": {
+    "groups": ["footer"]
+  },
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "shop_menu",
+      "label": "Shop menu",
+      "default": "main-menu"
+    },
+    {
+      "type": "link_list",
+      "id": "support_menu",
+      "label": "Support menu",
+      "default": "footer"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_localization",
+      "label": "Show language and country selector",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-5"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "Top padding",
+      "min": 12,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "Bottom padding",
+      "min": 12,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Astranova Footer"
+    }
+  ]
+}
+{% endschema %}

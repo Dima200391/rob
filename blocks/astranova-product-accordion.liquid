@@ -1,0 +1,46 @@
+{% assign product = closest.product %}
+
+<div class="astranova-product-accordion-block" {{ block.shopify_attributes }}>
+  {% for item in 'specifications,compatibility,in_the_box,shipping' | split: ',' %}
+    <details class="astranova-detail" {% if forloop.first %}open{% endif %}>
+      <summary>
+        <span>{{ 'astranova.product.accordion.' | append: item | append: '.title' | t }}</span>
+        <span class="astranova-detail__caret"></span>
+      </summary>
+      <div class="astranova-detail__content astranova-richtext">
+        {% liquid
+          case item
+            when 'specifications'
+              assign metafield = product.metafields.custom.specifications
+            when 'compatibility'
+              assign metafield = product.metafields.custom.compatibility
+            when 'in_the_box'
+              assign metafield = product.metafields.custom.whats_in_the_box
+            else
+              assign metafield = product.metafields.custom.shipping_and_warranty
+          endcase
+
+          if metafield != blank
+            echo metafield | metafield_tag
+          else
+            echo 'astranova.product.accordion.' | append: item | append: '.default_html' | t
+          endif
+        %}
+      </div>
+    </details>
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Astranova Product Accordion",
+  "tag": null,
+  "settings": [],
+  "presets": [
+    {
+      "name": "Astranova Product Accordion",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

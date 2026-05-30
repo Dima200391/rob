@@ -1,0 +1,79 @@
+{
+  "sections": {
+    "intro": {
+      "type": "astranova-page-intro",
+      "settings": {
+        "eyebrow": "Track order",
+        "title": "Give customers one calm place to check what happens after checkout.",
+        "body": "If you are using a dedicated order-tracking app, embed it on this page. If not, use the structure below so customers know exactly what information to prepare before contacting support.",
+        "primary_label": "Contact support",
+        "primary_link": "/pages/support",
+        "secondary_label": "Shop catalog",
+        "secondary_link": "/collections/all",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 36,
+        "padding_block_end": 16
+      }
+    },
+    "steps": {
+      "type": "astranova-feature-grid",
+      "blocks": {
+        "email": {
+          "type": "card",
+          "settings": {
+            "kicker": "Step 01",
+            "title": "Check your order confirmation email first",
+            "body": "Customers should keep their order number, checkout email and shipping name ready before asking for manual help."
+          }
+        },
+        "timing": {
+          "type": "card",
+          "settings": {
+            "kicker": "Step 02",
+            "title": "Allow the processing window promised at checkout",
+            "body": "Set clear expectations for dispatch timing and repeat them in confirmation emails so tracking questions arrive with better context."
+          }
+        },
+        "support": {
+          "type": "card",
+          "settings": {
+            "kicker": "Step 03",
+            "title": "Escalate exceptions through support with exact details",
+            "body": "When something is delayed or unclear, route the customer to support with a short checklist instead of generic policy copy.",
+            "link_label": "Open support page",
+            "link": "/pages/support"
+          }
+        }
+      },
+      "block_order": [
+        "email",
+        "timing",
+        "support"
+      ],
+      "settings": {
+        "eyebrow": "Order visibility",
+        "title": "Tracking works best when the customer knows what to expect at each stage.",
+        "body": "Use this page as the home for your future tracking app or as a support-first fallback while operations are still being finalized.",
+        "columns": "3",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 12,
+        "padding_block_end": 20
+      }
+    },
+    "trust": {
+      "type": "astranova-trust-bar",
+      "settings": {
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block": 8
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "steps",
+    "trust"
+  ]
+}

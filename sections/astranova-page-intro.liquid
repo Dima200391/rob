@@ -1,0 +1,155 @@
+{% liquid
+  assign primary_label = section.settings.primary_label | strip
+  assign secondary_label = section.settings.secondary_label | strip
+%}
+
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<section
+  class="astranova-page-intro section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+  style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
+  {{ section.shopify_attributes }}
+>
+  <div class="astranova-panel astranova-page-intro__panel">
+    {% if section.settings.eyebrow != blank %}
+      <p class="astranova-eyebrow">{{ section.settings.eyebrow }}</p>
+    {% endif %}
+
+    {% if section.settings.title != blank %}
+      <h1 class="astranova-page-intro__title">{{ section.settings.title }}</h1>
+    {% endif %}
+
+    {% if section.settings.body != blank %}
+      <div class="astranova-section-copy astranova-page-intro__body">{{ section.settings.body | newline_to_br }}</div>
+    {% endif %}
+
+    {% if primary_label != blank or secondary_label != blank %}
+      <div class="astranova-page-intro__actions">
+        {% if primary_label != blank %}
+          <a href="{{ section.settings.primary_link | default: '/collections/all' }}" class="button">{{ primary_label }}</a>
+        {% endif %}
+        {% if secondary_label != blank %}
+          <a href="{{ section.settings.secondary_link | default: '/pages/contact' }}" class="button-secondary">{{ secondary_label }}</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% stylesheet %}
+  .astranova-page-intro__panel {
+    display: grid;
+    gap: 1rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .astranova-page-intro__title {
+    margin: 0;
+    color: var(--astranova-foreground);
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.05em;
+    max-width: 14ch;
+  }
+
+  .astranova-page-intro__body {
+    max-width: 52rem;
+  }
+
+  .astranova-page-intro__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 0.25rem;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Astranova Page Intro",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Astranova"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "A clearer way to present modern electronics."
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body",
+      "default": "Use this section to introduce support, about or policy pages with calm premium copy."
+    },
+    {
+      "type": "text",
+      "id": "primary_label",
+      "label": "Primary button label",
+      "default": "Shop catalog"
+    },
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Primary button link",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Secondary button label",
+      "default": "Contact support"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Secondary button link",
+      "default": "/pages/contact"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "Top padding",
+      "min": 12,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "Bottom padding",
+      "min": 12,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Astranova Page Intro"
+    }
+  ]
+}
+{% endschema %}

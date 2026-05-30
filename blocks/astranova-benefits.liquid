@@ -1,0 +1,48 @@
+{% liquid
+  assign product = closest.product
+  assign promise = product.metafields.custom.promise_headline.value | default: 'astranova.product.promise_default' | t
+  assign benefit_1 = product.metafields.custom.benefit_1.value | default: 'astranova.product.benefit_1' | t
+  assign benefit_2 = product.metafields.custom.benefit_2.value | default: 'astranova.product.benefit_2' | t
+  assign benefit_3 = product.metafields.custom.benefit_3.value | default: 'astranova.product.benefit_3' | t
+%}
+
+<div class="astranova-benefits-block" {{ block.shopify_attributes }}>
+  <p class="astranova-eyebrow">{{ 'astranova.product.promise_label' | t }}</p>
+  <p class="astranova-benefits-block__promise">{{ promise }}</p>
+  <ul class="astranova-benefit-list" role="list">
+    <li>{{ benefit_1 }}</li>
+    <li>{{ benefit_2 }}</li>
+    <li>{{ benefit_3 }}</li>
+  </ul>
+</div>
+
+{% stylesheet %}
+  .astranova-benefits-block {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .astranova-benefits-block__promise {
+    margin: 0;
+    color: var(--astranova-foreground);
+    font-family: var(--font-heading--family);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.03em;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Astranova Benefits",
+  "tag": null,
+  "settings": [],
+  "presets": [
+    {
+      "name": "Astranova Benefits",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

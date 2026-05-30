@@ -1,0 +1,84 @@
+{
+  "sections": {
+    "intro": {
+      "type": "astranova-page-intro",
+      "settings": {
+        "eyebrow": "FAQ",
+        "title": "Answer the questions that usually slow electronics purchases down.",
+        "body": "Astranova works best when shipping, warranty, compatibility and delivery expectations are visible without making the store feel heavy or defensive.",
+        "primary_label": "Contact support",
+        "primary_link": "/pages/support",
+        "secondary_label": "Track order",
+        "secondary_link": "/pages/track-order",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 36,
+        "padding_block_end": 16
+      }
+    },
+    "faq": {
+      "type": "astranova-faq",
+      "settings": {
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 0,
+        "padding_block_end": 24
+      }
+    },
+    "links": {
+      "type": "astranova-feature-grid",
+      "blocks": {
+        "shipping": {
+          "type": "card",
+          "settings": {
+            "kicker": "Policies",
+            "title": "Create a dedicated shipping page next",
+            "body": "Keep Estonia-first delivery expectations, processing windows and EU expansion notes in one page so support answers stay consistent.",
+            "link_label": "Suggested handle: /pages/shipping",
+            "link": "/pages/shipping"
+          }
+        },
+        "returns": {
+          "type": "card",
+          "settings": {
+            "kicker": "Returns",
+            "title": "Separate returns and warranty into clear customer-facing pages",
+            "body": "That makes the footer easier to scan and gives product pages cleaner places to link policy details.",
+            "link_label": "Suggested handle: /pages/returns",
+            "link": "/pages/returns"
+          }
+        },
+        "contact": {
+          "type": "card",
+          "settings": {
+            "kicker": "Support",
+            "title": "Use support to handle the exceptions, not the basics",
+            "body": "The better the FAQ and policies are organized, the more support can focus on real order-specific cases.",
+            "link_label": "Open support",
+            "link": "/pages/support"
+          }
+        }
+      },
+      "block_order": [
+        "shipping",
+        "returns",
+        "contact"
+      ],
+      "settings": {
+        "eyebrow": "Next pages to create",
+        "title": "Turn repeated questions into visible policy pages.",
+        "body": "This keeps footer navigation useful and reduces the amount of friction near checkout.",
+        "columns": "3",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 0,
+        "padding_block_end": 40
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "faq",
+    "links"
+  ]
+}

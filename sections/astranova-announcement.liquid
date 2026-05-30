@@ -1,0 +1,66 @@
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<div
+  class="astranova-announcement section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+  style="--astranova-announcement-padding: {{ section.settings.padding_block }}px;"
+  {{ section.shopify_attributes }}
+>
+  <p class="astranova-announcement__text">{{ 'astranova.announcement' | t }}</p>
+</div>
+
+{% stylesheet %}
+  .astranova-announcement {
+    padding-block: var(--astranova-announcement-padding);
+  }
+
+  .astranova-announcement__text {
+    margin: 0;
+    text-align: center;
+    color: var(--astranova-accent-strong);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Astranova Announcement",
+  "enabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "full-width"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-2"
+    },
+    {
+      "type": "range",
+      "id": "padding_block",
+      "label": "Vertical padding",
+      "min": 8,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "default": 12
+    }
+  ],
+  "presets": [
+    {
+      "name": "Astranova Announcement"
+    }
+  ]
+}
+{% endschema %}

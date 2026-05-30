@@ -1,0 +1,88 @@
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<section
+  class="astranova-trust-bar section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+  style="padding-block: {{ section.settings.padding_block }}px;"
+  {{ section.shopify_attributes }}
+>
+  <div class="astranova-card-grid astranova-card-grid--4">
+    {% for item in 'shipping,warranty,checkout,support' | split: ',' %}
+      <div class="astranova-panel astranova-panel--compact astranova-trust-bar__item">
+        <div class="astranova-trust-bar__marker"></div>
+        <p class="astranova-trust-bar__title">{{ 'astranova.trust.' | append: item | append: '.title' | t }}</p>
+        <p class="astranova-trust-bar__copy">{{ 'astranova.trust.' | append: item | append: '.body' | t }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% stylesheet %}
+  .astranova-trust-bar__item {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1.35rem;
+  }
+
+  .astranova-trust-bar__marker {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 999px;
+    background:
+      radial-gradient(circle at 35% 35%, rgba(255, 255, 255, 0.92), transparent 45%),
+      linear-gradient(135deg, var(--astranova-accent), var(--astranova-accent-strong));
+    box-shadow: 0 15px 25px rgba(42, 74, 105, 0.18);
+  }
+
+  .astranova-trust-bar__title {
+    margin: 0;
+    color: var(--astranova-foreground);
+    font-family: var(--font-heading--family);
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  .astranova-trust-bar__copy {
+    margin: 0;
+    color: var(--astranova-muted);
+    line-height: 1.6;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Astranova Trust Bar",
+  "settings": [
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_block",
+      "label": "Vertical padding",
+      "min": 0,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    }
+  ],
+  "presets": [
+    {
+      "name": "Astranova Trust Bar"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,151 @@
+{
+  "sections": {
+    "intro": {
+      "type": "astranova-page-intro",
+      "settings": {
+        "eyebrow": "Support",
+        "title": "Support should feel as clear as the storefront itself.",
+        "body": "Use this page as the central place for pre-purchase questions, order help and warranty guidance. Keep replies calm, specific and fast so customers trust Astranova before and after checkout.",
+        "primary_label": "Email support",
+        "primary_link": "/pages/contact",
+        "secondary_label": "Track order",
+        "secondary_link": "/pages/track-order",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 36,
+        "padding_block_end": 16
+      }
+    },
+    "cards": {
+      "type": "astranova-feature-grid",
+      "blocks": {
+        "purchase": {
+          "type": "card",
+          "settings": {
+            "kicker": "Before checkout",
+            "title": "Help customers choose the right product faster",
+            "body": "Use support to answer compatibility, bundle and shipping questions before hesitation turns into a dropped session.",
+            "link_label": "View products",
+            "link": "/collections/all"
+          }
+        },
+        "orders": {
+          "type": "card",
+          "settings": {
+            "kicker": "Orders",
+            "title": "Keep order updates direct and easy to verify",
+            "body": "Ask customers for order number, email used at checkout and the exact issue so the conversation stays efficient from the start.",
+            "link_label": "Track order",
+            "link": "/pages/track-order"
+          }
+        },
+        "coverage": {
+          "type": "card",
+          "settings": {
+            "kicker": "Coverage",
+            "title": "Make warranty and returns visible before they are requested",
+            "body": "Customers should not need to search for coverage terms. Repeat the essentials on product pages, in support pages and inside policy pages.",
+            "link_label": "Read FAQ",
+            "link": "/pages/faq"
+          }
+        }
+      },
+      "block_order": [
+        "purchase",
+        "orders",
+        "coverage"
+      ],
+      "settings": {
+        "eyebrow": "Support framework",
+        "title": "Organize support around the questions that block conversion most often.",
+        "body": "The goal is to reassure quickly, not overwhelm the customer with policy language.",
+        "columns": "3",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 12,
+        "padding_block_end": 20
+      }
+    },
+    "faq": {
+      "type": "astranova-faq",
+      "settings": {
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 0,
+        "padding_block_end": 24
+      }
+    },
+    "form": {
+      "type": "section",
+      "blocks": {
+        "contact_form": {
+          "type": "contact-form",
+          "settings": {
+            "width": "custom",
+            "custom_width": 50,
+            "width_mobile": "custom",
+            "custom_width_mobile": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "submit-button": {
+              "type": "contact-form-submit-button",
+              "static": true,
+              "settings": {
+                "label": "Send message",
+                "style_class": "button",
+                "width": "fit-content",
+                "custom_width": 100,
+                "width_mobile": "fit-content",
+                "custom_width_mobile": 100
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": []
+        }
+      },
+      "block_order": [
+        "contact_form"
+      ],
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "flex-start",
+        "vertical_alignment": "center",
+        "align_baseline": false,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 32,
+        "section_width": "page-width",
+        "section_height": "",
+        "section_height_custom": 50,
+        "color_scheme": "scheme-2",
+        "background_media": "none",
+        "video_position": "cover",
+        "background_image_position": "cover",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 0,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "padding-block-start": 8,
+        "padding-block-end": 56
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "cards",
+    "faq",
+    "form"
+  ]
+}

@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "astranova_hero": {
+      "type": "astranova-hero",
+      "settings": {
+        "primary_link": "/collections/all",
+        "secondary_link": "/pages/contact",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 48,
+        "padding_block_end": 72
+      }
+    },
+    "astranova_trust": {
+      "type": "astranova-trust-bar",
+      "settings": {
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block": 20
+      }
+    },
+    "astranova_collections": {
+      "type": "astranova-collections",
+      "settings": {
+        "audio_link": "/collections/audio",
+        "accessories_link": "/collections/mobile-accessories",
+        "desk_link": "/collections/desk-setup",
+        "gadgets_link": "/collections/smart-gadgets",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 16,
+        "padding_block_end": 32
+      }
+    },
+    "featured_product_astranova": {
+      "type": "featured-product",
+      "blocks": {
+        "media": {
+          "type": "_media-without-appearance",
+          "name": "t:names.product_media",
+          "static": true,
+          "settings": {}
+        },
+        "featured-product": {
+          "type": "_featured-product",
+          "name": "t:names.product",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "featured-product-title": {
+              "type": "product-title",
+              "name": "t:names.title",
+              "static": true,
+              "settings": {
+                "type_preset": "h5",
+                "width": "100%"
+              },
+              "blocks": {}
+            },
+            "featured-product-price": {
+              "type": "_featured-product-price",
+              "name": "t:names.price",
+              "static": true,
+              "settings": {},
+              "blocks": {}
+            },
+            "featured-product-gallery": {
+              "type": "_featured-product-gallery",
+              "name": "t:names.image",
+              "static": true,
+              "settings": {},
+              "blocks": {}
+            },
+            "featured-product-swatches": {
+              "type": "swatches",
+              "name": "t:names.swatches",
+              "static": true,
+              "settings": {
+                "hide_padding": true
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "featured-product-title",
+            "featured-product-price",
+            "featured-product-gallery",
+            "featured-product-swatches"
+          ]
+        }
+      },
+      "block_order": [
+        "media",
+        "featured-product"
+      ],
+      "settings": {
+        "product": "",
+        "layout": "media-left",
+        "color_scheme": "scheme-2",
+        "padding-block-start": 16,
+        "padding-block-end": 28
+      }
+    },
+    "astranova_use_cases": {
+      "type": "astranova-use-cases",
+      "settings": {
+        "section_width": "page-width",
+        "color_scheme": "scheme-2",
+        "padding_block_start": 24,
+        "padding_block_end": 24
+      }
+    },
+    "astranova_testimonials": {
+      "type": "astranova-testimonials",
+      "settings": {
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 28,
+        "padding_block_end": 24
+      }
+    },
+    "astranova_faq": {
+      "type": "astranova-faq",
+      "settings": {
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 24,
+        "padding_block_end": 32
+      }
+    }
+  },
+  "order": [
+    "astranova_hero",
+    "astranova_trust",
+    "astranova_collections",
+    "featured_product_astranova",
+    "astranova_use_cases",
+    "astranova_testimonials",
+    "astranova_faq"
+  ]
+}

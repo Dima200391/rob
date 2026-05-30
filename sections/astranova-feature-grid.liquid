@@ -1,0 +1,203 @@
+<div class="section-background color-{{ section.settings.color_scheme }}"></div>
+<section
+  class="astranova-feature-grid section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+  style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
+  {{ section.shopify_attributes }}
+>
+  {% if section.settings.eyebrow != blank or section.settings.title != blank or section.settings.body != blank %}
+    <div class="astranova-feature-grid__header">
+      {% if section.settings.eyebrow != blank %}
+        <p class="astranova-eyebrow">{{ section.settings.eyebrow }}</p>
+      {% endif %}
+      {% if section.settings.title != blank %}
+        <h2 class="astranova-section-heading">{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.body != blank %}
+        <p class="astranova-section-copy">{{ section.settings.body }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="astranova-card-grid astranova-card-grid--{{ section.settings.columns }}">
+    {% for block in section.blocks %}
+      <article class="astranova-panel astranova-panel--compact astranova-feature-grid__card" {{ block.shopify_attributes }}>
+        {% if block.settings.kicker != blank %}
+          <p class="astranova-feature-grid__kicker">{{ block.settings.kicker }}</p>
+        {% endif %}
+        {% if block.settings.title != blank %}
+          <h3 class="astranova-feature-grid__title">{{ block.settings.title }}</h3>
+        {% endif %}
+        {% if block.settings.body != blank %}
+          <p class="astranova-feature-grid__copy">{{ block.settings.body }}</p>
+        {% endif %}
+        {% if block.settings.link_label != blank %}
+          <a href="{{ block.settings.link | default: '/pages/contact' }}" class="astranova-link">{{ block.settings.link_label }}</a>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+{% stylesheet %}
+  .astranova-feature-grid__header {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .astranova-feature-grid__card {
+    display: grid;
+    gap: 0.85rem;
+    padding: 1.4rem;
+    min-height: 100%;
+  }
+
+  .astranova-feature-grid__kicker {
+    margin: 0;
+    color: var(--astranova-accent-strong);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+
+  .astranova-feature-grid__title {
+    margin: 0;
+    color: var(--astranova-foreground);
+    font-size: 1.25rem;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+
+  .astranova-feature-grid__copy {
+    margin: 0;
+    color: var(--astranova-muted);
+    line-height: 1.6;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Astranova Feature Grid",
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "kicker",
+          "label": "Kicker",
+          "default": "Astranova"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Clarity first"
+        },
+        {
+          "type": "textarea",
+          "id": "body",
+          "label": "Body",
+          "default": "Use short, high-confidence copy that makes the store feel curated and easy to trust."
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Astranova"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Present information in a way that feels premium."
+    },
+    {
+      "type": "textarea",
+      "id": "body",
+      "label": "Body",
+      "default": "Use this section for support promises, brand values, order guidance or category framing."
+    },
+    {
+      "type": "select",
+      "id": "columns",
+      "label": "Columns",
+      "options": [
+        { "value": "2", "label": "2" },
+        { "value": "3", "label": "3" },
+        { "value": "4", "label": "4" }
+      ],
+      "default": "3"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    },
+    {
+      "type": "range",
+      "id": "padding_block_start",
+      "label": "Top padding",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "padding_block_end",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 140,
+      "step": 2,
+      "unit": "px",
+      "default": 32
+    }
+  ],
+  "presets": [
+    {
+      "name": "Astranova Feature Grid",
+      "blocks": [
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        },
+        {
+          "type": "card"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
