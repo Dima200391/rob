@@ -3,6 +3,7 @@
   assign collection_link_accessories = section.settings.accessories_link | default: '/collections/mobile-accessories'
   assign collection_link_desk = section.settings.desk_link | default: '/collections/desk-setup'
   assign collection_link_gadgets = section.settings.gadgets_link | default: '/collections/smart-gadgets'
+  assign astranova_collection_items = 'audio,accessories,desk,gadgets' | split: ','
 %}
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
@@ -18,7 +19,7 @@
   </div>
 
   <div class="astranova-card-grid astranova-card-grid--4">
-    {% for item in 'audio,accessories,desk,gadgets' | split: ',' %}
+    {% for item in astranova_collection_items %}
       {% liquid
         case item
           when 'audio'
@@ -94,26 +95,22 @@
     {
       "type": "url",
       "id": "audio_link",
-      "label": "Audio link",
-      "default": "/collections/audio"
+      "label": "Audio link"
     },
     {
       "type": "url",
       "id": "accessories_link",
-      "label": "Mobile accessories link",
-      "default": "/collections/mobile-accessories"
+      "label": "Mobile accessories link"
     },
     {
       "type": "url",
       "id": "desk_link",
-      "label": "Desk setup link",
-      "default": "/collections/desk-setup"
+      "label": "Desk setup link"
     },
     {
       "type": "url",
       "id": "gadgets_link",
-      "label": "Smart gadgets link",
-      "default": "/collections/smart-gadgets"
+      "label": "Smart gadgets link"
     },
     {
       "type": "select",

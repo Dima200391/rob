@@ -1,6 +1,8 @@
 {% liquid
   assign primary_link = section.settings.primary_link | default: '/collections/all'
   assign secondary_link = section.settings.secondary_link | default: '/pages/contact'
+  assign astranova_hero_chip_items = 'shipping,warranty,checkout' | split: ','
+  assign astranova_hero_stat_items = 'catalog,delivery,support' | split: ','
 %}
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
@@ -21,7 +23,7 @@
       </div>
 
       <ul class="astranova-hero__chips" role="list">
-        {% for item in 'shipping,warranty,checkout' | split: ',' %}
+        {% for item in astranova_hero_chip_items %}
           {% assign chip_key = 'astranova.hero.chips.' | append: item %}
           <li class="astranova-tag">{{ chip_key | t }}</li>
         {% endfor %}
@@ -36,7 +38,7 @@
       </div>
 
       <div class="astranova-card-grid astranova-card-grid--3 astranova-hero__stats">
-        {% for item in 'catalog,delivery,support' | split: ',' %}
+        {% for item in astranova_hero_stat_items %}
           <div class="astranova-stat">
             <div class="astranova-stat__value">{{ 'astranova.hero.stats.' | append: item | append: '.value' | t }}</div>
             <div class="astranova-stat__label">{{ 'astranova.hero.stats.' | append: item | append: '.label' | t }}</div>
@@ -164,14 +166,12 @@
     {
       "type": "url",
       "id": "primary_link",
-      "label": "Primary button link",
-      "default": "/collections/all"
+      "label": "Primary button link"
     },
     {
       "type": "url",
       "id": "secondary_link",
-      "label": "Secondary button link",
-      "default": "/pages/contact"
+      "label": "Secondary button link"
     },
     {
       "type": "select",

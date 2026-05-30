@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "current": {
     "logo_height": 36,
     "logo_height_mobile": 28,
@@ -63,13 +63,13 @@
     "icon_stroke": "default",
     "input_border_width": 1,
     "inputs_border_radius": 20,
-    "popover_border_radius": 24,
+    "popover_border_radius": 16,
     "popover_border": "none",
     "currency_code_enabled_product_pages": true,
     "currency_code_enabled_product_cards": true,
     "currency_code_enabled_cart_items": true,
     "product_corner_radius": 24,
-    "card_corner_radius": 18,
+    "card_corner_radius": 16,
     "show_variant_image": false,
     "variant_swatch_width": 34,
     "variant_swatch_height": 34,
