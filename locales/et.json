@@ -12,7 +12,7 @@
     "checkout": {
       "order_summary": {
         "price_per_item": {
-          "label": "%{price}\/tk."
+          "label": "%{price}/tk."
         },
         "updated_shipping_method": "Uuendatud kohaletoimetamise viis: %{shipping_method}",
         "discount_not_found": "Sooduskoodiga allahindlust ei leitud",
@@ -29,7 +29,7 @@
           "title": "Jääk {{amount_due}} tuleb tasuda hiljemalt {{due_at}}",
           "due_on_fulfillment_title": "Järelejäänud summa {{amount_due}} tuleb tasuda tööde teostamisel"
         },
-        "eligible_customer_missing_notice": "Sooduskoodi <strong style=\"text-transform:uppercase\">%{code}<\/strong> saamiseks peab klient vastama nõuetele",
+        "eligible_customer_missing_notice": "Sooduskoodi <strong style=\"text-transform:uppercase\">%{code}</strong> saamiseks peab klient vastama nõuetele",
         "subtotal_label_with_quantity": {
           "one": "Vahetulemus • %{count} toode",
           "other": "Vahetulemus • %{count} toode(-t)",
@@ -42,7 +42,7 @@
         "more_items_modal": {
           "clear_search": "Kustuta otsingupäring",
           "empty_results": "Otsingule „%{searchText}” ei leitud ühtegi vastet. Kontrollige õigekirja või valige muud sõnad või fraasid.",
-          "number_items_shown": "%{shownNumber} \/ %{totalNumber}",
+          "number_items_shown": "%{shownNumber} / %{totalNumber}",
           "search_item": "Otsing"
         },
         "number_items": {
@@ -73,7 +73,7 @@
         "deposit_label": "Deposiit",
         "total_due_today_label": "Tänane tasumisele kuuluv kogusumma",
         "total_due_later_label": "Kogu makstav summa hiljem",
-        "discount_code_allocations_mismatch": "Sooduskood <strong style=\"text-transform:uppercase\">%{code}<\/strong> on muutunud. Palun kontrollige ostukorvi ja proovige uuesti.",
+        "discount_code_allocations_mismatch": "Sooduskood <strong style=\"text-transform:uppercase\">%{code}</strong> on muutunud. Palun kontrollige ostukorvi ja proovige uuesti.",
         "deferred_total_due_date_label_next": "Kehtiv: %{date}",
         "total_due_label": "Kokku tasumisele",
         "total_price_label": "Kogusumma",
@@ -140,20 +140,20 @@
           "pay_button_label": "Vormista tellimus",
           "notice": "Praegu raha maha ei võeta. Makse jätkamisega annate nõusoleku, et tellimuse töötlemisel võetakse raha teie makseviisilt maha."
         },
-        "card_expiry_label": "Kehtiv kuni (KK\/AA)",
-        "card_expiry_placeholder": "Kehtivusaeg (KK\/AA)",
+        "card_expiry_label": "Kehtiv kuni (KK/AA)",
+        "card_expiry_placeholder": "Kehtivusaeg (KK/AA)",
         "credit_card_start_month": "Kehtivuse alguse kuu",
         "credit_card_start_year": "Kehtivuse alguse aasta",
         "card_verification_value_label": "Turvakood",
         "card_verification_value_placeholder": "Turvakood",
-        "card_expiry_date_explanation": "Kaardi kehtivusaeg MM\/AA-vormingus",
+        "card_expiry_date_explanation": "Kaardi kehtivusaeg MM/AA-vormingus",
         "card_expiration_month_label": "Kuu, millal aegub",
         "card_expiration_year_label": "Aegumistähtaeg",
         "card_verification_value_explanation": "3-kohaline kood. Asub tavaliselt kaardi tagaküljel. American Expressi kaartidel on 4-kohaline kood esiküljel.",
         "card_verification_value_explanation_amex": "4-kohaline turvakood kaardi esiküljel",
         "card_verification_value_explanation_other": "3-kohaline turvakood kaardi tagaküljel",
-        "card_start_label": "Väljalaskekuupäev (KK\/AA)",
-        "card_start_placeholder": "Väljalaskekuupäev (KK\/AA)",
+        "card_start_label": "Väljalaskekuupäev (KK/AA)",
+        "card_start_placeholder": "Väljalaskekuupäev (KK/AA)",
         "card_issue_number_label": "Seerianumber",
         "card_issue_number_placeholder": "Seerianumber",
         "card_change_label": "Muuda",
@@ -162,7 +162,7 @@
         "pay_with_payment_method": "Maksa %{payment_method} kaudu",
         "same_billing_address_label": "Ühtib tarneaadressiga",
         "different_billing_address_label": "Kasuta muud arveldusaadressi",
-        "free_order_notice_html": "Teie tellimuse kaubad on <strong>tasuta<\/strong>. Tasu ei ole vaja maksta.",
+        "free_order_notice_html": "Teie tellimuse kaubad on <strong>tasuta</strong>. Tasu ei ole vaja maksta.",
         "express_checkout_free_order": "Me ei võta tasuta tellimuste eest tasu",
         "offsite_gateway_redirect_hint": "Teid suunatakse ostu lõpuleviimiseks %{gateway_label}.",
         "offsite_gateway_redirect_hint_multi_currency_html": "%{gateway_label}, kokku: %{total_shop_price}",
@@ -193,12 +193,12 @@
           "many": "Teie tellimuse summa katavad kinkekaardid."
         },
         "card_fields_unavailable_html": {
-          "one": "Krediit- ja deebetkaardimaksed ei ole praegu saadaval.<br><a href=\"%{current_url}\">Värskendage seda lehte<\/a> või proovige hiljem uuesti.",
-          "other": "Krediit- ja deebetkaardimaksed ei ole hetkel saadaval.<br><a href=\"%{current_url}\">Värskendage seda lehte<\/a> või kasutage mõnda muud makseviisi.",
-          "few": "Krediit- ja deebetkaardimaksed ei ole hetkel saadaval.<br><a href=\"%{current_url}\">Värskendage seda lehte<\/a> või kasutage mõnda muud makseviisi.",
-          "many": "Krediit- ja deebetkaardimaksed ei ole hetkel saadaval.<br><a href=\"%{current_url}\">Värskendage seda lehte<\/a> või kasutage mõnda muud makseviisi."
+          "one": "Krediit- ja deebetkaardimaksed ei ole praegu saadaval.<br><a href=\"%{current_url}\">Värskendage seda lehte</a> või proovige hiljem uuesti.",
+          "other": "Krediit- ja deebetkaardimaksed ei ole hetkel saadaval.<br><a href=\"%{current_url}\">Värskendage seda lehte</a> või kasutage mõnda muud makseviisi.",
+          "few": "Krediit- ja deebetkaardimaksed ei ole hetkel saadaval.<br><a href=\"%{current_url}\">Värskendage seda lehte</a> või kasutage mõnda muud makseviisi.",
+          "many": "Krediit- ja deebetkaardimaksed ei ole hetkel saadaval.<br><a href=\"%{current_url}\">Värskendage seda lehte</a> või kasutage mõnda muud makseviisi."
         },
-        "subscription_agreement_label_html": "Ma mõistan, et nõustun tellimuse kasutustingimustega. Seda uuendatakse määratud hinnaga ja toodud sagedusega kuni kehtivusaja lõpuni\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">või tühistamiseni<\/a>.\n",
+        "subscription_agreement_label_html": "Ma mõistan, et nõustun tellimuse kasutustingimustega. Seda uuendatakse määratud hinnaga ja toodud sagedusega kuni kehtivusaja lõpuni\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">või tühistamiseni</a>.\n",
         "waiting_on_payment_methods": "Otsin saadaolevaid makseviise…",
         "apple_pay_payment_error": "Makse nurjus. Palun proovige uuesti või kasutage teist makseviisi.",
         "subscription_card_update_agreement_label": "Makseviisi muutmine mõjutab teie tellimust ja tulevasi korduvaid makseid.",
@@ -225,8 +225,8 @@
         "credit_card_vaulting_sign_in_banner_title": "Krediitkaardi andmete salvestamine",
         "credit_card_vaulting_sign_in_banner_info": "Logige sisse oma kontole või looge uus konto, et salvestada krediitkaardi andmed ostude tegemiseks.",
         "credit_card_vaulting_sign_in_banner_button_label": "Sisene",
-        "expiry_long": "(Kehtib kuni %{month}\/%{year})",
-        "expiry_short": "(Kehtiv kuni %{month}\/%{year})",
+        "expiry_long": "(Kehtib kuni %{month}/%{year})",
+        "expiry_short": "(Kehtiv kuni %{month}/%{year})",
         "ftd_vault_credit_card_label": "Salvesta krediitkaart kontole, et tellimusi kiiremini vormistada",
         "delete_customer_mandate_modal_title": "Kas kustutada kaart?",
         "delete_customer_mandate_modal_body": "Kui kustutate selle kaardi, peate selle uuesti lisama, enne kui saate makseid sooritada.",
@@ -235,8 +235,8 @@
           "connect": "Puudutage, et ühendada oma Google Pay konto.",
           "error_authorizing": "Makse autoriseerimisel tekkis viga"
         },
-        "mor_disclaimer_html": "Vajutades allolevale nupule ja sooritades ostu, nõustute ostma kaubad Global-e-lt kui registreeritud müüjalt\nkäesoleva tehingu kaudu ja nõustute Global-e <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">tingimustega<\/a>\nja <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">privaatsuspõhimõtetega<\/a>. Global-e on kaupluse %{shop_name} rahvusvaheline täisteenuse pakkuja.\n",
-        "purchase_options_card_update_agreement_label_html": "Makseviisi uuendades nõustute, et kõik korduvad või edasilükatud maksed tehakse vastavalt poe <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">tühistamispoliitika<\/a> tingimustele.",
+        "mor_disclaimer_html": "Vajutades allolevale nupule ja sooritades ostu, nõustute ostma kaubad Global-e-lt kui registreeritud müüjalt\nkäesoleva tehingu kaudu ja nõustute Global-e <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">tingimustega</a>\nja <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">privaatsuspõhimõtetega</a>. Global-e on kaupluse %{shop_name} rahvusvaheline täisteenuse pakkuja.\n",
+        "purchase_options_card_update_agreement_label_html": "Makseviisi uuendades nõustute, et kõik korduvad või edasilükatud maksed tehakse vastavalt poe <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">tühistamispoliitika</a> tingimustele.",
         "receiver_payment_experience_hint": "Pärast tellimuse esitamist saadetakse teile makseandmed. Makse saate teha Multibanco kaudu või kodulehel %{due_days} päeva jooksul.",
         "pending_payment": {
           "due_notice": "Makse summas %{amount_due} tuleb tasuda hiljemalt %{due_date}.",
@@ -250,7 +250,7 @@
       },
       "payment_summary": {
         "gift_card_current_balance_notice": "Praegune saldo: %{amount}",
-        "credit_card_expires_on_notice": "Aegub %{month}\/%{year}",
+        "credit_card_expires_on_notice": "Aegub %{month}/%{year}",
         "express_payment_gateway_label": "Ekspress",
         "manual_payment_gateway_label": "Käsitsi",
         "billing_address_title": "Arve saatmise aadress",
@@ -267,9 +267,9 @@
         "address_address1_blank": "Märkige aadress",
         "address_address2_blank": "Palun sisestage korteri number, korteriühistu number jne.",
         "address_city_blank": "Märkige linn",
-        "address_country_blank": "Vali riik\/regioon",
+        "address_country_blank": "Vali riik/regioon",
         "address_country_not_supported": "Me ei toimetata kaupu sellesse riiki ega piirkonda. Palun sisesta teine tarneaadress ja proovi uuesti.",
-        "address_province_blank": "Vali osariik\/provints",
+        "address_province_blank": "Vali osariik/provints",
         "address_company_blank": "Märkige ettevõtte nimi",
         "address_phone_blank": "Sisestage kehtiv telefoninumber",
         "address_zip_blank": "Sisestage sihtnumber",
@@ -335,11 +335,11 @@
         "payment_gateway_unsupported_for_deferred_purchase_options": "See makseviis ei ole järelmaksu ostude puhul saadaval.",
         "reduction_code_gift_cards_not_supported_with_deferred_purchase_options": "Kinkekaardid ei kehti järelmaksuga ostude puhul.",
         "delivery_zone_not_found": "Määratud riigist ei leitud määratud tsooni.",
-        "payment_gateway_unsupported_for_development_store_html": "Testimiseks tehke proovitellimus. Vaadake lisateavet <a href=\"%{docs_link}\">arendusjärgus e-poe proovitellimuste<\/a> kohta.",
-        "payment_gateway_unsupported_for_order_above_maximum_orders_html": "<p>Olete saavutanud poes tehingulimiidi, mis on arendusjärgus ja kasutab seda maksesüsteemi. Järgmise tellimuse esitamiseks kasutage testimise makseteenust. Lisateavet <a href=\"%{docs_link}\">arenduses olevas poes testtellimuste<\/a> kohta leiate juhendist.<\/p>",
+        "payment_gateway_unsupported_for_development_store_html": "Testimiseks tehke proovitellimus. Vaadake lisateavet <a href=\"%{docs_link}\">arendusjärgus e-poe proovitellimuste</a> kohta.",
+        "payment_gateway_unsupported_for_order_above_maximum_orders_html": "<p>Olete saavutanud poes tehingulimiidi, mis on arendusjärgus ja kasutab seda maksesüsteemi. Järgmise tellimuse esitamiseks kasutage testimise makseteenust. Lisateavet <a href=\"%{docs_link}\">arenduses olevas poes testtellimuste</a> kohta leiate juhendist.</p>",
         "email_blank": "Sisesta e-posti aadress",
         "phone_blank": "Sisestage telefoninumber",
-        "address_country_invalid": "Vali riik\/piirkond loendist",
+        "address_country_invalid": "Vali riik/piirkond loendist",
         "address_zip_invalid": "Sisestage kehtiv sihtnumber",
         "gift_card_invalid": "Kinkekaart „••••%{last_four_characters}” on kehtetu",
         "vaulting_agreement_blank": "See makseviis on vaja salvestada, kuna selle tellimuse maksumus arveldatakse hiljem.",
@@ -356,7 +356,7 @@
         "address_city_contains_mathematical_symbols": "Linna nimi ei tohi sisaldada matemaatilisi sümboleid",
         "address_company_contains_mathematical_symbols": "Ettevõtte nimi ei tohi sisaldada matemaatilisi sümboleid",
         "address_zip_contains_mathematical_symbols": "Postiindeks ei tohi sisaldada matemaatilisi sümboleid",
-        "address_province_invalid": "Valige kehtiv osariik\/provints",
+        "address_province_invalid": "Valige kehtiv osariik/provints",
         "address_generic_blank": "Kohustuslik väli",
         "address_generic_invalid": "Vigane kanne",
         "address_generic_error": "Välja viga",
@@ -875,10 +875,10 @@
             "many": "%{pickup_point_index} of %{count} asukohad"
           },
           "selected_page": {
-            "one": "%{first}–%{last} \/ %{count} tk.",
-            "other": "%{first}–%{last} \/ %{count} tk.",
-            "few": "%{first}–%{last} \/ %{count} tk.",
-            "many": "%{first}–%{last} \/ %{count} tk."
+            "one": "%{first}–%{last} / %{count} tk.",
+            "other": "%{first}–%{last} / %{count} tk.",
+            "few": "%{first}–%{last} / %{count} tk.",
+            "many": "%{first}–%{last} / %{count} tk."
           }
         },
         "number_of_pickup_points_near_location": {
@@ -898,7 +898,7 @@
           }
         },
         "no_business_hours": "Tööaegu pole märgitud",
-        "open_twenty_four_hours": "Töötab 24\/7",
+        "open_twenty_four_hours": "Töötab 24/7",
         "address_label": "Aadress",
         "pickup_unavailable_banner_title": {
           "one": "Teie kauba jaoks ei ole saadaval ühtegi järeletulemispunkti",
@@ -957,7 +957,7 @@
           "header": "Teabe värskendamiseks {{emailLink}}.",
           "email_link": "võtke meiega ühendust"
         },
-        "payment_method_not_available_with_payment_terms": "<p>Teie valitud makseviis pole enam saadaval, kuna selle tellimuse tasumine toimub nüüd vastavalt {{paymentTerms}}<\/p>",
+        "payment_method_not_available_with_payment_terms": "<p>Teie valitud makseviis pole enam saadaval, kuna selle tellimuse tasumine toimub nüüd vastavalt {{paymentTerms}}</p>",
         "payment_method_not_available_with_fulfillment_terms": "Teie valitud makseviis ei ole enam saadaval, kuna selle tellimuse tasumine toimub nüüd täitmise ajal.",
         "payment_method_not_available_with_fixed_terms": "Teie valitud makseviis ei ole enam saadaval, kuna selle tellimuse tasumine toimub nüüd hiljem",
         "payment_method_not_available_with_review_requirement": "Teie valitud makseviis ei ole enam saadaval, kuna tasu võetakse pärast teie tellimuse kinnitamist.",
@@ -1134,7 +1134,7 @@
         "removed_with_quantity": "Kustutatud: {{quantity}}",
         "updated_at": "Teie tellimus on värskendatud {{date}}",
         "returned": "Tagastatud",
-        "returned_with_quantities": "Tagastatud {{delta}} \/ {{total}}",
+        "returned_with_quantities": "Tagastatud {{delta}} / {{total}}",
         "removed_with_quantities": "Kustutati {{delta}} {{total}}-st",
         "return_line_item_removed": "Tagastusest eemaldatud",
         "return_line_item_removed_with_quantities": "Tagastusest eemaldatud: {{delta}}"
@@ -1403,176 +1403,194 @@
     }
   },
   "astranova": {
-    "announcement": "Tarne Euroopa Liidus | 1-aastane garantii | Turvaline makse | Tugi Tallinnast",
+    "announcement": "Curated drops | EU shipping | Gift-ready picks | Secure checkout",
     "hero": {
-      "eyebrow": "Minimalistlik luksustehnoloogia",
-      "title": "Astranova loob igapäevaelektroonikat puhtama ja rahulikuma kogemusega.",
-      "body": "Hoolikalt valitud audio-, laadimis- ja lauatarvikud, mõeldud Eestile, saadetud üle Euroopa Liidu ja esitletud premium-tasemel usaldusväärsusega.",
-      "primary_cta": "Ava valik",
-      "secondary_cta": "Võta toega ühendust",
+      "eyebrow": "Curated modern living",
+      "title": "Astranova gathers the pieces that make everyday life look better.",
+      "body": "A premium storefront for home accents, beauty rituals, accessories and smart finds, styled with a calm editorial touch instead of marketplace noise.",
+      "primary_cta": "Explore the collection",
+      "secondary_cta": "See new arrivals",
       "chips": {
-        "shipping": "EL tarne",
-        "warranty": "1-aastane garantii",
-        "checkout": "Turvaline makse"
+        "curated": "Curated drops",
+        "shipping": "EU shipping",
+        "gifting": "Gift-ready picks"
       },
-      "panel_eyebrow": "Miks Astranova",
-      "panel_title": "Fookustatud kataloog, mis jätab premium-mulje esimesest klõpsust.",
-      "panel_body": "Eelistame usaldusväärset tehnikat, selgeid spetsifikatsioone ja tugevaid usaldussignaale turuplatsi müra asemel.",
+      "panel_eyebrow": "Why it works",
+      "panel_title": "More like a well-edited boutique. Less like a crowded catalog.",
+      "panel_body": "Every category is framed with the same quiet luxury language, so the store can grow wider without feeling messier.",
       "stats": {
         "catalog": {
-          "value": "4 suunda",
-          "label": "Audio, tarvikud, töölaua lahendused ja nutikad vidinad."
+          "value": "4 worlds",
+          "label": "Home, beauty, accessories and smart finds."
         },
-        "delivery": {
-          "value": "48h+",
-          "label": "Kiire väljasaatmine Eestist koos EL-valmis täitmisega."
+        "discovery": {
+          "value": "Gift-ready",
+          "label": "Selected for self-treats, upgrades and easy gifting."
         },
         "support": {
           "value": "EN / ET / RU",
-          "label": "Lokaliseeritud storefront ja tuge toetav kogemus."
+          "label": "Localized browsing for a calmer buying experience."
+        }
+      },
+      "orbit": {
+        "home": {
+          "title": "Home & living",
+          "body": "Useful pieces that soften the room and sharpen the setup."
+        },
+        "beauty": {
+          "title": "Beauty & wellness",
+          "body": "Daily rituals, self-care moments and easy gift ideas."
+        },
+        "style": {
+          "title": "Style & accessories",
+          "body": "Details that travel well and finish the look cleanly."
+        },
+        "smart": {
+          "title": "Smart finds",
+          "body": "Problem-solvers that still deserve premium presentation."
         }
       }
     },
     "trust": {
       "shipping": {
-        "title": "EL-valmis tarne",
-        "body": "Selge tarnesõnum Eestile, koos laiema Euroopa usaldusega."
+        "title": "Clear delivery",
+        "body": "Set expectations cleanly for Estonia and the wider EU, without hidden friction."
       },
       "warranty": {
-        "title": "Garantii esiplaanil",
-        "body": "Too garantii, tagastused ja tootetugi nähtavale enne, kui klient peab küsima."
+        "title": "Easy returns",
+        "body": "Make shipping, returns and care information visible before the customer has to ask."
       },
       "checkout": {
-        "title": "Turvaline makse",
-        "body": "Hoia maksevoog, hinnainfo ja usaldusmärgid puhtad esimesest klõpsust ostukorvini."
+        "title": "Secure checkout",
+        "body": "Keep payment, pricing and trust cues elegant from the first glance to cart."
       },
       "support": {
-        "title": "Inimlik tugi",
-        "body": "Kasuta rahulikku ja selget teksti inglise, eesti ja vene keeles seal, kus kindlus on oluline."
+        "title": "Responsive support",
+        "body": "Fast, human help for product questions, gifting decisions and order follow-up."
       }
     },
     "collections": {
-      "eyebrow": "Põhikogud",
-      "title": "Neli tootesuunda. Üks selge premium-suund.",
-      "body": "Alusta kureeritud kataloogiga, mida on lihtne usaldada, lihtne sirvida ja valmis kasvatama.",
-      "cta": "Ava kogum",
-      "audio": {
-        "tag": "Audio",
-        "title": "Heli, mis tundub puhas, mitte vali.",
-        "body": "Kõrvaklapid, kõlarid ja kuulamisvahendid rahuliku premium-esitlusega."
+      "eyebrow": "Featured worlds",
+      "title": "Four shoppable moods with one consistent point of view.",
+      "body": "This is how Astranova stays broad without feeling random.",
+      "cta": "Shop this world",
+      "home": {
+        "tag": "Home & living",
+        "title": "Soften the room with useful, beautiful details.",
+        "body": "Decor accents, organizers and small upgrades that make a space feel more composed."
       },
-      "accessories": {
-        "tag": "Mobiilitarvikud",
-        "title": "Laadimine ja kandmine igapäevase rütmi jaoks.",
-        "body": "Kaablid, voolulahendused ja reisitarvikud teravama esitluse ja selgema väärtusega."
+      "beauty": {
+        "tag": "Beauty & wellness",
+        "title": "Daily rituals that feel elevated and easy to gift.",
+        "body": "Self-care, wellness and beauty finds chosen for desirability, not clutter."
       },
-      "desk": {
-        "tag": "Töölaua setup",
-        "title": "Tööpinnad vähem segadust, rohkem sihti.",
-        "body": "Korraldajad, valgustid ja setup-vahendid keskendunud ja disainiteadlike rutiinide jaoks."
+      "style": {
+        "tag": "Style & accessories",
+        "title": "The finishing pieces that complete the look.",
+        "body": "Everyday carry items, fashion extras and details that add polish without noise."
       },
-      "gadgets": {
-        "tag": "Nutikad vidinad",
-        "title": "Kasulik tehnika viimistletud esmamuljega.",
-        "body": "Kompaktsed uuendused, mis mõjuvad kvaliteetselt, kingituseks sobivalt ja lihtsalt mõistetavalt."
+      "smart": {
+        "tag": "Smart finds",
+        "title": "Problem-solving pieces with a premium first impression.",
+        "body": "Useful upgrades and clever extras that still belong in an elegant storefront."
       }
     },
     "use_cases": {
-      "eyebrow": "Igapäevaseks kasutuseks",
-      "title": "Loodud koju, tööle, reisile ja kingituseks.",
-      "body": "Näita kliendile, kuhu iga toode sobib, et kataloog mõjuks kureeritult, mitte ülekoormatult.",
+      "eyebrow": "Shop by feeling",
+      "title": "Built for atmosphere, rituals, daily carry and gifting.",
+      "body": "Show shoppers how the assortment fits into their life, not just which category it belongs to.",
       "home": {
-        "kicker": "Kodus",
-        "title": "Puhas heli ja rahulik laadimine",
-        "body": "Loo vaiksem elukeskkond audio- ja toitelahendustega, mis tunduvad läbimõeldud."
+        "kicker": "Set the mood",
+        "title": "Home details that change the room quickly",
+        "body": "Lead with warmth, texture, light and organization so the store feels styled, not generic."
       },
-      "work": {
-        "kicker": "Tööl",
-        "title": "Keskendunud lauad parema vooga",
-        "body": "Tõsta esile tooteid, mis parandavad töökoha kvaliteeti, kaasaskantavust ja töökindlust."
+      "ritual": {
+        "kicker": "Reset",
+        "title": "Beauty and wellness picks for small daily rituals",
+        "body": "Self-care products work best when they feel easy to trust and pleasing to keep close."
       },
-      "travel": {
-        "kicker": "Liikvel",
-        "title": "Kompaktne tehnika, mida on lihtne usaldada",
-        "body": "Rõhuta kaasaskantavust, aku-kindlust ja kiire maksevoo usaldust mobiilsetele ostjatele."
+      "carry": {
+        "kicker": "Carry well",
+        "title": "Accessories that travel, layer and gift easily",
+        "body": "Keep the selection concise so shoppers can make a fast yes-or-no decision."
       },
       "gifting": {
-        "kicker": "Kingituseks",
-        "title": "Premium-esitlus esimesest pilgust",
-        "body": "Kasuta enesekindlat teksti ja tugevat kategooriaraami, et tooted tunduksid kohe kingituseks sobivad."
+        "kicker": "Gift beautifully",
+        "title": "Products that already look considered before they are wrapped",
+        "body": "Strong presentation and clear use-case framing make a multi-category store easier to buy from."
       }
     },
     "testimonials": {
-      "eyebrow": "Sotsiaalne tõestus",
-      "title": "Usaldus kasvab siis, kui kogu kogemus on ühtlane.",
-      "body": "Seo premium-visuaalid tõenditega, et tarne, tugi ja tootekvaliteet vastavad lubadusele.",
+      "eyebrow": "Why shoppers stay",
+      "title": "The brand feels stronger when the whole experience feels composed.",
+      "body": "Premium design matters most when it is backed by clarity, taste and easy support.",
       "one": {
-        "quote": "Pood tundub premium ja makseprotsess on üllatavalt selge. See muutis toote kohe usaldusväärsemaks.",
+        "quote": "I came for one gift and ended up bookmarking the whole store. It feels curated in a way most general stores never do.",
         "name": "Elina K.",
-        "meta": "Esimene ostja Tallinnast"
+        "meta": "Gift shopper in Tallinn"
       },
       "two": {
-        "quote": "Mõistsin ühilduvust, garantiid ja tarnet sekunditega. See võttis ära kõhkluse, mis mul elektroonikapoodidega tavaliselt on.",
+        "quote": "The mix of home, beauty and accessories still feels consistent. Nothing looks random or rushed.",
         "name": "Markus T.",
-        "meta": "Töölaua setupi ostja"
+        "meta": "Returning customer"
       },
       "three": {
-        "quote": "Astranova tundub kureeritud, mitte ülerahvastatud. Kogu pood on rahulikum ja see muudab tooted kallimaks.",
+        "quote": "The site feels calm, elegant and easy to trust. I can browse quickly without feeling overwhelmed.",
         "name": "Anna P.",
-        "meta": "Kingituse ostja"
+        "meta": "First order from Estonia"
       }
     },
     "faq": {
-      "eyebrow": "KKK",
-      "title": "Vasta ostuotsust mõjutavatele küsimustele enne kassasse jõudmist.",
-      "body": "Hoia vastused lühikesed, selged ja nähtavad nii mobiilis kui lauaarvutis.",
+      "eyebrow": "FAQ",
+      "title": "Answer the practical questions before they interrupt the mood.",
+      "body": "Keep the answers short, visible and easy to understand across desktop and mobile.",
       "one": {
-        "question": "Kuhu Astranova tarnib?",
-        "answer_html": "<p>Astranova on üles ehitatud eeskätt Eesti jaoks, kuid tarnesõnumid on valmis kasvama üle kogu Euroopa Liidu.</p>"
+        "question": "What kinds of products does Astranova carry?",
+        "answer_html": "<p>Astranova is built as a curated premium store for home living, beauty and wellness, accessories, gifting and smart everyday finds. The mix can grow, but the presentation should always stay selective.</p>"
       },
       "two": {
-        "question": "Mis teeb kataloogi kureerituks?",
-        "answer_html": "<p>Pood algab fokusseeritud elektroonikakategooriatega, et pakkumine oleks kiiresti mõistetav ja kergemini usaldatav.</p>"
+        "question": "Where does Astranova ship?",
+        "answer_html": "<p>The store is positioned for Estonia first, with clear delivery communication for customers across the wider EU.</p>"
       },
       "three": {
-        "question": "Kuidas peaksid garantii ja tagastused välja nägema?",
-        "answer_html": "<p>Hoia garantii, tagastused ja tarneinfo nähtaval lisamisnupu lähedal ning uuesti toote detailide akordionis.</p>"
+        "question": "Are the products gift-friendly?",
+        "answer_html": "<p>Yes. Many products are chosen because they feel easy to gift, easy to understand and easy to buy with confidence.</p>"
       },
       "four": {
-        "question": "Kuidas tooteid esitleda?",
-        "answer_html": "<p>Alusta lühikese lubadusega, too välja kolm selget eelist, spetsifikatsioonide ala ja seotud toodete plokk.</p>"
+        "question": "How should product pages be structured?",
+        "answer_html": "<p>Lead with a short promise, three benefit bullets, clear product details, size and materials, care guidance and visible shipping or returns information.</p>"
       }
     },
     "footer": {
-      "eyebrow": "Püsi orbiidil",
-      "title": "Hoia Astranova lähedal iga uue lansseerimise, täienduse ja väljalaske ajal.",
-      "body": "Kasuta footerit e-postide kogumiseks, toe usaldusväärsuse rõhutamiseks ja keele või valuuta lihtsaks muutmiseks.",
-      "submit": "Liitu",
-      "shop_heading": "Pood",
-      "support_heading": "Tugi"
+      "eyebrow": "Stay in orbit",
+      "title": "Keep close to new drops, small restocks and the next beautiful find.",
+      "body": "Use the footer to collect email, reinforce trust and make language or currency changes feel effortless.",
+      "submit": "Join list",
+      "shop_heading": "Shop",
+      "support_heading": "Support"
     },
     "product": {
-      "promise_label": "Miks see toimib",
-      "promise_default": "Täpselt läbimõeldud tehnika igapäevasteks rutiinideks, selgete spetsifikatsioonide ja kindla tarnega.",
-      "benefit_1": "Stuudiopuhta esitluse, premium-materjalide ja modernse viimistlusega.",
-      "benefit_2": "Selge ühilduvus, turvaline makse ja EL-valmis tarne.",
-      "benefit_3": "Toe ja garantii tekstid, mis eemaldavad vastuväited enne ostu.",
+      "promise_label": "Why you'll love it",
+      "promise_default": "A well-chosen piece for everyday living, presented with the clarity and confidence it deserves.",
+      "benefit_1": "Elevated look and feel that makes the product easy to want and easy to gift.",
+      "benefit_2": "Straightforward details on size, materials, care and delivery before checkout.",
+      "benefit_3": "A calmer buying experience with polished support, returns and shipping guidance.",
       "accordion": {
-        "specifications": {
-          "title": "Spetsifikatsioonid",
-          "default_html": "<p>Lisa <strong>custom.specifications</strong> metafield, et kuvada mõõdud, toide, ühenduvus ja materjalid.</p>"
+        "details": {
+          "title": "Product details",
+          "default_html": "<p>Add a <strong>custom.product_details</strong> metafield to explain what this item is, how it fits into daily use and why it stands out.</p>"
         },
-        "compatibility": {
-          "title": "Ühilduvus",
-          "default_html": "<p>Lisa <strong>custom.compatibility</strong> metafield, et selgitada toetatud seadmeid, porte või ökosüsteeme.</p>"
+        "size_materials": {
+          "title": "Size & materials",
+          "default_html": "<p>Add a <strong>custom.size_and_materials</strong> metafield to show dimensions, fabric, finish, ingredients or material notes here.</p>"
         },
-        "in_the_box": {
-          "title": "Mis on karbis",
-          "default_html": "<p>Lisa <strong>custom.whats_in_the_box</strong> metafield, et loetleda tarvikud, adapterid ja kaasasolevad osad.</p>"
+        "care": {
+          "title": "Care & use",
+          "default_html": "<p>Add a <strong>custom.care_and_use</strong> metafield for maintenance steps, usage tips, storage guidance or safety notes.</p>"
         },
         "shipping": {
-          "title": "Tarne ja garantii",
-          "default_html": "<p>Lisa <strong>custom.shipping_and_warranty</strong> metafield, et kokku võtta saatmiskiirus, garantii ja tagastused.</p>"
+          "title": "Shipping & returns",
+          "default_html": "<p>Add a <strong>custom.shipping_and_returns</strong> metafield to summarize dispatch timing, delivery expectations and return guidance.</p>"
         }
       }
     }

@@ -57,7 +57,7 @@
       "many": "Применены {{ count }} фильтра(-ов)"
     },
     "menu": "Меню",
-    "country_region": "Страна\/регион",
+    "country_region": "Страна/регион",
     "slide_status": "Слайд {{ index }} из {{ length }}",
     "scroll_to": "Прокрутить до {{ title }}",
     "loading_product_recommendations": "Загрузка рекомендаций товаров",
@@ -94,7 +94,7 @@
     "show_filters": "Фильтровать",
     "clear": "Очистить",
     "continue_shopping": "Продолжить покупки",
-    "log_in_html": "Уже есть учетная запись? <a href=\"{{ link }}\">Войдите<\/a>, чтобы быстро оформить заказ.",
+    "log_in_html": "Уже есть учетная запись? <a href=\"{{ link }}\">Войдите</a>, чтобы быстро оформить заказ.",
     "see_items": {
       "one": "Смотреть {{ count }} товар",
       "other": "Смотреть {{ count }} товара(-ов)",
@@ -146,13 +146,13 @@
     "cart_subtotal": "Промежуточный итог",
     "discounts": "Скидки",
     "discount": "Скидка",
-    "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Пошлины и налоги включены. Скидки и <a href=\"{{ link }}\">стоимость доставки<\/a> рассчитываются при оформлении заказа.",
+    "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Пошлины и налоги включены. Скидки и <a href=\"{{ link }}\">стоимость доставки</a> рассчитываются при оформлении заказа.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Пошлины и налоги включены. Скидки и стоимость доставки рассчитываются при оформлении заказа.",
-    "taxes_included_shipping_at_checkout_with_policy_html": "Налоги включены. Скидки и <a href=\"{{ link }}\">стоимость доставки<\/a> рассчитываются при оформлении заказа.",
+    "taxes_included_shipping_at_checkout_with_policy_html": "Налоги включены. Скидки и <a href=\"{{ link }}\">стоимость доставки</a> рассчитываются при оформлении заказа.",
     "taxes_included_shipping_at_checkout_without_policy": "Налоги включены. Скидки и стоимость доставки рассчитываются при оформлении заказа.",
-    "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Пошлины включены. Налоги, скидки и <a href=\"{{ link }}\">стоимость доставки<\/a> рассчитываются при оформлении заказа.",
+    "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Пошлины включены. Налоги, скидки и <a href=\"{{ link }}\">стоимость доставки</a> рассчитываются при оформлении заказа.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Пошлины включены. Налоги, скидки и стоимость доставки рассчитываются при оформлении заказа.",
-    "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Налоги, скидки и <a href=\"{{ link }}\">стоимость доставки<\/a> рассчитываются при оформлении заказа.",
+    "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Налоги, скидки и <a href=\"{{ link }}\">стоимость доставки</a> рассчитываются при оформлении заказа.",
     "taxes_at_checkout_shipping_at_checkout_without_policy": "Налоги, скидки и стоимость доставки рассчитываются при оформлении заказа.",
     "checkout": "Оформить заказ",
     "cart_title": "Корзина",
@@ -162,7 +162,7 @@
     "price_sale": "Цена со скидкой",
     "duties_and_taxes_included": "Пошлины и налоги включены.",
     "duties_included": "Пошлины включены.",
-    "shipping_policy_html": "<a href=\"{{ link }}\">Стоимость доставки<\/a> рассчитывается при оформлении заказа.",
+    "shipping_policy_html": "<a href=\"{{ link }}\">Стоимость доставки</a> рассчитывается при оформлении заказа.",
     "taxes_included": "Налоги включены.",
     "product_badge_sold_out": "Распродано",
     "product_badge_sale": "Распродажа",
@@ -207,7 +207,7 @@
     "filters": "Фильтры",
     "no_products_found": "Продукты не найдены.",
     "price_filter_html": "Максимальная цена: {{ price }}",
-    "use_fewer_filters_html": "Попробуйте использовать меньше фильтров или <a class=\"{{ class }}\" href=\"{{ link }}\">сбросьте все фильтры<\/a>.",
+    "use_fewer_filters_html": "Попробуйте использовать меньше фильтров или <a class=\"{{ class }}\" href=\"{{ link }}\">сбросьте все фильтры</a>.",
     "search": "Поиск",
     "search_results_no_results_check_spelling": "По запросу «{{ terms }}» ничего не найдено. Проверьте правописание или выберите другие слова либо фразу.",
     "blog_details_separator": "|",
@@ -222,11 +222,11 @@
     "duties_and_taxes_included_shipping_at_checkout_without_policy_without_discounts": "Пошлины и налоги включены. Стоимость доставки рассчитывается при оформлении заказа.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Пошлины включены. Стоимость доставки рассчитывается при оформлении заказа.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Пошлины включены. Стоимость доставки рассчитывается при оформлении заказа.",
-    "pickup_available_at_html": "Самовывоз доступен: <b>{{ location }}<\/b>",
+    "pickup_available_at_html": "Самовывоз доступен: <b>{{ location }}</b>",
     "pickup_available_in": "Доступен самовывоз, {{ pickup_time }}",
     "pickup_not_available": "В настоящее время самовывоз недоступен",
     "pickup_ready_in": "{{ pickup_time }}",
-    "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Налоги и <a href=\"{{ link }}\">стоимость доставки<\/a>, рассчитанные при оформлении заказа.",
+    "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Налоги и <a href=\"{{ link }}\">стоимость доставки</a>, рассчитанные при оформлении заказа.",
     "taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Налоги и стоимость доставки, рассчитанные при оформлении заказа.",
     "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Налоги включены. Стоимость доставки рассчитывается при оформлении заказа.",
     "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Налоги включены. Стоимость доставки рассчитывается при оформлении заказа.",
@@ -244,7 +244,7 @@
       "many": "Осталось: {{ count }}"
     },
     "powered_by": "Этот магазин работает на платформе",
-    "store_owner_link_html": "Вы владелец магазина? <a href=\"{{ link }}\">Войдите здесь<\/a>",
+    "store_owner_link_html": "Вы владелец магазина? <a href=\"{{ link }}\">Войдите здесь</a>",
     "shipping_discount_error": "Скидки на доставку отображаются при оформлении и оплате заказа после добавления адреса",
     "discount_code_error": "Код скидки не может быть применен к вашей корзине",
     "shipping_policy": "Стоимость доставки рассчитывается при оформлении заказа.",
@@ -254,13 +254,13 @@
     "recipient_form_email_address": "Адрес электронной почты получателя",
     "recipient_form_name_label": "Имя получателя (необязательно)",
     "recipient_form_message": "Сообщение (необязательно)",
-    "recipient_form_characters_used": "Использовано символов: {{ used_chars }}\/{{ max_chars }}",
+    "recipient_form_characters_used": "Использовано символов: {{ used_chars }}/{{ max_chars }}",
     "recipient_form_send_on": "ГГГГ-ММ-ДД",
     "recipient_form_send_on_label": "Дата отправки (необязательно)",
     "recipient_form_fields_visible": "Поля формы получателя теперь отображаются",
     "recipient_form_fields_hidden": "Поля формы получателя теперь скрыты",
     "recipient_form_error": "При отправке формы возникла ошибка",
-    "product_custom_property_character_count": "Использовано символов: {{ used_chars }}\/{{ max_chars }}",
+    "product_custom_property_character_count": "Использовано символов: {{ used_chars }}/{{ max_chars }}",
     "terms_and_policies": "Условия и политики",
     "pagination": {
       "nav_label": "Постраничная навигация",
@@ -276,7 +276,7 @@
     "price_at": "по цене",
     "cancel": "Отмена",
     "product_subtotal": "Итого за товары",
-    "quantity_per_item": "\/шт.",
+    "quantity_per_item": "/шт.",
     "remove_all": "Удалить все",
     "remove_all_items_confirmation": "Удалить все товары ({{ count }}) из корзины?",
     "remove_one_item_confirmation": "Удалить 1 предмет из корзины?",
@@ -364,176 +364,194 @@
     }
   },
   "astranova": {
-    "announcement": "Доставка по ЕС | Гарантия 1 год | Безопасная оплата | Поддержка из Таллина",
+    "announcement": "Curated drops | EU shipping | Gift-ready picks | Secure checkout",
     "hero": {
-      "eyebrow": "Минималистичная премиум-техника",
-      "title": "Astranova делает повседневную электронику чище, спокойнее и понятнее.",
-      "body": "Тщательно отобранные аудио-устройства, зарядные решения и аксессуары для рабочего стола, созданные для Эстонии, готовые к доставке по ЕС и представленные с уверенностью премиального бренда.",
-      "primary_cta": "Открыть каталог",
-      "secondary_cta": "Связаться с поддержкой",
+      "eyebrow": "Curated modern living",
+      "title": "Astranova gathers the pieces that make everyday life look better.",
+      "body": "A premium storefront for home accents, beauty rituals, accessories and smart finds, styled with a calm editorial touch instead of marketplace noise.",
+      "primary_cta": "Explore the collection",
+      "secondary_cta": "See new arrivals",
       "chips": {
-        "shipping": "Доставка по ЕС",
-        "warranty": "Гарантия 1 год",
-        "checkout": "Безопасная оплата"
+        "curated": "Curated drops",
+        "shipping": "EU shipping",
+        "gifting": "Gift-ready picks"
       },
-      "panel_eyebrow": "Почему Astranova",
-      "panel_title": "Сфокусированный каталог, который ощущается премиально с первого клика.",
-      "panel_body": "Мы делаем ставку на надежную электронику, понятные характеристики и быстрые сигналы доверия вместо шума маркетплейса.",
+      "panel_eyebrow": "Why it works",
+      "panel_title": "More like a well-edited boutique. Less like a crowded catalog.",
+      "panel_body": "Every category is framed with the same quiet luxury language, so the store can grow wider without feeling messier.",
       "stats": {
         "catalog": {
-          "value": "4 линии",
-          "label": "Аудио, аксессуары, решения для рабочего стола и умные гаджеты."
+          "value": "4 worlds",
+          "label": "Home, beauty, accessories and smart finds."
         },
-        "delivery": {
-          "value": "48h+",
-          "label": "Быстрая отправка из Эстонии с готовностью к доставке по ЕС."
+        "discovery": {
+          "value": "Gift-ready",
+          "label": "Selected for self-treats, upgrades and easy gifting."
         },
         "support": {
           "value": "EN / ET / RU",
-          "label": "Локализованный storefront и готовая к поддержке структура."
+          "label": "Localized browsing for a calmer buying experience."
+        }
+      },
+      "orbit": {
+        "home": {
+          "title": "Home & living",
+          "body": "Useful pieces that soften the room and sharpen the setup."
+        },
+        "beauty": {
+          "title": "Beauty & wellness",
+          "body": "Daily rituals, self-care moments and easy gift ideas."
+        },
+        "style": {
+          "title": "Style & accessories",
+          "body": "Details that travel well and finish the look cleanly."
+        },
+        "smart": {
+          "title": "Smart finds",
+          "body": "Problem-solvers that still deserve premium presentation."
         }
       }
     },
     "trust": {
       "shipping": {
-        "title": "Доставка по ЕС",
-        "body": "Понятные условия доставки для Эстонии с готовым расширением доверия на весь ЕС."
+        "title": "Clear delivery",
+        "body": "Set expectations cleanly for Estonia and the wider EU, without hidden friction."
       },
       "warranty": {
-        "title": "Гарантия на виду",
-        "body": "Покажите гарантию, возвраты и поддержку товара еще до того, как клиенту придется спрашивать."
+        "title": "Easy returns",
+        "body": "Make shipping, returns and care information visible before the customer has to ask."
       },
       "checkout": {
-        "title": "Безопасная оплата",
-        "body": "Сделайте путь оплаты, цены и сигналы доверия аккуратными от первого клика до корзины."
+        "title": "Secure checkout",
+        "body": "Keep payment, pricing and trust cues elegant from the first glance to cart."
       },
       "support": {
-        "title": "Живая поддержка",
-        "body": "Используйте спокойный и прямой тон на английском, эстонском и русском там, где уверенность особенно важна."
+        "title": "Responsive support",
+        "body": "Fast, human help for product questions, gifting decisions and order follow-up."
       }
     },
     "collections": {
-      "eyebrow": "Основные коллекции",
-      "title": "Четыре товарные линии. Одно ясное премиальное направление.",
-      "body": "Начните с тщательно отобранного каталога, которому легко доверять, который легко просматривать и который готов масштабироваться.",
-      "cta": "Открыть коллекцию",
-      "audio": {
-        "tag": "Audio",
-        "title": "Звук, который ощущается чистым, а не шумным.",
-        "body": "Наушники, колонки и устройства для прослушивания, представленные со спокойной премиальной уверенностью."
+      "eyebrow": "Featured worlds",
+      "title": "Four shoppable moods with one consistent point of view.",
+      "body": "This is how Astranova stays broad without feeling random.",
+      "cta": "Shop this world",
+      "home": {
+        "tag": "Home & living",
+        "title": "Soften the room with useful, beautiful details.",
+        "body": "Decor accents, organizers and small upgrades that make a space feel more composed."
       },
-      "accessories": {
-        "tag": "Mobile accessories",
-        "title": "Зарядка и переноска для ежедневного ритма.",
-        "body": "Кабели, питание и travel-аксессуары с более сильной подачей и более ясной ценностью."
+      "beauty": {
+        "tag": "Beauty & wellness",
+        "title": "Daily rituals that feel elevated and easy to gift.",
+        "body": "Self-care, wellness and beauty finds chosen for desirability, not clutter."
       },
-      "desk": {
-        "tag": "Desk setup",
-        "title": "Рабочее пространство без лишнего шума.",
-        "body": "Органайзеры, свет и setup-аксессуары для сфокусированных и визуально аккуратных рутин."
+      "style": {
+        "tag": "Style & accessories",
+        "title": "The finishing pieces that complete the look.",
+        "body": "Everyday carry items, fashion extras and details that add polish without noise."
       },
-      "gadgets": {
-        "tag": "Smart gadgets",
-        "title": "Полезная техника с сильным первым впечатлением.",
-        "body": "Компактные инновации, которые выглядят дороже, подходят для подарка и легко считываются."
+      "smart": {
+        "tag": "Smart finds",
+        "title": "Problem-solving pieces with a premium first impression.",
+        "body": "Useful upgrades and clever extras that still belong in an elegant storefront."
       }
     },
     "use_cases": {
-      "eyebrow": "Для повседневной жизни",
-      "title": "Создано для дома, работы, поездок и подарков.",
-      "body": "Покажите, где именно нужен каждый товар, чтобы каталог ощущался отобранным, а не перегруженным.",
+      "eyebrow": "Shop by feeling",
+      "title": "Built for atmosphere, rituals, daily carry and gifting.",
+      "body": "Show shoppers how the assortment fits into their life, not just which category it belongs to.",
       "home": {
-        "kicker": "Дома",
-        "title": "Чистый звук и спокойная зарядка",
-        "body": "Создайте более тихое и аккуратное пространство с аудио- и power-решениями, которые выглядят продуманно."
+        "kicker": "Set the mood",
+        "title": "Home details that change the room quickly",
+        "body": "Lead with warmth, texture, light and organization so the store feels styled, not generic."
       },
-      "work": {
-        "kicker": "На работе",
-        "title": "Сфокусированный desk setup",
-        "body": "Выделяйте товары, которые улучшают качество setup, переносимость и ежедневную надежность."
+      "ritual": {
+        "kicker": "Reset",
+        "title": "Beauty and wellness picks for small daily rituals",
+        "body": "Self-care products work best when they feel easy to trust and pleasing to keep close."
       },
-      "travel": {
-        "kicker": "В дороге",
-        "title": "Компактная техника, которой легко доверять",
-        "body": "Подчеркивайте portability, уверенность в зарядке и быстрое прохождение checkout для мобильных покупателей."
+      "carry": {
+        "kicker": "Carry well",
+        "title": "Accessories that travel, layer and gift easily",
+        "body": "Keep the selection concise so shoppers can make a fast yes-or-no decision."
       },
       "gifting": {
-        "kicker": "Для подарка",
-        "title": "Премиальная подача с первого взгляда",
-        "body": "Используйте уверенный текст и сильное категорийное позиционирование, чтобы товары сразу ощущались как удачный подарок."
+        "kicker": "Gift beautifully",
+        "title": "Products that already look considered before they are wrapped",
+        "body": "Strong presentation and clear use-case framing make a multi-category store easier to buy from."
       }
     },
     "testimonials": {
-      "eyebrow": "Социальное доказательство",
-      "title": "Доверие растет, когда весь опыт ощущается цельным.",
-      "body": "Соединяйте премиальную визуальную подачу с доказательством того, что доставка, поддержка и качество товара соответствуют обещанию.",
+      "eyebrow": "Why shoppers stay",
+      "title": "The brand feels stronger when the whole experience feels composed.",
+      "body": "Premium design matters most when it is backed by clarity, taste and easy support.",
       "one": {
-        "quote": "Сайт ощущается премиально, а checkout удивительно понятный. Это сразу сделало товар более надежным в глазах покупателя.",
+        "quote": "I came for one gift and ended up bookmarking the whole store. It feels curated in a way most general stores never do.",
         "name": "Elina K.",
-        "meta": "Первая покупка из Таллина"
+        "meta": "Gift shopper in Tallinn"
       },
       "two": {
-        "quote": "Я понял совместимость, гарантию и доставку за секунды. Это сняло то сомнение, которое у меня обычно бывает с магазинами электроники.",
+        "quote": "The mix of home, beauty and accessories still feels consistent. Nothing looks random or rushed.",
         "name": "Markus T.",
-        "meta": "Покупатель desk setup"
+        "meta": "Returning customer"
       },
       "three": {
-        "quote": "Astranova выглядит как отобранный магазин, а не как перегруженный каталог. Из-за этого сами товары ощущаются дороже.",
+        "quote": "The site feels calm, elegant and easy to trust. I can browse quickly without feeling overwhelmed.",
         "name": "Anna P.",
-        "meta": "Покупатель подарка"
+        "meta": "First order from Estonia"
       }
     },
     "faq": {
       "eyebrow": "FAQ",
-      "title": "Ответьте на вопросы, которые мешают покупке, еще до checkout.",
-      "body": "Держите ответы короткими, прямыми и заметными как на mobile, так и на desktop.",
+      "title": "Answer the practical questions before they interrupt the mood.",
+      "body": "Keep the answers short, visible and easy to understand across desktop and mobile.",
       "one": {
-        "question": "Куда доставляет Astranova?",
-        "answer_html": "<p>Astranova в первую очередь ориентирована на Эстонию, но логика доставки уже подготовлена для масштабирования по всему ЕС.</p>"
+        "question": "What kinds of products does Astranova carry?",
+        "answer_html": "<p>Astranova is built as a curated premium store for home living, beauty and wellness, accessories, gifting and smart everyday finds. The mix can grow, but the presentation should always stay selective.</p>"
       },
       "two": {
-        "question": "Что делает каталог curated?",
-        "answer_html": "<p>Магазин стартует с узкого набора категорий электроники, чтобы клиент быстро понимал предложение и легче доверял подаче.</p>"
+        "question": "Where does Astranova ship?",
+        "answer_html": "<p>The store is positioned for Estonia first, with clear delivery communication for customers across the wider EU.</p>"
       },
       "three": {
-        "question": "Как показывать гарантию и возвраты?",
-        "answer_html": "<p>Держите гарантию, возвраты и информацию о доставке рядом с add-to-cart и повторяйте их внутри product accordion.</p>"
+        "question": "Are the products gift-friendly?",
+        "answer_html": "<p>Yes. Many products are chosen because they feel easy to gift, easy to understand and easy to buy with confidence.</p>"
       },
       "four": {
-        "question": "Как лучше мерчандайзить товары?",
-        "answer_html": "<p>Начинайте с короткого promise-headline, трех ясных преимуществ, блока со specs и cross-sell из похожих товаров.</p>"
+        "question": "How should product pages be structured?",
+        "answer_html": "<p>Lead with a short promise, three benefit bullets, clear product details, size and materials, care guidance and visible shipping or returns information.</p>"
       }
     },
     "footer": {
-      "eyebrow": "Оставайтесь на орбите",
-      "title": "Держите Astranova рядом с каждым launch, restock и new release.",
-      "body": "Используйте footer для сбора email, усиления доверия к поддержке и удобного переключения языка или валюты.",
-      "submit": "Подписаться",
-      "shop_heading": "Каталог",
-      "support_heading": "Поддержка"
+      "eyebrow": "Stay in orbit",
+      "title": "Keep close to new drops, small restocks and the next beautiful find.",
+      "body": "Use the footer to collect email, reinforce trust and make language or currency changes feel effortless.",
+      "submit": "Join list",
+      "shop_heading": "Shop",
+      "support_heading": "Support"
     },
     "product": {
-      "promise_label": "Почему это работает",
-      "promise_default": "Точно продуманная техника для повседневных ритуалов, с ясными характеристиками и надежной доставкой.",
-      "benefit_1": "Чистая студийная подача, premium-материалы и современная отделка.",
-      "benefit_2": "Понятная совместимость, безопасная оплата и доставка по ЕС.",
-      "benefit_3": "Тексты поддержки и гарантии, которые снимают возражения еще до checkout.",
+      "promise_label": "Why you'll love it",
+      "promise_default": "A well-chosen piece for everyday living, presented with the clarity and confidence it deserves.",
+      "benefit_1": "Elevated look and feel that makes the product easy to want and easy to gift.",
+      "benefit_2": "Straightforward details on size, materials, care and delivery before checkout.",
+      "benefit_3": "A calmer buying experience with polished support, returns and shipping guidance.",
       "accordion": {
-        "specifications": {
-          "title": "Характеристики",
-          "default_html": "<p>Добавьте metafield <strong>custom.specifications</strong>, чтобы показать размеры, питание, совместимость и материалы.</p>"
+        "details": {
+          "title": "Product details",
+          "default_html": "<p>Add a <strong>custom.product_details</strong> metafield to explain what this item is, how it fits into daily use and why it stands out.</p>"
         },
-        "compatibility": {
-          "title": "Совместимость",
-          "default_html": "<p>Добавьте metafield <strong>custom.compatibility</strong>, чтобы указать поддерживаемые устройства, порты или экосистемы.</p>"
+        "size_materials": {
+          "title": "Size & materials",
+          "default_html": "<p>Add a <strong>custom.size_and_materials</strong> metafield to show dimensions, fabric, finish, ingredients or material notes here.</p>"
         },
-        "in_the_box": {
-          "title": "Что в коробке",
-          "default_html": "<p>Добавьте metafield <strong>custom.whats_in_the_box</strong>, чтобы перечислить аксессуары, адаптеры и комплектующие.</p>"
+        "care": {
+          "title": "Care & use",
+          "default_html": "<p>Add a <strong>custom.care_and_use</strong> metafield for maintenance steps, usage tips, storage guidance or safety notes.</p>"
         },
         "shipping": {
-          "title": "Доставка и гарантия",
-          "default_html": "<p>Добавьте metafield <strong>custom.shipping_and_warranty</strong>, чтобы кратко описать скорость отправки, гарантию и возвраты.</p>"
+          "title": "Shipping & returns",
+          "default_html": "<p>Add a <strong>custom.shipping_and_returns</strong> metafield to summarize dispatch timing, delivery expectations and return guidance.</p>"
         }
       }
     }

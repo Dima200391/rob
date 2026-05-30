@@ -1,13 +1,13 @@
 :root {
-  --astranova-background: #f5f8fb;
-  --astranova-surface: rgba(255, 255, 255, 0.82);
-  --astranova-surface-strong: rgba(255, 255, 255, 0.96);
-  --astranova-foreground: #17202d;
-  --astranova-muted: #5f7084;
-  --astranova-accent: #6282a2;
-  --astranova-accent-strong: #2a4a69;
-  --astranova-border: rgba(96, 122, 148, 0.2);
-  --astranova-shadow: 0 24px 70px rgba(15, 23, 42, 0.1);
+  --astranova-background: #f5f0e9;
+  --astranova-surface: rgba(255, 255, 255, 0.78);
+  --astranova-surface-strong: rgba(255, 255, 255, 0.94);
+  --astranova-foreground: #17151c;
+  --astranova-muted: #665f69;
+  --astranova-accent: #c8a37b;
+  --astranova-accent-strong: #38506b;
+  --astranova-border: rgba(56, 80, 107, 0.16);
+  --astranova-shadow: 0 24px 80px rgba(23, 21, 28, 0.08);
   --astranova-radius: 28px;
   --astranova-radius-sm: 18px;
   --astranova-grid-gap: clamp(1rem, 2vw, 1.5rem);
@@ -19,8 +19,9 @@
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(117, 146, 175, 0.18), transparent 30%),
-    linear-gradient(180deg, #fbfdff 0%, var(--astranova-background) 100%);
+    radial-gradient(circle at top left, rgba(56, 80, 107, 0.14), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgba(200, 163, 123, 0.16), transparent 24%),
+    linear-gradient(180deg, #fcfaf7 0%, var(--astranova-background) 100%);
   color: var(--astranova-foreground);
 }
 
@@ -53,6 +54,7 @@ h6,
 
 .header-section {
   backdrop-filter: blur(22px);
+  background: rgba(252, 249, 245, 0.72);
 }
 
 .header .header__row,
@@ -76,11 +78,14 @@ h6,
 }
 
 .button {
-  box-shadow: 0 12px 30px rgba(23, 32, 45, 0.16);
+  background: linear-gradient(135deg, var(--astranova-accent-strong), #58718e);
+  box-shadow: 0 12px 30px rgba(23, 21, 28, 0.16);
+  color: #fff;
 }
 
 .button-secondary {
   backdrop-filter: blur(10px);
+  border: 1px solid rgba(56, 80, 107, 0.18);
 }
 
 .astranova-shell {
@@ -93,8 +98,20 @@ h6,
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(135deg, rgba(98, 130, 162, 0.08), transparent 38%),
-    radial-gradient(circle at 85% 15%, rgba(98, 130, 162, 0.16), transparent 28%);
+    linear-gradient(135deg, rgba(56, 80, 107, 0.06), transparent 38%),
+    radial-gradient(circle at 85% 15%, rgba(200, 163, 123, 0.16), transparent 28%);
+}
+
+.astranova-shell::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle, rgba(56, 80, 107, 0.08) 1px, transparent 1.2px);
+  background-size: 26px 26px;
+  opacity: 0.18;
+  mask-image: linear-gradient(180deg, transparent, black 18%, black 82%, transparent);
 }
 
 .astranova-panel {
@@ -104,10 +121,19 @@ h6,
   background: var(--astranova-surface);
   box-shadow: var(--astranova-shadow);
   backdrop-filter: blur(16px);
+  overflow: hidden;
 }
 
 .astranova-panel--compact {
   border-radius: var(--astranova-radius-sm);
+}
+
+.astranova-panel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.24), transparent 42%);
 }
 
 .astranova-eyebrow {
@@ -170,9 +196,9 @@ h6,
   gap: 0.4rem;
   width: fit-content;
   padding: 0.5rem 0.9rem;
-  border: 1px solid rgba(98, 130, 162, 0.22);
+  border: 1px solid rgba(56, 80, 107, 0.16);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.78);
   color: var(--astranova-accent-strong);
   font-size: 0.78rem;
   font-weight: 700;
@@ -204,6 +230,16 @@ h6,
 
 .astranova-link:hover {
   color: var(--astranova-foreground);
+}
+
+.section {
+  position: relative;
+}
+
+.astranova-panel a,
+.astranova-panel button {
+  position: relative;
+  z-index: 1;
 }
 
 .astranova-detail {

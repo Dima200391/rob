@@ -1,5 +1,5 @@
 {% assign product = closest.product %}
-{% assign accordion_items = 'specifications,compatibility,in_the_box,shipping' | split: ',' %}
+{% assign accordion_items = 'details,size_materials,care,shipping' | split: ',' %}
 
 <div class="astranova-product-accordion-block" {{ block.shopify_attributes }}>
   {% for item in accordion_items %}
@@ -11,14 +11,14 @@
       <div class="astranova-detail__content astranova-richtext">
         {% liquid
           case item
-            when 'specifications'
-              assign metafield = product.metafields.custom.specifications
-            when 'compatibility'
-              assign metafield = product.metafields.custom.compatibility
-            when 'in_the_box'
-              assign metafield = product.metafields.custom.whats_in_the_box
+            when 'details'
+              assign metafield = product.metafields.custom.product_details
+            when 'size_materials'
+              assign metafield = product.metafields.custom.size_and_materials
+            when 'care'
+              assign metafield = product.metafields.custom.care_and_use
             else
-              assign metafield = product.metafields.custom.shipping_and_warranty
+              assign metafield = product.metafields.custom.shipping_and_returns
           endcase
 
           if metafield != blank

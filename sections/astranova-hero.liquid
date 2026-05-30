@@ -1,8 +1,9 @@
 {% liquid
   assign primary_link = section.settings.primary_link | default: '/collections/all'
-  assign secondary_link = section.settings.secondary_link | default: '/pages/contact'
-  assign astranova_hero_chip_items = 'shipping,warranty,checkout' | split: ','
-  assign astranova_hero_stat_items = 'catalog,delivery,support' | split: ','
+  assign secondary_link = section.settings.secondary_link | default: '/collections/new-in'
+  assign astranova_hero_chip_items = 'curated,shipping,gifting' | split: ','
+  assign astranova_hero_stat_items = 'catalog,discovery,support' | split: ','
+  assign astranova_hero_orbit_items = 'home,beauty,style,smart' | split: ','
 %}
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
@@ -46,6 +47,16 @@
         {% endfor %}
       </div>
 
+      <div class="astranova-hero__mini-grid">
+        {% for item in astranova_hero_orbit_items %}
+          <article class="astranova-hero__mini-card">
+            <p class="astranova-hero__mini-index">0{{ forloop.index }}</p>
+            <h3 class="astranova-hero__mini-title">{{ 'astranova.hero.orbit.' | append: item | append: '.title' | t }}</h3>
+            <p class="astranova-hero__mini-copy">{{ 'astranova.hero.orbit.' | append: item | append: '.body' | t }}</p>
+          </article>
+        {% endfor %}
+      </div>
+
       <div class="astranova-hero__signal">
         <div class="astranova-hero__signal-orbit"></div>
         <div class="astranova-hero__signal-core"></div>
@@ -75,18 +86,19 @@
     border: 1px solid var(--astranova-border);
     border-radius: var(--astranova-radius);
     background:
-      linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72)),
-      radial-gradient(circle at top right, rgba(98, 130, 162, 0.18), transparent 30%);
+      linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(255, 251, 247, 0.78)),
+      radial-gradient(circle at top right, rgba(56, 80, 107, 0.16), transparent 34%),
+      radial-gradient(circle at bottom left, rgba(200, 163, 123, 0.14), transparent 30%);
     box-shadow: var(--astranova-shadow);
   }
 
   .astranova-hero__title {
     margin: 0;
     color: var(--astranova-foreground);
-    font-size: clamp(2.8rem, 7vw, 5.8rem);
-    line-height: 0.92;
+    font-size: clamp(3rem, 7vw, 6.2rem);
+    line-height: 0.9;
     letter-spacing: -0.06em;
-    max-width: 11ch;
+    max-width: 8.6ch;
   }
 
   .astranova-hero__actions {
@@ -107,9 +119,12 @@
   .astranova-hero__panel {
     overflow: hidden;
     display: grid;
-    gap: 1.5rem;
+    gap: 1.35rem;
     padding: clamp(1.5rem, 3vw, 2.4rem);
     min-height: 100%;
+    background:
+      linear-gradient(160deg, rgba(255, 255, 255, 0.82), rgba(250, 244, 238, 0.7)),
+      radial-gradient(circle at 85% 0, rgba(56, 80, 107, 0.18), transparent 32%);
   }
 
   .astranova-hero__panel-title {
@@ -124,12 +139,53 @@
     align-items: start;
   }
 
+  .astranova-hero__mini-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.85rem;
+  }
+
+  .astranova-hero__mini-card {
+    display: grid;
+    gap: 0.45rem;
+    padding: 1rem;
+    border: 1px solid rgba(56, 80, 107, 0.14);
+    border-radius: calc(var(--astranova-radius-sm) - 2px);
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(12px);
+  }
+
+  .astranova-hero__mini-index {
+    margin: 0;
+    color: rgba(56, 80, 107, 0.5);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+  }
+
+  .astranova-hero__mini-title {
+    margin: 0;
+    color: var(--astranova-foreground);
+    font-size: 1rem;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+  }
+
+  .astranova-hero__mini-copy {
+    margin: 0;
+    color: var(--astranova-muted);
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
   .astranova-hero__signal {
     position: absolute;
-    right: -2.5rem;
-    bottom: -2.5rem;
-    width: 12rem;
-    height: 12rem;
+    right: -2rem;
+    bottom: -1.5rem;
+    width: 13rem;
+    height: 13rem;
     border-radius: 999px;
     opacity: 0.9;
   }
@@ -142,14 +198,20 @@
   }
 
   .astranova-hero__signal-orbit {
-    border: 1px solid rgba(98, 130, 162, 0.25);
-    transform: scale(0.72);
+    border: 1px solid rgba(56, 80, 107, 0.18);
+    transform: scale(0.7);
   }
 
   .astranova-hero__signal-core {
-    inset: 35%;
-    background: radial-gradient(circle, rgba(98, 130, 162, 0.95), rgba(98, 130, 162, 0.2));
-    box-shadow: 0 0 55px rgba(98, 130, 162, 0.3);
+    inset: 34%;
+    background: radial-gradient(circle, rgba(200, 163, 123, 0.95), rgba(200, 163, 123, 0.2));
+    box-shadow: 0 0 60px rgba(200, 163, 123, 0.22);
+  }
+
+  @media screen and (max-width: 749px) {
+    .astranova-hero__mini-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media screen and (min-width: 990px) {
