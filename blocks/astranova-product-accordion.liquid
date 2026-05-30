@@ -1,7 +1,8 @@
 {% assign product = closest.product %}
+{% assign accordion_items = 'specifications,compatibility,in_the_box,shipping' | split: ',' %}
 
 <div class="astranova-product-accordion-block" {{ block.shopify_attributes }}>
-  {% for item in 'specifications,compatibility,in_the_box,shipping' | split: ',' %}
+  {% for item in accordion_items %}
     <details class="astranova-detail" {% if forloop.first %}open{% endif %}>
       <summary>
         <span>{{ 'astranova.product.accordion.' | append: item | append: '.title' | t }}</span>
@@ -33,12 +34,12 @@
 
 {% schema %}
 {
-  "name": "Astranova Product Accordion",
+  "name": "Astranova Accordion",
   "tag": null,
   "settings": [],
   "presets": [
     {
-      "name": "Astranova Product Accordion",
+      "name": "Astranova Accordion",
       "category": "Product"
     }
   ]

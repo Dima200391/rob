@@ -61,8 +61,8 @@
               "name": "t:names.title",
               "static": true,
               "settings": {
-                "type_preset": "h5",
-                "width": "100%"
+                "width": "100%",
+                "type_preset": "h5"
               },
               "blocks": {}
             },
@@ -90,18 +90,9 @@
               "blocks": {}
             }
           },
-          "block_order": [
-            "featured-product-title",
-            "featured-product-price",
-            "featured-product-gallery",
-            "featured-product-swatches"
-          ]
+          "block_order": []
         }
       },
-      "block_order": [
-        "media",
-        "featured-product"
-      ],
       "settings": {
         "product": "",
         "layout": "media-left",
