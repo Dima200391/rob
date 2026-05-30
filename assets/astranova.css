@@ -18,11 +18,43 @@
 }
 
 body {
+  position: relative;
   background:
     radial-gradient(circle at top left, rgba(56, 80, 107, 0.14), transparent 28%),
     radial-gradient(circle at 85% 10%, rgba(200, 163, 123, 0.16), transparent 24%),
     linear-gradient(180deg, #fcfaf7 0%, var(--astranova-background) 100%);
   color: var(--astranova-foreground);
+}
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  inset: auto;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  top: 8vh;
+  right: 6vw;
+  width: 28rem;
+  height: 28rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(200, 163, 123, 0.16), rgba(200, 163, 123, 0));
+  filter: blur(18px);
+  animation: astranova-drift 20s ease-in-out infinite;
+}
+
+body::after {
+  left: 4vw;
+  bottom: 10vh;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(56, 80, 107, 0.12), rgba(56, 80, 107, 0));
+  filter: blur(20px);
+  animation: astranova-drift 24s ease-in-out infinite reverse;
 }
 
 body,
@@ -55,6 +87,7 @@ h6,
 .header-section {
   backdrop-filter: blur(22px);
   background: rgba(252, 249, 245, 0.72);
+  box-shadow: 0 10px 28px rgba(23, 21, 28, 0.04);
 }
 
 .header .header__row,
@@ -100,6 +133,7 @@ h6,
   background:
     linear-gradient(135deg, rgba(56, 80, 107, 0.06), transparent 38%),
     radial-gradient(circle at 85% 15%, rgba(200, 163, 123, 0.16), transparent 28%);
+  animation: astranova-drift 22s ease-in-out infinite;
 }
 
 .astranova-shell::after {
@@ -112,6 +146,7 @@ h6,
   background-size: 26px 26px;
   opacity: 0.18;
   mask-image: linear-gradient(180deg, transparent, black 18%, black 82%, transparent);
+  animation: astranova-stars 18s linear infinite;
 }
 
 .astranova-panel {
@@ -370,4 +405,68 @@ h6,
 
 .shopify-section-group-footer-group footer {
   margin-top: 3rem;
+}
+
+@keyframes astranova-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(1.2rem, -1rem, 0) scale(1.06);
+  }
+}
+
+@keyframes astranova-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.01);
+  }
+
+  50% {
+    transform: translate3d(0, -0.55rem, 0) scale(1.03);
+  }
+}
+
+@keyframes astranova-pulse {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes astranova-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes astranova-stars {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 26px 52px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
+  .astranova-shell::before,
+  .astranova-shell::after {
+    animation: none;
+  }
 }
