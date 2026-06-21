@@ -1732,6 +1732,29 @@
       },
       {
         "type": "checkbox",
+        "id": "astranova_show_shipping_progress",
+        "label": "Show free shipping progress",
+        "default": true
+      },
+      {
+        "type": "range",
+        "id": "astranova_free_shipping_threshold",
+        "label": "Free shipping threshold",
+        "min": 20,
+        "max": 500,
+        "step": 5,
+        "unit": "€",
+        "default": 75,
+        "visible_if": "{{ settings.astranova_show_shipping_progress == true }}"
+      },
+      {
+        "type": "checkbox",
+        "id": "astranova_show_cart_trust",
+        "label": "Show cart trust notes",
+        "default": true
+      },
+      {
+        "type": "checkbox",
         "id": "show_cart_note",
         "label": "t:settings.seller_note",
         "default": false

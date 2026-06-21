@@ -1,0 +1,131 @@
+{% liquid
+  assign max_items = section.settings.max_products
+  assign featured_collection = section.settings.collection
+%}
+
+<section
+  class="astranova-featured section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+  style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
+  {{ section.shopify_attributes }}
+>
+  <div class="astranova-section-head">
+    <div>
+      <p class="astranova-eyebrow">{{ 'astranova.featured.eyebrow' | t }}</p>
+      <h2 class="astranova-section-heading">{{ 'astranova.featured.title' | t }}</h2>
+    </div>
+    {% if featured_collection != blank %}
+      <a class="astranova-link" href="{{ featured_collection.url }}">{{ 'astranova.featured.view_all' | t }} →</a>
+    {% endif %}
+  </div>
+
+  {% capture list_items %}
+    {% if featured_collection != blank and shop.products_count != 0 %}
+      {% for product in featured_collection.products limit: max_items %}
+        <div class="resource-list__item">
+          {% # theme-check-disable UniqueStaticBlockId %}
+            {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: product %}
+          {% # theme-check-enable UniqueStaticBlockId %}
+        </div>
+        {% unless forloop.last %}<!--@list/split-->{% endunless %}
+      {% endfor %}
+    {% else %}
+      {% for i in (1..max_items) %}
+        <div class="resource-list__item">
+          {% # theme-check-disable UniqueStaticBlockId %}
+            {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: null %}
+          {% # theme-check-enable UniqueStaticBlockId %}
+        </div>
+        {% unless forloop.last %}<!--@list/split-->{% endunless %}
+      {% endfor %}
+    {% endif %}
+  {% endcapture %}
+
+  {% assign list_items_array = list_items | strip | split: '<!--@list/split-->' %}
+  {% render 'resource-list',
+    list_items: list_items,
+    list_items_array: list_items_array,
+    settings: section.settings,
+    slide_count: max_items,
+    content_type: 'products',
+    test_id: 'astranova-featured-products'
+  %}
+</section>
+
+{% schema %}
+{
+  "name": "Astranova Featured",
+  "blocks": [{ "type": "@theme" }, { "type": "@app" }],
+  "settings": [
+    { "type": "collection", "id": "collection", "label": "Collection" },
+    { "type": "range", "id": "max_products", "label": "Product count", "min": 2, "max": 12, "step": 1, "default": 5 },
+    {
+      "type": "select",
+      "id": "layout_type",
+      "label": "Layout",
+      "options": [
+        { "value": "grid", "label": "Grid" },
+        { "value": "carousel", "label": "Carousel" }
+      ],
+      "default": "carousel"
+    },
+    { "type": "checkbox", "id": "carousel_on_mobile", "label": "Carousel on mobile", "default": true },
+    { "type": "range", "id": "columns", "label": "Columns", "min": 2, "max": 6, "step": 1, "default": 5 },
+    {
+      "type": "select",
+      "id": "mobile_columns",
+      "label": "Mobile columns",
+      "options": [
+        { "value": "1", "label": "One" },
+        { "value": "2", "label": "Two" }
+      ],
+      "default": "2"
+    },
+    {
+      "type": "select",
+      "id": "mobile_card_size",
+      "label": "Mobile card size",
+      "options": [
+        { "value": "60cqw", "label": "Large" },
+        { "value": "44cqw", "label": "Compact" }
+      ],
+      "default": "60cqw"
+    },
+    { "type": "range", "id": "columns_gap", "label": "Column gap", "min": 0, "max": 40, "step": 1, "unit": "px", "default": 16 },
+    { "type": "range", "id": "rows_gap", "label": "Row gap", "min": 0, "max": 40, "step": 1, "unit": "px", "default": 24 },
+    {
+      "type": "select",
+      "id": "icons_style",
+      "label": "Navigation icon",
+      "options": [
+        { "value": "arrow", "label": "Arrow" },
+        { "value": "chevron", "label": "Chevron" }
+      ],
+      "default": "arrow"
+    },
+    {
+      "type": "select",
+      "id": "icons_shape",
+      "label": "Navigation shape",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "circle", "label": "Circle" }
+      ],
+      "default": "circle"
+    },
+    {
+      "type": "select",
+      "id": "section_width",
+      "label": "Width",
+      "options": [
+        { "value": "page-width", "label": "Page" },
+        { "value": "full-width", "label": "Full" }
+      ],
+      "default": "page-width"
+    },
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "range", "id": "padding_block_start", "label": "Top padding", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 28 },
+    { "type": "range", "id": "padding_block_end", "label": "Bottom padding", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 44 }
+  ],
+  "presets": [{ "name": "Astranova Featured Products" }]
+}
+{% endschema %}

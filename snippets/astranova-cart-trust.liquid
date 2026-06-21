@@ -1,0 +1,21 @@
+{% doc %}
+Renders concise trust notes beside the cart checkout action.
+{% enddoc %}
+
+{% if settings.astranova_show_cart_trust %}
+  <div class="astranova-cart-trust">
+    <span>✓ {{ 'astranova.cart.secure' | t }}</span>
+    <span>✓ {{ 'astranova.cart.returns' | t }}</span>
+    <span>✓ {{ 'astranova.cart.support' | t }}</span>
+  </div>
+{% endif %}
+
+{% stylesheet %}
+  .astranova-cart-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 0.85rem;
+    color: var(--astranova-muted);
+    font-size: 0.72rem;
+  }
+{% endstylesheet %}

@@ -364,13 +364,27 @@
     }
   },
   "astranova": {
-    "announcement": "Curated drops | EU shipping | Gift-ready picks | Secure checkout",
+    "announcement": "Бесплатная доставка по ЕС от €75 | Возврат 30 дней | Безопасная оплата",
     "hero": {
-      "eyebrow": "Curated modern living",
-      "title": "Astranova gathers the pieces that make everyday life look better.",
-      "body": "A premium storefront for home accents, beauty rituals, accessories and smart finds, styled with a calm editorial touch instead of marketplace noise.",
-      "primary_cta": "Explore the collection",
-      "secondary_cta": "See new arrivals",
+      "eyebrow": "Технологии для реальной жизни",
+      "title": "Технологии. Каждый день. На новом уровне.",
+      "body": "Отобранная электроника и современные товары для дома, работы и жизни в движении.",
+      "primary_cta": "Смотреть электронику",
+      "secondary_cta": "Смотреть всё",
+      "trust": {
+        "shipping": {
+          "title": "Бесплатная доставка",
+          "body": "Для подходящих заказов"
+        },
+        "returns": {
+          "title": "Простой возврат",
+          "body": "В течение 30 дней"
+        },
+        "checkout": {
+          "title": "Безопасная оплата",
+          "body": "Надёжно и защищённо"
+        }
+      },
       "chips": {
         "curated": "Curated drops",
         "shipping": "EU shipping",
@@ -431,14 +445,31 @@
       }
     },
     "collections": {
-      "eyebrow": "Featured worlds",
-      "title": "Four shoppable moods with one consistent point of view.",
+      "eyebrow": "Категории",
+      "title": "Найдите полезное обновление для каждого дня.",
       "body": "This is how Astranova stays broad without feeling random.",
       "cta": "Shop this world",
+      "view_all": "Все категории",
+      "electronics": {
+        "title": "Электроника",
+        "body": "Современная техника на каждый день"
+      },
+      "accessories": {
+        "title": "Аксессуары",
+        "body": "Чехлы, кабели и многое другое"
+      },
       "home": {
         "tag": "Home & living",
-        "title": "Soften the room with useful, beautiful details.",
-        "body": "Decor accents, organizers and small upgrades that make a space feel more composed."
+        "title": "Для дома",
+        "body": "Умный быт и красивое пространство"
+      },
+      "gifts": {
+        "title": "Подарки",
+        "body": "Продуманные идеи для близких"
+      },
+      "new_arrivals": {
+        "title": "Новинки",
+        "body": "Свежие поступления и первые релизы"
       },
       "beauty": {
         "tag": "Beauty & wellness",
@@ -454,6 +485,34 @@
         "tag": "Smart finds",
         "title": "Problem-solving pieces with a premium first impression.",
         "body": "Useful upgrades and clever extras that still belong in an elegant storefront."
+      }
+    },
+    "featured": {
+      "eyebrow": "Популярное",
+      "title": "Технологии, к которым хочется возвращаться.",
+      "view_all": "Все товары"
+    },
+    "why": {
+      "eyebrow": "Почему Astranova",
+      "title": "Отобранные решения. Созданы для реальной жизни.",
+      "body": "Мы собираем качественную электронику и современные товары от брендов, которым доверяем.",
+      "cta": "Наша история",
+      "trust_title": "Надёжность на каждом этапе",
+      "payments": {
+        "title": "Безопасная оплата",
+        "body": "Платёжная информация защищена."
+      },
+      "delivery": {
+        "title": "Быстрая доставка",
+        "body": "Понятные сроки отправки и отслеживание."
+      },
+      "returns": {
+        "title": "Возврат 30 дней",
+        "body": "Передумали? Верните подходящий товар без лишней сложности."
+      },
+      "support": {
+        "title": "Полезная поддержка",
+        "body": "Практичная помощь до и после заказа."
       }
     },
     "use_cases": {
@@ -482,78 +541,117 @@
       }
     },
     "testimonials": {
-      "eyebrow": "Why shoppers stay",
-      "title": "The brand feels stronger when the whole experience feels composed.",
+      "eyebrow": "Истории покупателей",
+      "title": "Что говорят покупатели",
+      "rating": "Оценка пять из пяти",
       "body": "Premium design matters most when it is backed by clarity, taste and easy support.",
       "one": {
-        "quote": "I came for one gift and ended up bookmarking the whole store. It feels curated in a way most general stores never do.",
-        "name": "Elina K.",
-        "meta": "Gift shopper in Tallinn"
+        "quote": "Отличное качество и понятное описание. Покупка прошла спокойно, а доставка была прозрачной на каждом этапе.",
+        "name": "Мария К.",
+        "meta": "Подтверждённый покупатель"
       },
       "two": {
-        "quote": "The mix of home, beauty and accessories still feels consistent. Nothing looks random or rushed.",
-        "name": "Markus T.",
-        "meta": "Returning customer"
+        "quote": "Стильный, точный и действительно полезный товар. Astranova ощущается как отобранный магазин, а не случайный каталог.",
+        "name": "Елена К.",
+        "meta": "Повторный покупатель"
       },
       "three": {
-        "quote": "The site feels calm, elegant and easy to trust. I can browse quickly without feeling overwhelmed.",
-        "name": "Anna P.",
-        "meta": "First order from Estonia"
+        "quote": "Легко сравнить варианты, быстро найти нужное и оформить заказ без лишних шагов.",
+        "name": "Андрей С.",
+        "meta": "Покупатель из Эстонии"
       }
     },
     "faq": {
       "eyebrow": "FAQ",
-      "title": "Answer the practical questions before they interrupt the mood.",
+      "title": "Частые вопросы",
       "body": "Keep the answers short, visible and easy to understand across desktop and mobile.",
       "one": {
-        "question": "What kinds of products does Astranova carry?",
-        "answer_html": "<p>Astranova is built as a curated premium store for home living, beauty and wellness, accessories, gifting and smart everyday finds. The mix can grow, but the presentation should always stay selective.</p>"
+        "question": "Какие товары продаёт Astranova?",
+        "answer_html": "<p>Astranova начинает с электроники и современных аксессуаров, а затем расширится товарами для дома, подарками и другими полезными категориями.</p>"
       },
       "two": {
-        "question": "Where does Astranova ship?",
-        "answer_html": "<p>The store is positioned for Estonia first, with clear delivery communication for customers across the wider EU.</p>"
+        "question": "Куда вы доставляете?",
+        "answer_html": "<p>Магазин ориентирован на Эстонию и страны ЕС. Доступные способы и сроки доставки отображаются при оформлении заказа.</p>"
       },
       "three": {
-        "question": "Are the products gift-friendly?",
-        "answer_html": "<p>Yes. Many products are chosen because they feel easy to gift, easy to understand and easy to buy with confidence.</p>"
+        "question": "Можно ли заказать товар в подарок?",
+        "answer_html": "<p>Да. Многие товары подходят для подарка; доступность подарочной упаковки будет указана в корзине или на странице товара.</p>"
       },
       "four": {
-        "question": "How should product pages be structured?",
-        "answer_html": "<p>Lead with a short promise, three benefit bullets, clear product details, size and materials, care guidance and visible shipping or returns information.</p>"
+        "question": "Можно ли вернуть товар, если он не подошёл?",
+        "answer_html": "<p>Подходящие товары можно вернуть в течение 30 дней. Итоговые условия и исключения указаны до оформления заказа.</p>"
+      },
+      "five": {
+        "question": "Есть ли гарантия на товары?",
+        "answer_html": "<p>Условия гарантии указаны на странице товара и могут отличаться в зависимости от бренда и категории.</p>"
+      },
+      "six": {
+        "question": "Как связаться с поддержкой?",
+        "answer_html": "<p>Используйте страницу контактов или ответьте на письмо о заказе. Мы постараемся помочь быстро и по делу.</p>"
       }
     },
     "footer": {
-      "eyebrow": "Stay in orbit",
-      "title": "Keep close to new drops, small restocks and the next beautiful find.",
-      "body": "Use the footer to collect email, reinforce trust and make language or currency changes feel effortless.",
-      "submit": "Join list",
-      "shop_heading": "Shop",
-      "support_heading": "Support"
+      "eyebrow": "Будьте на связи",
+      "title": "Оставайтесь на орбите",
+      "body": "Новинки, полезные материалы и специальные предложения. Без лишнего шума.",
+      "submit": "Подписаться",
+      "shop_heading": "Магазин",
+      "support_heading": "Поддержка"
     },
     "product": {
-      "promise_label": "Why you'll love it",
-      "promise_default": "A well-chosen piece for everyday living, presented with the clarity and confidence it deserves.",
-      "benefit_1": "Elevated look and feel that makes the product easy to want and easy to gift.",
-      "benefit_2": "Straightforward details on size, materials, care and delivery before checkout.",
-      "benefit_3": "A calmer buying experience with polished support, returns and shipping guidance.",
+      "promise_label": "Почему вам понравится",
+      "promise_default": "Продуманный товар для реальной жизни с понятными характеристиками и условиями покупки.",
+      "benefit_1": "Современный дизайн и практичная польза без лишних обещаний.",
+      "benefit_2": "Понятные характеристики, комплектация и совместимость до покупки.",
+      "benefit_3": "Прозрачная доставка, возврат и поддержка после заказа.",
+      "frequently_bought": "Часто покупают вместе",
+      "specifications": "Характеристики",
+      "spec": {
+        "brand": "Бренд",
+        "model": "Модель",
+        "compatibility": "Совместимость",
+        "material": "Материал",
+        "size": "Размер",
+        "color": "Цвет",
+        "power": "Мощность"
+      },
+      "trust": {
+        "delivery_title": "Доставка",
+        "delivery_default": "Отслеживаемая доставка с понятными обновлениями.",
+        "returns_title": "Возврат",
+        "returns_default": "Возврат подходящих товаров в течение 30 дней.",
+        "warranty_title": "Гарантия",
+        "warranty_default": "Условия гарантии подтверждаются для этого товара."
+      },
       "accordion": {
         "details": {
-          "title": "Product details",
-          "default_html": "<p>Add a <strong>custom.product_details</strong> metafield to explain what this item is, how it fits into daily use and why it stands out.</p>"
+          "title": "О товаре",
+          "default_html": "<p>Добавьте metafield <strong>custom.product_details</strong> с понятным описанием назначения и ключевых особенностей товара.</p>"
+        },
+        "package": {
+          "title": "Комплектация",
+          "default_html": "<p>Добавьте metafield <strong>custom.package_contents</strong>, чтобы перечислить всё, что входит в комплект.</p>"
         },
         "size_materials": {
-          "title": "Size & materials",
-          "default_html": "<p>Add a <strong>custom.size_and_materials</strong> metafield to show dimensions, fabric, finish, ingredients or material notes here.</p>"
+          "title": "Размер и материалы",
+          "default_html": "<p>Добавьте metafield <strong>custom.size_and_materials</strong> с размерами, материалами и отделкой.</p>"
         },
         "care": {
-          "title": "Care & use",
-          "default_html": "<p>Add a <strong>custom.care_and_use</strong> metafield for maintenance steps, usage tips, storage guidance or safety notes.</p>"
+          "title": "Использование и уход",
+          "default_html": "<p>Добавьте metafield <strong>custom.care_and_use</strong> с рекомендациями по использованию, хранению и безопасности.</p>"
         },
         "shipping": {
-          "title": "Shipping & returns",
-          "default_html": "<p>Add a <strong>custom.shipping_and_returns</strong> metafield to summarize dispatch timing, delivery expectations and return guidance.</p>"
+          "title": "Доставка и возврат",
+          "default_html": "<p>Добавьте metafield <strong>custom.shipping_and_returns</strong> со сроками отправки, доставки и условиями возврата.</p>"
         }
       }
+    },
+    "cart": {
+      "shipping_remaining_html": "Добавьте товаров на <strong>{{ amount }}</strong> для бесплатной доставки",
+      "shipping_unlocked": "Бесплатная доставка доступна",
+      "secure": "Безопасная оплата",
+      "returns": "Возврат 30 дней",
+      "support": "Полезная поддержка"
     }
   }
 }

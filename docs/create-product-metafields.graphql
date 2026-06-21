@@ -1,0 +1,59 @@
+mutation CreateAstranovaProductMetafields {
+  brand: metafieldDefinitionCreate(
+    definition: { name: "Brand", namespace: "custom", key: "brand", type: "single_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  model: metafieldDefinitionCreate(
+    definition: { name: "Model", namespace: "custom", key: "model", type: "single_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  compatibility: metafieldDefinitionCreate(
+    definition: { name: "Compatibility", namespace: "custom", key: "compatibility", type: "multi_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  material: metafieldDefinitionCreate(
+    definition: { name: "Material", namespace: "custom", key: "material", type: "single_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  size: metafieldDefinitionCreate(
+    definition: { name: "Size", namespace: "custom", key: "size", type: "single_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  color: metafieldDefinitionCreate(
+    definition: { name: "Color", namespace: "custom", key: "color", type: "single_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  power: metafieldDefinitionCreate(
+    definition: { name: "Power", namespace: "custom", key: "power", type: "single_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  warranty: metafieldDefinitionCreate(
+    definition: { name: "Warranty", namespace: "custom", key: "warranty", type: "single_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  packageContents: metafieldDefinitionCreate(
+    definition: { name: "Package contents", namespace: "custom", key: "package_contents", type: "multi_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  delivery: metafieldDefinitionCreate(
+    definition: { name: "Delivery information", namespace: "custom", key: "delivery", type: "single_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  technicalSpecifications: metafieldDefinitionCreate(
+    definition: { name: "Technical specifications", namespace: "custom", key: "technical_specifications", type: "multi_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  promiseHeadline: metafieldDefinitionCreate(
+    definition: { name: "Product promise", namespace: "custom", key: "promise_headline", type: "single_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  benefit1: metafieldDefinitionCreate(
+    definition: { name: "Benefit 1", namespace: "custom", key: "benefit_1", type: "single_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  benefit2: metafieldDefinitionCreate(
+    definition: { name: "Benefit 2", namespace: "custom", key: "benefit_2", type: "single_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  benefit3: metafieldDefinitionCreate(
+    definition: { name: "Benefit 3", namespace: "custom", key: "benefit_3", type: "single_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  productDetails: metafieldDefinitionCreate(
+    definition: { name: "Product details", namespace: "custom", key: "product_details", type: "multi_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  sizeAndMaterials: metafieldDefinitionCreate(
+    definition: { name: "Size and materials", namespace: "custom", key: "size_and_materials", type: "multi_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  careAndUse: metafieldDefinitionCreate(
+    definition: { name: "Care and use", namespace: "custom", key: "care_and_use", type: "multi_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+  shippingAndReturns: metafieldDefinitionCreate(
+    definition: { name: "Shipping and returns", namespace: "custom", key: "shipping_and_returns", type: "multi_line_text_field", ownerType: PRODUCT, pin: true, access: { storefront: PUBLIC_READ } }
+  ) { createdDefinition { id namespace key } userErrors { field message code } }
+}

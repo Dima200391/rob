@@ -1,24 +1,27 @@
-<div class="section-background color-{{ section.settings.color_scheme }}"></div>
 {% assign testimonial_items = 'one,two,three' | split: ',' %}
 <section
   class="astranova-testimonials section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
   style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
   {{ section.shopify_attributes }}
 >
-  <div class="astranova-testimonials__header">
-    <p class="astranova-eyebrow">{{ 'astranova.testimonials.eyebrow' | t }}</p>
-    <h2 class="astranova-section-heading">{{ 'astranova.testimonials.title' | t }}</h2>
-    <p class="astranova-section-copy">{{ 'astranova.testimonials.body' | t }}</p>
+  <div class="astranova-section-head">
+    <div>
+      <p class="astranova-eyebrow">{{ 'astranova.testimonials.eyebrow' | t }}</p>
+      <h2 class="astranova-section-heading">{{ 'astranova.testimonials.title' | t }}</h2>
+    </div>
   </div>
 
   <div class="astranova-card-grid astranova-card-grid--3">
     {% for item in testimonial_items %}
-      <article class="astranova-panel astranova-panel--compact astranova-testimonials__card">
-        <p class="astranova-testimonials__rating">5/5</p>
-        <blockquote class="astranova-testimonials__quote">{{ 'astranova.testimonials.' | append: item | append: '.quote' | t }}</blockquote>
+      <article class="astranova-testimonials__card">
+        <p class="astranova-testimonials__rating" aria-label="{{ 'astranova.testimonials.rating' | t }}">★★★★★ <span>5.0</span></p>
+        <blockquote>{{ 'astranova.testimonials.' | append: item | append: '.quote' | t }}</blockquote>
         <p class="astranova-testimonials__meta">
-          <strong>{{ 'astranova.testimonials.' | append: item | append: '.name' | t }}</strong>
-          <span>{{ 'astranova.testimonials.' | append: item | append: '.meta' | t }}</span>
+          <span class="astranova-testimonials__avatar" aria-hidden="true">{{ 'astranova.testimonials.' | append: item | append: '.name' | t | slice: 0 }}</span>
+          <span>
+            <strong>{{ 'astranova.testimonials.' | append: item | append: '.name' | t }}</strong>
+            <small>{{ 'astranova.testimonials.' | append: item | append: '.meta' | t }}</small>
+          </span>
         </p>
       </article>
     {% endfor %}
@@ -26,39 +29,68 @@
 </section>
 
 {% stylesheet %}
-  .astranova-testimonials__header {
-    display: grid;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
   .astranova-testimonials__card {
     display: grid;
     gap: 1rem;
     padding: 1.5rem;
+    border: 1px solid rgba(92, 79, 205, 0.1);
+    border-radius: var(--astranova-radius-sm);
+    background: linear-gradient(145deg, #fff, #f7f6ff);
+  }
+
+  .astranova-testimonials__rating,
+  .astranova-testimonials__card blockquote,
+  .astranova-testimonials__meta {
+    margin: 0;
   }
 
   .astranova-testimonials__rating {
-    margin: 0;
-    color: var(--astranova-accent-strong);
-    font-size: 0.82rem;
-    font-weight: 800;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
+    color: var(--astranova-violet);
+    font-size: 0.84rem;
+    letter-spacing: 0.12em;
   }
 
-  .astranova-testimonials__quote {
-    margin: 0;
+  .astranova-testimonials__rating span {
+    margin-left: 0.4rem;
+    color: var(--astranova-muted);
+    letter-spacing: 0;
+  }
+
+  .astranova-testimonials__card blockquote {
     color: var(--astranova-foreground);
-    font-size: 1.15rem;
     line-height: 1.65;
   }
 
   .astranova-testimonials__meta {
     display: grid;
-    gap: 0.2rem;
-    margin: 0;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .astranova-testimonials__avatar {
+    display: grid;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+    background: linear-gradient(135deg, var(--astranova-violet), var(--astranova-blue));
+  }
+
+  .astranova-testimonials__meta strong,
+  .astranova-testimonials__meta small {
+    display: block;
+  }
+
+  .astranova-testimonials__meta strong {
+    color: var(--astranova-foreground);
+    font-size: 0.82rem;
+  }
+
+  .astranova-testimonials__meta small {
     color: var(--astranova-muted);
+    font-size: 0.74rem;
   }
 {% endstylesheet %}
 
@@ -76,37 +108,10 @@
       ],
       "default": "page-width"
     },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "Color scheme",
-      "default": "scheme-1"
-    },
-    {
-      "type": "range",
-      "id": "padding_block_start",
-      "label": "Top padding",
-      "min": 0,
-      "max": 120,
-      "step": 2,
-      "unit": "px",
-      "default": 28
-    },
-    {
-      "type": "range",
-      "id": "padding_block_end",
-      "label": "Bottom padding",
-      "min": 0,
-      "max": 120,
-      "step": 2,
-      "unit": "px",
-      "default": 28
-    }
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "range", "id": "padding_block_start", "label": "Top padding", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 28 },
+    { "type": "range", "id": "padding_block_end", "label": "Bottom padding", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 28 }
   ],
-  "presets": [
-    {
-      "name": "Astranova Testimonials"
-    }
-  ]
+  "presets": [{ "name": "Astranova Testimonials" }]
 }
 {% endschema %}

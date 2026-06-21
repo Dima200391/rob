@@ -1,22 +1,22 @@
-<div class="section-background color-{{ section.settings.color_scheme }}"></div>
-{% assign faq_items = 'one,two,three,four' | split: ',' %}
+{% assign faq_items = 'one,two,three,four,five,six' | split: ',' %}
 <section
   class="astranova-faq section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
   style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
   {{ section.shopify_attributes }}
 >
-  <div class="astranova-faq__header">
-    <p class="astranova-eyebrow">{{ 'astranova.faq.eyebrow' | t }}</p>
-    <h2 class="astranova-section-heading">{{ 'astranova.faq.title' | t }}</h2>
-    <p class="astranova-section-copy">{{ 'astranova.faq.body' | t }}</p>
+  <div class="astranova-section-head">
+    <div>
+      <p class="astranova-eyebrow">{{ 'astranova.faq.eyebrow' | t }}</p>
+      <h2 class="astranova-section-heading">{{ 'astranova.faq.title' | t }}</h2>
+    </div>
   </div>
 
-  <div class="astranova-panel astranova-faq__panel">
+  <div class="astranova-faq__grid">
     {% for item in faq_items %}
-      <details class="astranova-detail" {% if forloop.first %}open{% endif %}>
+      <details class="astranova-detail">
         <summary>
           <span>{{ 'astranova.faq.' | append: item | append: '.question' | t }}</span>
-          <span class="astranova-detail__caret"></span>
+          <span class="astranova-detail__plus" aria-hidden="true">+</span>
         </summary>
         <div class="astranova-detail__content astranova-richtext">
           {{ 'astranova.faq.' | append: item | append: '.answer_html' | t }}
@@ -27,14 +27,43 @@
 </section>
 
 {% stylesheet %}
-  .astranova-faq__header {
+  .astranova-faq__grid {
     display: grid;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem 1rem;
   }
 
-  .astranova-faq__panel {
-    padding: 0 1.5rem;
+  .astranova-faq__grid .astranova-detail {
+    align-self: start;
+    border: 1px solid var(--astranova-border);
+    border-radius: 0.8rem;
+    background: #fff;
+  }
+
+  .astranova-faq__grid .astranova-detail summary {
+    padding: 1rem 1.15rem;
+    font-size: 0.9rem;
+  }
+
+  .astranova-detail__plus {
+    color: var(--astranova-violet);
+    font-size: 1.25rem;
+    transition: transform 180ms ease;
+  }
+
+  .astranova-detail[open] .astranova-detail__plus {
+    transform: rotate(45deg);
+  }
+
+  .astranova-faq__grid .astranova-detail__content {
+    padding: 0 1.15rem 1rem;
+    font-size: 0.88rem;
+  }
+
+  @media screen and (max-width: 749px) {
+    .astranova-faq__grid {
+      grid-template-columns: 1fr;
+    }
   }
 {% endstylesheet %}
 
@@ -52,37 +81,10 @@
       ],
       "default": "page-width"
     },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "Color scheme",
-      "default": "scheme-1"
-    },
-    {
-      "type": "range",
-      "id": "padding_block_start",
-      "label": "Top padding",
-      "min": 0,
-      "max": 120,
-      "step": 2,
-      "unit": "px",
-      "default": 28
-    },
-    {
-      "type": "range",
-      "id": "padding_block_end",
-      "label": "Bottom padding",
-      "min": 0,
-      "max": 120,
-      "step": 2,
-      "unit": "px",
-      "default": 32
-    }
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "range", "id": "padding_block_start", "label": "Top padding", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 28 },
+    { "type": "range", "id": "padding_block_end", "label": "Bottom padding", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 48 }
   ],
-  "presets": [
-    {
-      "name": "Astranova FAQ"
-    }
-  ]
+  "presets": [{ "name": "Astranova FAQ" }]
 }
 {% endschema %}

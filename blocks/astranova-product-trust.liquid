@@ -1,0 +1,79 @@
+{% doc %}
+Renders delivery, returns and warranty reassurance on a product page.
+{% enddoc %}
+
+{% assign product = closest.product %}
+{% assign warranty = product.metafields.custom.warranty.value | default: 'astranova.product.trust.warranty_default' | t %}
+
+<div class="astranova-product-trust" {{ block.shopify_attributes }}>
+  <div>
+    <span aria-hidden="true">✓</span>
+    <p><strong>{{ 'astranova.product.trust.delivery_title' | t }}</strong><small>{{ product.metafields.custom.delivery.value | default: 'astranova.product.trust.delivery_default' | t }}</small></p>
+  </div>
+  <div>
+    <span aria-hidden="true">✓</span>
+    <p><strong>{{ 'astranova.product.trust.returns_title' | t }}</strong><small>{{ 'astranova.product.trust.returns_default' | t }}</small></p>
+  </div>
+  <div>
+    <span aria-hidden="true">✓</span>
+    <p><strong>{{ 'astranova.product.trust.warranty_title' | t }}</strong><small>{{ warranty }}</small></p>
+  </div>
+</div>
+
+{% stylesheet %}
+  .astranova-product-trust {
+    display: grid;
+    gap: 0.65rem;
+    padding: 1rem;
+    border: 1px solid var(--astranova-border);
+    border-radius: var(--astranova-radius-sm);
+    background: linear-gradient(145deg, #fff, #f6f5ff);
+  }
+
+  .astranova-product-trust > div {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.65rem;
+    align-items: start;
+  }
+
+  .astranova-product-trust > div > span {
+    display: grid;
+    width: 1.5rem;
+    height: 1.5rem;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--astranova-violet);
+    background: var(--astranova-lavender);
+    font-size: 0.75rem;
+  }
+
+  .astranova-product-trust p {
+    margin: 0;
+  }
+
+  .astranova-product-trust strong,
+  .astranova-product-trust small {
+    display: block;
+  }
+
+  .astranova-product-trust strong {
+    color: var(--astranova-foreground);
+    font-size: 0.85rem;
+  }
+
+  .astranova-product-trust small {
+    margin-top: 0.1rem;
+    color: var(--astranova-muted);
+    line-height: 1.4;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Astranova Product Trust",
+  "tag": null,
+  "settings": [],
+  "presets": [{ "name": "Astranova Product Trust", "category": "Product" }]
+}
+{% endschema %}

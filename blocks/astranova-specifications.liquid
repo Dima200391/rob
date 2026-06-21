@@ -1,0 +1,79 @@
+{% doc %}
+Renders common product specification metafields when values are present.
+{% enddoc %}
+
+{% assign product = closest.product %}
+{% assign specification_keys = 'brand,model,compatibility,material,size,color,power' | split: ',' %}
+
+<div class="astranova-specifications" {{ block.shopify_attributes }}>
+  <h3>{{ 'astranova.product.specifications' | t }}</h3>
+  <dl>
+    {% for key in specification_keys %}
+      {% assign value = product.metafields.custom[key].value %}
+      {% if value != blank %}
+        <div>
+          <dt>{{ 'astranova.product.spec.' | append: key | t }}</dt>
+          <dd>{{ value }}</dd>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </dl>
+  {% if product.metafields.custom.technical_specifications != blank %}
+    <div class="astranova-specifications__details">
+      {{ product.metafields.custom.technical_specifications | metafield_tag }}
+    </div>
+  {% endif %}
+</div>
+
+{% stylesheet %}
+  .astranova-specifications {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .astranova-specifications h3,
+  .astranova-specifications dl,
+  .astranova-specifications dd {
+    margin: 0;
+  }
+
+  .astranova-specifications h3 {
+    color: var(--astranova-foreground);
+    font-size: 1rem;
+  }
+
+  .astranova-specifications dl {
+    border-top: 1px solid var(--astranova-border);
+  }
+
+  .astranova-specifications dl > div {
+    display: grid;
+    grid-template-columns: minmax(8rem, 0.42fr) 1fr;
+    gap: 1rem;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--astranova-border);
+  }
+
+  .astranova-specifications dt {
+    color: var(--astranova-muted);
+  }
+
+  .astranova-specifications dd {
+    color: var(--astranova-foreground);
+    font-weight: 600;
+  }
+
+  .astranova-specifications__details {
+    color: var(--astranova-muted);
+    line-height: 1.6;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Astranova Specifications",
+  "tag": null,
+  "settings": [],
+  "presets": [{ "name": "Astranova Specifications", "category": "Product" }]
+}
+{% endschema %}

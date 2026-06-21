@@ -1,178 +1,237 @@
-{% liquid
-  assign collection_link_home = section.settings.home_link | default: '/collections/home-living'
-  assign collection_link_beauty = section.settings.beauty_link | default: '/collections/beauty-wellness'
-  assign collection_link_style = section.settings.style_link | default: '/collections/style-accessories'
-  assign collection_link_smart = section.settings.smart_link | default: '/collections/smart-finds'
-  assign astranova_collection_items = 'home,beauty,style,smart' | split: ','
-%}
-
-<div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <section
-  class="astranova-collections section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+  class="astranova-categories section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
   style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
   {{ section.shopify_attributes }}
 >
-  <div class="astranova-collections__header">
-    <p class="astranova-eyebrow">{{ 'astranova.collections.eyebrow' | t }}</p>
-    <h2 class="astranova-section-heading">{{ 'astranova.collections.title' | t }}</h2>
-    <p class="astranova-section-copy">{{ 'astranova.collections.body' | t }}</p>
+  <div class="astranova-section-head">
+    <div>
+      <p class="astranova-eyebrow">{{ 'astranova.collections.eyebrow' | t }}</p>
+      <h2 class="astranova-section-heading">{{ 'astranova.collections.title' | t }}</h2>
+    </div>
+    <a class="astranova-link" href="{{ routes.collections_url }}">{{ 'astranova.collections.view_all' | t }} →</a>
   </div>
 
-  <div class="astranova-card-grid astranova-card-grid--4">
-    {% for item in astranova_collection_items %}
+  <div class="astranova-categories__grid">
+    {% for block in section.blocks %}
       {% liquid
-        case item
+        assign category_collection = block.settings.collection
+        assign category_link = block.settings.link
+        if category_link == blank and category_collection != blank
+          assign category_link = category_collection.url
+        endif
+        if category_link == blank
+          assign category_link = routes.collections_url
+        endif
+
+        assign category_image = block.settings.image
+        if category_image == blank and category_collection != blank
+          assign category_image = category_collection.featured_image
+        endif
+
+        assign fallback_key = block.settings.fallback_key | default: 'electronics'
+        assign title_key = 'astranova.collections.' | append: fallback_key | append: '.title'
+        assign body_key = 'astranova.collections.' | append: fallback_key | append: '.body'
+        assign category_title = block.settings.title | default: category_collection.title
+        case fallback_key
+          when 'electronics'
+            assign fallback_asset = 'astranova-collection-smart.svg'
+          when 'accessories'
+            assign fallback_asset = 'astranova-collection-style.svg'
           when 'home'
-            assign link = collection_link_home
-            assign visual_asset = 'astranova-collection-home.svg'
-          when 'beauty'
-            assign link = collection_link_beauty
-            assign visual_asset = 'astranova-collection-beauty.svg'
-          when 'style'
-            assign link = collection_link_style
-            assign visual_asset = 'astranova-collection-style.svg'
+            assign fallback_asset = 'astranova-collection-home.svg'
+          when 'gifts'
+            assign fallback_asset = 'astranova-collection-beauty.svg'
           else
-            assign link = collection_link_smart
-            assign visual_asset = 'astranova-collection-smart.svg'
+            assign fallback_asset = 'astranova-hero-electronics.png'
         endcase
       %}
-      <a href="{{ link }}" class="astranova-panel astranova-panel--compact astranova-collections__card">
-        <div class="astranova-collections__visual" aria-hidden="true">
-          <div class="astranova-collections__visual-glow"></div>
-          <img
-            src="{{ visual_asset | asset_url }}"
-            alt=""
-            width="720"
-            height="880"
-            loading="lazy"
-            class="astranova-collections__image"
-          >
+      <a class="astranova-categories__card" href="{{ category_link }}" {{ block.shopify_attributes }}>
+        <div class="astranova-categories__media">
+          {% if category_image != blank %}
+            {{ category_image | image_url: width: 720 | image_tag: loading: 'lazy', class: 'astranova-categories__image' }}
+          {% else %}
+            <img
+              src="{{ fallback_asset | asset_url }}"
+              alt=""
+              width="720"
+              height="640"
+              loading="lazy"
+              class="astranova-categories__image"
+            >
+          {% endif %}
         </div>
-        <span class="astranova-tag">{{ 'astranova.collections.' | append: item | append: '.tag' | t }}</span>
-        <div class="astranova-collections__number">0{{ forloop.index }}</div>
-        <h3 class="astranova-collections__card-title">{{ 'astranova.collections.' | append: item | append: '.title' | t }}</h3>
-        <p class="astranova-collections__card-copy">{{ 'astranova.collections.' | append: item | append: '.body' | t }}</p>
-        <span class="astranova-collections__cta">{{ 'astranova.collections.cta' | t }}</span>
+        <div class="astranova-categories__content">
+          <div>
+            <h3>
+              {% if category_title != blank %}
+                {{ category_title }}
+              {% else %}
+                {{ title_key | t }}
+              {% endif %}
+            </h3>
+            <p>
+              {% if block.settings.body != blank %}
+                {{ block.settings.body }}
+              {% else %}
+                {{ body_key | t }}
+              {% endif %}
+            </p>
+          </div>
+          <span class="astranova-categories__arrow" aria-hidden="true">→</span>
+        </div>
       </a>
     {% endfor %}
   </div>
 </section>
 
 {% stylesheet %}
-  .astranova-collections__header {
-    display: grid;
-    gap: 1rem;
+  .astranova-section-head {
+    display: flex;
+    gap: 1.5rem;
+    align-items: end;
+    justify-content: space-between;
     margin-bottom: 1.5rem;
   }
 
-  .astranova-collections__card {
+  .astranova-section-head > div {
     display: grid;
-    gap: 0.95rem;
-    padding: 1.5rem;
-    color: inherit;
-    text-decoration: none;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-    background:
-      linear-gradient(165deg, rgba(255, 255, 255, 0.82), rgba(250, 245, 240, 0.72)),
-      radial-gradient(circle at top right, rgba(56, 80, 107, 0.12), transparent 34%);
+    gap: 0.55rem;
   }
 
-  .astranova-collections__card:hover {
-    transform: translateY(-6px);
-    border-color: rgba(56, 80, 107, 0.24);
-    box-shadow: 0 18px 42px rgba(23, 21, 28, 0.08);
+  .astranova-categories__grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1rem;
   }
 
-  .astranova-collections__visual {
-    position: relative;
-    aspect-ratio: 4 / 4.8;
-    margin: -0.45rem -0.45rem 0.1rem;
-    border-radius: calc(var(--astranova-radius-sm) - 2px);
+  .astranova-categories__card {
     overflow: hidden;
-    background:
-      radial-gradient(circle at top right, rgba(200, 163, 123, 0.24), transparent 32%),
-      linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(244, 236, 228, 0.78));
+    min-width: 0;
+    border: 1px solid var(--astranova-border);
+    border-radius: var(--astranova-radius-sm);
+    color: inherit;
+    background: #fff;
+    box-shadow: 0 12px 40px rgba(13, 18, 44, 0.06);
+    text-decoration: none;
+    transition: transform 180ms ease, box-shadow 180ms ease;
   }
 
-  .astranova-collections__visual-glow {
-    position: absolute;
-    inset: auto auto 1rem 1rem;
-    width: 7rem;
-    height: 7rem;
-    border-radius: 999px;
-    background: radial-gradient(circle, rgba(56, 80, 107, 0.16), rgba(56, 80, 107, 0));
-    filter: blur(8px);
-    z-index: 0;
+  .astranova-categories__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(13, 18, 44, 0.12);
   }
 
-  .astranova-collections__image {
-    position: relative;
-    z-index: 1;
+  .astranova-categories__media {
+    aspect-ratio: 1 / 0.88;
+    overflow: hidden;
+    background: linear-gradient(145deg, #f0efff, #faf9ff);
+  }
+
+  .astranova-categories__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
-    mix-blend-mode: multiply;
+    transition: transform 420ms ease;
   }
 
-  .astranova-collections__card:hover .astranova-collections__image {
-    transform: scale(1.035);
+  .astranova-categories__card:hover .astranova-categories__image {
+    transform: scale(1.04);
   }
 
-  .astranova-collections__number {
-    color: rgba(56, 80, 107, 0.18);
-    font-family: var(--font-heading--family);
-    font-size: clamp(2.2rem, 4vw, 3.3rem);
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: -0.06em;
+  .astranova-categories__content {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.75rem;
+    align-items: center;
+    padding: 1rem;
   }
 
-  .astranova-collections__card-title {
+  .astranova-categories__content h3,
+  .astranova-categories__content p {
     margin: 0;
+  }
+
+  .astranova-categories__content h3 {
     color: var(--astranova-foreground);
-    font-size: 1.25rem;
-    line-height: 1.08;
-    letter-spacing: -0.04em;
+    font-size: 1rem;
+    letter-spacing: -0.025em;
   }
 
-  .astranova-collections__card-copy {
-    margin: 0;
+  .astranova-categories__content p {
+    margin-top: 0.25rem;
     color: var(--astranova-muted);
-    line-height: 1.6;
+    font-size: 0.76rem;
+    line-height: 1.35;
   }
 
-  .astranova-collections__cta {
-    color: var(--astranova-accent-strong);
-    font-weight: 700;
-    letter-spacing: 0.02em;
+  .astranova-categories__arrow {
+    display: grid;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    border-radius: 50%;
+    color: var(--astranova-violet);
+    background: var(--astranova-lavender);
+  }
+
+  @media screen and (max-width: 989px) {
+    .astranova-categories__grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .astranova-section-head {
+      align-items: start;
+    }
+
+    .astranova-categories__grid {
+      display: flex;
+      margin-inline: calc(var(--page-margin) * -1);
+      padding-inline: var(--page-margin);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+    }
+
+    .astranova-categories__card {
+      flex: 0 0 76%;
+      scroll-snap-align: start;
+    }
   }
 {% endstylesheet %}
 
 {% schema %}
 {
-  "name": "Astranova Collections",
+  "name": "Astranova Categories",
+  "max_blocks": 8,
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Collection" },
+        { "type": "image_picker", "id": "image", "label": "Custom image" },
+        { "type": "text", "id": "title", "label": "Title" },
+        { "type": "text", "id": "body", "label": "Description" },
+        { "type": "url", "id": "link", "label": "Custom link" },
+        {
+          "type": "select",
+          "id": "fallback_key",
+          "label": "Fallback content",
+          "options": [
+            { "value": "electronics", "label": "Electronics" },
+            { "value": "accessories", "label": "Accessories" },
+            { "value": "home", "label": "Home" },
+            { "value": "gifts", "label": "Gifts" },
+            { "value": "new_arrivals", "label": "New arrivals" }
+          ],
+          "default": "electronics"
+        }
+      ]
+    }
+  ],
   "settings": [
-    {
-      "type": "url",
-      "id": "home_link",
-      "label": "Home & living link"
-    },
-    {
-      "type": "url",
-      "id": "beauty_link",
-      "label": "Beauty & wellness link"
-    },
-    {
-      "type": "url",
-      "id": "style_link",
-      "label": "Style & accessories link"
-    },
-    {
-      "type": "url",
-      "id": "smart_link",
-      "label": "Smart finds link"
-    },
     {
       "type": "select",
       "id": "section_width",
@@ -183,36 +242,20 @@
       ],
       "default": "page-width"
     },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "Color scheme",
-      "default": "scheme-1"
-    },
-    {
-      "type": "range",
-      "id": "padding_block_start",
-      "label": "Top padding",
-      "min": 0,
-      "max": 120,
-      "step": 2,
-      "unit": "px",
-      "default": 28
-    },
-    {
-      "type": "range",
-      "id": "padding_block_end",
-      "label": "Bottom padding",
-      "min": 0,
-      "max": 120,
-      "step": 2,
-      "unit": "px",
-      "default": 32
-    }
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-1" },
+    { "type": "range", "id": "padding_block_start", "label": "Top padding", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 48 },
+    { "type": "range", "id": "padding_block_end", "label": "Bottom padding", "min": 0, "max": 120, "step": 2, "unit": "px", "default": 28 }
   ],
   "presets": [
     {
-      "name": "Astranova Collections"
+      "name": "Astranova Categories",
+      "blocks": [
+        { "type": "category", "settings": { "fallback_key": "electronics" } },
+        { "type": "category", "settings": { "fallback_key": "accessories" } },
+        { "type": "category", "settings": { "fallback_key": "home" } },
+        { "type": "category", "settings": { "fallback_key": "gifts" } },
+        { "type": "category", "settings": { "fallback_key": "new_arrivals" } }
+      ]
     }
   ]
 }

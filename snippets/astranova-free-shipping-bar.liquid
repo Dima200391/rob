@@ -1,0 +1,56 @@
+{% doc %}
+Renders cart free-shipping progress using the configured cart threshold.
+{% enddoc %}
+
+{% liquid
+  assign threshold = settings.astranova_free_shipping_threshold | times: 100
+  assign progress = cart.total_price | times: 100 | divided_by: threshold
+  if progress > 100
+    assign progress = 100
+  endif
+  assign remaining = threshold | minus: cart.total_price
+%}
+
+{% if settings.astranova_show_shipping_progress and threshold > 0 %}
+  <div class="astranova-shipping-progress">
+    {% if remaining > 0 %}
+      <p>{{ 'astranova.cart.shipping_remaining_html' | t: amount: remaining | money }}</p>
+    {% else %}
+      <p>{{ 'astranova.cart.shipping_unlocked' | t }}</p>
+    {% endif %}
+    <div class="astranova-shipping-progress__track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ progress }}">
+      <span style="width: {{ progress }}%;"></span>
+    </div>
+  </div>
+{% endif %}
+
+{% stylesheet %}
+  .astranova-shipping-progress {
+    display: grid;
+    gap: 0.55rem;
+    padding: 0.9rem 1rem;
+    border-radius: 0.9rem;
+    color: var(--astranova-foreground);
+    background: var(--astranova-lavender);
+  }
+
+  .astranova-shipping-progress p {
+    margin: 0;
+    font-size: 0.82rem;
+    font-weight: 650;
+  }
+
+  .astranova-shipping-progress__track {
+    overflow: hidden;
+    height: 0.42rem;
+    border-radius: 999px;
+    background: rgba(65, 45, 170, 0.14);
+  }
+
+  .astranova-shipping-progress__track span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, var(--astranova-violet), var(--astranova-blue));
+  }
+{% endstylesheet %}

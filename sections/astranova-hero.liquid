@@ -1,387 +1,243 @@
 {% liquid
-  assign primary_link = section.settings.primary_link | default: '/collections/all'
-  assign secondary_link = section.settings.secondary_link | default: '/collections/new-in'
-  assign astranova_hero_chip_items = 'curated,shipping,gifting' | split: ','
-  assign astranova_hero_stat_items = 'catalog,discovery,support' | split: ','
-  assign astranova_hero_orbit_items = 'home,beauty,style,smart' | split: ','
+  assign primary_link = section.settings.primary_link | default: routes.all_products_collection_url
+  assign secondary_link = section.settings.secondary_link | default: routes.collections_url
+  assign trust_items = 'shipping,returns,checkout' | split: ','
 %}
 
-<div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <section
-  class="astranova-shell astranova-hero section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
-  style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
+  class="astranova-hero color-{{ section.settings.color_scheme }}"
+  style="--astranova-hero-min-height: {{ section.settings.min_height }}px;"
   {{ section.shopify_attributes }}
 >
-  <div class="astranova-hero__grid">
+  <img
+    src="{{ 'astranova-hero-electronics.png' | asset_url }}"
+    alt=""
+    width="1536"
+    height="1024"
+    class="astranova-hero__image"
+    fetchpriority="high"
+  >
+  <div class="astranova-hero__veil"></div>
+  <div class="astranova-hero__stars"></div>
+
+  <div class="astranova-hero__inner page-width">
     <div class="astranova-hero__content">
-      <p class="astranova-eyebrow">{{ 'astranova.hero.eyebrow' | t }}</p>
+      <p class="astranova-eyebrow astranova-eyebrow--light">{{ 'astranova.hero.eyebrow' | t }}</p>
       <h1 class="astranova-hero__title">{{ 'astranova.hero.title' | t }}</h1>
-      <p class="astranova-section-copy">{{ 'astranova.hero.body' | t }}</p>
+      <p class="astranova-hero__copy">{{ 'astranova.hero.body' | t }}</p>
 
       <div class="astranova-hero__actions">
         <a href="{{ primary_link }}" class="button">{{ 'astranova.hero.primary_cta' | t }}</a>
-        <a href="{{ secondary_link }}" class="button-secondary">{{ 'astranova.hero.secondary_cta' | t }}</a>
+        <a href="{{ secondary_link }}" class="button-secondary astranova-hero__secondary">
+          {{ 'astranova.hero.secondary_cta' | t }}
+        </a>
       </div>
 
-      <ul class="astranova-hero__chips" role="list">
-        {% for item in astranova_hero_chip_items %}
-          {% assign chip_key = 'astranova.hero.chips.' | append: item %}
-          <li class="astranova-tag">{{ chip_key | t }}</li>
+      <ul class="astranova-hero__trust" role="list">
+        {% for item in trust_items %}
+          <li class="astranova-hero__trust-item">
+            <span class="astranova-hero__trust-icon">
+              {{ 'icon-checkmark.svg' | inline_asset_content }}
+            </span>
+            <span>
+              <strong>{{ 'astranova.hero.trust.' | append: item | append: '.title' | t }}</strong>
+              <small>{{ 'astranova.hero.trust.' | append: item | append: '.body' | t }}</small>
+            </span>
+          </li>
         {% endfor %}
       </ul>
-    </div>
-
-    <div class="astranova-panel astranova-hero__panel">
-      <div class="astranova-hero__visual" aria-hidden="true">
-        <div class="astranova-hero__visual-halo astranova-hero__visual-halo--amber"></div>
-        <div class="astranova-hero__visual-halo astranova-hero__visual-halo--blue"></div>
-        <div class="astranova-hero__visual-orbit astranova-hero__visual-orbit--one"></div>
-        <div class="astranova-hero__visual-orbit astranova-hero__visual-orbit--two"></div>
-        <img
-          src="{{ 'astranova-hero-scene.svg' | asset_url }}"
-          alt=""
-          width="1400"
-          height="980"
-          loading="lazy"
-          class="astranova-hero__visual-art"
-        >
-        <div class="astranova-hero__visual-badge astranova-hero__visual-badge--one">
-          <span class="astranova-hero__visual-badge-dot"></span>
-          <span>{{ 'astranova.collections.home.title' | t }}</span>
-        </div>
-        <div class="astranova-hero__visual-badge astranova-hero__visual-badge--two">
-          <span class="astranova-hero__visual-badge-dot"></span>
-          <span>{{ 'astranova.collections.style.title' | t }}</span>
-        </div>
-      </div>
-
-      <div class="astranova-hero__panel-copy">
-        <p class="astranova-eyebrow">{{ 'astranova.hero.panel_eyebrow' | t }}</p>
-        <h2 class="astranova-hero__panel-title">{{ 'astranova.hero.panel_title' | t }}</h2>
-        <p class="astranova-section-copy">{{ 'astranova.hero.panel_body' | t }}</p>
-      </div>
-
-      <div class="astranova-card-grid astranova-card-grid--3 astranova-hero__stats">
-        {% for item in astranova_hero_stat_items %}
-          <div class="astranova-stat">
-            <div class="astranova-stat__value">{{ 'astranova.hero.stats.' | append: item | append: '.value' | t }}</div>
-            <div class="astranova-stat__label">{{ 'astranova.hero.stats.' | append: item | append: '.label' | t }}</div>
-          </div>
-        {% endfor %}
-      </div>
-
-      <div class="astranova-hero__mini-grid">
-        {% for item in astranova_hero_orbit_items %}
-          <article class="astranova-hero__mini-card">
-            <p class="astranova-hero__mini-index">0{{ forloop.index }}</p>
-            <h3 class="astranova-hero__mini-title">{{ 'astranova.hero.orbit.' | append: item | append: '.title' | t }}</h3>
-            <p class="astranova-hero__mini-copy">{{ 'astranova.hero.orbit.' | append: item | append: '.body' | t }}</p>
-          </article>
-        {% endfor %}
-      </div>
-
-      <div class="astranova-hero__signal">
-        <div class="astranova-hero__signal-orbit"></div>
-        <div class="astranova-hero__signal-core"></div>
-      </div>
     </div>
   </div>
 </section>
 
 {% stylesheet %}
-  .astranova-hero__grid {
+  .astranova-hero {
     position: relative;
-    display: grid;
-    gap: 1.5rem;
-    align-items: stretch;
+    min-height: var(--astranova-hero-min-height);
+    overflow: hidden;
+    isolation: isolate;
+    background: #030716;
+    color: #fff;
   }
 
-  .astranova-hero__content,
-  .astranova-hero__panel {
-    position: relative;
-    z-index: 1;
+  .astranova-hero__image,
+  .astranova-hero__veil,
+  .astranova-hero__stars {
+    position: absolute;
+    inset: 0;
+  }
+
+  .astranova-hero__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -3;
+  }
+
+  .astranova-hero__veil {
+    z-index: -2;
+    background:
+      linear-gradient(90deg, rgba(2, 5, 18, 0.98) 0%, rgba(2, 5, 18, 0.88) 35%, rgba(2, 5, 18, 0.2) 66%, rgba(2, 5, 18, 0.48) 100%),
+      linear-gradient(180deg, rgba(3, 7, 22, 0.18), rgba(3, 7, 22, 0.78));
+  }
+
+  .astranova-hero__stars {
+    z-index: -1;
+    opacity: 0.22;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.72) 1px, transparent 1.2px);
+    background-size: 52px 52px;
+    mask-image: linear-gradient(90deg, transparent, #000 45%, #000);
+  }
+
+  .astranova-hero__inner {
+    display: grid;
+    align-items: center;
+    min-height: var(--astranova-hero-min-height);
+    padding-block: clamp(4.5rem, 10vw, 8rem) clamp(2.5rem, 6vw, 4.5rem);
+    padding-inline: clamp(1.25rem, 3vw, 3.25rem);
   }
 
   .astranova-hero__content {
     display: grid;
-    gap: 1.25rem;
-    padding: clamp(1.5rem, 4vw, 4rem);
-    border: 1px solid var(--astranova-border);
-    border-radius: var(--astranova-radius);
-    background:
-      linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(255, 251, 247, 0.78)),
-      radial-gradient(circle at top right, rgba(56, 80, 107, 0.16), transparent 34%),
-      radial-gradient(circle at bottom left, rgba(200, 163, 123, 0.14), transparent 30%);
-    box-shadow: var(--astranova-shadow);
+    gap: 1.35rem;
+    width: min(42rem, 55%);
   }
 
   .astranova-hero__title {
+    max-width: 10ch;
     margin: 0;
-    color: var(--astranova-foreground);
-    font-size: clamp(3rem, 7vw, 6.2rem);
-    line-height: 0.9;
-    letter-spacing: -0.06em;
-    max-width: 8.6ch;
+    color: #fff;
+    font-size: clamp(3.2rem, 5vw, 4.8rem);
+    line-height: 0.93;
+    letter-spacing: -0.065em;
+    text-wrap: balance;
+  }
+
+  .astranova-hero__copy {
+    max-width: 34rem;
+    margin: 0;
+    color: rgba(239, 243, 255, 0.78);
+    font-size: clamp(1rem, 1.25vw, 1.2rem);
+    line-height: 1.65;
   }
 
   .astranova-hero__actions {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.75rem;
+    gap: 0.8rem;
   }
 
-  .astranova-hero__chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+  .astranova-hero__secondary {
+    border-color: rgba(255, 255, 255, 0.42);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .astranova-hero__trust {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 1rem 0 0;
+    padding: 1.25rem 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
     list-style: none;
-    padding: 0;
-    margin: 0;
   }
 
-  .astranova-hero__panel {
-    overflow: hidden;
+  .astranova-hero__trust-item {
     display: grid;
-    gap: 1.35rem;
-    padding: clamp(1.5rem, 3vw, 2.4rem);
-    min-height: 100%;
-    background:
-      linear-gradient(160deg, rgba(255, 255, 255, 0.82), rgba(250, 244, 238, 0.7)),
-      radial-gradient(circle at 85% 0, rgba(56, 80, 107, 0.18), transparent 32%);
-  }
-
-  .astranova-hero__visual {
-    position: relative;
-    min-height: clamp(18rem, 42vw, 28rem);
-    border: 1px solid rgba(56, 80, 107, 0.14);
-    border-radius: calc(var(--astranova-radius) - 4px);
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(248, 241, 234, 0.66)),
-      radial-gradient(circle at 88% 16%, rgba(200, 163, 123, 0.24), transparent 26%),
-      radial-gradient(circle at 12% 88%, rgba(56, 80, 107, 0.18), transparent 28%);
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.76);
-    overflow: hidden;
-    isolation: isolate;
-  }
-
-  .astranova-hero__visual::before {
-    content: '';
-    position: absolute;
-    inset: 1rem;
-    border-radius: calc(var(--astranova-radius) - 10px);
-    border: 1px solid rgba(255, 255, 255, 0.56);
-    opacity: 0.8;
-    z-index: 0;
-  }
-
-  .astranova-hero__visual-art {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    mix-blend-mode: multiply;
-    transform: scale(1.01);
-    animation: astranova-float 12s ease-in-out infinite;
-  }
-
-  .astranova-hero__visual-halo,
-  .astranova-hero__visual-orbit {
-    position: absolute;
-    border-radius: 999px;
-    pointer-events: none;
-  }
-
-  .astranova-hero__visual-halo {
-    filter: blur(8px);
-    opacity: 0.8;
-    animation: astranova-pulse 8s ease-in-out infinite;
-  }
-
-  .astranova-hero__visual-halo--amber {
-    top: 0.8rem;
-    right: 1.2rem;
-    width: 10rem;
-    height: 10rem;
-    background: radial-gradient(circle, rgba(215, 178, 140, 0.36), rgba(215, 178, 140, 0));
-  }
-
-  .astranova-hero__visual-halo--blue {
-    left: 1.4rem;
-    bottom: 1rem;
-    width: 11rem;
-    height: 11rem;
-    background: radial-gradient(circle, rgba(56, 80, 107, 0.22), rgba(56, 80, 107, 0));
-    animation-delay: -3s;
-  }
-
-  .astranova-hero__visual-orbit {
-    border: 1px solid rgba(56, 80, 107, 0.14);
-    opacity: 0.6;
-    z-index: 0;
-  }
-
-  .astranova-hero__visual-orbit--one {
-    top: -2rem;
-    right: -1rem;
-    width: 11rem;
-    height: 11rem;
-    animation: astranova-spin 28s linear infinite;
-  }
-
-  .astranova-hero__visual-orbit--two {
-    bottom: -3rem;
-    left: -1.5rem;
-    width: 14rem;
-    height: 14rem;
-    animation: astranova-spin 36s linear infinite reverse;
-  }
-
-  .astranova-hero__visual-badge {
-    position: absolute;
-    z-index: 2;
-    display: inline-flex;
+    grid-template-columns: auto 1fr;
+    gap: 0.65rem;
     align-items: center;
-    gap: 0.55rem;
-    padding: 0.62rem 0.9rem;
-    border: 1px solid rgba(56, 80, 107, 0.14);
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.86);
-    color: var(--astranova-accent-strong);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    box-shadow: 0 16px 24px rgba(23, 21, 28, 0.1);
-    backdrop-filter: blur(14px);
+    min-width: 0;
   }
 
-  .astranova-hero__visual-badge--one {
-    top: 1.25rem;
-    left: 1.25rem;
-    animation: astranova-float 10s ease-in-out infinite;
-  }
-
-  .astranova-hero__visual-badge--two {
-    right: 1.4rem;
-    bottom: 1.25rem;
-    animation: astranova-float 11s ease-in-out infinite reverse;
-  }
-
-  .astranova-hero__visual-badge-dot {
-    width: 0.55rem;
-    height: 0.55rem;
-    border-radius: 999px;
-    background: linear-gradient(135deg, var(--astranova-accent), var(--astranova-accent-strong));
-    box-shadow: 0 0 0 0.22rem rgba(56, 80, 107, 0.08);
-  }
-
-  .astranova-hero__panel-title {
-    margin: 0.5rem 0 0;
-    color: var(--astranova-foreground);
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
-    line-height: 1;
-    letter-spacing: -0.05em;
-  }
-
-  .astranova-hero__stats {
-    align-items: start;
-  }
-
-  .astranova-hero__mini-grid {
-    position: relative;
-    z-index: 1;
+  .astranova-hero__trust-icon {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.85rem;
+    width: 2rem;
+    height: 2rem;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 50%;
+    color: #aeb8ff;
   }
 
-  .astranova-hero__mini-card {
-    display: grid;
-    gap: 0.45rem;
-    padding: 1rem;
-    border: 1px solid rgba(56, 80, 107, 0.14);
-    border-radius: calc(var(--astranova-radius-sm) - 2px);
-    background: rgba(255, 255, 255, 0.68);
-    backdrop-filter: blur(12px);
+  .astranova-hero__trust-icon svg {
+    width: 0.8rem;
+    height: 0.8rem;
   }
 
-  .astranova-hero__mini-index {
-    margin: 0;
-    color: rgba(56, 80, 107, 0.5);
-    font-size: 0.78rem;
-    font-weight: 800;
-    letter-spacing: 0.18em;
+  .astranova-hero__trust-item strong,
+  .astranova-hero__trust-item small {
+    display: block;
   }
 
-  .astranova-hero__mini-title {
-    margin: 0;
-    color: var(--astranova-foreground);
-    font-size: 1rem;
-    line-height: 1.1;
-    letter-spacing: -0.04em;
+  .astranova-hero__trust-item strong {
+    color: #fff;
+    font-size: 0.83rem;
   }
 
-  .astranova-hero__mini-copy {
-    margin: 0;
-    color: var(--astranova-muted);
-    font-size: 0.92rem;
-    line-height: 1.55;
+  .astranova-hero__trust-item small {
+    margin-top: 0.15rem;
+    color: rgba(239, 243, 255, 0.58);
+    font-size: 0.72rem;
+    line-height: 1.35;
   }
 
-  .astranova-hero__signal {
-    position: absolute;
-    right: -2rem;
-    bottom: -1.5rem;
-    width: 13rem;
-    height: 13rem;
-    border-radius: 999px;
-    opacity: 0.9;
-  }
+  @media screen and (max-width: 989px) {
+    .astranova-hero__image {
+      object-position: 64% center;
+    }
 
-  .astranova-hero__signal-orbit,
-  .astranova-hero__signal-core {
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-  }
+    .astranova-hero__veil {
+      background:
+        linear-gradient(90deg, rgba(2, 5, 18, 0.98), rgba(2, 5, 18, 0.8) 58%, rgba(2, 5, 18, 0.4)),
+        linear-gradient(180deg, rgba(3, 7, 22, 0.18), rgba(3, 7, 22, 0.82));
+    }
 
-  .astranova-hero__signal-orbit {
-    border: 1px solid rgba(56, 80, 107, 0.18);
-    transform: scale(0.7);
-  }
-
-  .astranova-hero__signal-core {
-    inset: 34%;
-    background: radial-gradient(circle, rgba(200, 163, 123, 0.95), rgba(200, 163, 123, 0.2));
-    box-shadow: 0 0 60px rgba(200, 163, 123, 0.22);
-    animation: astranova-pulse 7s ease-in-out infinite;
+    .astranova-hero__content {
+      width: min(36rem, 72%);
+    }
   }
 
   @media screen and (max-width: 749px) {
-    .astranova-hero__mini-grid {
-      grid-template-columns: 1fr;
+    .astranova-hero {
+      min-height: 48rem;
     }
 
-    .astranova-hero__visual-badge {
-      font-size: 0.72rem;
-      letter-spacing: 0.05em;
+    .astranova-hero__image {
+      height: 58%;
+      inset: auto 0 0;
+      object-position: 66% bottom;
     }
-  }
 
-  @media screen and (min-width: 990px) {
-    .astranova-hero__grid {
-      grid-template-columns: minmax(0, 1.1fr) minmax(24rem, 0.9fr);
+    .astranova-hero__veil {
+      background:
+        linear-gradient(180deg, rgba(2, 5, 18, 0.99) 0%, rgba(2, 5, 18, 0.94) 48%, rgba(2, 5, 18, 0.32) 76%, rgba(2, 5, 18, 0.74) 100%);
     }
-  }
 
-  @media (prefers-reduced-motion: reduce) {
-    .astranova-hero__visual-art,
-    .astranova-hero__visual-halo,
-    .astranova-hero__visual-orbit,
-    .astranova-hero__visual-badge,
-    .astranova-hero__signal-core {
-      animation: none;
+    .astranova-hero__inner {
+      align-items: start;
+      min-height: 48rem;
+      padding-block: 4rem 2rem;
+    }
+
+    .astranova-hero__content {
+      width: 100%;
+      gap: 1rem;
+    }
+
+    .astranova-hero__title {
+      max-width: 9ch;
+      font-size: clamp(3rem, 14vw, 4.4rem);
+    }
+
+    .astranova-hero__copy {
+      max-width: 29rem;
+    }
+
+    .astranova-hero__trust {
+      display: none;
     }
   }
 {% endstylesheet %}
@@ -390,57 +246,20 @@
 {
   "name": "Astranova Hero",
   "settings": [
-    {
-      "type": "url",
-      "id": "primary_link",
-      "label": "Primary button link"
-    },
-    {
-      "type": "url",
-      "id": "secondary_link",
-      "label": "Secondary button link"
-    },
-    {
-      "type": "select",
-      "id": "section_width",
-      "label": "Width",
-      "options": [
-        { "value": "page-width", "label": "Page" },
-        { "value": "full-width", "label": "Full" }
-      ],
-      "default": "page-width"
-    },
-    {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "Color scheme",
-      "default": "scheme-1"
-    },
+    { "type": "url", "id": "primary_link", "label": "Primary button link" },
+    { "type": "url", "id": "secondary_link", "label": "Secondary button link" },
     {
       "type": "range",
-      "id": "padding_block_start",
-      "label": "Top padding",
-      "min": 24,
-      "max": 140,
-      "step": 2,
+      "id": "min_height",
+      "label": "Minimum height",
+      "min": 520,
+      "max": 900,
+      "step": 20,
       "unit": "px",
-      "default": 44
+      "default": 720
     },
-    {
-      "type": "range",
-      "id": "padding_block_end",
-      "label": "Bottom padding",
-      "min": 24,
-      "max": 140,
-      "step": 2,
-      "unit": "px",
-      "default": 72
-    }
+    { "type": "color_scheme", "id": "color_scheme", "label": "Color scheme", "default": "scheme-5" }
   ],
-  "presets": [
-    {
-      "name": "Astranova Hero"
-    }
-  ]
+  "presets": [{ "name": "Astranova Hero" }]
 }
 {% endschema %}

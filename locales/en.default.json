@@ -350,13 +350,27 @@
     }
   },
   "astranova": {
-    "announcement": "Curated drops | EU shipping | Gift-ready picks | Secure checkout",
+    "announcement": "Free EU shipping over €75 | 30-day returns | Secure checkout",
     "hero": {
-      "eyebrow": "Curated modern living",
-      "title": "Astranova gathers the pieces that make everyday life look better.",
-      "body": "A premium storefront for home accents, beauty rituals, accessories and smart finds, styled with a calm editorial touch instead of marketplace noise.",
-      "primary_cta": "Explore the collection",
-      "secondary_cta": "See new arrivals",
+      "eyebrow": "Technology for real life",
+      "title": "Technology. Everyday. Elevated.",
+      "body": "Curated electronics and modern essentials for life at home, at work and on the move.",
+      "primary_cta": "Shop electronics",
+      "secondary_cta": "Explore all",
+      "trust": {
+        "shipping": {
+          "title": "Free shipping",
+          "body": "On eligible orders"
+        },
+        "returns": {
+          "title": "Easy returns",
+          "body": "30-day returns"
+        },
+        "checkout": {
+          "title": "Secure checkout",
+          "body": "Trusted and protected"
+        }
+      },
       "chips": {
         "curated": "Curated drops",
         "shipping": "EU shipping",
@@ -417,14 +431,31 @@
       }
     },
     "collections": {
-      "eyebrow": "Featured worlds",
-      "title": "Four shoppable moods with one consistent point of view.",
+      "eyebrow": "Shop by category",
+      "title": "Find your next everyday upgrade.",
       "body": "This is how Astranova stays broad without feeling random.",
       "cta": "Shop this world",
+      "view_all": "View all categories",
+      "electronics": {
+        "title": "Electronics",
+        "body": "Modern tech for everyday life"
+      },
+      "accessories": {
+        "title": "Accessories",
+        "body": "Cases, cables and more"
+      },
       "home": {
         "tag": "Home & living",
-        "title": "Soften the room with useful, beautiful details.",
-        "body": "Decor accents, organizers and small upgrades that make a space feel more composed."
+        "title": "Home",
+        "body": "Smart living, beautiful spaces"
+      },
+      "gifts": {
+        "title": "Gifts",
+        "body": "Thoughtful picks for everyone"
+      },
+      "new_arrivals": {
+        "title": "New arrivals",
+        "body": "Latest drops, first looks"
       },
       "beauty": {
         "tag": "Beauty & wellness",
@@ -440,6 +471,34 @@
         "tag": "Smart finds",
         "title": "Problem-solving pieces with a premium first impression.",
         "body": "Useful upgrades and clever extras that still belong in an elegant storefront."
+      }
+    },
+    "featured": {
+      "eyebrow": "Popular picks",
+      "title": "Technology customers keep coming back for.",
+      "view_all": "View all products"
+    },
+    "why": {
+      "eyebrow": "Why Astranova",
+      "title": "Curated choices. Designed for real life.",
+      "body": "We bring together quality electronics and modern essentials from brands we trust, so you can focus on what matters.",
+      "cta": "Our story",
+      "trust_title": "Trusted every step of the way",
+      "payments": {
+        "title": "Secure payments",
+        "body": "Your payment information is protected."
+      },
+      "delivery": {
+        "title": "Fast, reliable delivery",
+        "body": "Clear dispatch and tracking updates."
+      },
+      "returns": {
+        "title": "30-day returns",
+        "body": "Change your mind? Send it back with ease."
+      },
+      "support": {
+        "title": "Support that helps",
+        "body": "Practical advice before and after your order."
       }
     },
     "use_cases": {
@@ -468,8 +527,9 @@
       }
     },
     "testimonials": {
-      "eyebrow": "Why shoppers stay",
-      "title": "The brand feels stronger when the whole experience feels composed.",
+      "eyebrow": "Customer stories",
+      "title": "What customers say",
+      "rating": "Rated five out of five",
       "body": "Premium design matters most when it is backed by clarity, taste and easy support.",
       "one": {
         "quote": "I came for one gift and ended up bookmarking the whole store. It feels curated in a way most general stores never do.",
@@ -489,7 +549,7 @@
     },
     "faq": {
       "eyebrow": "FAQ",
-      "title": "Answer the practical questions before they interrupt the mood.",
+      "title": "Frequently asked questions",
       "body": "Keep the answers short, visible and easy to understand across desktop and mobile.",
       "one": {
         "question": "What kinds of products does Astranova carry?",
@@ -504,15 +564,23 @@
         "answer_html": "<p>Yes. Many products are chosen because they feel easy to gift, easy to understand and easy to buy with confidence.</p>"
       },
       "four": {
-        "question": "How should product pages be structured?",
-        "answer_html": "<p>Lead with a short promise, three benefit bullets, clear product details, size and materials, care guidance and visible shipping or returns information.</p>"
+        "question": "Can I return a product if it does not suit me?",
+        "answer_html": "<p>Eligible items can be returned within 30 days. The final policy and any product-specific exclusions are shown before checkout.</p>"
+      },
+      "five": {
+        "question": "Are products covered by a warranty?",
+        "answer_html": "<p>Warranty details are shown on each product page and may vary by brand and product category.</p>"
+      },
+      "six": {
+        "question": "How can I contact support?",
+        "answer_html": "<p>Use the contact page or reply to your order email. We aim to provide clear, practical help as quickly as possible.</p>"
       }
     },
     "footer": {
       "eyebrow": "Stay in orbit",
-      "title": "Keep close to new drops, small restocks and the next beautiful find.",
-      "body": "Use the footer to collect email, reinforce trust and make language or currency changes feel effortless.",
-      "submit": "Join list",
+      "title": "Stay in the orbit",
+      "body": "New drops, useful guides and exclusive offers. No noise.",
+      "submit": "Subscribe",
       "shop_heading": "Shop",
       "support_heading": "Support"
     },
@@ -522,10 +590,33 @@
       "benefit_1": "Elevated look and feel that makes the product easy to want and easy to gift.",
       "benefit_2": "Straightforward details on size, materials, care and delivery before checkout.",
       "benefit_3": "A calmer buying experience with polished support, returns and shipping guidance.",
+      "frequently_bought": "Frequently bought together",
+      "specifications": "Specifications",
+      "spec": {
+        "brand": "Brand",
+        "model": "Model",
+        "compatibility": "Compatibility",
+        "material": "Material",
+        "size": "Size",
+        "color": "Color",
+        "power": "Power"
+      },
+      "trust": {
+        "delivery_title": "Delivery",
+        "delivery_default": "Tracked delivery with clear updates.",
+        "returns_title": "Returns",
+        "returns_default": "30-day returns on eligible products.",
+        "warranty_title": "Warranty",
+        "warranty_default": "Warranty information is confirmed for this product."
+      },
       "accordion": {
         "details": {
           "title": "Product details",
           "default_html": "<p>Add a <strong>custom.product_details</strong> metafield to explain what this item is, how it fits into daily use and why it stands out.</p>"
+        },
+        "package": {
+          "title": "What is in the box",
+          "default_html": "<p>Add a <strong>custom.package_contents</strong> metafield to list every included item clearly.</p>"
         },
         "size_materials": {
           "title": "Size & materials",
@@ -540,6 +631,13 @@
           "default_html": "<p>Add a <strong>custom.shipping_and_returns</strong> metafield to summarize dispatch timing, delivery expectations and return guidance.</p>"
         }
       }
+    },
+    "cart": {
+      "shipping_remaining_html": "Add <strong>{{ amount }}</strong> for free shipping",
+      "shipping_unlocked": "Free shipping unlocked",
+      "secure": "Secure checkout",
+      "returns": "30-day returns",
+      "support": "Helpful support"
     }
   }
 }

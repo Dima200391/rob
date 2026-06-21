@@ -13,102 +13,173 @@
       "type": "astranova-hero",
       "settings": {
         "primary_link": "/collections/all",
-        "secondary_link": "/collections/new-in",
-        "section_width": "page-width",
-        "color_scheme": "scheme-1",
-        "padding_block_start": 48,
-        "padding_block_end": 72
+        "secondary_link": "/collections",
+        "min_height": 720,
+        "color_scheme": "scheme-5"
       }
     },
-    "astranova_trust": {
-      "type": "astranova-trust-bar",
-      "settings": {
-        "section_width": "page-width",
-        "color_scheme": "scheme-1",
-        "padding_block": 20
-      }
-    },
-    "astranova_collections": {
+    "astranova_categories": {
       "type": "astranova-collections",
-      "settings": {
-        "home_link": "/collections/home-living",
-        "beauty_link": "/collections/beauty-wellness",
-        "style_link": "/collections/style-accessories",
-        "smart_link": "/collections/smart-finds",
-        "section_width": "page-width",
-        "color_scheme": "scheme-1",
-        "padding_block_start": 16,
-        "padding_block_end": 32
-      }
-    },
-    "astranova_edit": {
-      "type": "astranova-feature-grid",
       "blocks": {
+        "electronics": {
+          "type": "category",
+          "settings": {
+            "fallback_key": "electronics",
+            "link": "/collections/electronics"
+          }
+        },
+        "accessories": {
+          "type": "category",
+          "settings": {
+            "fallback_key": "accessories",
+            "link": "/collections/accessories"
+          }
+        },
         "home": {
-          "type": "card",
+          "type": "category",
           "settings": {
-            "kicker": "Home mood",
-            "title": "Room-changing pieces with soft luxury energy",
-            "body": "Home accents, organizers and details that make the space feel calmer, brighter and more intentional.",
-            "link_label": "Browse home",
-            "link": "/collections/home-living"
+            "fallback_key": "home",
+            "link": "/collections/home"
           }
         },
-        "beauty": {
-          "type": "card",
+        "gifts": {
+          "type": "category",
           "settings": {
-            "kicker": "Daily rituals",
-            "title": "Beauty and wellness finds that feel giftable by default",
-            "body": "Build a section around self-care, reset moments and small indulgences that are easy to buy and easy to love.",
-            "link_label": "Browse beauty",
-            "link": "/collections/beauty-wellness"
+            "fallback_key": "gifts",
+            "link": "/collections/gifts"
           }
         },
-        "style": {
-          "type": "card",
+        "new_arrivals": {
+          "type": "category",
           "settings": {
-            "kicker": "Everyday detail",
-            "title": "Style and accessories that finish the look without trying too hard",
-            "body": "From daily carry pieces to fashion extras, keep the assortment sharp, concise and visually elevated.",
-            "link_label": "Browse style",
-            "link": "/collections/style-accessories"
-          }
-        },
-        "smart": {
-          "type": "card",
-          "settings": {
-            "kicker": "Useful extras",
-            "title": "Smart finds that solve a problem and still look premium",
-            "body": "The best gadget layer of a general store is helpful, polished and easy to trust in seconds.",
-            "link_label": "Browse smart finds",
-            "link": "/collections/smart-finds"
+            "fallback_key": "new_arrivals",
+            "link": "/collections/new-arrivals"
           }
         }
       },
-      "block_order": [
-        "home",
-        "beauty",
-        "style",
-        "smart"
-      ],
+      "block_order": ["electronics", "accessories", "home", "gifts", "new_arrivals"],
       "settings": {
-        "eyebrow": "The Astranova edit",
-        "title": "A broader catalog still feels refined when every category has a point of view.",
-        "body": "Astranova should feel like a well-edited store of beautiful, useful finds instead of a random product feed.",
-        "columns": "4",
         "section_width": "page-width",
-        "color_scheme": "scheme-2",
-        "padding_block_start": 20,
+        "color_scheme": "scheme-1",
+        "padding_block_start": 48,
         "padding_block_end": 28
       }
     },
-    "astranova_use_cases": {
-      "type": "astranova-use-cases",
+    "astranova_featured": {
+      "type": "astranova-featured-products",
+      "blocks": {
+        "static-product-card": {
+          "type": "_product-card",
+          "name": "t:names.product_card",
+          "static": true,
+          "settings": {
+            "product_card_gap": 8,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 16,
+            "padding-block-start": 0,
+            "padding-block-end": 8,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "product-card-gallery": {
+              "type": "_product-card-gallery",
+              "name": "t:names.product_card_media",
+              "settings": {
+                "image_ratio": "square",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_radius": 16,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "product_title": {
+              "type": "product-title",
+              "name": "t:names.product_title",
+              "settings": {
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.9rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "var(--color-foreground)",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 4,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "price": {
+              "type": "price",
+              "name": "t:names.product_price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h6",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "color": "var(--color-foreground)",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": ["product-card-gallery", "product_title", "price"]
+        }
+      },
+      "block_order": [],
       "settings": {
+        "max_products": 5,
+        "layout_type": "carousel",
+        "carousel_on_mobile": true,
+        "columns": 5,
+        "mobile_columns": "2",
+        "mobile_card_size": "60cqw",
+        "columns_gap": 16,
+        "rows_gap": 24,
+        "icons_style": "arrow",
+        "icons_shape": "circle",
         "section_width": "page-width",
-        "color_scheme": "scheme-2",
-        "padding_block_start": 24,
-        "padding_block_end": 24
+        "color_scheme": "scheme-1",
+        "padding_block_start": 28,
+        "padding_block_end": 44
+      }
+    },
+    "astranova_why": {
+      "type": "astranova-why",
+      "settings": {
+        "link": "/pages/about-us",
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding_block_start": 28,
+        "padding_block_end": 28
       }
     },
     "astranova_testimonials": {
@@ -117,7 +188,7 @@
         "section_width": "page-width",
         "color_scheme": "scheme-1",
         "padding_block_start": 28,
-        "padding_block_end": 24
+        "padding_block_end": 28
       }
     },
     "astranova_faq": {
@@ -125,17 +196,16 @@
       "settings": {
         "section_width": "page-width",
         "color_scheme": "scheme-1",
-        "padding_block_start": 24,
-        "padding_block_end": 32
+        "padding_block_start": 28,
+        "padding_block_end": 48
       }
     }
   },
   "order": [
     "astranova_hero",
-    "astranova_trust",
-    "astranova_collections",
-    "astranova_edit",
-    "astranova_use_cases",
+    "astranova_categories",
+    "astranova_featured",
+    "astranova_why",
     "astranova_testimonials",
     "astranova_faq"
   ]
