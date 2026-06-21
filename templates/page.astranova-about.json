@@ -1,12 +1,21 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "intro": {
       "type": "astranova-page-intro",
       "settings": {
         "eyebrow": "About Astranova",
-        "title": "Electronics curated for calmer, clearer everyday living.",
-        "body": "Astranova is a premium-tech storefront built around trust, clarity and a tighter catalog. Instead of feeling crowded, the store is designed to help customers understand what matters fast: what a product does, who it fits, how it ships and why it is worth buying.",
-        "primary_label": "Shop catalog",
+        "title": "A curated orbit of modern finds for home, ritual and everyday style.",
+        "body": "Astranova is built to feel calm, polished and selective.\nInstead of trying to sell everything at once, the store presents a tighter edit of products that make daily life look better, feel easier or gift more beautifully.",
+        "primary_label": "Shop all",
         "primary_link": "/collections/all",
         "secondary_label": "Contact support",
         "secondary_link": "/pages/support",
@@ -19,46 +28,46 @@
     "values": {
       "type": "astranova-feature-grid",
       "blocks": {
-        "catalog": {
+        "curated": {
           "type": "card",
           "settings": {
-            "kicker": "Curated catalog",
-            "title": "Four clear product lines instead of endless noise",
-            "body": "Astranova begins with audio, mobile accessories, desk setup and smart gadgets so the storefront feels focused and premium from the first click.",
+            "kicker": "Curated feel",
+            "title": "A smaller, better-edited assortment beats a crowded general store",
+            "body": "Astranova should feel deliberate from the first screen, with categories that belong together visually even when the products are different.",
             "link_label": "Browse collections",
             "link": "/collections"
           }
         },
-        "details": {
+        "utility": {
           "type": "card",
           "settings": {
-            "kicker": "Transparent details",
-            "title": "Specs, compatibility and warranty appear before doubt sets in",
-            "body": "Each product page is meant to answer practical questions quickly with benefit bullets, technical detail and visible shipping guidance.",
+            "kicker": "Beautiful utility",
+            "title": "Useful products still deserve premium presentation",
+            "body": "From home pieces to beauty extras and smart finds, every product should look elevated and easy to trust.",
             "link_label": "Open support",
             "link": "/pages/support"
           }
         },
-        "support": {
+        "confidence": {
           "type": "card",
           "settings": {
-            "kicker": "Local-first trust",
-            "title": "Estonia-facing support with wider EU confidence built in",
-            "body": "The brand voice stays calm and direct while the storefront supports English, Estonian and Russian for the moments where clarity matters most.",
-            "link_label": "Read FAQs",
+            "kicker": "Customer confidence",
+            "title": "Clear delivery, returns and product details keep the brand believable",
+            "body": "The more polished the structure feels, the easier it is to sell across multiple categories without losing focus.",
+            "link_label": "Read FAQ",
             "link": "/pages/faq"
           }
         }
       },
       "block_order": [
-        "catalog",
-        "details",
-        "support"
+        "curated",
+        "utility",
+        "confidence"
       ],
       "settings": {
         "eyebrow": "Brand principles",
-        "title": "A smaller catalog can feel more premium when the presentation is deliberate.",
-        "body": "Astranova is organized to reduce hesitation and make every product line easier to trust.",
+        "title": "Astranova works when it feels like a boutique edit, not a random feed.",
+        "body": "That means controlled category choices, elegant visuals and simple paths to trust on every page.",
         "columns": "3",
         "section_width": "page-width",
         "color_scheme": "scheme-1",

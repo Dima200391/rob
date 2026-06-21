@@ -13,7 +13,7 @@
       "type": "astranova-hero",
       "settings": {
         "primary_link": "/collections/all",
-        "secondary_link": "/pages/contact",
+        "secondary_link": "/collections/new-in",
         "section_width": "page-width",
         "color_scheme": "scheme-1",
         "padding_block_start": 48,
@@ -31,83 +31,75 @@
     "astranova_collections": {
       "type": "astranova-collections",
       "settings": {
-        "audio_link": "/collections/audio",
-        "accessories_link": "/collections/mobile-accessories",
-        "desk_link": "/collections/desk-setup",
-        "gadgets_link": "/collections/smart-gadgets",
+        "home_link": "/collections/home-living",
+        "beauty_link": "/collections/beauty-wellness",
+        "style_link": "/collections/style-accessories",
+        "smart_link": "/collections/smart-finds",
         "section_width": "page-width",
         "color_scheme": "scheme-1",
         "padding_block_start": 16,
         "padding_block_end": 32
       }
     },
-    "featured_product_astranova": {
-      "type": "featured-product",
+    "astranova_edit": {
+      "type": "astranova-feature-grid",
       "blocks": {
-        "media": {
-          "type": "_media-without-appearance",
-          "name": "t:names.product_media",
-          "static": true,
-          "settings": {}
+        "home": {
+          "type": "card",
+          "settings": {
+            "kicker": "Home mood",
+            "title": "Room-changing pieces with soft luxury energy",
+            "body": "Home accents, organizers and details that make the space feel calmer, brighter and more intentional.",
+            "link_label": "Browse home",
+            "link": "/collections/home-living"
+          }
         },
-        "featured-product": {
-          "type": "_featured-product",
-          "name": "t:names.product",
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "featured-product-title": {
-              "type": "product-title",
-              "name": "t:names.title",
-              "static": true,
-              "settings": {
-                "type_preset": "h5",
-                "width": "100%"
-              },
-              "blocks": {}
-            },
-            "featured-product-price": {
-              "type": "_featured-product-price",
-              "name": "t:names.price",
-              "static": true,
-              "settings": {},
-              "blocks": {}
-            },
-            "featured-product-gallery": {
-              "type": "_featured-product-gallery",
-              "name": "t:names.image",
-              "static": true,
-              "settings": {},
-              "blocks": {}
-            },
-            "featured-product-swatches": {
-              "type": "swatches",
-              "name": "t:names.swatches",
-              "static": true,
-              "settings": {
-                "hide_padding": true
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "featured-product-title",
-            "featured-product-price",
-            "featured-product-gallery",
-            "featured-product-swatches"
-          ]
+        "beauty": {
+          "type": "card",
+          "settings": {
+            "kicker": "Daily rituals",
+            "title": "Beauty and wellness finds that feel giftable by default",
+            "body": "Build a section around self-care, reset moments and small indulgences that are easy to buy and easy to love.",
+            "link_label": "Browse beauty",
+            "link": "/collections/beauty-wellness"
+          }
+        },
+        "style": {
+          "type": "card",
+          "settings": {
+            "kicker": "Everyday detail",
+            "title": "Style and accessories that finish the look without trying too hard",
+            "body": "From daily carry pieces to fashion extras, keep the assortment sharp, concise and visually elevated.",
+            "link_label": "Browse style",
+            "link": "/collections/style-accessories"
+          }
+        },
+        "smart": {
+          "type": "card",
+          "settings": {
+            "kicker": "Useful extras",
+            "title": "Smart finds that solve a problem and still look premium",
+            "body": "The best gadget layer of a general store is helpful, polished and easy to trust in seconds.",
+            "link_label": "Browse smart finds",
+            "link": "/collections/smart-finds"
+          }
         }
       },
       "block_order": [
-        "media",
-        "featured-product"
+        "home",
+        "beauty",
+        "style",
+        "smart"
       ],
       "settings": {
-        "product": "",
-        "layout": "media-left",
+        "eyebrow": "The Astranova edit",
+        "title": "A broader catalog still feels refined when every category has a point of view.",
+        "body": "Astranova should feel like a well-edited store of beautiful, useful finds instead of a random product feed.",
+        "columns": "4",
+        "section_width": "page-width",
         "color_scheme": "scheme-2",
-        "padding-block-start": 16,
-        "padding-block-end": 28
+        "padding_block_start": 20,
+        "padding_block_end": 28
       }
     },
     "astranova_use_cases": {
@@ -142,7 +134,7 @@
     "astranova_hero",
     "astranova_trust",
     "astranova_collections",
-    "featured_product_astranova",
+    "astranova_edit",
     "astranova_use_cases",
     "astranova_testimonials",
     "astranova_faq"

@@ -33,7 +33,6 @@
     "inventory_status": "Inventory status",
     "localization_region_and_language": "Region and language selector",
     "menu": "Menu",
-    // This is the label for the header navigation menu when using screen readers, it will read "Primary navigation"
     "header_navigation_label": "Primary",
     "nested_product": "{{ product_title }} for {{ parent_title }}",
     "new_window": "Opens in a new window.",
@@ -66,52 +65,40 @@
     "price_filter_high": "High price"
   },
   "actions": {
-    // Quick add button on product cards, shortened version of add to cart
     "add": "Add",
     "add_to_cart": "Add to cart",
-    // Success message shown after adding item to cart
     "added": "Added",
-    // Button to apply discount code to cart
     "apply": "Apply",
     "back": "Back",
     "back_to": "Back to {{ title }}",
     "choose": "Choose",
-    // Button to reset current selection or input
     "clear": "Clear",
-    // Button to remove all applied product filters
     "clear_all": "Clear all",
     "close": "Close",
     "open": "Open",
-    // Continue shopping link on the cart page which takes the user back to a collection page
     "continue_shopping": "Continue shopping",
     "enter_password": "Enter password",
     "log_in_html": "Have an account? <a href=\"{{ link }}\">Log in</a> to check out faster.",
     "log_in": "Sign in",
     "log_out": "Log out",
     "open_image_in_full_screen": "Open image in full screen",
-    // Button to remove applied filters from search/collection results
     "remove": "Remove",
     "remove_discount": "Remove discount {{ code }}",
-    // Button to expand hidden product variant options
     "show_all_options": "Show all options",
     "see_items": {
       "one": "See {{ count }} item",
-      // Button to view filtered product results and close filter dialog
       "other": "See {{ count }} items"
     },
     "show_filters": "Filter",
     "show_less": "Show less",
     "show_more": "Show more",
     "sign_in_options": "Other sign in options",
-    // AR button to view 3D product model in physical space
     "view_in_your_space": "View in your space",
-    // Button to view complete collection/product list
     "view_all": "View all",
     "more": "More",
     "zoom": "Zoom",
     "zoom_media": "Zoom media {{ index }}",
     "close_dialog": "Close dialog",
-    // Button to clear search filter and restore default view
     "reset": "Reset",
     "enter_using_password": "Enter using password",
     "sign_up": "Sign up",
@@ -257,7 +244,6 @@
     "search_results_no_results_check_spelling": "No results found for \"{{ terms }}\". Check the spelling or use a different word or phrase.",
     "search_results_resource_articles": "Blog posts",
     "search_results_resource_collections": "Collections",
-    // Section heading for Shopify store pages in search results
     "search_results_resource_pages": "Pages",
     "search_results_resource_products": "Products",
     "search_results_resource_products_count": {
@@ -274,10 +260,8 @@
       "one": "1 item added to cart",
       "other": "{{ count }} items added to cart"
     },
-    // Button to go from search preview to full search results page
     "search_results_view_all": "View all",
     "search_results_view_all_button": "View all",
-    // Label for customer's note to seller during checkout
     "seller_note": "Special instructions",
     "shipping_policy": "Shipping calculated at checkout.",
     "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
@@ -293,7 +277,6 @@
     "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Taxes included. Shipping is calculated at checkout.",
     "unavailable": "Unavailable",
     "use_fewer_filters_html": "Try using fewer filters, or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all filters</a>.",
-    // Link or button to expand additional information
     "view_more_details": "View more details",
     "volume_pricing_available": "Volume pricing available",
     "volume_pricing": "Volume pricing",
@@ -306,7 +289,6 @@
     "product_count": "Product count",
     "errors": "Errors",
     "wrong_password": "Wrong password",
-    // Legend text for gift card delivery options
     "recipient_form_send_to": "Send to",
     "recipient_form_email_label": "Recipient’s email",
     "recipient_form_email_label_my_email": "My email",
@@ -322,7 +304,6 @@
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} characters used"
   },
   "fields": {
-    // Separates min and max values in price range filter
     "separator": "to"
   },
   "gift_cards": {
@@ -369,176 +350,194 @@
     }
   },
   "astranova": {
-    "announcement": "EU shipping ? 1-year warranty ? Secure checkout ? Support from Tallinn",
+    "announcement": "Curated drops | EU shipping | Gift-ready picks | Secure checkout",
     "hero": {
-      "eyebrow": "Minimal luxury tech",
-      "title": "Astranova builds everyday electronics with a calmer, cleaner signal.",
-      "body": "Curated audio, charging and desk essentials designed for Estonia, shipped across the EU, and presented with the confidence of a premium brand.",
-      "primary_cta": "Shop collection",
-      "secondary_cta": "Talk to support",
+      "eyebrow": "Curated modern living",
+      "title": "Astranova gathers the pieces that make everyday life look better.",
+      "body": "A premium storefront for home accents, beauty rituals, accessories and smart finds, styled with a calm editorial touch instead of marketplace noise.",
+      "primary_cta": "Explore the collection",
+      "secondary_cta": "See new arrivals",
       "chips": {
+        "curated": "Curated drops",
         "shipping": "EU shipping",
-        "warranty": "1-year warranty",
-        "checkout": "Secure checkout"
+        "gifting": "Gift-ready picks"
       },
-      "panel_eyebrow": "Why Astranova",
-      "panel_title": "A focused catalog that feels premium from the first click.",
-      "panel_body": "We prioritize dependable electronics, clear specs and fast trust signals over marketplace clutter.",
+      "panel_eyebrow": "Why it works",
+      "panel_title": "More like a well-edited boutique. Less like a crowded catalog.",
+      "panel_body": "Every category is framed with the same quiet luxury language, so the store can grow wider without feeling messier.",
       "stats": {
         "catalog": {
-          "value": "4 lines",
-          "label": "Audio, accessories, desk setup and smart gadgets."
+          "value": "4 worlds",
+          "label": "Home, beauty, accessories and smart finds."
         },
-        "delivery": {
-          "value": "48h+",
-          "label": "Fast Estonia dispatch with EU-ready fulfillment."
+        "discovery": {
+          "value": "Gift-ready",
+          "label": "Selected for self-treats, upgrades and easy gifting."
         },
         "support": {
           "value": "EN / ET / RU",
-          "label": "Localized storefront and support-ready experience."
+          "label": "Localized browsing for a calmer buying experience."
+        }
+      },
+      "orbit": {
+        "home": {
+          "title": "Home & living",
+          "body": "Useful pieces that soften the room and sharpen the setup."
+        },
+        "beauty": {
+          "title": "Beauty & wellness",
+          "body": "Daily rituals, self-care moments and easy gift ideas."
+        },
+        "style": {
+          "title": "Style & accessories",
+          "body": "Details that travel well and finish the look cleanly."
+        },
+        "smart": {
+          "title": "Smart finds",
+          "body": "Problem-solvers that still deserve premium presentation."
         }
       }
     },
     "trust": {
       "shipping": {
-        "title": "EU-ready delivery",
-        "body": "Clear shipping messaging for Estonia first, with wider EU confidence built in."
+        "title": "Clear delivery",
+        "body": "Set expectations cleanly for Estonia and the wider EU, without hidden friction."
       },
       "warranty": {
-        "title": "Warranty first",
-        "body": "Lead with coverage, returns clarity and product support before customers need to ask."
+        "title": "Easy returns",
+        "body": "Make shipping, returns and care information visible before the customer has to ask."
       },
       "checkout": {
         "title": "Secure checkout",
-        "body": "Keep payment, trust cues and pricing communication polished from first click to cart."
+        "body": "Keep payment, pricing and trust cues elegant from the first glance to cart."
       },
       "support": {
-        "title": "Human support",
-        "body": "Use calm, direct copy in English, Estonian and Russian wherever reassurance matters."
+        "title": "Responsive support",
+        "body": "Fast, human help for product questions, gifting decisions and order follow-up."
       }
     },
     "collections": {
-      "eyebrow": "Featured collections",
-      "title": "Four product lines. One clear premium direction.",
-      "body": "Start with a curated catalog that is easy to trust, easy to browse and ready to scale.",
-      "cta": "Open collection",
-      "audio": {
-        "tag": "Audio",
-        "title": "Sound that feels clean, not loud.",
-        "body": "Headphones, speakers and listening tools presented with calm premium confidence."
+      "eyebrow": "Featured worlds",
+      "title": "Four shoppable moods with one consistent point of view.",
+      "body": "This is how Astranova stays broad without feeling random.",
+      "cta": "Shop this world",
+      "home": {
+        "tag": "Home & living",
+        "title": "Soften the room with useful, beautiful details.",
+        "body": "Decor accents, organizers and small upgrades that make a space feel more composed."
       },
-      "accessories": {
-        "tag": "Mobile accessories",
-        "title": "Charging and carry built for daily rhythm.",
-        "body": "Cables, power and travel essentials with a sharper presentation and clearer value."
+      "beauty": {
+        "tag": "Beauty & wellness",
+        "title": "Daily rituals that feel elevated and easy to gift.",
+        "body": "Self-care, wellness and beauty finds chosen for desirability, not clutter."
       },
-      "desk": {
-        "tag": "Desk setup",
-        "title": "Work surfaces with less clutter and more intention.",
-        "body": "Organizers, lighting and setup tools for focused, design-conscious routines."
+      "style": {
+        "tag": "Style & accessories",
+        "title": "The finishing pieces that complete the look.",
+        "body": "Everyday carry items, fashion extras and details that add polish without noise."
       },
-      "gadgets": {
-        "tag": "Smart gadgets",
-        "title": "Useful tech with a polished first impression.",
-        "body": "Compact innovations that feel elevated, giftable and easy to understand."
+      "smart": {
+        "tag": "Smart finds",
+        "title": "Problem-solving pieces with a premium first impression.",
+        "body": "Useful upgrades and clever extras that still belong in an elegant storefront."
       }
     },
     "use_cases": {
-      "eyebrow": "Built for daily life",
-      "title": "Designed for home, work, travel and gifting.",
-      "body": "Show customers where each product belongs so the catalog feels curated instead of overwhelming.",
+      "eyebrow": "Shop by feeling",
+      "title": "Built for atmosphere, rituals, daily carry and gifting.",
+      "body": "Show shoppers how the assortment fits into their life, not just which category it belongs to.",
       "home": {
-        "kicker": "At home",
-        "title": "Clean sound and calm charging",
-        "body": "Create a quieter living space with audio and power essentials that feel intentional."
+        "kicker": "Set the mood",
+        "title": "Home details that change the room quickly",
+        "body": "Lead with warmth, texture, light and organization so the store feels styled, not generic."
       },
-      "work": {
-        "kicker": "At work",
-        "title": "Focused desks with better flow",
-        "body": "Highlight products that improve setup quality, portability and everyday reliability."
+      "ritual": {
+        "kicker": "Reset",
+        "title": "Beauty and wellness picks for small daily rituals",
+        "body": "Self-care products work best when they feel easy to trust and pleasing to keep close."
       },
-      "travel": {
-        "kicker": "On the move",
-        "title": "Compact tech that is easy to trust",
-        "body": "Frame portability, battery confidence and fast checkout reassurance for mobile buyers."
+      "carry": {
+        "kicker": "Carry well",
+        "title": "Accessories that travel, layer and gift easily",
+        "body": "Keep the selection concise so shoppers can make a fast yes-or-no decision."
       },
       "gifting": {
-        "kicker": "For gifting",
-        "title": "Premium presentation from the first glance",
-        "body": "Use confident copy and strong category framing to make products feel instantly gift-ready."
+        "kicker": "Gift beautifully",
+        "title": "Products that already look considered before they are wrapped",
+        "body": "Strong presentation and clear use-case framing make a multi-category store easier to buy from."
       }
     },
     "testimonials": {
-      "eyebrow": "Social proof",
-      "title": "Trust grows when the experience feels consistent.",
-      "body": "Pair premium visuals with proof that delivery, support and product quality all match the promise.",
+      "eyebrow": "Why shoppers stay",
+      "title": "The brand feels stronger when the whole experience feels composed.",
+      "body": "Premium design matters most when it is backed by clarity, taste and easy support.",
       "one": {
-        "quote": "The site feels premium and the checkout is refreshingly clear. It immediately made the product feel more trustworthy.",
+        "quote": "I came for one gift and ended up bookmarking the whole store. It feels curated in a way most general stores never do.",
         "name": "Elina K.",
-        "meta": "First-time customer in Tallinn"
+        "meta": "Gift shopper in Tallinn"
       },
       "two": {
-        "quote": "I could understand compatibility, warranty and delivery in seconds. That removed the hesitation I usually have with electronics stores.",
+        "quote": "The mix of home, beauty and accessories still feels consistent. Nothing looks random or rushed.",
         "name": "Markus T.",
-        "meta": "Desk setup buyer"
+        "meta": "Returning customer"
       },
       "three": {
-        "quote": "Astranova looks curated instead of crowded. The whole store feels calmer, which makes the products feel more premium.",
+        "quote": "The site feels calm, elegant and easy to trust. I can browse quickly without feeling overwhelmed.",
         "name": "Anna P.",
-        "meta": "Gift shopper"
+        "meta": "First order from Estonia"
       }
     },
     "faq": {
       "eyebrow": "FAQ",
-      "title": "Answer the conversion questions before they block checkout.",
-      "body": "Keep the answers short, direct and visible across mobile and desktop.",
+      "title": "Answer the practical questions before they interrupt the mood.",
+      "body": "Keep the answers short, visible and easy to understand across desktop and mobile.",
       "one": {
-        "question": "Where does Astranova ship?",
-        "answer_html": "<p>Astranova is positioned for Estonia first, with shipping messaging built to scale across the wider EU.</p>"
+        "question": "What kinds of products does Astranova carry?",
+        "answer_html": "<p>Astranova is built as a curated premium store for home living, beauty and wellness, accessories, gifting and smart everyday finds. The mix can grow, but the presentation should always stay selective.</p>"
       },
       "two": {
-        "question": "What makes the catalog feel curated?",
-        "answer_html": "<p>The store starts with a focused set of electronics categories so customers can understand the offer quickly and trust the presentation.</p>"
+        "question": "Where does Astranova ship?",
+        "answer_html": "<p>The store is positioned for Estonia first, with clear delivery communication for customers across the wider EU.</p>"
       },
       "three": {
-        "question": "How should warranty and returns appear?",
-        "answer_html": "<p>Keep warranty, returns and shipping information visible near the add-to-cart area and again inside the product details accordion.</p>"
+        "question": "Are the products gift-friendly?",
+        "answer_html": "<p>Yes. Many products are chosen because they feel easy to gift, easy to understand and easy to buy with confidence.</p>"
       },
       "four": {
-        "question": "How should products be merchandised?",
-        "answer_html": "<p>Lead with a short promise headline, three clear benefits, a specs area and a related-products cross-sell block.</p>"
+        "question": "How should product pages be structured?",
+        "answer_html": "<p>Lead with a short promise, three benefit bullets, clear product details, size and materials, care guidance and visible shipping or returns information.</p>"
       }
     },
     "footer": {
       "eyebrow": "Stay in orbit",
-      "title": "Keep Astranova close to every launch, restock and release.",
-      "body": "Use the footer to collect email signups, reinforce support confidence and make language or currency changes easy.",
+      "title": "Keep close to new drops, small restocks and the next beautiful find.",
+      "body": "Use the footer to collect email, reinforce trust and make language or currency changes feel effortless.",
       "submit": "Join list",
       "shop_heading": "Shop",
       "support_heading": "Support"
     },
     "product": {
-      "promise_label": "Why it works",
-      "promise_default": "Precision tech for everyday rituals, backed by clear specs and dependable delivery.",
-      "benefit_1": "Studio-clean presentation with premium materials and modern finishes.",
-      "benefit_2": "Straightforward compatibility, secure checkout and EU-ready shipping.",
-      "benefit_3": "Support copy and warranty details that answer objections before checkout.",
+      "promise_label": "Why you'll love it",
+      "promise_default": "A well-chosen piece for everyday living, presented with the clarity and confidence it deserves.",
+      "benefit_1": "Elevated look and feel that makes the product easy to want and easy to gift.",
+      "benefit_2": "Straightforward details on size, materials, care and delivery before checkout.",
+      "benefit_3": "A calmer buying experience with polished support, returns and shipping guidance.",
       "accordion": {
-        "specifications": {
-          "title": "Specifications",
-          "default_html": "<p>Add a <strong>custom.specifications</strong> metafield to show dimensions, power, connectivity and materials here.</p>"
+        "details": {
+          "title": "Product details",
+          "default_html": "<p>Add a <strong>custom.product_details</strong> metafield to explain what this item is, how it fits into daily use and why it stands out.</p>"
         },
-        "compatibility": {
-          "title": "Compatibility",
-          "default_html": "<p>Add a <strong>custom.compatibility</strong> metafield to clarify supported devices, ports or ecosystems.</p>"
+        "size_materials": {
+          "title": "Size & materials",
+          "default_html": "<p>Add a <strong>custom.size_and_materials</strong> metafield to show dimensions, fabric, finish, ingredients or material notes here.</p>"
         },
-        "in_the_box": {
-          "title": "What's in the box",
-          "default_html": "<p>Add a <strong>custom.whats_in_the_box</strong> metafield to list accessories, adapters and included components.</p>"
+        "care": {
+          "title": "Care & use",
+          "default_html": "<p>Add a <strong>custom.care_and_use</strong> metafield for maintenance steps, usage tips, storage guidance or safety notes.</p>"
         },
         "shipping": {
-          "title": "Shipping & warranty",
-          "default_html": "<p>Add a <strong>custom.shipping_and_warranty</strong> metafield to summarize dispatch speed, coverage and returns.</p>"
+          "title": "Shipping & returns",
+          "default_html": "<p>Add a <strong>custom.shipping_and_returns</strong> metafield to summarize dispatch timing, delivery expectations and return guidance.</p>"
         }
       }
     }

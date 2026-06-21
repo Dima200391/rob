@@ -1,4 +1,5 @@
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
+{% assign use_case_items = 'home,ritual,carry,gifting' | split: ',' %}
 <section
   class="astranova-use-cases section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
   style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
@@ -11,7 +12,7 @@
   </div>
 
   <div class="astranova-card-grid astranova-card-grid--4">
-    {% for item in 'home,work,travel,gifting' | split: ',' %}
+    {% for item in use_case_items %}
       <div class="astranova-panel astranova-panel--compact astranova-use-cases__card">
         <p class="astranova-use-cases__card-kicker">{{ 'astranova.use_cases.' | append: item | append: '.kicker' | t }}</p>
         <h3 class="astranova-use-cases__card-title">{{ 'astranova.use_cases.' | append: item | append: '.title' | t }}</h3>
@@ -31,7 +32,10 @@
   .astranova-use-cases__card {
     display: grid;
     gap: 0.8rem;
-    padding: 1.4rem;
+    padding: 1.5rem;
+    background:
+      linear-gradient(155deg, rgba(255, 255, 255, 0.82), rgba(248, 242, 235, 0.72)),
+      radial-gradient(circle at 100% 0, rgba(200, 163, 123, 0.18), transparent 32%);
   }
 
   .astranova-use-cases__card-kicker {

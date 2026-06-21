@@ -1,4 +1,5 @@
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
+{% assign testimonial_items = 'one,two,three' | split: ',' %}
 <section
   class="astranova-testimonials section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
   style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
@@ -11,7 +12,7 @@
   </div>
 
   <div class="astranova-card-grid astranova-card-grid--3">
-    {% for item in 'one,two,three' | split: ',' %}
+    {% for item in testimonial_items %}
       <article class="astranova-panel astranova-panel--compact astranova-testimonials__card">
         <p class="astranova-testimonials__rating">5/5</p>
         <blockquote class="astranova-testimonials__quote">{{ 'astranova.testimonials.' | append: item | append: '.quote' | t }}</blockquote>

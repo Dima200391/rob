@@ -1,8 +1,9 @@
 {% liquid
-  assign collection_link_audio = section.settings.audio_link | default: '/collections/audio'
-  assign collection_link_accessories = section.settings.accessories_link | default: '/collections/mobile-accessories'
-  assign collection_link_desk = section.settings.desk_link | default: '/collections/desk-setup'
-  assign collection_link_gadgets = section.settings.gadgets_link | default: '/collections/smart-gadgets'
+  assign collection_link_home = section.settings.home_link | default: '/collections/home-living'
+  assign collection_link_beauty = section.settings.beauty_link | default: '/collections/beauty-wellness'
+  assign collection_link_style = section.settings.style_link | default: '/collections/style-accessories'
+  assign collection_link_smart = section.settings.smart_link | default: '/collections/smart-finds'
+  assign astranova_collection_items = 'home,beauty,style,smart' | split: ','
 %}
 
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
@@ -18,25 +19,40 @@
   </div>
 
   <div class="astranova-card-grid astranova-card-grid--4">
-    {% for item in 'audio,accessories,desk,gadgets' | split: ',' %}
+    {% for item in astranova_collection_items %}
       {% liquid
         case item
-          when 'audio'
-            assign link = collection_link_audio
-          when 'accessories'
-            assign link = collection_link_accessories
-          when 'desk'
-            assign link = collection_link_desk
+          when 'home'
+            assign link = collection_link_home
+            assign visual_asset = 'astranova-collection-home.svg'
+          when 'beauty'
+            assign link = collection_link_beauty
+            assign visual_asset = 'astranova-collection-beauty.svg'
+          when 'style'
+            assign link = collection_link_style
+            assign visual_asset = 'astranova-collection-style.svg'
           else
-            assign link = collection_link_gadgets
+            assign link = collection_link_smart
+            assign visual_asset = 'astranova-collection-smart.svg'
         endcase
       %}
       <a href="{{ link }}" class="astranova-panel astranova-panel--compact astranova-collections__card">
+        <div class="astranova-collections__visual" aria-hidden="true">
+          <div class="astranova-collections__visual-glow"></div>
+          <img
+            src="{{ visual_asset | asset_url }}"
+            alt=""
+            width="720"
+            height="880"
+            loading="lazy"
+            class="astranova-collections__image"
+          >
+        </div>
         <span class="astranova-tag">{{ 'astranova.collections.' | append: item | append: '.tag' | t }}</span>
         <div class="astranova-collections__number">0{{ forloop.index }}</div>
         <h3 class="astranova-collections__card-title">{{ 'astranova.collections.' | append: item | append: '.title' | t }}</h3>
         <p class="astranova-collections__card-copy">{{ 'astranova.collections.' | append: item | append: '.body' | t }}</p>
-        <span class="astranova-link">{{ 'astranova.collections.cta' | t }}</span>
+        <span class="astranova-collections__cta">{{ 'astranova.collections.cta' | t }}</span>
       </a>
     {% endfor %}
   </div>
@@ -51,20 +67,60 @@
 
   .astranova-collections__card {
     display: grid;
-    gap: 0.9rem;
-    padding: 1.4rem;
+    gap: 0.95rem;
+    padding: 1.5rem;
     color: inherit;
     text-decoration: none;
-    transition: transform 0.2s ease, border-color 0.2s ease;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    background:
+      linear-gradient(165deg, rgba(255, 255, 255, 0.82), rgba(250, 245, 240, 0.72)),
+      radial-gradient(circle at top right, rgba(56, 80, 107, 0.12), transparent 34%);
   }
 
   .astranova-collections__card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(98, 130, 162, 0.34);
+    transform: translateY(-6px);
+    border-color: rgba(56, 80, 107, 0.24);
+    box-shadow: 0 18px 42px rgba(23, 21, 28, 0.08);
+  }
+
+  .astranova-collections__visual {
+    position: relative;
+    aspect-ratio: 4 / 4.8;
+    margin: -0.45rem -0.45rem 0.1rem;
+    border-radius: calc(var(--astranova-radius-sm) - 2px);
+    overflow: hidden;
+    background:
+      radial-gradient(circle at top right, rgba(200, 163, 123, 0.24), transparent 32%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(244, 236, 228, 0.78));
+  }
+
+  .astranova-collections__visual-glow {
+    position: absolute;
+    inset: auto auto 1rem 1rem;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(56, 80, 107, 0.16), rgba(56, 80, 107, 0));
+    filter: blur(8px);
+    z-index: 0;
+  }
+
+  .astranova-collections__image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    mix-blend-mode: multiply;
+  }
+
+  .astranova-collections__card:hover .astranova-collections__image {
+    transform: scale(1.035);
   }
 
   .astranova-collections__number {
-    color: rgba(23, 32, 45, 0.2);
+    color: rgba(56, 80, 107, 0.18);
     font-family: var(--font-heading--family);
     font-size: clamp(2.2rem, 4vw, 3.3rem);
     font-weight: 700;
@@ -85,6 +141,12 @@
     color: var(--astranova-muted);
     line-height: 1.6;
   }
+
+  .astranova-collections__cta {
+    color: var(--astranova-accent-strong);
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -93,27 +155,23 @@
   "settings": [
     {
       "type": "url",
-      "id": "audio_link",
-      "label": "Audio link",
-      "default": "/collections/audio"
+      "id": "home_link",
+      "label": "Home & living link"
     },
     {
       "type": "url",
-      "id": "accessories_link",
-      "label": "Mobile accessories link",
-      "default": "/collections/mobile-accessories"
+      "id": "beauty_link",
+      "label": "Beauty & wellness link"
     },
     {
       "type": "url",
-      "id": "desk_link",
-      "label": "Desk setup link",
-      "default": "/collections/desk-setup"
+      "id": "style_link",
+      "label": "Style & accessories link"
     },
     {
       "type": "url",
-      "id": "gadgets_link",
-      "label": "Smart gadgets link",
-      "default": "/collections/smart-gadgets"
+      "id": "smart_link",
+      "label": "Smart finds link"
     },
     {
       "type": "select",

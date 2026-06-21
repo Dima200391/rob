@@ -1,11 +1,20 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "intro": {
       "type": "astranova-page-intro",
       "settings": {
         "eyebrow": "Support",
-        "title": "Support should feel as clear as the storefront itself.",
-        "body": "Use this page as the central place for pre-purchase questions, order help and warranty guidance. Keep replies calm, specific and fast so customers trust Astranova before and after checkout.",
+        "title": "Support should feel as calm and polished as the storefront itself.",
+        "body": "Use this page for product questions, order help, gift guidance and after-purchase reassurance. The goal is to reduce friction quickly and make Astranova feel dependable across every category.",
         "primary_label": "Email support",
         "primary_link": "/pages/contact",
         "secondary_label": "Track order",
@@ -19,13 +28,13 @@
     "cards": {
       "type": "astranova-feature-grid",
       "blocks": {
-        "purchase": {
+        "selection": {
           "type": "card",
           "settings": {
             "kicker": "Before checkout",
-            "title": "Help customers choose the right product faster",
-            "body": "Use support to answer compatibility, bundle and shipping questions before hesitation turns into a dropped session.",
-            "link_label": "View products",
+            "title": "Help shoppers choose the right item with less hesitation",
+            "body": "Answer questions around size, materials, gifting, use or product fit before a customer leaves the page.",
+            "link_label": "View catalog",
             "link": "/collections/all"
           }
         },
@@ -33,32 +42,32 @@
           "type": "card",
           "settings": {
             "kicker": "Orders",
-            "title": "Keep order updates direct and easy to verify",
-            "body": "Ask customers for order number, email used at checkout and the exact issue so the conversation stays efficient from the start.",
+            "title": "Keep delivery questions direct, specific and easy to verify",
+            "body": "Ask for order number, checkout email and the exact issue so support can move faster from the first reply.",
             "link_label": "Track order",
             "link": "/pages/track-order"
           }
         },
-        "coverage": {
+        "care": {
           "type": "card",
           "settings": {
-            "kicker": "Coverage",
-            "title": "Make warranty and returns visible before they are requested",
-            "body": "Customers should not need to search for coverage terms. Repeat the essentials on product pages, in support pages and inside policy pages.",
+            "kicker": "After purchase",
+            "title": "Make returns, care and delivery policies visible before they are requested",
+            "body": "Customers trust a multi-category store more when the practical details are easy to find and easy to understand.",
             "link_label": "Read FAQ",
             "link": "/pages/faq"
           }
         }
       },
       "block_order": [
-        "purchase",
+        "selection",
         "orders",
-        "coverage"
+        "care"
       ],
       "settings": {
         "eyebrow": "Support framework",
-        "title": "Organize support around the questions that block conversion most often.",
-        "body": "The goal is to reassure quickly, not overwhelm the customer with policy language.",
+        "title": "Organize support around the questions that block confidence most often.",
+        "body": "Keep the language clear, warm and fast to scan so the support experience reinforces the brand.",
         "columns": "3",
         "section_width": "page-width",
         "color_scheme": "scheme-1",

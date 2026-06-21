@@ -1,11 +1,12 @@
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
+{% assign trust_items = 'shipping,warranty,checkout,support' | split: ',' %}
 <section
   class="astranova-trust-bar section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
   style="padding-block: {{ section.settings.padding_block }}px;"
   {{ section.shopify_attributes }}
 >
   <div class="astranova-card-grid astranova-card-grid--4">
-    {% for item in 'shipping,warranty,checkout,support' | split: ',' %}
+    {% for item in trust_items %}
       <div class="astranova-panel astranova-panel--compact astranova-trust-bar__item">
         <div class="astranova-trust-bar__marker"></div>
         <p class="astranova-trust-bar__title">{{ 'astranova.trust.' | append: item | append: '.title' | t }}</p>

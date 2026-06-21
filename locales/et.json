@@ -8,537 +8,1589 @@
  * ------------------------------------------------------------
  */
 {
-  "accessibility": {
-    "account": "Konto",
-    "active_filters": "Active filters:",
-    "cart": "Ostukorv",
-    "cart_count": "Total items in cart",
-    "close_dialog": "Close dialog",
-    "country_region": "Riik/piirkond",
-    "country_results_count": "{{ count }} results",
-    "product_details": "Toote ?ksikasjad",
-    "show_product_details": "Show product details for {{ product_name }}",
-    "decrease_quantity": "Decrease quantity",
-    "discount": "Apply a discount code",
-    "discount_menu": "Discount Codes",
-    "discount_applied": "Applied discount code: {{ code }}",
-    "featured_product": "Featured product",
-    "filters": "Filters",
-    "filter_count": {
-      "one": "{{ count }} filter applied",
-      "other": "{{ count }} filters applied"
-    },
-    "home_logo_alt": "{{ store_name }} - Home",
-    "increase_quantity": "Suurenda kogust",
-    "inventory_status": "Inventory status",
-    "localization_region_and_language": "Region and language selector",
-    "menu": "Men??",
-    // This is the label for the header navigation menu when using screen readers, it will read "Primary navigation"
-    "header_navigation_label": "Primary",
-    "nested_product": "{{ product_title }} for {{ parent_title }}",
-    "new_window": "Opens in a new window.",
-    "quantity": "Kogus",
-    "pause_video": "Pause video",
-    "play_model": "Play 3D model",
-    "play_video": "Play video",
-    "loading_product_recommendations": "Loading product recommendations",
-    "rating": "Selle toote hinnang on {{ rating }} viiest",
-    "remove_item": "Remove {{ title}}",
-    "remove": "Remove",
-    "reset_search": "Reset search",
-    "scroll_to": "Scroll to {{ title }}",
-    "search_results_count": "Leiti {{ count }} otsingutulemust p?ringule \"{{ query }}\"",
-    "search_results_no_results": "No results found for \"{{ query }}\"",
-    "search_suggestions_available": "Search suggestions available for \"{{ query }}\"",
-    "skip_to_product_info": "Skip to product information",
-    "skip_to_results_list": "Skip to results list",
-    "skip_to_text": "Skip to content",
-    "slide_status": "Slide {{ index }} of {{ length }}",
-    "slideshow": "Slideshow",
-    "slideshow_next": "Next slide",
-    "slideshow_pause": "Pause slideshow",
-    "slideshow_play": "Play slideshow",
-    "slideshow_previous": "Previous slide",
-    "unit_price": "Unit price",
-    "find_country": "Otsi riiki",
-    "view_pricing_info": "View pricing information",
-    "price_filter_low": "Low price",
-    "price_filter_high": "High price"
-  },
-  "actions": {
-    // Quick add button on product cards, shortened version of add to cart
-    "add": "Lisa",
-    "add_to_cart": "Lisa ostukorvi",
-    // Success message shown after adding item to cart
-    "added": "Added",
-    // Button to apply discount code to cart
-    "apply": "Apply",
-    "back": "Back",
-    "back_to": "Back to {{ title }}",
-    "choose": "Choose",
-    // Button to reset current selection or input
-    "clear": "Clear",
-    // Button to remove all applied product filters
-    "clear_all": "Clear all",
-    "close": "Sulge",
-    "open": "Ava",
-    // Continue shopping link on the cart page which takes the user back to a collection page
-    "continue_shopping": "J?tka ostlemist",
-    "enter_password": "Enter password",
-    "log_in_html": "Have an account? <a href=\"{{ link }}\">Log in</a> to check out faster.",
-    "log_in": "Sign in",
-    "log_out": "Log out",
-    "open_image_in_full_screen": "Open image in full screen",
-    // Button to remove applied filters from search/collection results
-    "remove": "Remove",
-    "remove_discount": "Remove discount {{ code }}",
-    // Button to expand hidden product variant options
-    "show_all_options": "Show all options",
-    "see_items": {
-      "one": "See {{ count }} item",
-      // Button to view filtered product results and close filter dialog
-      "other": "See {{ count }} items"
-    },
-    "show_filters": "Filter",
-    "show_less": "Show less",
-    "show_more": "Show more",
-    "sign_in_options": "Other sign in options",
-    // AR button to view 3D product model in physical space
-    "view_in_your_space": "View in your space",
-    // Button to view complete collection/product list
-    "view_all": "Vaata k?iki",
-    "more": "More",
-    "zoom": "Zoom",
-    "zoom_media": "Zoom media {{ index }}",
-    "close_dialog": "Close dialog",
-    // Button to clear search filter and restore default view
-    "reset": "Reset",
-    "enter_using_password": "Enter using password",
-    "sign_up": "Sign up",
-    "submit": "Submit",
-    "view_store_information": "View store information",
-    "sort": "Sort"
-  },
-  "blocks": {
-    "contact_form": {
-      "name": "Name",
-      "email": "Email",
-      "phone": "Phone",
-      "comment": "Comment",
-      "post_success": "Thanks for contacting us. We'll get back to you as soon as possible.",
-      "error_heading": "Please adjust the following:"
-    },
-    "email_signup": {
-      "label": "E-post",
-      "placeholder": "E-posti aadress",
-      "success": "Ait?h liitumast!"
-    },
-    "filter": "Filter",
-    "load_video": "Load video: {{ description }}",
-    "sold_out": "V?lja m??dud",
-    "payment_methods": "Payment methods",
-    "slider_label": "Slider"
-  },
-  "blogs": {
-    "article": {
-      "comments_heading": {
-        "one": "{{ count }} comment",
-        "other": "{{ count }} comments"
+  "shopify": {
+    "checkout": {
+      "order_summary": {
+        "price_per_item": {
+          "label": "%{price}/tk."
+        },
+        "updated_shipping_method": "Uuendatud kohaletoimetamise viis: %{shipping_method}",
+        "discount_not_found": "Sooduskoodiga allahindlust ei leitud",
+        "total_savings": "Säästude kogusumma",
+        "return_restocking_fee_label": "Tagastustasu",
+        "return_shipping_fee_label": "Kauba tagastamine",
+        "enter_shipping_address": "Märkige tarneaadress",
+        "shipping_discount_title": "Allahindlus kohaletoimetamisele",
+        "discount_code_applied": "Sooduskood on rakendatud",
+        "discount_code_applied_with_code": "Sooduskood %{code} rakendatud",
+        "gift_card_applied": "Kinkekaart on rakendatud",
+        "duties_included_label": "Lõppsumma sisaldab makse ja tollimakse. Kohaletoimetamisel lisatasusid ei lisandu.",
+        "deferred_balance_info": {
+          "title": "Jääk {{amount_due}} tuleb tasuda hiljemalt {{due_at}}",
+          "due_on_fulfillment_title": "Järelejäänud summa {{amount_due}} tuleb tasuda tööde teostamisel"
+        },
+        "eligible_customer_missing_notice": "Sooduskoodi <strong style=\"text-transform:uppercase\">%{code}</strong> saamiseks peab klient vastama nõuetele",
+        "subtotal_label_with_quantity": {
+          "one": "Vahetulemus • %{count} toode",
+          "other": "Vahetulemus • %{count} toode(-t)",
+          "few": "Vahetulemus • %{count} toode(-t)",
+          "many": "Vahetulemus • %{count} toode(-t)"
+        },
+        "cost_table_item_column_header": "Kaup",
+        "cost_table_value_column_header": "Hind",
+        "product_image_quantity_label": "Kogus",
+        "more_items_modal": {
+          "clear_search": "Kustuta otsingupäring",
+          "empty_results": "Otsingule „%{searchText}” ei leitud ühtegi vastet. Kontrollige õigekirja või valige muud sõnad või fraasid.",
+          "number_items_shown": "%{shownNumber} / %{totalNumber}",
+          "search_item": "Otsing"
+        },
+        "number_items": {
+          "one": "%{count} toode",
+          "other": "%{count} toodet",
+          "few": "%{count} toodet",
+          "many": "%{count} toodet"
+        },
+        "view_all_items": {
+          "one": "Vaata %{count} kaupa",
+          "other": "Vaata kõiki tooteid (%{count})",
+          "few": "Vaata kõiki tooteid (%{count})",
+          "many": "Vaata kõiki tooteid (%{count})"
+        },
+        "price_before_discount_aria_text": "Alghind",
+        "price_after_discount_aria_text": "Soodushind",
+        "discount_code_aria_text": "Sooduskood",
+        "pickup_unavailable_banner_body": {
+          "ship_to_address": "Vali kohaletoimetamine aadressile",
+          "ship_to_address_instead_html": "%{link} selle asemel"
+        },
+        "pickup_unavailable_banner_title": {
+          "one": "Teie toodet ei pakuta üheski kaupluses",
+          "other": "Teie toodetega poode ei ole",
+          "few": "Teie toodetega poode ei ole",
+          "many": "Teie toodetega poode ei ole"
+        },
+        "deposit_label": "Deposiit",
+        "total_due_today_label": "Tänane tasumisele kuuluv kogusumma",
+        "total_due_later_label": "Kogu makstav summa hiljem",
+        "discount_code_allocations_mismatch": "Sooduskood <strong style=\"text-transform:uppercase\">%{code}</strong> on muutunud. Palun kontrollige ostukorvi ja proovige uuesti.",
+        "deferred_total_due_date_label_next": "Kehtiv: %{date}",
+        "total_due_label": "Kokku tasumisele",
+        "total_price_label": "Kogusumma",
+        "for_add_on": "Grupile: %{group_title}",
+        "unconfirmed_label": "Kinnitamata",
+        "total_paid_label": "Tasumisele kuuluv summa",
+        "from_shop_heading": "Poest %{shop_name}",
+        "from_other_stores_heading": "Teistest poodidest",
+        "order_discounts_apply_to_local_shop": "Allahindlused tellimuse puhul kehtivad ainult toodetele poest %{shop_name}",
+        "gift_cards_apply_to_local_shop": "Kinkekaardid kehtivad ainult toodete puhul, mis on ostetud %{shop_name}-st",
+        "estimated_taxes_label_short": "Eelnevalt",
+        "discount_code_removed": "Sooduskood %{code} on eemaldatud",
+        "discount_code_replaced": "Sooduskood %{old_code} on eemaldatud ja rakendatud on %{code}",
+        "discount_code_replaced_multiple": "Mitu sooduskoodi on eemaldatud ja %{code} on rakendatud.",
+        "from_multiple_stores_heading": "Mitu poodi",
+        "pay_merchant_label": "Maksa %{merchant_name} kaudu",
+        "discount_applies_to_subscription_items_only": "See soodustus kehtib ainult tellitavatele toodetele",
+        "estimated_taxes_finalization_tooltip_content_short": "Lõpliku maksusumma määramine pärast tasumist",
+        "pickup_unavailable_banner_title_with_country": {
+          "one": "Riigis %{country} pole kauplusi, kus teie toode on saadaval",
+          "other": "Riigis %{country} pole kaupluseid, kus teie esemed saadaval oleksid",
+          "few": "Riigis %{country} pole kaupluseid, kus teie esemed saadaval oleksid",
+          "many": "Riigis %{country} pole kaupluseid, kus teie esemed saadaval oleksid"
+        },
+        "compare_at_sale": "Müük (%{sale_amount})",
+        "discount_code_applied_count": {
+          "few": "Näita %{count} soodustust",
+          "many": "Näita %{count} soodustust"
+        },
+        "tax_line": {
+          "hst": "GST (kaubandus- ja teenustemaks)",
+          "gst": "GST (kaubade ja teenuste maks)",
+          "vpt": "HVK"
+        },
+        "automatic_discount_tooltip": "Automaatselt rakendatud soodustusi ei saa eemaldada"
       },
-      "comment_author_separator": "•"
+      "payment": {
+        "amazon_payments_login_hint": "Peate sisse logima Amazoni kontoga.",
+        "amazon_payments_logout": "Välju Amazon Payst",
+        "amazon_payments_failed_mfa_challenge": "Valitud makseviisi ei saa kasutada. Valige mõni muu makseviis või võtke ühendust oma panga või kaardi väljastanud asutusega.",
+        "amazon_payments_abandoned_mfa_challenge": "Makse ei õnnestunud. Palun kasutage teist makseviisi või võtke ühendust oma panga või kaardi väljastajaga.",
+        "amazon_payments_could_not_enqueue_authorize": "Teie makse töötlemisel ilmnes probleem. Palun proovige uuesti või kasutage mõnda muud makseviisi.",
+        "title": "Makse",
+        "amount_left_to_pay_label": "Maksetähtaeg:",
+        "discount_button_action_label": "Rakenda sooduskood",
+        "gift_card_code_label": "Kinkekaardi kood",
+        "apply_gift_card_button_label": "Rakenda",
+        "gift_card_balance_label": "Saldo:",
+        "supported_card_brands_more_label": "ja veel...",
+        "detected_card_brand": "Kaardi konkreetne kaubamärk: {brand}",
+        "card_number_label": "Kaardi number",
+        "card_number_placeholder": "Kaardi number",
+        "card_pay_with": "Maksa kasutades:",
+        "card_security_notice": "Kõik tehingud on turvatud ja krüpteeritud.",
+        "card_information_notice": "Kõik tehingud on kaitstud ja krüpteeritud. Me ei salvesta kunagi krediitkaardiandmeid.",
+        "name_on_card_label": "Nimi kaardil",
+        "name_on_card_placeholder": "Nimi kaardil",
+        "multiple_primary_payment_not_allowed": "Kehtetud makseviisid",
+        "purchase_options_subscription_agreement_label": "Teie korvis on automaatselt uuenev tellimus. Vajutades nuppu „%{button_label}“, %{consent_text} %{cancellation_instructions}",
+        "purchase_options_subscription_consent_text": "nõustute otseselt ja tingimusteta, et teie ostukorvis näidatud korduv makse(d) (lisaks kohaletoimetamisele ja maksudele) võetakse teilt automaatselt maha, kuni teie tellimuse(te) aegumise või teiepoolse tühistamiseni.",
+        "purchase_options_subscription_cancellation_instructions": "%{cancel_text} Palun tutvu reeglitega: %{cancellation_policy_label}.",
+        "purchase_options_subscription_cancel_text": "Saate oma tellimuse igal ajal tühistada oma kontol või kauplusega ühendust võttes.",
+        "vault_for_payment_later": {
+          "pay_button_label": "Vormista tellimus",
+          "notice": "Praegu raha maha ei võeta. Makse jätkamisega annate nõusoleku, et tellimuse töötlemisel võetakse raha teie makseviisilt maha."
+        },
+        "card_expiry_label": "Kehtiv kuni (KK/AA)",
+        "card_expiry_placeholder": "Kehtivusaeg (KK/AA)",
+        "credit_card_start_month": "Kehtivuse alguse kuu",
+        "credit_card_start_year": "Kehtivuse alguse aasta",
+        "card_verification_value_label": "Turvakood",
+        "card_verification_value_placeholder": "Turvakood",
+        "card_expiry_date_explanation": "Kaardi kehtivusaeg MM/AA-vormingus",
+        "card_expiration_month_label": "Kuu, millal aegub",
+        "card_expiration_year_label": "Aegumistähtaeg",
+        "card_verification_value_explanation": "3-kohaline kood. Asub tavaliselt kaardi tagaküljel. American Expressi kaartidel on 4-kohaline kood esiküljel.",
+        "card_verification_value_explanation_amex": "4-kohaline turvakood kaardi esiküljel",
+        "card_verification_value_explanation_other": "3-kohaline turvakood kaardi tagaküljel",
+        "card_start_label": "Väljalaskekuupäev (KK/AA)",
+        "card_start_placeholder": "Väljalaskekuupäev (KK/AA)",
+        "card_issue_number_label": "Seerianumber",
+        "card_issue_number_placeholder": "Seerianumber",
+        "card_change_label": "Muuda",
+        "ends_with_label": "lõpeb numbritega %{last_digits}",
+        "saved_by_payment_method": "Salvestatud %{payment_method}",
+        "pay_with_payment_method": "Maksa %{payment_method} kaudu",
+        "same_billing_address_label": "Ühtib tarneaadressiga",
+        "different_billing_address_label": "Kasuta muud arveldusaadressi",
+        "free_order_notice_html": "Teie tellimuse kaubad on <strong>tasuta</strong>. Tasu ei ole vaja maksta.",
+        "express_checkout_free_order": "Me ei võta tasuta tellimuste eest tasu",
+        "offsite_gateway_redirect_hint": "Teid suunatakse ostu lõpuleviimiseks %{gateway_label}.",
+        "offsite_gateway_redirect_hint_multi_currency_html": "%{gateway_label}, kokku: %{total_shop_price}",
+        "billing_address_title": "Arve esitamise aadress",
+        "billing_address_description": "Valige oma kaardi või makseviisiga sobiv aadress.",
+        "billing_address_description_no_shipping_address": "Sisestage aadress, mis vastab teie kaardile või makseviisile.",
+        "no_js_credit_card_fields_redirect_hint": "Teid suunatakse makseinfo sisestamise lehele.",
+        "card_fields_container_prefix": "Konteineri väli järgmisele:",
+        "card_fields_processing_error": "Makse töötlemisel ilmnes probleem. Laadige leht uuesti või kontrollige oma internetiühendust.",
+        "technical_error": "Tehnilise probleemi tõttu ei saa me praegu makseid töödelda. Proovige mõne minuti pärast uuesti.",
+        "no_method_error": "See pood ei aktsepteeri praegu makseid.",
+        "not_configured_error": "See pood ei aktsepteeri praegu makseid.",
+        "missing_credit_card_error": "Palun sisestage makse sooritamiseks kaardiandmed",
+        "billing_address_not_supported_for_payment_method_error": "See makseviis ei ole teie arveldusaadressi ja valuuta jaoks saadaval. Kasutage teist makseviisi.",
+        "generic_incorrect_card_info": "Teie makseandmeid ei õnnestunud kinnitada. Kontrollige sisestatud kaardiandmeid ja proovige uuesti.",
+        "sofort_label": "SOFORT-ülekanne",
+        "klarna_pay_later_label": "Maksa hiljem Klarnaga",
+        "klarna_pay_now_label": "Maksa kohe Klarnaga",
+        "eps_label": "eps-ülekanne",
+        "klarna_slice_it_label": "Klarna krediit",
+        "bank_picker_label": "Pank",
+        "change_currency_section_description": "Vali valuuta",
+        "no_real_orders_dev_store": "See pood ei saa vastu võtta tegelikke tellimusi ega tegelikke makseid.",
+        "order_covered_by_gift_cards_notice": {
+          "one": "Teie tellimuse summa katab kinkekaart.",
+          "other": "Teie tellimuse summa katavad kinkekaardid.",
+          "few": "Teie tellimuse summa katavad kinkekaardid.",
+          "many": "Teie tellimuse summa katavad kinkekaardid."
+        },
+        "card_fields_unavailable_html": {
+          "one": "Krediit- ja deebetkaardimaksed ei ole praegu saadaval.<br><a href=\"%{current_url}\">Värskendage seda lehte</a> või proovige hiljem uuesti.",
+          "other": "Krediit- ja deebetkaardimaksed ei ole hetkel saadaval.<br><a href=\"%{current_url}\">Värskendage seda lehte</a> või kasutage mõnda muud makseviisi.",
+          "few": "Krediit- ja deebetkaardimaksed ei ole hetkel saadaval.<br><a href=\"%{current_url}\">Värskendage seda lehte</a> või kasutage mõnda muud makseviisi.",
+          "many": "Krediit- ja deebetkaardimaksed ei ole hetkel saadaval.<br><a href=\"%{current_url}\">Värskendage seda lehte</a> või kasutage mõnda muud makseviisi."
+        },
+        "subscription_agreement_label_html": "Ma mõistan, et nõustun tellimuse kasutustingimustega. Seda uuendatakse määratud hinnaga ja toodud sagedusega kuni kehtivusaja lõpuni\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">või tühistamiseni</a>.\n",
+        "waiting_on_payment_methods": "Otsin saadaolevaid makseviise…",
+        "apple_pay_payment_error": "Makse nurjus. Palun proovige uuesti või kasutage teist makseviisi.",
+        "subscription_card_update_agreement_label": "Makseviisi muutmine mõjutab teie tellimust ja tulevasi korduvaid makseid.",
+        "card_security_vault_notice": "Esitage oma andmed edasiste maksete jaoks. Kõik tehingud on kaitstud ja krüpteeritud.",
+        "taxes_not_included": "Maksud ei sisaldu hinnas",
+        "no_taxes_banner_content": "Sellele tellimusele makse ei kohaldata. Niipea kui summa on moodustatud, peatub maksude arvutamine.",
+        "card_update_label": "Värskenda kaardi andmeid",
+        "paypal": {
+          "connect": "Kontolühenduse loomiseks klõpsa siin."
+        },
+        "subscription_agreement_label": "Üks või mitu toodet – tooted, mille eest saab tasuda järelmaksuga või ostu sooritada tellimusena. Makseprotsessiga jätkamine tähendab, et teie kontolt võetakse automaatselt tasu vastavalt teie makseviisile ning sellel lehel näidatud hinna ja sagedusega, kuni makseviisi kehtivusaeg lõppeb või see tühistatakse. Kõigile tühistamistele kohaldub %{cancelled}.",
+        "subscription_agreement_cancelled": "Tühistamispoliitika",
+        "card_expired": "Aegunud",
+        "card_verification_confirm": "Sisestage oma kaardi turvakood selle kinnitamiseks.",
+        "different_credit_card_label": "Kasutada teist kaarti",
+        "delete_customer_mandate_modal_cancel": "Tühista",
+        "apple": {
+          "connect": "Kontolühenduse loomiseks klõpsa siin.",
+          "not_available": "Apple Pay ei ole teie brauseris saadaval. Apple Pay konto loomiseks kasutage oma Apple'i seadmes Safarit."
+        },
+        "account_connected": "Konto on ühendatud",
+        "billing_address_associated_with_mandate": "Kasutage makseviisiga seotud aadressi",
+        "billing_address_associated_with_mandate_info": "Kui soovite arveldusaadressi muuta, eemaldage oma krediitkaardi andmed ja sisestage need uuesti.",
+        "credit_card_vaulting_sign_in_banner_title": "Krediitkaardi andmete salvestamine",
+        "credit_card_vaulting_sign_in_banner_info": "Logige sisse oma kontole või looge uus konto, et salvestada krediitkaardi andmed ostude tegemiseks.",
+        "credit_card_vaulting_sign_in_banner_button_label": "Sisene",
+        "expiry_long": "(Kehtib kuni %{month}/%{year})",
+        "expiry_short": "(Kehtiv kuni %{month}/%{year})",
+        "ftd_vault_credit_card_label": "Salvesta krediitkaart kontole, et tellimusi kiiremini vormistada",
+        "delete_customer_mandate_modal_title": "Kas kustutada kaart?",
+        "delete_customer_mandate_modal_body": "Kui kustutate selle kaardi, peate selle uuesti lisama, enne kui saate makseid sooritada.",
+        "delete_customer_mandate_modal_confirm": "Kustuta kaart",
+        "google": {
+          "connect": "Puudutage, et ühendada oma Google Pay konto.",
+          "error_authorizing": "Makse autoriseerimisel tekkis viga"
+        },
+        "mor_disclaimer_html": "Vajutades allolevale nupule ja sooritades ostu, nõustute ostma kaubad Global-e-lt kui registreeritud müüjalt\nkäesoleva tehingu kaudu ja nõustute Global-e <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">tingimustega</a>\nja <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">privaatsuspõhimõtetega</a>. Global-e on kaupluse %{shop_name} rahvusvaheline täisteenuse pakkuja.\n",
+        "purchase_options_card_update_agreement_label_html": "Makseviisi uuendades nõustute, et kõik korduvad või edasilükatud maksed tehakse vastavalt poe <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">tühistamispoliitika</a> tingimustele.",
+        "receiver_payment_experience_hint": "Pärast tellimuse esitamist saadetakse teile makseandmed. Makse saate teha Multibanco kaudu või kodulehel %{due_days} päeva jooksul.",
+        "pending_payment": {
+          "due_notice": "Makse summas %{amount_due} tuleb tasuda hiljemalt %{due_date}.",
+          "multibanco": {
+            "instruction_html": "Tasuge Multibanco teenuseid kasutades või veebisaidil allpool toodud andmetega. Kui teil on küsimusi või vajate makseandmete muutmist, võtke meiega ühendust %{contact_us}.",
+            "entity": "Element",
+            "reference": "Info",
+            "amount": "Kogus"
+          }
+        }
+      },
+      "payment_summary": {
+        "gift_card_current_balance_notice": "Praegune saldo: %{amount}",
+        "credit_card_expires_on_notice": "Aegub %{month}/%{year}",
+        "express_payment_gateway_label": "Ekspress",
+        "manual_payment_gateway_label": "Käsitsi",
+        "billing_address_title": "Arve saatmise aadress",
+        "free_label": "Tasuta"
+      },
+      "field_errors": {
+        "handle_phone_invalid": "Sisestage kehtiv telefoninumber",
+        "handle_email_invalid": "Sisestage kehtiv e-posti aadress",
+        "email_invalid": "Sisesta kehtiv e-posti aadress",
+        "email_or_phone_blank": "Sisestage e-posti aadress või telefoninumber",
+        "email_or_phone_invalid": "Sisesta sobiv e-posti aadress või mobiiltelefoni number",
+        "address_first_name_blank": "Märkige nimi",
+        "address_last_name_blank": "Palun märkige perekonnanimi",
+        "address_address1_blank": "Märkige aadress",
+        "address_address2_blank": "Palun sisestage korteri number, korteriühistu number jne.",
+        "address_city_blank": "Märkige linn",
+        "address_country_blank": "Vali riik/regioon",
+        "address_country_not_supported": "Me ei toimetata kaupu sellesse riiki ega piirkonda. Palun sisesta teine tarneaadress ja proovi uuesti.",
+        "address_province_blank": "Vali osariik/provints",
+        "address_company_blank": "Märkige ettevõtte nimi",
+        "address_phone_blank": "Sisestage kehtiv telefoninumber",
+        "address_zip_blank": "Sisestage sihtnumber",
+        "address_zip_invalid_for_country": "Sisestage riigi %{country} kehtiv sihtnumber",
+        "address_zip_invalid_for_country_and_province": "Sisestage kehtiv sihtnumber riigi %{country} provintsi %{province} jaoks",
+        "credit_card_name_blank": "Märkige oma nimi täpselt nii, nagu see on kaardil",
+        "credit_card_name_invalid": "Sisesta oma nimi täpselt nii, nagu see on kaardil",
+        "credit_card_number_invalid": "Sisestage kehtiv kaardinumber",
+        "credit_card_expiry_invalid": "Sisesta kehtiv aegumiskuupäev",
+        "credit_card_month_invalid": "Sisestage kehtiv aegumiskuu",
+        "credit_card_year_invalid": "Määrake kehtiv aegumisaasta",
+        "credit_card_start_invalid": "Märkige kaardi kehtiv alguskuupäev",
+        "credit_card_start_month_invalid": "Sisestage kaardi kehtivusaja alguskuupäeva korrektne kuu",
+        "credit_card_start_year_invalid": "Sisestage kaardi alguskuupäeva kehtiv aasta",
+        "credit_card_verification_value_blank": "Sisestage CVV- või CVC-kood",
+        "delivery_line_detail_changed": "Tarneandmed võivad olla muutunud. Kinnita tarneviis ja proovi uuesti.",
+        "reduction_code_code_not_found": "Sisestage kehtiv soodus- või kinkekaardi kood",
+        "reduction_code_discount_not_found": "Sisestage kehtiv sooduskood",
+        "reduction_code_gift_card_code_invalid": "Sisesta kehtiv kinkekaart",
+        "reduction_code_gift_card_unusable": "Kinkekaarti ei saa kasutada teise kinkekaardi ostmiseks",
+        "shipping_line_phone_blank": "Sisestage selle tarneviisi kasutamiseks telefoninumber",
+        "shipping_line_phone_invalid": "Sisestage kehtiv telefoninumber",
+        "gift_card_already_applied": "Kinkekaart on teie tellimusele juba rakendatud",
+        "gift_card_disabled": "See kinkekaart pole enam saadaval",
+        "gift_card_expired": "Selle kinkekaardi kehtivusaeg on lõppenud",
+        "gift_card_depleted": "Sellel kinkekaardil pole enam raha",
+        "gift_card_currency_mismatch": "Sellele tellimusele saab rakendada ainult kinkekaarte vääringus %{checkout_currency}",
+        "payment_gateway_needs_paid_plan_error": "See makseviis pole praegu selles poes saadaval",
+        "payment_gateway_incompatible_with_multi_currency": "Praeguses vääringus tellimuse vormistamise lõpuleviimiseks peate tasuma krediitkaardiga.",
+        "physical_gift_card_invalid_quantity": "Füüsiliste kinkekaartidega tellimuse kaubareade arv peab kokku langema kinkekaartide koodide arvuga.",
+        "physical_gift_card_duplicate_code": "Füüsiliste kinkekaartidega tellimuse kaubaartikkel sisaldab duplikaatkoodi.",
+        "physical_gift_card_invalid_code": "Füüsilise kinkekaardi kood on kehtetu.",
+        "payment_gateway_not_in_test_mode": "pole seadistatud testtellimuste jaoks. See pood ei saa vastu võtta tegelikke tellimusi ega tegelikke makseid.",
+        "tips_invalid_tip_amount": "Sisestage jootraha – vähem kui %{amount}",
+        "payment_gateway_unsupported_for_subscriptions": "See makseviis ei ole tellimuste puhul saadaval.",
+        "address_first_name_too_long": "Nimi on liiga pikk (ei tohi olla pikem kui 255 märki)",
+        "address_last_name_too_long": "Perekonnanimi on liiga pikk (ei tohi sisaldada rohkem kui 255 märki)",
+        "address_address1_too_long": "Aadressi esimene rida on liiga pikk (tohib sisaldada kuni 255 märki).",
+        "address_address2_too_long": "Aadressi teine rida on liiga pikk (tohib olla kuni 255 tähemärki pikk)",
+        "address_city_too_long": "Linna nimi on liiga pikk (ei tohi sisaldada rohkem kui 255 märki)",
+        "address_company_too_long": "Ettevõtte nimi on liiga pikk (peaks olema maksimaalselt 255 märki pikk)",
+        "address_first_name_contains_html_tags": "Nimi ei saa sisaldada HTML-silte.",
+        "address_last_name_contains_html_tags": "Perekonnanimi ei tohi sisaldada HTML-silte.",
+        "address_address1_contains_html_tags": "Aadress 1 ei tohi sisaldada HTML-silte.",
+        "address_address2_contains_html_tags": "Aadress 2 ei tohi sisaldada HTML-silte.",
+        "address_city_contains_html_tags": "Linna nimi ei saa sisaldada HTML-silte.",
+        "address_company_contains_html_tags": "Ettevõtte nimi ei tohi sisaldada HTML-silte.",
+        "address_first_name_contains_emojis": "Nimi ei tohi sisaldada emotikone",
+        "address_last_name_contains_emojis": "Perekonnanimi ei tohi sisaldada emotikone",
+        "address_address1_contains_emojis": "Aadressirida 1 ei tohi sisaldada emotikone",
+        "address_address2_contains_emojis": "Aadressireal 2 ei tohi olla emotikone",
+        "address_city_contains_emojis": "Linna nimi ei saa sisaldada emotikone",
+        "address_company_contains_emojis": "Ettevõtte nimi ei tohi sisaldada emotikone",
+        "address_phone_contains_emojis": "Telefoninumber ei tohi sisaldada emotikone",
+        "address_zip_contains_emojis": "Postiindeks ei tohi sisaldada emotikone",
+        "address_first_name_contains_url": "Nimi ei tohi sisaldada URL-i",
+        "address_last_name_contains_url": "Perekonnanimi ei tohi sisaldada URL-aadressi",
+        "gift_cards_not_supported_with_deferred_purchase_options": "Kinkekaardid ei kehti järelmaksuga ostude puhul.",
+        "address_zip_not_supported": "Te ei saa selles piirkonnas oste sooritada ega kohaletoimetamist tellida",
+        "gift_card_buying_gift_card": "Te ei saa kasutada kinkekaarti teise kinkekaardi ostmiseks.",
+        "payment_gateway_unsupported_for_country": "See makseviis ei ole teie riigis saadaval.",
+        "purchase_options_agreement_blank": "Ostude vormistamise jätkamiseks palun aktsepteerige maksetingimused (maksepikendus või perioodilised maksed).",
+        "payment_gateway_unsupported_for_deferred_purchase_options": "See makseviis ei ole järelmaksu ostude puhul saadaval.",
+        "reduction_code_gift_cards_not_supported_with_deferred_purchase_options": "Kinkekaardid ei kehti järelmaksuga ostude puhul.",
+        "delivery_zone_not_found": "Määratud riigist ei leitud määratud tsooni.",
+        "payment_gateway_unsupported_for_development_store_html": "Testimiseks tehke proovitellimus. Vaadake lisateavet <a href=\"%{docs_link}\">arendusjärgus e-poe proovitellimuste</a> kohta.",
+        "payment_gateway_unsupported_for_order_above_maximum_orders_html": "<p>Olete saavutanud poes tehingulimiidi, mis on arendusjärgus ja kasutab seda maksesüsteemi. Järgmise tellimuse esitamiseks kasutage testimise makseteenust. Lisateavet <a href=\"%{docs_link}\">arenduses olevas poes testtellimuste</a> kohta leiate juhendist.</p>",
+        "email_blank": "Sisesta e-posti aadress",
+        "phone_blank": "Sisestage telefoninumber",
+        "address_country_invalid": "Vali riik/piirkond loendist",
+        "address_zip_invalid": "Sisestage kehtiv sihtnumber",
+        "gift_card_invalid": "Kinkekaart „••••%{last_four_characters}” on kehtetu",
+        "vaulting_agreement_blank": "See makseviis on vaja salvestada, kuna selle tellimuse maksumus arveldatakse hiljem.",
+        "sms_marketing_phone_invalid": "Sisestage kehtiv telefoninumber",
+        "address_suggestion_did_you_mean_html": "Kas te mõtlesite %{html}?",
+        "address_zip_invalid_for_province": "Sisestage kehtiv sihtnumber piirkonnale %{province}",
+        "address_zip_too_long": "Postiindeks on liiga pikk (ei tohi sisaldada rohkem kui 255 märki)",
+        "address_phone_invalid": "Sisestage kehtiv telefoninumber",
+        "credit_card_number_blank": "Sisestage kaardi number",
+        "address_first_name_contains_mathematical_symbols": "Nimi ei tohi sisaldada matemaatilisi sümboleid",
+        "address_last_name_contains_mathematical_symbols": "Perekonnanimi ei tohi sisaldada matemaatilisi sümboleid",
+        "address_address1_contains_mathematical_symbols": "Aadressi esimene rida ei tohi sisaldada matemaatilisi sümboleid",
+        "address_address2_contains_mathematical_symbols": "Aadressi teine rida ei tohi sisaldada matemaatilisi sümboleid",
+        "address_city_contains_mathematical_symbols": "Linna nimi ei tohi sisaldada matemaatilisi sümboleid",
+        "address_company_contains_mathematical_symbols": "Ettevõtte nimi ei tohi sisaldada matemaatilisi sümboleid",
+        "address_zip_contains_mathematical_symbols": "Postiindeks ei tohi sisaldada matemaatilisi sümboleid",
+        "address_province_invalid": "Valige kehtiv osariik/provints",
+        "address_generic_blank": "Kohustuslik väli",
+        "address_generic_invalid": "Vigane kanne",
+        "address_generic_error": "Välja viga",
+        "payment_gateway_missing": "Valige makseviis.",
+        "split_cart_international_shipping_not_supported": "Rahvusvaheliseks kohaletoimetamiseks peate kõigi kaupade puhul valima sama tarnemeetodi. Palun uuendage tarnemeetodit või looge mitu tellimust.",
+        "address_zip_blocked_address": "Te ei saa selles piirkonnas oste sooritada ega kohaletoimetamist tellida",
+        "invalid_delivery_address_reference_handle": "Tarnepunkti tugisüsteemi aadress ei vasta ühelgi olemasolevale tarnepunkti aadressile.",
+        "must_use_available_delivery_address": "Tarneaadress tuleb valida saadaolevate valikute hulgast.",
+        "must_use_available_shipping_rate": "Saatmiskulu tuleb valida saadaolevate valikute hulgast.",
+        "shipping_method_invalid_phone_number": "Saadaolevate tarneviiside nägemiseks värskenda palun oma tarneaadressis olevat telefoninumbrit.",
+        "split_by_delivery_method_not_allowed": "Tellimuse jagamine tarneviiside alusel ei ole selle seansi või kaupluse jaoks lubatud.",
+        "split_by_delivery_method_unsupported_method_type": "Püüti jaotada tarnemeetodi järgi sobimatu tarnemeetodi tüübiga.",
+        "split_by_delivery_method_requires_merchandise_from_single_location": "Tarneviisi alusel jaotamiseks on nõutav, et üksikuid kaubaartikleid töödeldakse ühes ja samas asukohas.",
+        "address_subdistrict_blank": "Sisestage linnaosa",
+        "address_subdistrict_too_long": "Mikrorajooni nimi on liiga pikk (maksimaalselt {{count}} märki)",
+        "address_subdistrict_contains_emojis": "Mikrorajooni nimi ei tohi sisaldada emotikone",
+        "address_subdistrict_contains_html_tags": "Lähiala nimi ei saa sisaldada HTML-silte.",
+        "address_subdistrict_contains_mathematical_symbols": "Mikrorajooni nimi ei tohi sisaldada matemaatilisi sümboleid"
+      },
+      "general": {
+        "errors": {
+          "merchandise": {
+            "mixed_currencies": "Tellimuse vormistamise järjekorras on erinevate valuutadega tooteid.",
+            "product_not_published_in_buyer_location": "Toode pole ostja praeguses asukohas saadaval.",
+            "combined_listing_parent_not_purchasable": "Segaloendi vanemkaupu ei saa otse osta.",
+            "only_value_constraint": "Toote sisestusväljale on lubatud ainult täpsed väärtused.",
+            "merchandise_not_found": "Toodet ei leitud.",
+            "merchandise_variant_not_found": "Tootevarianti ei leitud.",
+            "merchandise_not_applicable": "Valikut ei saa osta.",
+            "bundle_products_not_supported_for_b2b": "Tootekogumeid ei saa selles piirkonnas B2B tellimustele lisada.",
+            "gift_card_quantity_mismatch": "Kui sisestate kinkekaartide koode, peab tellimuses olevate kaupade arv vastama kinkekaartide koodide arvule.",
+            "gift_card_not_supported": "Selle tellimuse vormistamise seansi jaoks kinkekaarte ei toetata.",
+            "gift_card_not_unique": "Selle ostuprotsessi käigus esineb mitu korda kinkekaart koodiga {{code}}. Koodid vormindatakse enne võrdlemist.",
+            "gift_card_used": "Kinkekaardi kood {{code}} on juba kinkekaardile määratud. Koodid on enne võrdlemist vormindatud.",
+            "gift_card_invalid": "Kinkekaardi kood {{code}} ei ole kehtiv.",
+            "gift_card_code_changed": "Kinkekaardi kood {{proposed_code}} on vormindusreeglitele vastavaks muudetud ja on nüüd {{formatted_code}}.",
+            "gift_card_with_attributes_not_supported": "Kohandatavate atribuutidega kinkekaarte ei toetata selle ostu sooritamise sessiooni puhul.",
+            "gift_card_with_components_not_supported": "Kingituste kaardid koos komponentidega ei ole selle ostu sooritamise seansi puhul toetatud.",
+            "selling_plan_mismatch": "Tellimus on uuendatud.",
+            "selling_plan_not_supported": "Tellimusi ei toetata.",
+            "selling_plan_not_supported_b2b": "Tellimusi ei toetata B2B kassas.",
+            "price_mismatch": "Selle toote eelnevalt pakutud hind on kehtetu ja seda on muudetud.",
+            "inventory_not_found": "Selle toote valikut ei leitud.",
+            "product_not_published": "Toode pole avaldatud.",
+            "duplicated_stable_id": "Kauba andmete real on sama stabiilne identifikaator mis teisel real.",
+            "minimum_quantity_not_met": "Mõnede kaupade kogus ei ole minimaalselt lubatud.",
+            "maximum_quantity_exceeded": "Mõnede kaupade kogus ületab maksimaalselt lubatu.",
+            "quantity_increment_not_met": "Mõne toote kogus ei vasta tellimuse piirangutele.",
+            "quantity_rules_not_met": "Mõne kauba kogus ei vasta tellimuse piirangutele.",
+            "bundle_requires_components": "Tootekomplektil puuduvad komponendid.",
+            "title_too_long": "Toote nimetus on liiga pikk.",
+            "title_empty": "Toote nime pole märgitud."
+          },
+          "buyer_identity": {
+            "business_customer_does_not_match_company": "Ettevõtte kontaktisikul puudub ettevõttele ligipääs.",
+            "customer_account_required": "Jätkamiseks logi sisse.",
+            "contact_info_does_not_match_customer_account": "Kontaktandmed peavad kattuma kontoga, kuhu olete sisse loginud.",
+            "phone_number_does_not_match_expected_pattern": "Määratud telefoninumber ei vasta oodatud mallile.",
+            "email_required": "Kui kaup on ostetud tellimusega, tuleb märkida e-posti aadress.",
+            "email_domain_is_invalid": "Määratud domeeniga seotud probleemi ei õnnestu lahendada.",
+            "missing_contact_method": "Puudub kehtiv suhtlusviis.",
+            "checkout_completion_target_is_missing": "Ostukorvil puudub eesmärk.",
+            "invalid_customer_profile": "Kliendi profiil on vigane.",
+            "customer_profile_access_restricted": "Makseprotsessi seansil puudub kliendi profiilile ligipääsuks luba.",
+            "checkout_completion_target_is_invalid_proc": "Tellimuse vormistamise sihtkoht on vale.",
+            "company_location_required": "Klient peab jätkamiseks valima ettevõtte asukoha.",
+            "lost_access_to_company": "Klient kaotas juurdepääsu igale ettevõttele.",
+            "company_purchase_permission_required": "Kliendil ei ole volitust ettevõtte nimel tellimusi esitada.",
+            "personal_order_not_allowed": "Selles poes ei võeta vastu eritellimusi.",
+            "buyer_identity_presentment_currency_does_not_match": "Tellimuse töötlemisel tekkis probleem. Proovige mõne minuti pärast uuesti."
+          },
+          "delivery": {
+            "only_one_delivery_line_allowed": "Korvis peab olema ainult üks saatmisteabe rida.",
+            "wrong_number_of_delivery_lines": "Tuleb lisada iga tootegrupi kohta tarneandmete rida.",
+            "external_delivery_promise_error": "Viga tarneaja saamine välisest teenusest.",
+            "options_instructions_invalid": "Määratud juhised ei ühti eeldatava mustriga.",
+            "destination_address_required": "Jätkamiseks peate sisestama sihtkoha aadressi.",
+            "pickup_points_unavailable": "Väljastuspunktid ei ole praegu saadaval.",
+            "local_pickup_delivery_line_detail_changed": "Jätkamiseks peate muutma praegust tarnestrateegiat (ise järele tulemine).",
+            "local_pickup_no_delivery_strategy_available": "Saadavat järeletulemisega kohaletoimetamise strateegiat ei leitud.",
+            "origin_location_id_required": "Kui valitud on jaekauba kättetoimetamisviis, tuleb märkida päritolukoha identifikaator.",
+            "invalid_origin_location_id": "Asukoha leidmine päritoluasukoha ID järgi ebaõnnestus.",
+            "origin_location_id_not_allowed": "Valitud kohaletoimetamisviisid ei toeta päritolukoha ID-d.",
+            "auto_fulfill_not_allowed": "Sellel seansil pole õigust tellimuse täitmise toiminguid alistada.",
+            "auto_fulfill_required": "Kui valitud on jaekauba kättetoimetamise viis, tuleb märkida automaatne tellimuse täitmine.",
+            "prefetch_shipping_rates_used": "Eelnevalt valitud saatmiskulud ei tohiks kunagi raha tagastamist lubada.",
+            "fulfillment_constraints_not_satisfied": "Üks või mitu tellimuse täitmise piirangut pole täidetud.",
+            "must_fulfill_from_constraint_not_satisfied": "Tellimuse täitmise piirangud on täitmata, sest kaupa ei saa vajalikes asukohtades töödelda.",
+            "must_fulfill_from_same_location_constraint_not_satisfied": "Tellimuse täitmise piirangud on täitmata, kuna kaupu ei saa samas asukohas töödelda.",
+            "delivery_strategy_conditions_not_satisfied": "Kohaletoimetamise strateegiad on selle asukoha jaoks saadaval, kuid nende tingimused ei ole täidetud.",
+            "out_of_stock_at_origin_location": "Tooted ei ole päritolukohas saadaval.",
+            "invalid_signature": "Kupongi allkiri on vale.",
+            "selected_pickup_option_no_longer_available": "Varem valitud ise järele tulemise variant ei ole enam saadaval.",
+            "mixed_destination_countries": "Kohaletoimetamine pole võimalik, kuna tarneaadressid asuvad eri riikides."
+          },
+          "discount": {
+            "discounts_not_allowed_for_b2b": "Soodustused pole B2B poodides lubatud.",
+            "custom_discount_not_honoured": "Määratud individuaalset allahindlust ei ole arvesse võetud.",
+            "unsupported_expectation": "Poliitikal ei õnnestunud tõlgendada ootust, mis oli märgitud esitatud allahindluse real.",
+            "additional_requested_discount_code_discarded": "{{code}} on kehtiv, kuid seda ei saa kasutada. Vaadake soodustingimusi.",
+            "allocations_mismatch": "Sooduskood on muutunud. Vaadake ostukorvi ja proovige uuesti.",
+            "discount_title_too_long": "Soodustuse nime pikkus ei tohi ületada 255 märki.",
+            "additional_requested_discount_discarded": "Teie soodustus kehtib, kuid seda ei saa rakendada. Palun tutvuge soodustuse tingimustega.",
+            "mixed_destination_countries": "Allahindlused ei ole saadaval, kuna tarneaadressid asuvad eri riikides."
+          },
+          "tax": {
+            "new_tax_must_be_accepted": "Teie tellimuse maksusumma on muutunud. Kontrollige ja proovige uuesti.",
+            "unresolvable_tax_terms": "Pakutud tingimused on käimasolevate läbirääkimiste kontekstis lahendamatud.",
+            "delivery_price_is_abstract": "Seotud saatmiskulu on abstraktne.",
+            "tax_inclusivity_mismatch": "Palun vaadake tingimused uuesti läbi, täpsustades konkreetse väärtuse kas totalTaxAndDutyAmount või totalAmountIncludedInTarget jaoks.",
+            "tax_exemption_not_supported": "Maksuvabastusi praeguse läbirääkimiste vooru jaoks ei toetata.",
+            "delivery_tax_exemption_not_supported": "Maksuvabastust kohaletoimetamise üksuste ridadel hetkel ei toetata.",
+            "proposed_allocations_required": "Väli \"pakutud jaotused\" on puudu.",
+            "merchandise_terms_must_be_defined": "Kauba tingimused on vaja kindlaks määrata.",
+            "delivery_terms_must_be_defined": "Tuleb määratleda tarnetingimused.",
+            "merchandise_discount_terms_must_be_defined": "On vaja kindlaks määrata kauba soodustingimused.",
+            "delivery_discount_terms_must_be_defined": "Tarne soodustuse tingimused on vaja määratleda.",
+            "allocated_required": "Väli \"jaotatud\" puudub.",
+            "value_required": "Väli \"väärtus\" puudub.",
+            "line_splits_not_supported": "Väli „kauba andmerida“ tuleb jagada selliselt, et iga üks neist sisaldaks eraldi rea komponenti müüja lauses."
+          },
+          "payment": {
+            "manual_payments_not_allowed_for_b2b": "Käsitsi makse ei ole B2B kauplustes lubatud.",
+            "positive_amount_expected": "Makstav summa peab olema suurem kui 0.",
+            "total_amount_mismatch": "Kogusumma tasumiseks ei kattu maksete summaga.",
+            "subscription_terms_not_accepted": "Tellimistingimused on vastu võtmata.",
+            "missing_session_id": "Krediitkaardi kasutamise seansi andmed puuduvad.",
+            "gateway_not_supported": "Makseteenus ei toeta makseviiside salvestamist.",
+            "credit_card_last_name_required": "Väli „perekonnanimi” ei tohi olla null.",
+            "credit_card_update_failed": "Krediitkaarti ei õnnestunud muuta.",
+            "invalid_address_type": "Määratud aadressitüüp ei sobi selle makseviisi jaoks.",
+            "missing_retail_attributions": "Käsitsi sisestatud krediitkaardimaksete puhul tuleb esitada jaemüügi atribuudid.",
+            "unexpected_retail_attributions": "Jaemüügi eseme atribuudid on ootamatult esitatud käsitsi krediitkaardi andmete sisestamise makseviisile.",
+            "invalid_card_source": "Selle seansi jaoks puudub luba selle kaardi allika kasutamiseks.",
+            "wallet_content_missing": "Puudub rahakoti sisu.",
+            "payment_instrument_not_found": "Makseviisi ei leitud",
+            "unauthorized_capture_method": "Blokeeritud summa mahaarvamise viisi pole võimalik konfigureerida.",
+            "saved_payment_methods_not_allowed": "Salvestatud makseviiside kasutamine pole lubatud.",
+            "saved_payment_methods_not_enabled": "Salvestatud makseviisid pole selle poe jaoks lubatud.",
+            "store_credit_not_enabled": "Kaubakrediit pole selle poe jaoks lubatud.",
+            "store_credit_account_not_found": "Kaubakrediidi arvet ei leitud.",
+            "store_credit_account_mismatch": "Kaubalaenu arve ei ühti ostja isikuga.",
+            "store_credit_mismatched_currency": "Kaubakrediidi arve valuuta ei ühti tellimuse valuutaga.",
+            "store_credit_insufficient_funds": "Kaubakrediidikontol ei ole piisavalt vahendeid.",
+            "store_credit_buying_gift_card": "Kaubakrediiti ei saa kasutada kinkekaardi ostmiseks.",
+            "gift_cards_not_allowed_for_b2b": "Kinkekaardid ei ole B2B kauplustes lubatud.",
+            "method_required": "Tuleb pakkuda välja kohaletoimetamise viis.",
+            "paypal_express_address_invalid": "PayPal saatis teate kehtetu aadressi kohta.",
+            "saved_payment_methods_cvv_verification_disabled": "Valitud makseviis nõuab CVV-koodi kinnitamist, mida see pood ei toeta. Palun valige teine makseviis."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Pood jootraha vastu ei võta.",
+            "only_one_tip_line_allowed": "Jootraha jaoks ei saa lisaridu lisada.",
+            "tips_not_allowed_for_b2b": "Jootraha ei ole B2B kauplustes lubatud.",
+            "currency_change_reset": "Valuutavahetuse tõttu jäid jootrahad saamata.",
+            "tips_not_allowed_for_deferred_purchase_options": "Jootraha ei toetata praegu ostude puhul, mis kasutavad hilisema makseviise."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Seda eeltellimust praeguses poes ei eksisteeri.",
+            "staff_member_not_exist": "Seda personali praeguses kaupluses ei eksisteeri.",
+            "location_not_exist": "Seda asukohta praeguses kaupluses ei eksisteeri.",
+            "point_of_sale_device_not_exist": "See müügikoha seade puudub praeguses kaupluses."
+          },
+          "session_identifier_not_unique_error": "Teie tellimuse töötlemisel tekkis viga, proovige hiljem uuesti.",
+          "line_item_limit_reached": "Olete tellimuses määranud maksimaalse positsioonide arvu.",
+          "only_empty_terms_accepted": "Sellele poliitikale on lubatud ainult tühjad tingimused.",
+          "session_is_already_finished": "See ostu sooritamise seanss on juba lõppenud."
+        },
+        "page_title": "Vormista tellimus",
+        "error_page_title": "Viga",
+        "skip_to_content": "Mine sisu juurde",
+        "breadcrumb": "Navigeerimisriba",
+        "continue_button_label": "Jätka",
+        "complete_purchase_button_label": "Lõpeta tellimus",
+        "pay_now_button_label": "Maksta",
+        "authenticate_purchase_button_label": "Autoriseeri makse",
+        "edit_link_label": "Muuda",
+        "all_rights_reserved": "Kõik õigused kaitstud. %{shop_name}",
+        "print_policies_link_label": "Print",
+        "cart": "Ostukorv",
+        "close_modal_label": "Sule",
+        "close_notice_label": "Sulgeda",
+        "expand_notice_label": "Veel",
+        "continue_to_shipping_method": "Mine kohaletoimetamise juurde",
+        "continue_to_payment_method": "Mine maksma",
+        "continue_to_review": "Vaata tellimust",
+        "back_to_cart": "Tagasi ostukorvi",
+        "back_to_contact_information": "Tagasi infoekraanile",
+        "back_to_shipping_method": "Tagasi tarne juurde",
+        "back_to_payment_method": "Naase maksmise juurde",
+        "choose_shipping_method": "Vali tarneviis",
+        "choose_payment_method": "Vali makseviis",
+        "choose_billing_address": "Vali arve esitamise aadress",
+        "contact_us_html": "Võtke meiega ühendust, et rohkem teada saada",
+        "autocomplete_title": "Soovitused",
+        "autocomplete_single_item": "Saadaval 1 ühik",
+        "autocomplete_multi_item": "Saadaval: {{number}} üh.",
+        "autocomplete_close": "Sule soovitused",
+        "tooltip_accessibility_label": "Täpsemalt",
+        "forwarding_indicator": {
+          "new_window": "Avatakse uues aknas.",
+          "external": "Avab välise veebilehe.",
+          "external_and_new_window": "Avab välise veebilehe uues aknas."
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} – Tellimuse esitamine"
+        }
+      },
+      "payment_errors": {
+        "generic_error": "Teie makse töötlemisel ilmnes probleem. Proovige uuesti või kasutage teist makseviisi.",
+        "rejected_transaction": "Makse tagasi lükatud. Proovige uuesti või kasutage muud makseviisi.",
+        "credit_card_processing": "Makset ei saa tehnilistel põhjustel töödelda. Palun proovige mõne minuti pärast uuesti või kasutage teist makseviisi.",
+        "order_total_changed": "Tellimuse kogusumma on muutunud. Kontrollige ja proovige uuesti.",
+        "payment_processing": "Makset ei saa tehnilistel põhjustel töödelda. Palun proovige uuesti või kasutage muud makseviisi.",
+        "paypal_zero_amount": "Te ei saa kasutada PayPali tellimuste puhul, mille summa on %{amount}. Palun vaadake oma tellimuse üksikasjad üle ja viige tellimus ilma PayPalita lõpule.",
+        "paypal_invalid_token": "PayPal-i kaudu tasumine pole saadaval. Proovige uuesti või kasutage muud makseviisi.",
+        "pay_later_failed": "Teie makse töötlemisel funktsiooniga „Maksa hiljem” ilmnes probleem. Valige mõni teine makseviis ja proovige uuesti.",
+        "three_d_secure_failed": "Teie makset ei saanud kinnitada. Palun proovige uuesti või kasutage muud makseviisi.",
+        "three_d_secure_failed_duplicate": "Krediitkaardi 3D Secure'i autentimine ebaõnnestus, kuna praegu on käimas teine autentimisprotsess.",
+        "three_d_secure_throttled": "Liiga palju katseid. Palun oodake enne uuesti proovimist.",
+        "subscription_agreement_blank": "Tellimuse ostmiseks salvestage makseandmed. Jätkamiseks kinnitage oma nõusolek või eemaldage tellitud üksused tellimusest.",
+        "insufficient_funds": "Makse on tagasi lükatud, kuna kontol pole piisavalt vahendeid. Proovige uuesti või kasutage muud makseviisi.",
+        "payment_processing_no_retry": "Makset ei saa tehnilistel põhjustel töödelda. Palun kasutage mõnda muud makseviisi.",
+        "checkout_amount_changed": "Makset ei saa töödelda, kuna tellimuse summa on muutunud. Palun kontrollige tellimuse andmeid ja proovige uuesti.",
+        "deferred_payment_not_allowed": "Edasilükatud makseid ei lubata. Palun kontrollige tellimuse andmeid ja proovige uuesti.",
+        "deferred_payment_required": "Selle tellimuse eest tuleb tasuda viitmaksega. Palun kontrollige tellimuse andmeid ja proovige uuesti.",
+        "deferred_amount_changed": "Makset ei saa töödelda, kuna edasilükatud makse summa on muutunud. Kontrollige tellimuse andmeid ja proovige uuesti.",
+        "deferred_date_changed": "Makset ei saa töödelda, kuna viitmakse kuupäev on muutunud. Palun kontrollige tellimuse andmeid ja proovige uuesti.",
+        "multiple_deferred_payment_not_allowed": "Iga päringu kohta pakutakse vaid üks edasilükatud makse. Palun kontrollige ja proovige uuesti.",
+        "shipping_must_match_billing": "Arve esitamise aadress peab ühtima tarneaadressiga. Kasutage teist makseviisi.",
+        "decision_rule_block": "Teie makse töötlemisel tekkis probleem. Palun võtke ühendust poe omanikuga.",
+        "pick_up_card": "Kaart on tagasi lükatud. Proovige uuesti või kasutage muud makseviisi.",
+        "cannot_verify": "Teie makseinfot ei õnnestunud kinnitada. Palun kontrollige sisestatud kaardiandmeid ja proovige uuesti.",
+        "invalid_number": "Sisestage kehtiv kaardinumber",
+        "invalid_expiry_date": "Sisesta kehtiv aegumiskuupäev",
+        "invalid_cvc": "Sisestage kehtiv turvakood",
+        "expired_card": "Kaardi kehtivusaeg on lõppenud. Kasutage mõnda muud makseviisi.",
+        "card_declined": "Kaart on tagasi lükatud. Proovige uuesti või kasutage muud makseviisi.",
+        "processing_error": "Teie makse töötlemisel ilmnes probleem. Proovige uuesti või kasutage teist makseviisi.",
+        "call_issuer": "Kaart tagasi lükatud. Kasutage teist makseviisi või võtke ühendust oma pangaga.",
+        "test_mode_live_card": "See pood ei saa vastu võtta tegelikke tellimusi ega tegelikke makseid.",
+        "transient_error": "Makse töötlemisel tekkis probleem. Laadige leht uuesti või kontrollige oma internetiühendust.",
+        "missing_shipping_address": "Makset ei saa töödelda, kuna valitud tarneaadressi pole määratud. Sisestage tarneaadress ja proovige uuesti.",
+        "invalid_shipping_address": "Makset ei saa töödelda, kuna sisestatud tarneaadressi ei leitud. Palun kontrollige tarneaadressi ja proovige uuesti.",
+        "successful_offsite_with_gift_card_error": "Teie makse töötlemisel kinkekaardiga ilmnes probleem. Proovige uuesti või kasutage muud makseviisi.",
+        "development_store_order_limit_reached": "Olete ületanud selle maksesüsteemi kaupluse tellimuslimiidi arendusrežiimis. Teise tellimuse esitamiseks kasutage testimakseteenust. Lisateavet leiate siit: %{development_store_order_testing_docs_link}.",
+        "development_store_with_order_limit": "Testtellimuse esitamiseks kasutage testmakseteenust. Lisateavet leiate lehelt %{development_store_order_testing_docs_link}.",
+        "development_store_order_testing_docs_link": "testtellimustena arendusrežiimis kauplustes",
+        "method_not_available": "Valitud makseviis ei ole saadaval. Palun valige teine makseviis ja proovige uuesti.",
+        "available_methods_updated": "Teave saadaolevate makseviiside kohta on uuendatud.",
+        "selected_payment_method": "Valitud makseviisiga tekkis probleem ja vahendeid ei võetud maha. Proovige uuesti või kasutage teist makseviisi.",
+        "payment_method_billing_address": "Valitud makseviisi arveldusaadressiga tekkis probleem. Kontrollige aadressi ja proovige uuesti või kasutage muud makseviisi.",
+        "processing_error_checkout_as_guest": "Teie makse töötlemisel ilmnes probleem. Proovige uuesti, kasutage teist makseviisi või {{checkout_as_guest_link}}.",
+        "amount_too_small": "Minimaalne maksesumma peab ületama 0,50 dollarit. Proovige uuesti suurema summaga.",
+        "payment_above_threshold": "Makse summa ületab selle piirkonna rahalise limiidi. Vähendage kogusummat ja proovige uuesti",
+        "risky": "Teie makse töötlemisel ilmnes probleem. Proovige uuesti või kasutage muud makseviisi.",
+        "expired_buyer_action": "Valitud makseviisi kasutamise aeg on läbi. Palun proovige uuesti.",
+        "three_d_secure_failed_payment_method": "Teie kaarti ei saanud kinnitada. Proovige uuesti või lisage mõni muu kaart.",
+        "name_mismatch": "Kontrollige oma kaardi andmeid. Kaardil olev nimi ja arveldusaadress ei kattu.",
+        "payment_method_not_applicable": "Seda makseviisi ei saa kasutada. Kasutage muud makseviisi.",
+        "shop_pay_wallet_not_available": "Shop Pay pole kassas saadaval.",
+        "market_manager_blocks_wallet_payments": "Makseviis ei ole teie riigis toetatud.",
+        "paypal_over_capture": "Teie tellimuse kogusumma on uuendatud. Tellimuse vormistamiseks tasuge {{walletName}} abil.",
+        "test_mode_enabled_only_test_cards": "Testrežiim on sisse lülitatud, saab lisada ainult testkrediitkaarte.",
+        "captcha_required": "Sisestage makseandmed ja läbige CAPTCHA kontroll, et ost sooritada.",
+        "captcha_required_without_payment_information": "Ostlemise lõpetamiseks läbige CAPTCHA kontroll.",
+        "shipping_company_required_error": "{{shopName}} palub sisestada ettevõtte nimi tarneaadressi jaoks.",
+        "payment_credential_delegation_error": "Teie makse töötlemisel ilmnes probleem. Palun valige uus makseviis.",
+        "cancelled_payment": "Teie makse on tühistatud. Proovige uuesti või kasutage muud makseviisi.",
+        "currency": {
+          "no_longer_supported": "Kaupluse valuutat enam ei toetata."
+        },
+        "installments_payment_method_incompatible": "Valitud makseviisi ei saa kasutada korduvate maksete puhul. Valige muu makseviis.",
+        "missing_cvc": "Sisestage turvakood"
+      },
+      "shipping_errors": {
+        "shipping_method": "Teie tellimuse tarneviisid on muutunud. Palun kontrollige andmeid.",
+        "shipping_method_not_available": "Ostukorvi on värskendatud. Teie lisatud tooteid ei saa määratud aadressile tarnida. Eemaldage need tooted tellimuse vormistamiseks.",
+        "shipping_method_not_available_generic": {
+          "one": "Teie tellimust ei saa antud aadressile toimetada. Kontrollige aadressi, veenduge, et andmed on õiged ja proovige uuesti. Või määrake teine ​​aadress.",
+          "other": "Mõnda ostukorvi toodet ei tarnita antud aadressile. Kontrollige aadressi, veenduge, et andmed on õigesti sisestatud, ja proovige uuesti. Või sisestage teine aadress."
+        }
+      },
+      "shipping": {
+        "split_shipping_option_custom": "Muu",
+        "default_description": "Saadetakse 1 tööpäeva jooksul",
+        "split_shipping_shipment_notice": "Teie tellimus saabub %{quantity_shipments}",
+        "unbranded_default_description": "Saatmiseks valmis",
+        "prime_not_available": {
+          "default": "Teie tellimuse puhul ei ole Prime-kohaletoimetuse teenus saadaval. Teie kohaletoimetamise valikud on uuendatud."
+        },
+        "split_shipping_first_shipment_notice": "Teie esimene tellimus saabub %{quantity_shipments}",
+        "shipping_method_rollup_accessibility_label": "Tarneviisid",
+        "shipping_address_rollup_accessibility_label": "Kohaletoimetamisviisid aadressile",
+        "back": "Tagasi",
+        "invalid_shipping_method_summary_selected": "Valige muu tarneaadress, et näha saadaolevaid tarneviise",
+        "third_party_address_timeout": "Aadresse ei õnnestunud laadida. Proovige uuesti või kasutage muud aadressi.",
+        "third_party_address_error": "Saadaolevate aadresside laadimisel tekkis viga. Palun sisestage aadress käsitsi allpool.",
+        "third_party_payment_timeout": "Makseviise ei saa laadida. Proovige uuesti või kasutage teist makseviisi.",
+        "third_party_payment_error": "Saadaolevate makseviiside laadimisel tekkis viga. Palun kasutage teist makseviisi.",
+        "add_shipping_address": "Lisa kohaletoimetamise aadress",
+        "choose_new_address": "Valige uus aadress",
+        "unbranded_description_same_day": "Saatmine samal tööpäeval",
+        "unbranded_description_with_fulfillment_days": {
+          "one": "Saatmine järgmisel tööpäeval",
+          "other": "Tarne %{count} tööpäeva jooksul",
+          "few": "Tarne %{count} tööpäeva jooksul",
+          "many": "Tarne %{count} tööpäeva jooksul"
+        },
+        "unbranded_description_with_fulfillment_weeks": {
+          "one": "Saadetud %{count} nädala jooksul",
+          "other": "Saadetakse %{count} nädala jooksul",
+          "few": "Saadetakse %{count} nädala jooksul",
+          "many": "Saadetakse %{count} nädala jooksul"
+        },
+        "add_new_delivery_address": "Lisa uus tarneaadress",
+        "delivery_to": "Kohaletoimetamine",
+        "title": "Tarne",
+        "shipping_method_title": "Tarneviis",
+        "waiting_on_rate_notice": "Saadaolevate tarnekulude valikute hankimine...",
+        "waiting_on_pickup_location_notice": "Saadaolevate pakiautomaatide nimekirja hankimine...",
+        "no_rates_for_cart_or_destination_notice": "Teie ostukorvis olevate toodete või aadressi jaoks pole ühtegi kohaletoimetamisviisi.",
+        "no_pickup_location_notice": "Vähemalt üks tellitud toode ei ole isetoomiseks saadaval",
+        "no_rates_for_country_notice": "Sellele aadressile saatmise kohta puuduvad andmed.",
+        "no_rates_contact_notice": "Lisateabe saamiseks võtke meiega ühendust",
+        "free_rate_label": "Tasuta",
+        "cheapest_rate_label": "Madalaim hind",
+        "estimated_delivery_date_range": "%{minimum}–%{maximum} tööpäeva",
+        "shipping_line_phone_label": "Mobiiltelefoni number (kohustuslik)",
+        "shipping_line_phone": "Teie kuller saab sellel numbril teiega ühendust võtta.",
+        "shipping_rate_discounted_amount": "Varem: %{original_amount}. Praegu: %{amount}",
+        "optional_shipping_line_delivery_instructions_label": "Tarnesoovitused (valikuline)",
+        "estimated_delivery_date": {
+          "one": "Tööpäevad: %{count}",
+          "other": "%{count} tööpäeva",
+          "few": "%{count} tööpäeva",
+          "many": "%{count} tööpäeva"
+        },
+        "other_method": {
+          "zero": "Muid valikuid pole saadaval",
+          "one": "Saadaval on veel %{count} varianti",
+          "other": "Valikuid saadaval: %{count}, alates",
+          "few": "Valikuid saadaval: %{count}, alates",
+          "many": "Valikuid saadaval: %{count}, alates"
+        },
+        "shipping_line_delivery_phone": "Teile võidakse anda uusi andmeid teie tarne kohta.",
+        "shipping_line_delivery_phone_label": "Mobiiltelefoni number",
+        "shipping_line_delivery_instructions": "Palun sisesta kasulikku infot, näiteks fonoluku kood või juhised paki kohaletoimetamise kohta.",
+        "local_delivery": "Kohaletoimetamine aadressile",
+        "subscription_shipping": "Tellimuspõhine kohaletoimetamine",
+        "shipping_method_one_time_purchase_group_title": "Ühekordne ost",
+        "shipping_method_subscription_group_title": "Tellimus",
+        "one_time_purchase_shipping": "Üks tarnimine",
+        "subscription_delivery_description": {
+          "prepaid_delivery_frequency": {
+            "one": "%{count}. kohaletoimetamine",
+            "other": "teatud hulga (%{count}) tarnete eest",
+            "few": "teatud hulga (%{count}) tarnete eest",
+            "many": "teatud hulga (%{count}) tarnete eest"
+          },
+          "subscription_delivery_frequency": {
+            "day": {
+              "one": "iga päev",
+              "other": "iga %{count} päeva tagant",
+              "few": "iga %{count} päeva tagant",
+              "many": "iga %{count} päeva tagant"
+            },
+            "week": {
+              "one": "iga nädal",
+              "other": "iga %{count} näd.",
+              "few": "iga %{count} näd.",
+              "many": "iga %{count} näd."
+            },
+            "month": {
+              "one": "iga kuu",
+              "other": "iga %{count} kuu tagant",
+              "few": "iga %{count} kuu tagant",
+              "many": "iga %{count} kuu tagant"
+            },
+            "year": {
+              "one": "igal aastal",
+              "other": "iga %{count} aasta järel.",
+              "few": "iga %{count} aasta järel.",
+              "many": "iga %{count} aasta järel."
+            }
+          },
+          "multiple_subscriptions_shipping_price_label": "%{shipping_price} tarnekuludele",
+          "prepaid_shipping_price_label": "%{shipping_price} x %{delivery_interval_count} tarnimiseks",
+          "initial_order_discounted": "Esimene tarne on %{discounted_shipping_cost}, seejärel %{frequency_description}",
+          "prepaid_initial_order_discounted": "Esimene kohaletoimetamine %{discounted_shipping_price} eest %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "Esimene tarne on %{discounted_shipping_price} %{prepaid_delivery_frequency} kohta (%{discounted_cost_per_delivery})",
+          "prepaid_initial_order_discounted_with_renewal": "Esimene tarne %{discounted_shipping_price} %{prepaid_delivery_frequency}, seejärel %{shipping_price} %{billing_cycle}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "Esimene tarne %{discounted_shipping_price} eest %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery}), seejärel %{shipping_price} %{billing_cycle}",
+          "shipping_price_included": "Lisatud",
+          "recurring_order_shipping_price": "koos %{recurring_order_shipping_price}ga",
+          "first_order_shipping_price_included": "Hind koos esimese tellimusega pluss %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (tarnekulu %{per_delivery_price}) pluss %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "Esimene tellimus on tasuta",
+            "other": "Mõned esimesed tellimused (%{count}) on tasuta",
+            "few": "Mõned esimesed tellimused (%{count}) on tasuta",
+            "many": "Mõned esimesed tellimused (%{count}) on tasuta"
+          },
+          "free_for_first_n_order": {
+            "one": "Esimese tellimuse eest",
+            "other": "Esimese paari tellimuse eest (%{count})",
+            "few": "Esimese paari tellimuse eest (%{count})",
+            "many": "Esimese paari tellimuse eest (%{count})"
+          },
+          "subscription_free_with_frequency_label": "Tasuta kohaletoimetamine %{delivery_frequency}",
+          "free_shipping_cycles": {
+            "one": "Tasuta kohaletoimetamine veel %{count} tellimusele",
+            "other": "Tasuta kohaletoimetamine veel %{count} tellimusele",
+            "few": "Tasuta kohaletoimetamine veel %{count} tellimusele",
+            "many": "Tasuta kohaletoimetamine veel %{count} tellimusele"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "one": "Tasuta kohaletoimetamine %{count} tellimusele",
+            "other": "Tasuta kohaletoimetamine %{count} tellimuse puhul",
+            "few": "Tasuta kohaletoimetamine %{count} tellimuse puhul",
+            "many": "Tasuta kohaletoimetamine %{count} tellimuse puhul"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "Tasuta kohaletoimetamine veel %{count} tellimusele, seejärel %{recurring_order_shipping_price}",
+            "other": "Tasuta kohaletoimetamine veel %{count} tellimusele, seejärel – %{recurring_order_shipping_price}",
+            "few": "Tasuta kohaletoimetamine veel %{count} tellimusele, seejärel – %{recurring_order_shipping_price}",
+            "many": "Tasuta kohaletoimetamine veel %{count} tellimusele, seejärel – %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "Tasuta kohaletoimetamine %{count} tellimusele, edasi %{recurring_order_shipping_price}",
+            "other": "Tasuta kohaletoimetamine %{count} tellimusele, seejärel %{recurring_order_shipping_price}",
+            "few": "Tasuta kohaletoimetamine %{count} tellimusele, seejärel %{recurring_order_shipping_price}",
+            "many": "Tasuta kohaletoimetamine %{count} tellimusele, seejärel %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "one": "%{shipping_price} soodustus kehtib veel %{count} tellimuse puhul",
+            "other": "%{shipping_price} soodushind kehtib veel %{count} tellimusele",
+            "few": "%{shipping_price} soodushind kehtib veel %{count} tellimusele",
+            "many": "%{shipping_price} soodushind kehtib veel %{count} tellimusele"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "one": "%{shipping_price} suurune tarnehind kehtib %{count} tellimuse kohta",
+            "other": "%{shipping_price} soodushind kehtib veel %{count} tellimusele",
+            "few": "%{shipping_price} soodushind kehtib veel %{count} tellimusele",
+            "many": "%{shipping_price} soodushind kehtib veel %{count} tellimusele"
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "one": "Tasuta kohaletoimetamine esimese %{cycle} jooksul, seejärel – %{recurring_order_shipping_price}"
+          }
+        }
+      },
+      "change_currency": {
+        "credit_card_will_be_charged_html": "Teie krediitkaardilt debiteeritakse %{amount}",
+        "payment_total_label": "Kokku tasuda",
+        "change_currency_link": "Muuda valuutaks %{currency_name}",
+        "card_provider_fx_charges_warning": "Teie kaardilt võidakse valuutas %{currency_code} tehtud tehingute eest teenustasu võtta.",
+        "currency_not_supported_by_shop": "Seda valuutat enam ei kasutata. Kõik hinnad on nüüd valuutas %{currency_code}."
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "few": "Tarne pole saadaval järgmiste toodete jaoks: %{count}",
+            "many": "Tarne pole saadaval järgmiste toodete jaoks: %{count}"
+          },
+          "message": {
+            "one": "See toode eemaldatakse teie ostukorvist, kuna teie määratud aadressile pole kohaletoimetamine saadaval.",
+            "other": "Need tooted eemaldatakse teie ostukorvist, kuna tarne teie määratud aadressile ei ole saadaval.",
+            "few": "Need tooted eemaldatakse teie ostukorvist, kuna tarne teie määratud aadressile ei ole saadaval.",
+            "many": "Need tooted eemaldatakse teie ostukorvist, kuna tarne teie määratud aadressile ei ole saadaval."
+          },
+          "label": "Tarne pole saadaval"
+        }
+      },
+      "no_address_location": {
+        "title": "Asukohad ilma aadressita",
+        "header": "Te ei ole selle asukoha jaoks tarneaadressi määranud",
+        "message": "Võtke meiega ühendust, et lisada asukoha aadress ja tellimus vormistada.",
+        "email_us_button_label": "Saada kiri",
+        "alt_header": "Puudub tarneaadress"
+      },
+      "order_errors": {
+        "creation_failure": "Tellimuse loomisel tekkis probleem. Palun proovige uuesti või võtke meiega ühendust, et saada lisateavet.",
+        "network_failure": "Teie tellimust ei õnnestunud saata ühenduse veast tingituna. Palun kontrollige oma internetiühendust ja proovige uuesti.",
+        "inventory_reservation_failure": "Mõned kaubad pole enam saadaval."
+      },
+      "session_errors": {
+        "session_not_unique": "Tellimuse töötlemisel tekkis probleem. Laadi leht uuesti, et poodi tagasi minna.",
+        "session_already_finished": "See tellimus on juba saadetud. Uue tellimuse tegemiseks võite tagasi poodi minna."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "Suletud",
+        "business_hours": "Lahtiolekuajad",
+        "title": "Pakipunkt",
+        "or": "või",
+        "search_button": "Otsing",
+        "selector_tabs": "Vali pakiautomaat",
+        "selector_tab_map": "Kaart",
+        "selector_tab_list": "Nimekiri",
+        "could_not_resolve_address": "Aadressi ei leitud. Palun proovige uuesti või kasutage muud aadressi",
+        "no_pickup_points_near_you": "Valitud aadressi läheduses ei leitud järeletulemiskohti",
+        "no_pickup_points_near_location": "Teie asukoha läheduses ei leitud järeletulemispunkte",
+        "no_pickup_points_found": "Väljavõttepunkte ei leitud",
+        "paginator": {
+          "next_accessibility_label": "Järgmine lehekülg",
+          "previous_accessibility_label": "Eelmine lehekülg",
+          "header": {
+            "one": "Kuvatud %{first}–%{last} %{count} vastest",
+            "other": "Kuvatud %{first}–%{last} %{count} vastest",
+            "few": "Kuvatud %{first}–%{last} %{count} vastest",
+            "many": "Kuvatud %{first}–%{last} %{count} vastest"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} of %{count} asukohad",
+            "other": "%{pickup_point_index} of %{count} asukohad",
+            "few": "%{pickup_point_index} of %{count} asukohad",
+            "many": "%{pickup_point_index} of %{count} asukohad"
+          },
+          "selected_page": {
+            "one": "%{first}–%{last} / %{count} tk.",
+            "other": "%{first}–%{last} / %{count} tk.",
+            "few": "%{first}–%{last} / %{count} tk.",
+            "many": "%{first}–%{last} / %{count} tk."
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} väljastuspunkti Teie asukoha lähedal",
+          "other": "Teie asukoha lähedal asuvad pakipunktid: %{count}",
+          "few": "Teie asukoha lähedal asuvad pakipunktid: %{count}",
+          "many": "Teie asukoha lähedal asuvad pakipunktid: %{count}"
+        },
+        "change": "Muuda asukohta",
+        "waiting_on_pickup_point_location_notice": "Pealeostukohtade otsimine...",
+        "geolocation": {
+          "shared_location_button": "Kasutada minu asukohta",
+          "errors": {
+            "unsuported_by_browser": "Teie brauser ei toeta geolokatsiooni. Proovige uuesti või kasutage teist brauserit.",
+            "permission_not_allowed": "Lubage jagada oma asukohateavet.",
+            "permission_denied": "Teie asukoha andmeid ei õnnestunud hankida. Palun proovige uuesti."
+          }
+        },
+        "no_business_hours": "Tööaegu pole märgitud",
+        "open_twenty_four_hours": "Töötab 24/7",
+        "address_label": "Aadress",
+        "pickup_unavailable_banner_title": {
+          "one": "Teie kauba jaoks ei ole saadaval ühtegi järeletulemispunkti",
+          "other": "Teie toodete jaoks pole ühtegi järeletulemiskohta.",
+          "few": "Teie toodete jaoks pole ühtegi järeletulemiskohta.",
+          "many": "Teie toodete jaoks pole ühtegi järeletulemiskohta."
+        }
+      },
+      "error_page": {
+        "terminal": {
+          "title": "Maksega tekkis probleem",
+          "message": "Värskendage lehte või proovige mõne minuti pärast uuesti",
+          "action": {
+            "cta": "Värskenda lehte"
+          },
+          "request_id": "Päringu ID: {{requestId}}"
+        },
+        "embed_errors": {
+          "storefront_password_required": "See pood on parooliga kaitstud",
+          "customer_account_required": "Tellimuse vormistamiseks on vaja kliendikontot",
+          "cart_completed": "See tellimus on juba sooritatud",
+          "invalid_cart": "Ostukorv ei ole enam aktiivne",
+          "not_authorized": "Tellimuse esitamisel autentimine nurjus. Kontrollige rakenduse sisselogimisandmeid",
+          "killswitch_enabled": "Tellimuse vormistamine on ajutiselt peatatud",
+          "policy_violation": "Tellimuse vormistamine ei ole poliitika konfiguratsioonipiirangute tõttu võimalik",
+          "unrecoverable_failure": "Tellimuse vormistamise protseduuri ei õnnestunud laadida. Palun proovige uuesti."
+        }
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Tagasi ostukorvi",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} koguste uuendamiseks",
+        "subscription_changed": "Ühte teie tellimusse on tehtud muudatusi.",
+        "company_location_changed": "Ostukorvi sisu on uuendatud. Palun vaadake tellimus enne saatmist üle.",
+        "violations_title": "{{violation}}: pole saadaval või vale",
+        "individual_violations_title": {
+          "DeliveryViolations": "Tarneaadress",
+          "PaymentViolations": "Arve esitamise aadress",
+          "OtherViolations": "Tellimuse andmed",
+          "UnhandledViolations": "Tellimuse andmed"
+        },
+        "all_violations_content": "Helistage meile või saatke e-kiri ({{emailLink}}), et uuendada teavet ja lõpetada tellimus:",
+        "all_violations_email_link": "e-posti aadress",
+        "editable_shipping_address_violations_message_title": "Lisage oma tellimuse lõpuleviimiseks järgmine teave:",
+        "editable_shipping_address_violations_message_footer": "Selle asukoha aadressi värskendamiseks kasutage linki {{emailLink}}.",
+        "editable_shipping_address_violations_email_link": "võtke meiega ühendust",
+        "company_location_changed_product_removed": "Teie ostukorvi sisu on uuendatud, kuna mõned tooted ei ole selles piirkonnas saadaval. Palun vaadake tellimus enne esitamist üle.",
+        "shipping_address_incomplete_title": "Tarneaadress on puudulik",
+        "calculating_shipping": "Tarne maksumuse arvutamine on pooleli. Proovige mõne sekundi pärast uuesti. Raha pole maha arvestatud.",
+        "calculating_taxes": "Maksude arvestus käib. Palun proovige uuesti mõne sekundi pärast. Vahendeid ei ole maha arvestatud.",
+        "generic_processing_error": {
+          "title": "Tellimuse töötlemisel tekkis probleem",
+          "body": "Vahendeid ei debiteeritud. Proovige uuesti või kasutage muud makseviisi."
+        },
+        "contact_information": {
+          "title": "Vigane kontaktteave",
+          "header": "Teabe värskendamiseks {{emailLink}}.",
+          "email_link": "võtke meiega ühendust"
+        },
+        "payment_method_not_available_with_payment_terms": "<p>Teie valitud makseviis pole enam saadaval, kuna selle tellimuse tasumine toimub nüüd vastavalt {{paymentTerms}}</p>",
+        "payment_method_not_available_with_fulfillment_terms": "Teie valitud makseviis ei ole enam saadaval, kuna selle tellimuse tasumine toimub nüüd täitmise ajal.",
+        "payment_method_not_available_with_fixed_terms": "Teie valitud makseviis ei ole enam saadaval, kuna selle tellimuse tasumine toimub nüüd hiljem",
+        "payment_method_not_available_with_review_requirement": "Teie valitud makseviis ei ole enam saadaval, kuna tasu võetakse pärast teie tellimuse kinnitamist.",
+        "validation_errors_banner": {
+          "section_label": {
+            "delivery": "Tarne"
+          }
+        }
+      }
     },
-    "comment_form": {
-      "email": "Email",
-      "error": "Comment failed to post, please address the following:",
-      "heading": "Leave a comment",
-      "message": "Message",
-      "moderated": "Please note, comments need to be approved before they are published.",
-      "name": "Name",
-      "post": "Post comment",
-      "success_moderated": "Comment posted, awaiting moderation",
-      "success": "Comment posted"
+    "sentence": {
+      "two_words_connector": "ja",
+      "last_word_connector": ", ja "
     }
   },
-  "content": {
-    "cancel": "Cancel",
-    "discount": "Discount",
-    "account_title": "Account",
-    "terms_and_policies": "Terms and Policies",
-    "account_title_personalized": "Hi {{ first_name }}",
-    "account_orders": "Orders",
-    "account_profile": "Profile",
-    "blog_details_separator": "|",
-    "cart_estimated_total": "Estimated total",
-    "cart_title": "Ostukorv",
-    "cart_subtotal": "Subtotal",
-    "cart_total": "Cart total",
-    "checkout": "Makse",
-    "collection_placeholder": "Collection title",
-    "discount_code": "Discount code",
-    "shipping_discount_error": "Shipping discounts are shown at checkout after adding an address",
-    "discount_code_error": "Discount code cannot be applied to your cart",
-    "discounts": "Discounts",
-    "duties_and_taxes_included": "Duties and taxes included.",
-    "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Duties and taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
-    "duties_and_taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Duties and taxes included. Shipping is calculated at checkout.",
-    "duties_and_taxes_included_shipping_at_checkout_without_policy": "Duties and taxes included. Discounts and shipping calculated at checkout.",
-    "duties_and_taxes_included_shipping_at_checkout_without_policy_without_discounts": "Duties and taxes included. Shipping is calculated at checkout.",
-    "duties_included": "Duties included.",
-    "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Duties included. Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
-    "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Duties included. Shipping is calculated at checkout.",
-    "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Duties included. Taxes, discounts and shipping calculated at checkout.",
-    "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Duties included. Shipping is calculated at checkout.",
-    "featured_products": "Featured products",
-    "filters": "Filters",
-    "grid_view": {
-      "default_view": "Default",
-      "grid_fieldset": "Column grid",
-      "single_item": "Single",
-      "zoom_out": "Zoom out"
+  "customer_accounts": {
+    "orders": {
+      "order_list": {
+        "pagination": {
+          "load_more": "Laadi rohkem",
+          "load_more_accessibility_label": "Laadi rohkem tellimusi"
+        },
+        "sort_by": "Sorteerimine: {{option}}",
+        "sort_hide_options_accessibility_label": "Sorteerimisparameetrite peitmine kinnitatud tellimuste puhul.",
+        "sort_show_options_accessibility_label": "Sorteerimisparameetrite kuvamine kinnitatud tellimuste puhul.",
+        "sort_title": "Sorteerimine",
+        "sort": {
+          "date": {
+            "newest": "Uuemast vanemani",
+            "oldest": "Vanast uude"
+          },
+          "location": {
+            "ascending": "Asukoht (A-Z)",
+            "descending": "Asukoht (Z-A)"
+          },
+          "order_number": {
+            "ascending": "Tellimuse number (kasvavalt)",
+            "descending": "Tellimuse number (kahanevalt)"
+          },
+          "order_total": {
+            "ascending": "Tellimuse kogusumma (kasvavalt)",
+            "descending": "Tellimuse kogusumma (kahanevalt)"
+          }
+        },
+        "one_images_accessibility_label": "Tellimus sisaldab {{lineItemName1}}",
+        "two_images_accessibility_label": "Tellimus sisaldab {{lineItemName1}}, {{lineItemName2}}",
+        "three_images_accessibility_label": "Tellimus sisaldab: {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}",
+        "four_images_accessibility_label": "Tellimus sisaldab: {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, {{lineItemName4}}",
+        "no_filtered_results_description": "Eemaldage või muutke filtreid oma tellimuste nägemiseks",
+        "no_filtered_results_title": "Pärast filtri rakendamist ei ole tulemusi",
+        "estimated_shortform": "Orient. {{date}}",
+        "payment_status": {
+          "list_view": {
+            "overdue": "Aegunud",
+            "due": "Kehtiv kuni: {{date}}",
+            "due_today": "Maksetähtaeg on täna",
+            "due_without_date": "Tähtaeg",
+            "due_on_fulfillment": "Tehtud",
+            "pay_to_confirm": "Maksa kinnitamiseks",
+            "payment_not_due": "Tähtaeg pole veel kätte jõudnud.",
+            "paid": "Tasutud"
+          },
+          "gallery_view": {
+            "overdue": "Makse on tähtaja ületanud",
+            "due": "Maksetähtaeg: {{date}}",
+            "due_today": "Makse täitmise tähtaeg",
+            "due_without_date": "Makse sooritamise tähtaeg",
+            "due_on_fulfillment": "Makse on teostamiseks valmis",
+            "pay_to_confirm": "Maksa kinnitamiseks",
+            "payment_not_due": "Maksetähtaeg ei ole veel saabunud"
+          }
+        },
+        "sort_currently_sorted_by_accessibility_label": "Praegune sortimine: {{option}}",
+        "carousel": {
+          "one_products_accessibility_label": "Tellimus sisaldab: {{lineItemName1}} — {{lineItemQuantity1}} tk.",
+          "two_products_accessibility_label": "Tellimus sisaldab: {{lineItemName1}} — {{lineItemQuantity1}} tk, {{lineItemName2}} — {{lineItemQuantity2}} tk.",
+          "three_products_accessibility_label": "Tellimus sisaldab {{lineItemName1}} — {{lineItemQuantity1}} tk, {{lineItemName2}} — {{lineItemQuantity2}} tk, {{lineItemName3}} — {{lineItemQuantity3}} tk.",
+          "four_products_accessibility_label": "Tellimus sisaldab: {{lineItemName1}} — {{lineItemQuantity1}} tk, {{lineItemName2}} — {{lineItemQuantity2}} tk, {{lineItemName3}} — {{lineItemQuantity3}} tk, {{lineItemName4}} — {{lineItemQuantity4}} tk.",
+          "five_products_accessibility_label": "Tellimus sisaldab {{lineItemName1}} — {{lineItemQuantity1}} tk, {{lineItemName2}} — {{lineItemQuantity2}} tk, {{lineItemName3}} — {{lineItemQuantity3}} tk, {{lineItemName4}} — {{lineItemQuantity4}} tk, {{lineItemName5}} — {{lineItemQuantity5}} tk.",
+          "six_products_accessibility_label": "Tellimus sisaldab: {{lineItemName1}} — {{lineItemQuantity1}} tk, {{lineItemName2}} — {{lineItemQuantity2}} tk, {{lineItemName3}} — {{lineItemQuantity3}} tk, {{lineItemName4}} — {{lineItemQuantity4}} tk, {{lineItemName5}} — {{lineItemQuantity5}} tk, {{lineItemName6}} — {{lineItemQuantity6}} tk.",
+          "six_and_more_products_accessibility_label": "Tellimus sisaldab: {{lineItemName1}} — {{lineItemQuantity1}} tk, {{lineItemName2}} — {{lineItemQuantity2}} tk, {{lineItemName3}} — {{lineItemQuantity3}} tk, {{lineItemName4}} — {{lineItemQuantity4}} tk, {{lineItemName5}} — {{lineItemQuantity5}} tk, {{lineItemName6}} — {{lineItemQuantity6}} tk ja rohkem",
+          "view_order_details": "Kuva tellimuse andmed",
+          "previous": "Tagasi",
+          "next": "Edasi"
+        },
+        "show_order_actions_accessibility_label": "Kuva tellimuse tegevused {{name}}",
+        "empty_state_title_for_pending_orders": "Pole tellimusi, mis ootaksid vormistamist",
+        "more_than_four_products_accessibility_label": "Tellimus sisaldab {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}} ja {{numberOfAdditionalProducts}} toodet.",
+        "plus_more_products": "+ {{numberOfAdditionalProducts}} toodet",
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Kuva tellimuse andmed",
+            "estimated_delivery": "Eeldatav tarnekuupäev: {{date}}",
+            "last_updated": "Viimati uuendatud: {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Eeldatav tarneaeg: {{date}}"
+          }
+        },
+        "more_than_three_products_accessibility_label": "Tellimus sisaldab {{lineItemName1}}, {{lineItemName2}} ja veel {{numberOfAdditionalProducts}} toodet.",
+        "filter_title": "Sorteerimine",
+        "filter": {
+          "clear_section": "Kustuta jaotis",
+          "clear_all": "Kustuta kõik",
+          "apply": "Rakenda",
+          "date": {
+            "start_date": "Avaldamiskuupäev",
+            "end_date": "Sulgemiskuupäev",
+            "title": "Paigaldamise kuupäev",
+            "today": "Täna",
+            "last_7_days": "Viimase 7 päeva jooksul",
+            "last_30_days": "Viimase 30 päeva jooksul",
+            "last_90_days": "Viimase 90 päeva jooksul",
+            "last_365_days": "Viimase 12 kuu jooksul",
+            "custom": "Muu"
+          }
+        },
+        "no_order_banner": "Loo tellimus, et testida laiendust tellimuse oleku lehel.",
+        "location_filter_picker": {
+          "all_location": "Kõik kohad",
+          "current_location": "Praegune asukoht",
+          "switch_view": "Muuda vaadet"
+        },
+        "empty_state_with_location_title": "{{locationName}}: tellimusi pole",
+        "view_order": "Vaata tellimust",
+        "view_order_accessibility_label": "Kuva tellimus {{orderName}}"
+      },
+      "order_status": {
+        "canceled_label": "Tühistatud",
+        "canceled_title": "Teie tellimus on tühistatud",
+        "come_back": "Tagastage sellele lehele, et jälgida oma saadetise olekut.",
+        "company_tracking_number": "Jälgimisnumber ettevõttelt {{company}}:",
+        "confirmed_label": "Kinnitatud",
+        "confirmed_title": "Teie tellimus on kinnitatud",
+        "delivered_label": "Kohale toimetatud",
+        "estimated_delivery": "Eeldatav tarnekuupäev: {{date}}",
+        "in_review_label": "Menetluses",
+        "in_review_title": "Teie tellimus on kontrollimisel",
+        "no_tracking_number": "Selles tellimuses ei ole jälgimisnumbrit.",
+        "on_its_way_label": "Teel",
+        "out_for_delivery_label": "Lähtekohas",
+        "resume_tracking": "Jätka jälgimist",
+        "submitted_label": "Saadetud",
+        "track_shipment": "Jälgi tellimust",
+        "request_return": "Tagastustaotluse esitamine",
+        "attempted_delivery_label": "Tarnekatse",
+        "preparing_for_shipping_label": "Eelnev ettevalmistus saatmiseks",
+        "ready_for_pickup_label": "Kas saab järele tulla?",
+        "ready_for_pickup_description": "Kaubad on kättesaadavad. Peate väljastuspunktis esitama tellimuse kinnituse.",
+        "picked_up_label": "Tellimus vastu võetud",
+        "submitted_description": "Tellimuse ja makseandmete vaatamine."
+      }
     },
-    "inventory_low_stock_show_count": {
-      "one": "{{ count }} left",
-      "other": "{{ count }} left"
+    "order_details": {
+      "image_gallery": {
+        "load_more_items": {
+          "many": "Laadi tellimused: {{count}}"
+        }
+      },
+      "shop_order_tracking": {
+        "download_shop_to_track": "Laadige alla rakendus Shop paki jälgimiseks",
+        "track_order_with_shop": "Jälgige tellimust Shopiga",
+        "title_header": "Skannige kood telefoniga",
+        "real_time_delivery_updates": "Pärast tellimuse esitamist edastab Shop sulle reaalajas teavet selle staatuse kohta."
+      },
+      "shop_pay": {
+        "order_completed_with": "Tellimus täidetud läbi",
+        "learn_more": "Täpsemalt"
+      },
+      "edit_summary": {
+        "added": "Lisatud",
+        "added_with_quantity": "Lisatud: {{quantity}}",
+        "removed": "Kustutatud",
+        "removed_with_quantity": "Kustutatud: {{quantity}}",
+        "updated_at": "Teie tellimus on värskendatud {{date}}",
+        "returned": "Tagastatud",
+        "returned_with_quantities": "Tagastatud {{delta}} / {{total}}",
+        "removed_with_quantities": "Kustutati {{delta}} {{total}}-st",
+        "return_line_item_removed": "Tagastusest eemaldatud",
+        "return_line_item_removed_with_quantities": "Tagastusest eemaldatud: {{delta}}"
+      },
+      "pickup": {
+        "pickup": "Ise järele tulemine",
+        "pickup_location": "Väljastuspunkt",
+        "pickup_point": "Väljastuspunkt"
+      },
+      "paid_with_shop_pay_installments_card": {
+        "paid_with_shop_pay_installments": "Tasutud korduvmaksetega Shop Pay kaudu",
+        "description": "Jälgige oma maksegraafikut rakenduse Shop meeldetuletuste abil.",
+        "payment_reminders_button": "Saada maksemeeldetuletusi",
+        "desktop_qr_code_content": {
+          "title": "Kontrolli meeldetuletusi",
+          "description": "Saate Shopi abil järelmaksu tasumise meeldetuletusi."
+        },
+        "title": "Shop Pay järelmaksu maksemeeldetuletused"
+      },
+      "order_details": "Tellimuse andmed",
+      "contact_information": "Kontaktandmed",
+      "login_to_view_all_order_details": "Logi sisse, et näha tellimuse kõiki üksikasju.",
+      "log_in": "Logi sisse",
+      "paid_amount": "Makstud",
+      "remaining_amount": "Maksmisele",
+      "order_details_skeleton_accessibility_label": "Logi sisse, et näha tellimuse kõiki üksikasju.",
+      "tip": "Jootraha",
+      "logged_in_account_no_permission_to_order": "Olete sisse loginud kui {{email}}. Sellel kontol puudub selle tellimuse haldamiseks luba.",
+      "log_in_to_a_different_account": "Logi sisse teise kontoga",
+      "duties": "Tollimaksud",
+      "ok_duties_tooltip": "See toode saadetakse teisest riigist, mistõttu on tellimuse kogusummale lisatud tollimaks.",
+      "error_duties_tooltip": "See toode saadetakse teisest riigist, seega võivad tellimuse kogusummale lisanduda tollimaksud ja maksud.",
+      "zero_duties_tooltip": "See toode saadetakse teisest riigist. Sellise summa tellimuste puhul tollimakse ei võeta.",
+      "group_title_label": "Osa: {{groupTitle}}",
+      "fees": {
+        "restocking_fee": "Kauba tagastamise tasu",
+        "return_shipping_fee": "Kauba tagastamine"
+      },
+      "vat_invoices": {
+        "title": "KM-arved"
+      },
+      "taxes_included": "Sealhulgas {{amount}} maksude näol",
+      "duties_and_taxes_included": "Lõppsumma sisaldab tollimakse ja makse. Tarnimisel lisatasusid ei ole.",
+      "grouped_view_components": {
+        "expand_line_items": "Kuva {{count}} üh.",
+        "collapse_line_items": "Peida {{count}} ühikut",
+        "line_item_summary": "{{productTitle}} ({{refundableQuantity}} üh.)",
+        "line_item_summary_accessibility_label": "{{productTitle}} — {{refundableQuantity}} tk.",
+        "line_item_summary_list_accessibility_label": "Komplekti tooted {{productTitle}}"
+      },
+      "cash_rounding": "Sularahasumma ümardamine",
+      "adjusted_payment": "Kohandatud maksesumma",
+      "adjusted_total": "Korraldatud kogusumma",
+      "login_card": {
+        "log_in": "Logi sisse",
+        "link_expired": "Lingi kehtivusaeg on möödas",
+        "resend_link_and_login": "Oma tellimuse andmete nägemiseks logi sisse või saada uus link e-posti aadressile või telefoninumbrile, mida tellimuse vormistamisel kasutasid.",
+        "resend_link_only": "Oma tellimuse andmete vaatamiseks saatke uus link e-posti aadressile või telefoninumbrile, mida kasutasite tellimuse esitamisel.",
+        "resend_link": "Saada uus link",
+        "title": "Juurdepääs tellimuse andmetele"
+      },
+      "link_sent": "Link saadetud",
+      "view_controls": {
+        "gallery": "Galerii",
+        "list": "Loend"
+      },
+      "company_and_location": "Ettevõte ja asukoht",
+      "group_title_label_with_parent": "Kellele: {{groupTitle}}",
+      "due_on_date": "Maksetähtaeg: {{date}}",
+      "due_on_fulfillment": "Tasumisele täitmisel",
+      "due_on_receipt": "Maksmine kauba kättesaamisel",
+      "payment_confirmation": {
+        "payment_received": "Aitäh! Makse summas {{amount}} on laekunud.",
+        "full_payment_received": "Aitäh! Makse summas {{amount}} on laekunud. See tellimus on täielikult tasutud.",
+        "dismiss_label": "Sulge makse kinnitus",
+        "payment_authorized": "Täname! Saldo uuendatakse pärast makse laekumist."
+      },
+      "compare_at_sale": "Soodustus ({{saleAmount}})",
+      "marketing_pending_confirmation": "Kinnitamiseks klõpsake kirjas oleval lingil.",
+      "marketing_resend_email": "Saada kiri uuesti",
+      "marketing_resend_email_success": "Link saadetud",
+      "subtotal_label_with_quantity": {
+        "one": "Vahetulemus",
+        "other": "Vahetulemus · {{count}} toodet",
+        "few": "Vahetulemus · {{count}} eset",
+        "many": "Vahetulemus · {{count}} toodet"
+      },
+      "total_savings": "Kogusääst",
+      "price_before_discount_accessibility_label": "Algne hind",
+      "price_after_discount_accessibility_label": "Soodushind",
+      "discount_order_stacking": {
+        "one": "Tellimuse soodustus",
+        "other": "Tellimuse soodustused",
+        "few": "Tellimuse soodustused",
+        "many": "Tellimuse soodustused"
+      }
     },
-    "inventory_low_stock": "Low stock",
-    "inventory_in_stock": "In stock",
-    "inventory_out_of_stock": "Out of stock",
-    "item_count": {
-      "one": "{{ count }} item",
-      "other": "{{ count }} items"
+    "addresses": {
+      "add_button": "Lisa aadress",
+      "address_deleted_notification": "Aadress kustutatud",
+      "cancel_adding_address_accessibility_label": "Tühista aadressi lisamine",
+      "cancel_deletion_button": "Tühistamine",
+      "cancel_deletion_button_accessibility_label": "Tühista kustutamine {{address}}",
+      "default_address": {
+        "title": "Vaikimisi aadress",
+        "title_accessibility_label": "Vaikeaadress: {{address}}"
+      },
+      "delete_button": "Kustuta",
+      "delete_button_accessibility_label": "Kustuta {{address}}",
+      "delete_confirmation_button": "Kustuta aadress",
+      "delete_confirmation_button_accessibility_label": "Kustuta {{address}}",
+      "delete_confirmation_message": "Kustutada aadress? Olemasolevaid tellimusi see ei mõjuta.",
+      "edit_button": "Redigeeri"
     },
-    "item_count_cutoff": "More than {{ count }} items",
-    "language": "Keel",
-    "localization_region_and_language": "Piirkond ja keel",
-    "no_products_found": "No products found.",
-    "no_results_found": "No results found",
-    "page_placeholder_title": "Page title",
-    "page_placeholder_content": "Select a page to display its content.",
-    "pagination": {
-      "nav_label": "Pagination",
-      "previous": "Previous",
-      "next": "Next",
-      "page": "Page {{ page }}"
+    "B2B": {
+      "purchase_order_number": {
+        "edit_accessibility_label": "Ostutellimuse numbri muutmine",
+        "edit_modal_title": "Ostutellimuse numbri muutmine",
+        "empty_state": "Ilma ostutellimuse numbrita",
+        "modal_po_number_input_label": "Ostutellimuse number",
+        "modal_po_number_input_max_length_error": "Ostutellimuse number ei tohi sisaldada üle {{maxLength}} märgi.",
+        "save": "Salvesta",
+        "title": "Ostutellimuse number {{poNumber}}"
+      }
     },
-    "pickup_available_at_html": "Pickup available at <b>{{ location }}</b>",
-    "pickup_available_in": "Pickup available, {{ pickup_time }}",
-    "pickup_not_available": "Pickup currently not available",
-    "pickup_ready_in": "{{ pickup_time }}",
-    "powered_by": "This shop will be powered by",
-    "price": "Price",
-    "price_compare_at": "Compare at price",
-    "price_from": "From {{ price }}",
-    "price_regular": "Regular price",
-    "price_sale": "Sale price",
-    "price_filter_html": "The highest price is {{ price }}",
-    "product_image": "Product image",
-    "product_information": "Toote info",
-    "product_subtotal": "Product subtotal",
-    "product_total": "Product total",
-    "product_badge_sold_out": "Sold out",
-    "product_badge_sale": "Sale",
-    "product_card_placeholder": "Product title",
-    "placeholder_image": "Placeholder image",
-    "quantity": "Quantity",
-    "quantity_per_item": "/ea",
-    "quick_order_list": "Quick order list",
-    "recently_viewed_products": "Recently viewed",
-    "remove_all": "Remove all",
-    "remove_all_items_confirmation": "Remove all {{ count }} items from your cart?",
-    "remove_one_item_confirmation": "Remove 1 item from your cart?",
-    "reviews": "reviews",
-    "read_more": "Read more...",
-    "search_input_label": "Otsing",
-    "search_input_placeholder": "Otsi",
-    "search": "Otsi",
-    "search_results": "Search results",
-    "search_results_label": "Search results",
-    "search_results_no_results": "No results found for \"{{ terms }}\". Try another search.",
-    "search_results_no_results_check_spelling": "No results found for \"{{ terms }}\". Check the spelling or use a different word or phrase.",
-    "search_results_resource_articles": "Blog posts",
-    "search_results_resource_collections": "Collections",
-    // Section heading for Shopify store pages in search results
-    "search_results_resource_pages": "Pages",
-    "search_results_resource_products": "Products",
-    "search_results_resource_products_count": {
-      "one": "{{ count }} product",
-      "other": "{{ count }} products"
+    "errors": {
+      "address_deletion_error": {
+        "description": "Aadressi kustutamisel ilmnes probleem. Proovige uuesti või värskendage lehte."
+      },
+      "addresses_loading_issue": {
+        "description": "Ühenduse viga. Kontrollige oma internetiühendust ja proovige uuesti."
+      },
+      "banner_title": {
+        "one": "Leiti {{count}} viga",
+        "other": "Vigu leitud: {{count}}",
+        "few": "Vigu leitud: {{count}}",
+        "many": "Vigu leitud: {{count}}"
+      },
+      "failed_address_creation": {
+        "description": "Aadressi loomisel tekkis probleem. Laadige leht uuesti või kontrollige internetiühendust."
+      },
+      "failed_address_update": {
+        "description": "Aadressi värskendamisel tekkis probleem. Laadige leht uuesti või kontrollige oma internetiühendust."
+      },
+      "no_access_to_locations": {
+        "description": "Teil pole juurdepääsu ühelegi asukohale"
+      },
+      "not_found": {
+        "description": "Kontrollige URL-i või proovige mõne minuti pärast uuesti.",
+        "title": "Lehekülje laadimisel tekkis probleem."
+      },
+      "order_not_found": {
+        "description": "Tellimust ei eksisteeri või teil puudub selle vaatamiseks luba.",
+        "title": "Tellimust ei leitud"
+      },
+      "profile_update_error": {
+        "description": "Profiili värskendamisel tekkis probleem. Laadi leht uuesti või kontrolli oma internetiühendust."
+      },
+      "retry_action_label": "Proovi uuesti",
+      "load_orders_error": {
+        "title": "Tellimusi ei õnnestunud laadida",
+        "description": "Laadige uuesti või proovige hiljem uuesti.",
+        "retry_button": "Proovige uuesti"
+      },
+      "load_paypal_error": {
+        "description": "PayPali laadimisel tekkis probleem. Palun proovi uuesti."
+      },
+      "load_extension_error": {
+        "title": "Viga",
+        "description": "Värskendage lehte või proovige mõne minuti pärast uuesti.",
+        "refresh_button": "Värskenda lehte"
+      },
+      "already_upgraded": "Kliendikontod on juba uuendatud.",
+      "failed_to_upgrade": "Kliendikontode sätete värskendamine ebaõnnestus.",
+      "logout_everywhere": {
+        "description": "Süsteemist väljumisel ilmnes viga. Palun proovige uuesti."
+      },
+      "resend_link": {
+        "too_many_requests": "Liiga palju päringuid. Proovige hiljem uuesti.",
+        "generic": "Ebaõnnestunud päring"
+      },
+      "profile_name_update_error": {
+        "description": "Nime uuendamisel ilmnes probleem. Laadige leht uuesti või kontrollige oma internetiühendust."
+      },
+      "load_address_form_error": {
+        "title": "Aadressivormi laadimine ebaõnnestus",
+        "description": "Aadressivormi laadimine ebaõnnestus.",
+        "refresh_button": "Värskenda lehte"
+      },
+      "not_upgraded": "Kliendikontod ei uuene.",
+      "failed_to_revert": "Kliendi konto seadeid ei õnnestunud taastada.",
+      "revert_window_expired": "Muudatuste tagasivõtmise tähtaeg on möödunud."
     },
-    "search_results_resource_queries": "Search suggestions",
-    "total_items": "Total items",
-    "variant": "Variant",
-    "variant_total": "Variant total",
-    "view_cart": "View cart",
-    "your_cart": "Your cart",
-    "items_added_to_cart": {
-      "one": "1 item added to cart",
-      "other": "{{ count }} items added to cart"
-    },
-    // Button to go from search preview to full search results page
-    "search_results_view_all": "View all",
-    "search_results_view_all_button": "View all",
-    // Label for customer's note to seller during checkout
-    "seller_note": "Special instructions",
-    "shipping_policy": "Shipping calculated at checkout.",
-    "shipping_policy_html": "<a href=\"{{ link }}\">Shipping</a> calculated at checkout.",
-    "store_owner_link_html": "Are you the store owner? <a href=\"{{ link }}\">Log in here</a>",
-    "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Taxes, discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
-    "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Taxes and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
-    "taxes_at_checkout_shipping_at_checkout_without_policy": "Taxes, discounts and shipping calculated at checkout.",
-    "taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Taxes and shipping calculated at checkout.",
-    "taxes_included": "Taxes included.",
-    "taxes_included_shipping_at_checkout_with_policy_html": "Taxes included. Discounts and <a href=\"{{ link }}\">shipping</a> calculated at checkout.",
-    "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Taxes included. Shipping is calculated at checkout.",
-    "taxes_included_shipping_at_checkout_without_policy": "Taxes included. Discounts and shipping calculated at checkout.",
-    "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Taxes included. Shipping is calculated at checkout.",
-    "unavailable": "Pole saadaval",
-    "use_fewer_filters_html": "Try using fewer filters, or <a class=\"{{ class }}\" href=\"{{ link }}\">clear all filters</a>.",
-    // Link or button to expand additional information
-    "view_more_details": "View more details",
-    "volume_pricing_available": "Volume pricing available",
-    "volume_pricing": "Volume pricing",
-    "at_price_each": "at {{ price }}/ea",
-    "each": "{{ price }}/ea",
-    "each_abbreviation": "ea",
-    "price_at": "at",
-    "price_range": "Price range",
-    "your_cart_is_empty": "Your cart is empty",
-    "product_count": "Product count",
-    "errors": "Errors",
-    "wrong_password": "Wrong password",
-    // Legend text for gift card delivery options
-    "recipient_form_send_to": "Send to",
-    "recipient_form_email_label": "Recipient’s email",
-    "recipient_form_email_label_my_email": "My email",
-    "recipient_form_email_address": "Recipient email address",
-    "recipient_form_name_label": "Recipient name (optional)",
-    "recipient_form_message": "Message (optional)",
-    "recipient_form_characters_used": "{{ used_chars }}/{{ max_chars }} characters used",
-    "recipient_form_send_on": "YYYY-MM-DD",
-    "recipient_form_send_on_label": "Send on (optional)",
-    "recipient_form_fields_visible": "Recipient form fields are now visible",
-    "recipient_form_fields_hidden": "Recipient form fields are now hidden",
-    "recipient_form_error": "There was an error with the form submission",
-    "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} characters used"
-  },
-  "fields": {
-    // Separates min and max values in price range filter
-    "separator": "to"
-  },
-  "gift_cards": {
-    "issued": {
-      "how_to_use_gift_card": "Use the gift card code online or QR code in-store",
-      "title": "Here's your {{ value }} gift card balance for {{ shop }}!",
-      "subtext": "Your gift card",
-      "shop_link": "Visit online store",
-      "add_to_apple_wallet": "Add to Apple Wallet",
-      "qr_image_alt": "QR code — scan to redeem gift card",
-      "copy_code": "Copy gift card code",
-      "expiration_date": "Expires {{ expires_on }}",
-      "copy_code_success": "Code copied successfully",
-      "expired": "Expired"
-    }
-  },
-  "placeholders": {
-    "password": "Password",
-    "search": "Search",
-    "product_title": "Product title",
-    "collection_title": "Collection title",
-    "blog_posts": "Blog posts",
-    "blog_post_title": "Title",
-    "blog_post_author": "Author",
-    "blog_post_date": "Date",
-    "blog_post_description": "An excerpt of your blog post's content"
-  },
-  "products": {
-    "product": {
-      "add_to_cart": "Add to cart",
-      "adding_to_cart": "Lisamine...",
-      "added_to_cart": "Lisatud ostukorvi",
-      "add_to_cart_error": "Error adding to cart",
-      "quantity_error_max": "This item has a maximum of {{ maximum }}",
-      "sold_out": "Sold out",
-      "unavailable": "Unavailable",
-      "quantity": "Quantity",
-      "quantity_increments": "Increments of {{ increment }}",
-      "quantity_minimum": "Minimum of {{ minimum }}",
-      "quantity_maximum": "Maximum of {{ maximum }}",
-      "in_cart": "in cart",
-      "default_title": "Vaikimisi pealkiri",
-      "sticky_add_to_cart": "Kiire ostukorvi lisamise riba"
+    "payment_methods": {
+      "title": "Makseviisid",
+      "add_payment_method_button": "Lisa makseviis",
+      "payment_details": {
+        "title": "Makseviisi andmed",
+        "payment_method_expiring_on": "Kehtib kuni {{expiryDate}}",
+        "preauthorized_payments": "Eelnevalt kinnitatud maksed",
+        "close_payment_modal": "Sule",
+        "close_payment_modal_accessibility_label": "Sulge makseviisi andmete modaalakent",
+        "payment_method_not_found_error": "Makseviisi ei leitud",
+        "payment_details_loading": "Makseviisi andmete laadimine",
+        "pre_authorized_payments": "Eelnevalt autoriseeritud maksed",
+        "total_amount_of_subscription_line_items_left": "ja veel {{total}}",
+        "total_amount_of_subscription_line_items_left_accessibility_label": "Kokku — {{totalItems}}, kuvatakse — {{totalItemsToDisplay}}.",
+        "next_payment_due": "Järgmise makse tähtaeg: {{dueDateInMonthDayYear}}",
+        "edit_payment_method_button": "Redigeeri",
+        "edit_payment_method_button_accessibility_label": "Makseviisi muutmine, mille viimased numbrid on {{lastDigits}}",
+        "credit_card_details_accessibility_label": "lõpeb numbriga {{lastDigits}}",
+        "billing_title": "Arve esitamise aadress",
+        "card_info_title": "Kaardi andmed",
+        "payment_method_expired_on": "Aegumiskuupäev möödas {{expiryDate}}",
+        "loading_shop_pay": "Shop Pay laadimine",
+        "invalid_payment_method": "Makseviis on vale",
+        "invalid_payment_method_message": "Kasuta muud krediitkaarti, et uusi tellimusi vastu võtta.",
+        "replace_payment_method": "Muuda makseviisi",
+        "checkout_card_banner": "Seda makseviisi saab kasutada ainult eelautentimiseks. Seda ei kuvata kassas, kui olete sellesse poodi sisse logitud.",
+        "default_checkbox": "Määra vaike-makseviisiks",
+        "default_checkbox_accessibility_label": "Määra see makseviis vaikimisi",
+        "replace_payment_method_button": "Asendada"
+      },
+      "delete_payment_method_button": "Kustuta",
+      "delete_payment_method_button_accessibility_label": "Kustuta {{paymentMethodName}}",
+      "back_button": "Tagasi",
+      "back_button_accessibility_label": "Naase {{paymentMethodStepTitle}} juurde",
+      "generic_card": "Kaart",
+      "payment_delete": {
+        "title": "Makseviisi kustutamine",
+        "description_without_replacement": "See makseviis ei ole uute ostude puhul enam saadaval.",
+        "description_with_replacement": "Eelnevalt kinnitatud maksed nurjuvad pärast selle makseviisi eemaldamist. Teise võimalusena saate selle asendada mõne muu makseviisiga, et uusi tellimusi vastu võtta.",
+        "payment_method_selector_placeholder": "Vali alternatiivne makseviis (valikuline)",
+        "replace_method_with_new_method_description": "{{currentPaymentMethodName}} kustutatakse ja asendatakse kaardiga {{newPaymentMethodName}}.",
+        "error_when_deleting": "Vabandame. Tekkis viga. Seda makseviisi ei õnnestunud eemaldada. Palun proovige hiljem uuesti või laadige leht uuesti.",
+        "delete_and_replace_button": "Kustutada ja asendada",
+        "delete_and_replace_button_accessibility_label": "Eemalda {{currentPaymentMethodName}} ja asenda see {{newPaymentMethodName}}-ga.",
+        "deleted_successfully": "Makseviis on eemaldatud.",
+        "payment_method_selector_no_alternative_payment": "Maksevõimalus puudub",
+        "loading_available_payment_methods_accessibility_label": "Maksevõimaluste laadimine",
+        "warning_message_with_replacement": {
+          "with_pending_orders_and_subscriptions": "Selle makseviisi eemaldamine mõjutab eelnevalt kinnitatud makseid. Kui te ei vali alternatiivset makseviisi, kasutatakse praeguseid andmeid kõigi olemasolevate tellimuste täitmata maksete tasumiseks. Alternatiivse makseviisi valimine võimaldab teil pikendada järgmisi tellimusi, et teenuseid katkematult saada.",
+          "with_pending_orders": "Pärast selle makseviisi eemaldamist kaob see teie kontolt ja pole uute ostude jaoks enam saadaval. Kui te alternatiivset makseviisi ei vali, kasutatakse praeguseid andmeid endiselt kõigi olemasolevate tellimuste avatud maksete tasumiseks.",
+          "with_subscriptions": "Selle makseviisi eemaldamine mõjutab eelkinnitatud makseid. Uute tellimuste saamiseks asendage see teise makseviisiga."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "Selle makseviisi eemaldamine mõjutab eelnevalt kinnitatud makseid. Praegust makseviisi kasutatakse edasi kõigi olemasolevate tellimuste avatud maksete tasumiseks, kuid edaspidi te tellimuste tellimusi enam ei saa. Lisage alternatiivne makseviis, et jätkata tellimuste vastuvõtmist.",
+          "with_pending_orders": "Pärast selle makseviisi kustutamist kaob see teie kontolt ja seda ei saa enam uute ostude jaoks kasutada. Samas kehtivad praegused rekvisiidid ka edaspidi kõigi olemasolevate tellimuste avatud maksete tasumiseks.",
+          "with_subscriptions": "Selle makseviisi eemaldamine mõjutab eelnevalt heaks kiidetud makseid. Uute tellimuste saamiseks lisage alternatiivne makseviis."
+        }
+      },
+      "edit_payment_method": {
+        "title": "Muuda makseviisi",
+        "save_payment_method_button": "Salvesta",
+        "cancel_edit_payment_method_button": "Tühista",
+        "payment_method_updated_toast": "Makseviisid on muutunud",
+        "billing_address": "Arve esitamise aadress",
+        "billing_address_add_new": "Lisa",
+        "billing_address_choose_from_list": "Vali loendist",
+        "future_purchases_notice": "See makseviis salvestatakse uute ostude jaoks.",
+        "generic_error": "Värskendamisel tekkis probleem. Palun proovige uuesti."
+      },
+      "card_fields": {
+        "card_number_label": "Kaardi number"
+      }
     }
   },
   "astranova": {
-    "announcement": "Tarne Euroopa Liidus ? 1-aastane garantii ? Turvaline makse ? Tugi Tallinnast",
+    "announcement": "Curated drops | EU shipping | Gift-ready picks | Secure checkout",
     "hero": {
-      "eyebrow": "Minimalistlik luksustehnoloogia",
-      "title": "Astranova loob igap?evaelektroonikat puhtama ja rahulikuma kogemusega.",
-      "body": "Hoolikalt valitud audio-, laadimis- ja lauatarvikud, m?eldud Eestile, saadetud ?le Euroopa Liidu ja esitletud premium-tasemel usaldusv??rsusega.",
-      "primary_cta": "Ava valik",
-      "secondary_cta": "V?ta toega ?hendust",
+      "eyebrow": "Curated modern living",
+      "title": "Astranova gathers the pieces that make everyday life look better.",
+      "body": "A premium storefront for home accents, beauty rituals, accessories and smart finds, styled with a calm editorial touch instead of marketplace noise.",
+      "primary_cta": "Explore the collection",
+      "secondary_cta": "See new arrivals",
       "chips": {
-        "shipping": "EL tarne",
-        "warranty": "1-aastane garantii",
-        "checkout": "Turvaline makse"
+        "curated": "Curated drops",
+        "shipping": "EU shipping",
+        "gifting": "Gift-ready picks"
       },
-      "panel_eyebrow": "Miks Astranova",
-      "panel_title": "Fookustatud kataloog, mis j?tab premium-mulje esimesest kl?psust.",
-      "panel_body": "Eelistame usaldusv??rset tehnikat, selgeid spetsifikatsioone ja tugevaid usaldussignaale turuplatsi m?rale.",
+      "panel_eyebrow": "Why it works",
+      "panel_title": "More like a well-edited boutique. Less like a crowded catalog.",
+      "panel_body": "Every category is framed with the same quiet luxury language, so the store can grow wider without feeling messier.",
       "stats": {
         "catalog": {
-          "value": "4 suunda",
-          "label": "Audio, tarvikud, t??laua lahendused ja nutikad vidinad."
+          "value": "4 worlds",
+          "label": "Home, beauty, accessories and smart finds."
         },
-        "delivery": {
-          "value": "48h+",
-          "label": "Kiire v?ljasaatmine Eestist koos EL-valmis t?itmisega."
+        "discovery": {
+          "value": "Gift-ready",
+          "label": "Selected for self-treats, upgrades and easy gifting."
         },
         "support": {
           "value": "EN / ET / RU",
-          "label": "Lokaliseeritud storefront ja tuge toetav kogemus."
+          "label": "Localized browsing for a calmer buying experience."
+        }
+      },
+      "orbit": {
+        "home": {
+          "title": "Home & living",
+          "body": "Useful pieces that soften the room and sharpen the setup."
+        },
+        "beauty": {
+          "title": "Beauty & wellness",
+          "body": "Daily rituals, self-care moments and easy gift ideas."
+        },
+        "style": {
+          "title": "Style & accessories",
+          "body": "Details that travel well and finish the look cleanly."
+        },
+        "smart": {
+          "title": "Smart finds",
+          "body": "Problem-solvers that still deserve premium presentation."
         }
       }
     },
     "trust": {
       "shipping": {
-        "title": "EL-valmis tarne",
-        "body": "Selge tarnes?num Eestile, koos laiema Euroopa usaldusega."
+        "title": "Clear delivery",
+        "body": "Set expectations cleanly for Estonia and the wider EU, without hidden friction."
       },
       "warranty": {
-        "title": "Garantii esiplaanil",
-        "body": "Too garantii, tagastused ja tootetugi n?htavale enne, kui klient peab k?sima."
+        "title": "Easy returns",
+        "body": "Make shipping, returns and care information visible before the customer has to ask."
       },
       "checkout": {
-        "title": "Turvaline makse",
-        "body": "Hoia maksevoog, hinnainfo ja usaldusm?rgid puhtad esimesest kl?psust ostukorvini."
+        "title": "Secure checkout",
+        "body": "Keep payment, pricing and trust cues elegant from the first glance to cart."
       },
       "support": {
-        "title": "Inimlik tugi",
-        "body": "Kasuta rahulikku ja selget teksti inglise, eesti ja vene keeles seal, kus kindlus on oluline."
+        "title": "Responsive support",
+        "body": "Fast, human help for product questions, gifting decisions and order follow-up."
       }
     },
     "collections": {
-      "eyebrow": "P?hikogud",
-      "title": "Neli tootesuunda. ?ks selge premium-suund.",
-      "body": "Alusta kureeritud kataloogiga, mida on lihtne usaldada, lihtne sirvida ja valmis kasvatama.",
-      "cta": "Ava kogum",
-      "audio": {
-        "tag": "Audio",
-        "title": "Heli, mis tundub puhas, mitte vali.",
-        "body": "K?rvaklapid, k?larid ja kuulamisvahendid rahuliku premium-esitlusega."
+      "eyebrow": "Featured worlds",
+      "title": "Four shoppable moods with one consistent point of view.",
+      "body": "This is how Astranova stays broad without feeling random.",
+      "cta": "Shop this world",
+      "home": {
+        "tag": "Home & living",
+        "title": "Soften the room with useful, beautiful details.",
+        "body": "Decor accents, organizers and small upgrades that make a space feel more composed."
       },
-      "accessories": {
-        "tag": "Mobiilitarvikud",
-        "title": "Laadimine ja kandmine igap?evase r?tmi jaoks.",
-        "body": "Kaablid, voolulahendused ja reisitarvikud teravama esitluse ja selgema v??rtusega."
+      "beauty": {
+        "tag": "Beauty & wellness",
+        "title": "Daily rituals that feel elevated and easy to gift.",
+        "body": "Self-care, wellness and beauty finds chosen for desirability, not clutter."
       },
-      "desk": {
-        "tag": "T??laua setup",
-        "title": "T??pinnad v?hem segadust, rohkem sihti.",
-        "body": "Korraldajad, valgustid ja setup-vahendid keskendunud ja disainiteadlike rutiinide jaoks."
+      "style": {
+        "tag": "Style & accessories",
+        "title": "The finishing pieces that complete the look.",
+        "body": "Everyday carry items, fashion extras and details that add polish without noise."
       },
-      "gadgets": {
-        "tag": "Nutikad vidinad",
-        "title": "Kasulik tehnika viimistletud esmamuljega.",
-        "body": "Kompaktsed uuendused, mis m?juvad kvaliteetselt, kingituseks sobivalt ja lihtsalt m?istetavalt."
+      "smart": {
+        "tag": "Smart finds",
+        "title": "Problem-solving pieces with a premium first impression.",
+        "body": "Useful upgrades and clever extras that still belong in an elegant storefront."
       }
     },
     "use_cases": {
-      "eyebrow": "Igap?evaseks kasutuseks",
-      "title": "Loodud koju, t??le, reisile ja kingituseks.",
-      "body": "N?ita kliendile, kuhu iga toode sobib, et kataloog m?juks kureeritult, mitte ?lekoormatult.",
+      "eyebrow": "Shop by feeling",
+      "title": "Built for atmosphere, rituals, daily carry and gifting.",
+      "body": "Show shoppers how the assortment fits into their life, not just which category it belongs to.",
       "home": {
-        "kicker": "Kodus",
-        "title": "Puhas heli ja rahulik laadimine",
-        "body": "Loo vaiksem elukeskkond audio- ja toitelahendustega, mis tunduvad l?bim?eldud."
+        "kicker": "Set the mood",
+        "title": "Home details that change the room quickly",
+        "body": "Lead with warmth, texture, light and organization so the store feels styled, not generic."
       },
-      "work": {
-        "kicker": "T??l",
-        "title": "Keskendunud lauad parema vooga",
-        "body": "T?sta esile tooteid, mis parandavad t??koha kvaliteeti, kaasaskantavust ja t??kindlust."
+      "ritual": {
+        "kicker": "Reset",
+        "title": "Beauty and wellness picks for small daily rituals",
+        "body": "Self-care products work best when they feel easy to trust and pleasing to keep close."
       },
-      "travel": {
-        "kicker": "Liikvel",
-        "title": "Kompaktne tehnika, mida on lihtne usaldada",
-        "body": "R?huta kaasaskantavust, aku-kindlust ja kiire maksevoo usaldust mobiilsetele ostjatele."
+      "carry": {
+        "kicker": "Carry well",
+        "title": "Accessories that travel, layer and gift easily",
+        "body": "Keep the selection concise so shoppers can make a fast yes-or-no decision."
       },
       "gifting": {
-        "kicker": "Kingituseks",
-        "title": "Premium-esitlus esimesest pilgust",
-        "body": "Kasuta enesekindlat teksti ja tugevat kategooriaraami, et tooted tunduksid kohe kingituseks sobivad."
+        "kicker": "Gift beautifully",
+        "title": "Products that already look considered before they are wrapped",
+        "body": "Strong presentation and clear use-case framing make a multi-category store easier to buy from."
       }
     },
     "testimonials": {
-      "eyebrow": "Sotsiaalne t?estus",
-      "title": "Usaldus kasvab siis, kui kogu kogemus on ?htlane.",
-      "body": "Seo premium-visuaalid t?enditega, et tarne, tugi ja tootekvaliteet vastavad lubadusele.",
+      "eyebrow": "Why shoppers stay",
+      "title": "The brand feels stronger when the whole experience feels composed.",
+      "body": "Premium design matters most when it is backed by clarity, taste and easy support.",
       "one": {
-        "quote": "Pood tundub premium ja makseprotsess on ?llatavalt selge. See muutis toote kohe usaldusv??rsemaks.",
+        "quote": "I came for one gift and ended up bookmarking the whole store. It feels curated in a way most general stores never do.",
         "name": "Elina K.",
-        "meta": "Esimene ostja Tallinnast"
+        "meta": "Gift shopper in Tallinn"
       },
       "two": {
-        "quote": "M?istsin ?hilduvust, garantiid ja tarnet sekunditega. See v?ttis ?ra k?hkluse, mis mul elektroonikapoodidega tavaliselt on.",
+        "quote": "The mix of home, beauty and accessories still feels consistent. Nothing looks random or rushed.",
         "name": "Markus T.",
-        "meta": "T??laua setupi ostja"
+        "meta": "Returning customer"
       },
       "three": {
-        "quote": "Astranova tundub kureeritud, mitte ?lerahvastatud. Kogu pood on rahulikum ja see muudab tooted kallimaks.",
+        "quote": "The site feels calm, elegant and easy to trust. I can browse quickly without feeling overwhelmed.",
         "name": "Anna P.",
-        "meta": "Kingituse ostja"
+        "meta": "First order from Estonia"
       }
     },
     "faq": {
-      "eyebrow": "KKK",
-      "title": "Vasta ostuotsust m?jutavatele k?simustele enne kassasse j?udmist.",
-      "body": "Hoia vastused l?hikesed, selged ja n?htavad nii mobiilis kui lauaarvutis.",
+      "eyebrow": "FAQ",
+      "title": "Answer the practical questions before they interrupt the mood.",
+      "body": "Keep the answers short, visible and easy to understand across desktop and mobile.",
       "one": {
-        "question": "Kuhu Astranova tarnib?",
-        "answer_html": "<p>Astranova on ?les ehitatud eesk?tt Eesti jaoks, kuid tarnes?numid on valmis kasvama ?le kogu Euroopa Liidu.</p>"
+        "question": "What kinds of products does Astranova carry?",
+        "answer_html": "<p>Astranova is built as a curated premium store for home living, beauty and wellness, accessories, gifting and smart everyday finds. The mix can grow, but the presentation should always stay selective.</p>"
       },
       "two": {
-        "question": "Mis teeb kataloogi kureerituks?",
-        "answer_html": "<p>Pood algab fokusseeritud elektroonikakategooriatega, et pakkumine oleks kiiresti m?istetav ja kergemini usaldatav.</p>"
+        "question": "Where does Astranova ship?",
+        "answer_html": "<p>The store is positioned for Estonia first, with clear delivery communication for customers across the wider EU.</p>"
       },
       "three": {
-        "question": "Kuidas peaksid garantii ja tagastused v?lja n?gema?",
-        "answer_html": "<p>Hoia garantii, tagastused ja tarneinfo n?htaval lisamisnupu l?hedal ning uuesti toote detailide akordionis.</p>"
+        "question": "Are the products gift-friendly?",
+        "answer_html": "<p>Yes. Many products are chosen because they feel easy to gift, easy to understand and easy to buy with confidence.</p>"
       },
       "four": {
-        "question": "Kuidas tooteid esitleda?",
-        "answer_html": "<p>Alusta l?hikese lubadusega, too v?lja kolm selget eelist, spetsifikatsioonide ala ja seotud toodete plokk.</p>"
+        "question": "How should product pages be structured?",
+        "answer_html": "<p>Lead with a short promise, three benefit bullets, clear product details, size and materials, care guidance and visible shipping or returns information.</p>"
       }
     },
     "footer": {
-      "eyebrow": "P?si orbiidil",
-      "title": "Hoia Astranova l?hedal iga uue lansseerimise, t?ienduse ja v?ljalaske ajal.",
-      "body": "Kasuta footerit e-postide kogumiseks, toe usaldusv??rsuse r?hutamiseks ja keele v?i valuuta lihtsaks muutmiseks.",
-      "submit": "Liitu",
-      "shop_heading": "Pood",
-      "support_heading": "Tugi"
+      "eyebrow": "Stay in orbit",
+      "title": "Keep close to new drops, small restocks and the next beautiful find.",
+      "body": "Use the footer to collect email, reinforce trust and make language or currency changes feel effortless.",
+      "submit": "Join list",
+      "shop_heading": "Shop",
+      "support_heading": "Support"
     },
     "product": {
-      "promise_label": "Miks see toimib",
-      "promise_default": "T?pselt l?bim?eldud tehnika igap?evasteks rutiinideks, selgete spetsifikatsioonide ja kindla tarnega.",
-      "benefit_1": "Stuudiopuhta esitluse, premium-materjalide ja modernse viimistlusega.",
-      "benefit_2": "Selge ?hilduvus, turvaline makse ja EL-valmis tarne.",
-      "benefit_3": "Toe ja garantii tekstid, mis eemaldavad vastuv?ited enne ostu.",
+      "promise_label": "Why you'll love it",
+      "promise_default": "A well-chosen piece for everyday living, presented with the clarity and confidence it deserves.",
+      "benefit_1": "Elevated look and feel that makes the product easy to want and easy to gift.",
+      "benefit_2": "Straightforward details on size, materials, care and delivery before checkout.",
+      "benefit_3": "A calmer buying experience with polished support, returns and shipping guidance.",
       "accordion": {
-        "specifications": {
-          "title": "Spetsifikatsioonid",
-          "default_html": "<p>Lisa <strong>custom.specifications</strong> metafield, et kuvada m??dud, toide, ?henduvus ja materjalid.</p>"
+        "details": {
+          "title": "Product details",
+          "default_html": "<p>Add a <strong>custom.product_details</strong> metafield to explain what this item is, how it fits into daily use and why it stands out.</p>"
         },
-        "compatibility": {
-          "title": "?hilduvus",
-          "default_html": "<p>Lisa <strong>custom.compatibility</strong> metafield, et selgitada toetatud seadmeid, porte v?i ?kos?steeme.</p>"
+        "size_materials": {
+          "title": "Size & materials",
+          "default_html": "<p>Add a <strong>custom.size_and_materials</strong> metafield to show dimensions, fabric, finish, ingredients or material notes here.</p>"
         },
-        "in_the_box": {
-          "title": "Mis on karbis",
-          "default_html": "<p>Lisa <strong>custom.whats_in_the_box</strong> metafield, et loetleda tarvikud, adapterid ja kaasasolevad osad.</p>"
+        "care": {
+          "title": "Care & use",
+          "default_html": "<p>Add a <strong>custom.care_and_use</strong> metafield for maintenance steps, usage tips, storage guidance or safety notes.</p>"
         },
         "shipping": {
-          "title": "Tarne ja garantii",
-          "default_html": "<p>Lisa <strong>custom.shipping_and_warranty</strong> metafield, et kokku v?tta saatmiskiirus, garantii ja tagastused.</p>"
+          "title": "Shipping & returns",
+          "default_html": "<p>Add a <strong>custom.shipping_and_returns</strong> metafield to summarize dispatch timing, delivery expectations and return guidance.</p>"
         }
       }
     }
