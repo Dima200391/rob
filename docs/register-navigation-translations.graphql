@@ -1,0 +1,156 @@
+mutation RegisterNavigationTranslations {
+  mainMenu: translationsRegister(
+    resourceId: "gid://shopify/Menu/329710764372"
+    translations: [
+      { locale: "en", key: "title", value: "Main menu", translatableContentDigest: "758944d74b3ed9b8546b2f4a1291d058d11ab0d67d56fefd6d92c2b6c02d33fd" }
+      { locale: "et", key: "title", value: "Peamenüü", translatableContentDigest: "758944d74b3ed9b8546b2f4a1291d058d11ab0d67d56fefd6d92c2b6c02d33fd" }
+    ]
+  ) { userErrors { field message } }
+  footerMenu: translationsRegister(
+    resourceId: "gid://shopify/Menu/329710797140"
+    translations: [
+      { locale: "en", key: "title", value: "Footer menu", translatableContentDigest: "c840fbe5b3f65a71ded9bdcc456292b5bc05fbda838e614636007a0f07050b7f" }
+      { locale: "et", key: "title", value: "Jalusmenüü", translatableContentDigest: "c840fbe5b3f65a71ded9bdcc456292b5bc05fbda838e614636007a0f07050b7f" }
+    ]
+  ) { userErrors { field message } }
+  accountMenu: translationsRegister(
+    resourceId: "gid://shopify/Menu/329710829908"
+    translations: [
+      { locale: "en", key: "title", value: "Customer account main menu", translatableContentDigest: "cda8f3967716f8145489cee9b55f1a8e96d474cebc8827655ecb616df2b120de" }
+      { locale: "et", key: "title", value: "Konto menüü", translatableContentDigest: "cda8f3967716f8145489cee9b55f1a8e96d474cebc8827655ecb616df2b120de" }
+    ]
+  ) { userErrors { field message } }
+  shopMenu: translationsRegister(
+    resourceId: "gid://shopify/Menu/329742352724"
+    translations: [
+      { locale: "en", key: "title", value: "Shop", translatableContentDigest: "23e3c70647461aedfe5dbe9c956456f5522a0c3ff43eed4716147db7ec617dea" }
+      { locale: "et", key: "title", value: "Pood", translatableContentDigest: "23e3c70647461aedfe5dbe9c956456f5522a0c3ff43eed4716147db7ec617dea" }
+    ]
+  ) { userErrors { field message } }
+  orders: translationsRegister(
+    resourceId: "gid://shopify/Link/821860598100"
+    translations: [
+      { locale: "en", key: "title", value: "Orders", translatableContentDigest: "5b1d42386b6d46400045d0178b6be2ca7b1e83257aa6cd420de78fdd654f7322" }
+      { locale: "et", key: "title", value: "Tellimused", translatableContentDigest: "5b1d42386b6d46400045d0178b6be2ca7b1e83257aa6cd420de78fdd654f7322" }
+    ]
+  ) { userErrors { field message } }
+  profile: translationsRegister(
+    resourceId: "gid://shopify/Link/821860630868"
+    translations: [
+      { locale: "en", key: "title", value: "Profile", translatableContentDigest: "359497aff53e7d5d7fc1fb9347bffc50a247fc861fbd021ce7e9400d741c1374" }
+      { locale: "et", key: "title", value: "Profiil", translatableContentDigest: "359497aff53e7d5d7fc1fb9347bffc50a247fc861fbd021ce7e9400d741c1374" }
+    ]
+  ) { userErrors { field message } }
+  shipping: translationsRegister(
+    resourceId: "gid://shopify/Link/821937537364"
+    translations: [
+      { locale: "en", key: "title", value: "Shipping", translatableContentDigest: "77439d23b79a4fefb2b156f34ad06d244f9eaffde086f49434f1e4498dca83d1" }
+      { locale: "et", key: "title", value: "Tarne", translatableContentDigest: "77439d23b79a4fefb2b156f34ad06d244f9eaffde086f49434f1e4498dca83d1" }
+    ]
+  ) { userErrors { field message } }
+  warranty: translationsRegister(
+    resourceId: "gid://shopify/Link/821937570132"
+    translations: [
+      { locale: "en", key: "title", value: "Warranty", translatableContentDigest: "219eac643e57ca9fd038823fe39cbc2637824925172db8e3c44b4549092b97d3" }
+      { locale: "et", key: "title", value: "Garantii", translatableContentDigest: "219eac643e57ca9fd038823fe39cbc2637824925172db8e3c44b4549092b97d3" }
+    ]
+  ) { userErrors { field message } }
+  returns: translationsRegister(
+    resourceId: "gid://shopify/Link/821937602900"
+    translations: [
+      { locale: "en", key: "title", value: "Returns", translatableContentDigest: "e9427b19ccf489d4431b3942fc07e1002d1bc1b0267c11b499561eba0c5738c4" }
+      { locale: "et", key: "title", value: "Tagastused", translatableContentDigest: "e9427b19ccf489d4431b3942fc07e1002d1bc1b0267c11b499561eba0c5738c4" }
+    ]
+  ) { userErrors { field message } }
+  faq: translationsRegister(
+    resourceId: "gid://shopify/Link/821937635668"
+    translations: [
+      { locale: "en", key: "title", value: "FAQ", translatableContentDigest: "4663fcb25b2da2727bbbae77ceac0c2c4b4a37756ba7d53a5ab2b8c159deb072" }
+      { locale: "et", key: "title", value: "KKK", translatableContentDigest: "4663fcb25b2da2727bbbae77ceac0c2c4b4a37756ba7d53a5ab2b8c159deb072" }
+    ]
+  ) { userErrors { field message } }
+  contact: translationsRegister(
+    resourceId: "gid://shopify/Link/821937668436"
+    translations: [
+      { locale: "en", key: "title", value: "Contact", translatableContentDigest: "fca8d5aa3c1aef3237e727b299bb330e74aaf71e545a439c1f918a5a31a87629" }
+      { locale: "et", key: "title", value: "Kontakt", translatableContentDigest: "fca8d5aa3c1aef3237e727b299bb330e74aaf71e545a439c1f918a5a31a87629" }
+    ]
+  ) { userErrors { field message } }
+  policies: translationsRegister(
+    resourceId: "gid://shopify/Link/821937701204"
+    translations: [
+      { locale: "en", key: "title", value: "Policies", translatableContentDigest: "07a3b67d849aeb1e2331fe439c847a8e56dc3c9537319c8a4b31991b1dbd92e5" }
+      { locale: "et", key: "title", value: "Tingimused ja privaatsus", translatableContentDigest: "07a3b67d849aeb1e2331fe439c847a8e56dc3c9537319c8a4b31991b1dbd92e5" }
+    ]
+  ) { userErrors { field message } }
+  shop: translationsRegister(
+    resourceId: "gid://shopify/Link/821942911316"
+    translations: [
+      { locale: "en", key: "title", value: "Shop", translatableContentDigest: "23e3c70647461aedfe5dbe9c956456f5522a0c3ff43eed4716147db7ec617dea" }
+      { locale: "et", key: "title", value: "Pood", translatableContentDigest: "23e3c70647461aedfe5dbe9c956456f5522a0c3ff43eed4716147db7ec617dea" }
+    ]
+  ) { userErrors { field message } }
+  home: translationsRegister(
+    resourceId: "gid://shopify/Link/821942944084"
+    translations: [
+      { locale: "en", key: "title", value: "Home & Living", translatableContentDigest: "4d8b443630f7fe8388ab692a6d7be3d06b59dba7176d2a7f8545792ccb71a3cb" }
+      { locale: "et", key: "title", value: "Kodu ja elustiil", translatableContentDigest: "4d8b443630f7fe8388ab692a6d7be3d06b59dba7176d2a7f8545792ccb71a3cb" }
+    ]
+  ) { userErrors { field message } }
+  beauty: translationsRegister(
+    resourceId: "gid://shopify/Link/821942976852"
+    translations: [
+      { locale: "en", key: "title", value: "Beauty & Wellness", translatableContentDigest: "d8df6999da37e7e5bea942a33102ba7d3bf59b60f385c0c1395c00c4a50dd618" }
+      { locale: "et", key: "title", value: "Ilu ja heaolu", translatableContentDigest: "d8df6999da37e7e5bea942a33102ba7d3bf59b60f385c0c1395c00c4a50dd618" }
+    ]
+  ) { userErrors { field message } }
+  style: translationsRegister(
+    resourceId: "gid://shopify/Link/821943009620"
+    translations: [
+      { locale: "en", key: "title", value: "Style & Accessories", translatableContentDigest: "3909d4cfbbe8b0aad4ccdf696280042feab032bda5b559532e04e293726871f7" }
+      { locale: "et", key: "title", value: "Stiil ja aksessuaarid", translatableContentDigest: "3909d4cfbbe8b0aad4ccdf696280042feab032bda5b559532e04e293726871f7" }
+    ]
+  ) { userErrors { field message } }
+  smart: translationsRegister(
+    resourceId: "gid://shopify/Link/821943042388"
+    translations: [
+      { locale: "en", key: "title", value: "Smart Finds", translatableContentDigest: "92538052f1a6e144f2c0be71e973ebdb360621729390ec0296377e67708f06c6" }
+      { locale: "et", key: "title", value: "Nutikad leiud", translatableContentDigest: "92538052f1a6e144f2c0be71e973ebdb360621729390ec0296377e67708f06c6" }
+    ]
+  ) { userErrors { field message } }
+  collections: translationsRegister(
+    resourceId: "gid://shopify/Link/821943075156"
+    translations: [
+      { locale: "en", key: "title", value: "Collections", translatableContentDigest: "05f6c615a3518d9419b60486a1b33f8c9d55a7b9a4ca515f9b338a9f6901fbc8" }
+      { locale: "et", key: "title", value: "Kollektsioonid", translatableContentDigest: "05f6c615a3518d9419b60486a1b33f8c9d55a7b9a4ca515f9b338a9f6901fbc8" }
+    ]
+  ) { userErrors { field message } }
+  newProducts: translationsRegister(
+    resourceId: "gid://shopify/Link/821943107924"
+    translations: [
+      { locale: "en", key: "title", value: "New", translatableContentDigest: "f71493407396ffa304a922d49927eb9ccb6274d71fc0b3993c8f9b0aeecdcb39" }
+      { locale: "et", key: "title", value: "Uus", translatableContentDigest: "f71493407396ffa304a922d49927eb9ccb6274d71fc0b3993c8f9b0aeecdcb39" }
+    ]
+  ) { userErrors { field message } }
+  support: translationsRegister(
+    resourceId: "gid://shopify/Link/821943140692"
+    translations: [
+      { locale: "en", key: "title", value: "Support", translatableContentDigest: "f0012086d52ed643461220e5cfdd905599fbc0d168c6ad0d57de99b7514158d7" }
+      { locale: "et", key: "title", value: "Tugi", translatableContentDigest: "f0012086d52ed643461220e5cfdd905599fbc0d168c6ad0d57de99b7514158d7" }
+    ]
+  ) { userErrors { field message } }
+  about: translationsRegister(
+    resourceId: "gid://shopify/Link/821943173460"
+    translations: [
+      { locale: "en", key: "title", value: "About Astranova", translatableContentDigest: "a74bfebe130b246f63d68cfeb77b59ff74aaa4eabe3e4258bce957efea3a016b" }
+      { locale: "et", key: "title", value: "Astranovast", translatableContentDigest: "a74bfebe130b246f63d68cfeb77b59ff74aaa4eabe3e4258bce957efea3a016b" }
+    ]
+  ) { userErrors { field message } }
+  trackOrder: translationsRegister(
+    resourceId: "gid://shopify/Link/821943206228"
+    translations: [
+      { locale: "en", key: "title", value: "Track Order", translatableContentDigest: "e855f0c970f5636166cb6cc4d8c18e098609857e970f41e6bf5950b3f83e37bc" }
+      { locale: "et", key: "title", value: "Jälgi tellimust", translatableContentDigest: "e855f0c970f5636166cb6cc4d8c18e098609857e970f41e6bf5950b3f83e37bc" }
+    ]
+  ) { userErrors { field message } }
+}

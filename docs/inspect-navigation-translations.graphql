@@ -1,0 +1,55 @@
+query InspectNavigationTranslations {
+  navigationMenus: menus(first: 20) {
+    nodes {
+      id
+      title
+      handle
+      items {
+        id
+        title
+        type
+        url
+        resourceId
+        items {
+          id
+          title
+          type
+          url
+          resourceId
+        }
+      }
+    }
+  }
+  menus: translatableResources(first: 20, resourceType: MENU) {
+    nodes {
+      resourceId
+      translatableContent {
+        key
+        value
+        digest
+        locale
+      }
+      translations(locale: "ru") {
+        key
+        value
+        outdated
+      }
+    }
+  }
+  links: translatableResources(first: 100, resourceType: LINK) {
+    nodes {
+      resourceId
+      translatableContent {
+        key
+        value
+        digest
+        locale
+      }
+      translations(locale: "ru") {
+        key
+        value
+        outdated
+      }
+    }
+  }
+}

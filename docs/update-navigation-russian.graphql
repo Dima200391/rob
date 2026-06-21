@@ -1,0 +1,190 @@
+mutation UpdateNavigationRussian {
+  mainMenu: menuUpdate(
+    id: "gid://shopify/Menu/329710764372"
+    title: "Главное меню"
+    items: [
+      {
+        id: "gid://shopify/MenuItem/821942911316"
+        title: "Магазин"
+        type: HTTP
+        url: "/collections/all"
+        items: [
+          {
+            id: "gid://shopify/MenuItem/821942944084"
+            title: "Для дома"
+            type: COLLECTION
+            url: "/collections/home-living"
+            resourceId: "gid://shopify/Collection/713739829588"
+            items: []
+          }
+          {
+            id: "gid://shopify/MenuItem/821942976852"
+            title: "Красота и уход"
+            type: COLLECTION
+            url: "/collections/beauty-wellness"
+            resourceId: "gid://shopify/Collection/713739862356"
+            items: []
+          }
+          {
+            id: "gid://shopify/MenuItem/821943009620"
+            title: "Стиль и аксессуары"
+            type: COLLECTION
+            url: "/collections/style-accessories"
+            resourceId: "gid://shopify/Collection/713739895124"
+            items: []
+          }
+          {
+            id: "gid://shopify/MenuItem/821943042388"
+            title: "Технологичные находки"
+            type: COLLECTION
+            url: "/collections/smart-finds"
+            resourceId: "gid://shopify/Collection/713739927892"
+            items: []
+          }
+        ]
+      }
+      {
+        id: "gid://shopify/MenuItem/821943075156"
+        title: "Категории"
+        type: COLLECTIONS
+        url: "/collections"
+        items: []
+      }
+      {
+        id: "gid://shopify/MenuItem/821943107924"
+        title: "Новинки"
+        type: COLLECTION
+        url: "/collections/new-in"
+        resourceId: "gid://shopify/Collection/713739796820"
+        items: []
+      }
+      {
+        id: "gid://shopify/MenuItem/821943140692"
+        title: "Поддержка"
+        type: PAGE
+        url: "/pages/support"
+        resourceId: "gid://shopify/Page/708242243924"
+        items: []
+      }
+      {
+        id: "gid://shopify/MenuItem/821943173460"
+        title: "Об Astranova"
+        type: PAGE
+        url: "/pages/about-astranova"
+        resourceId: "gid://shopify/Page/708242211156"
+        items: []
+      }
+      {
+        id: "gid://shopify/MenuItem/821943206228"
+        title: "Отследить заказ"
+        type: PAGE
+        url: "/pages/track-order"
+        resourceId: "gid://shopify/Page/708242276692"
+        items: []
+      }
+    ]
+  ) {
+    menu {
+      id
+      title
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+  footerMenu: menuUpdate(
+    id: "gid://shopify/Menu/329710797140"
+    title: "Нижнее меню"
+    items: [
+      {
+        id: "gid://shopify/MenuItem/821937537364"
+        title: "Доставка"
+        type: PAGE
+        url: "/pages/shipping"
+        resourceId: "gid://shopify/Page/708242342228"
+        items: []
+      }
+      {
+        id: "gid://shopify/MenuItem/821937570132"
+        title: "Гарантия"
+        type: PAGE
+        url: "/pages/warranty"
+        resourceId: "gid://shopify/Page/708242374996"
+        items: []
+      }
+      {
+        id: "gid://shopify/MenuItem/821937602900"
+        title: "Возврат"
+        type: PAGE
+        url: "/pages/returns"
+        resourceId: "gid://shopify/Page/708242407764"
+        items: []
+      }
+      {
+        id: "gid://shopify/MenuItem/821937635668"
+        title: "Частые вопросы"
+        type: PAGE
+        url: "/pages/faq"
+        resourceId: "gid://shopify/Page/708242309460"
+        items: []
+      }
+      {
+        id: "gid://shopify/MenuItem/821937668436"
+        title: "Контакты"
+        type: PAGE
+        url: "/pages/contact"
+        resourceId: "gid://shopify/Page/708228219220"
+        items: []
+      }
+      {
+        id: "gid://shopify/MenuItem/821937701204"
+        title: "Условия и политика"
+        type: PAGE
+        url: "/pages/policies"
+        resourceId: "gid://shopify/Page/708242440532"
+        items: []
+      }
+    ]
+  ) {
+    menu {
+      id
+      title
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+  accountMenu: menuUpdate(
+    id: "gid://shopify/Menu/329710829908"
+    title: "Меню аккаунта"
+    items: [
+      {
+        id: "gid://shopify/MenuItem/821860598100"
+        title: "Заказы"
+        type: CUSTOMER_ACCOUNT_PAGE
+        url: "https://shopify.com/104096366932/account/orders"
+        resourceId: "gid://shopify/CustomerAccountPage/251457864020"
+        items: []
+      }
+      {
+        id: "gid://shopify/MenuItem/821860630868"
+        title: "Профиль"
+        type: CUSTOMER_ACCOUNT_PAGE
+        url: "https://shopify.com/104096366932/account/profile"
+        resourceId: "gid://shopify/CustomerAccountPage/251457896788"
+        items: []
+      }
+    ]
+  ) {
+    menu {
+      id
+      title
+    }
+    userErrors {
+      field
+      message
+    }
+  }
+}

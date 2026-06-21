@@ -386,69 +386,69 @@
         }
       },
       "chips": {
-        "curated": "Curated drops",
-        "shipping": "EU shipping",
-        "gifting": "Gift-ready picks"
+        "curated": "Отобранные новинки",
+        "shipping": "Доставка по ЕС",
+        "gifting": "Идеи для подарков"
       },
-      "panel_eyebrow": "Why it works",
-      "panel_title": "More like a well-edited boutique. Less like a crowded catalog.",
-      "panel_body": "Every category is framed with the same quiet luxury language, so the store can grow wider without feeling messier.",
+      "panel_eyebrow": "Почему это удобно",
+      "panel_title": "Продуманный магазин вместо перегруженного каталога.",
+      "panel_body": "Все категории оформлены в едином современном стиле, поэтому ассортимент может расти, сохраняя понятную структуру.",
       "stats": {
         "catalog": {
-          "value": "4 worlds",
-          "label": "Home, beauty, accessories and smart finds."
+          "value": "4 направления",
+          "label": "Дом, уход, аксессуары и технологичные находки."
         },
         "discovery": {
-          "value": "Gift-ready",
-          "label": "Selected for self-treats, upgrades and easy gifting."
+          "value": "Для подарков",
+          "label": "Товары для себя, полезных обновлений и подарков."
         },
         "support": {
           "value": "EN / ET / RU",
-          "label": "Localized browsing for a calmer buying experience."
+          "label": "Удобный просмотр магазина на трёх языках."
         }
       },
       "orbit": {
         "home": {
-          "title": "Home & living",
-          "body": "Useful pieces that soften the room and sharpen the setup."
+          "title": "Дом и быт",
+          "body": "Полезные товары для уютного и организованного пространства."
         },
         "beauty": {
-          "title": "Beauty & wellness",
-          "body": "Daily rituals, self-care moments and easy gift ideas."
+          "title": "Красота и уход",
+          "body": "Товары для ежедневного ухода, комфорта и подарков."
         },
         "style": {
-          "title": "Style & accessories",
-          "body": "Details that travel well and finish the look cleanly."
+          "title": "Стиль и аксессуары",
+          "body": "Практичные детали для повседневной жизни и путешествий."
         },
         "smart": {
-          "title": "Smart finds",
-          "body": "Problem-solvers that still deserve premium presentation."
+          "title": "Технологичные находки",
+          "body": "Полезные решения с современным дизайном."
         }
       }
     },
     "trust": {
       "shipping": {
-        "title": "Clear delivery",
-        "body": "Set expectations cleanly for Estonia and the wider EU, without hidden friction."
+        "title": "Понятная доставка",
+        "body": "Прозрачные условия доставки по Эстонии и другим странам ЕС."
       },
       "warranty": {
-        "title": "Easy returns",
-        "body": "Make shipping, returns and care information visible before the customer has to ask."
+        "title": "Простой возврат",
+        "body": "Условия доставки, возврата и ухода доступны до покупки."
       },
       "checkout": {
-        "title": "Secure checkout",
-        "body": "Keep payment, pricing and trust cues elegant from the first glance to cart."
+        "title": "Безопасная оплата",
+        "body": "Понятные цены и защищённый процесс оформления заказа."
       },
       "support": {
-        "title": "Responsive support",
-        "body": "Fast, human help for product questions, gifting decisions and order follow-up."
+        "title": "Полезная поддержка",
+        "body": "Помощь с выбором товара, подарка и вопросами по заказу."
       }
     },
     "collections": {
       "eyebrow": "Категории",
       "title": "Найдите полезное обновление для каждого дня.",
-      "body": "This is how Astranova stays broad without feeling random.",
-      "cta": "Shop this world",
+      "body": "Так Astranova сохраняет порядок даже при расширении ассортимента.",
+      "cta": "Смотреть категорию",
       "view_all": "Все категории",
       "electronics": {
         "title": "Электроника",
@@ -459,7 +459,7 @@
         "body": "Чехлы, кабели и многое другое"
       },
       "home": {
-        "tag": "Home & living",
+        "tag": "Дом и быт",
         "title": "Для дома",
         "body": "Умный быт и красивое пространство"
       },
@@ -472,19 +472,19 @@
         "body": "Свежие поступления и первые релизы"
       },
       "beauty": {
-        "tag": "Beauty & wellness",
-        "title": "Daily rituals that feel elevated and easy to gift.",
-        "body": "Self-care, wellness and beauty finds chosen for desirability, not clutter."
+        "tag": "Красота и уход",
+        "title": "Товары для ежедневного ухода и приятных подарков.",
+        "body": "Полезные и привлекательные решения для красоты и хорошего самочувствия."
       },
       "style": {
-        "tag": "Style & accessories",
-        "title": "The finishing pieces that complete the look.",
-        "body": "Everyday carry items, fashion extras and details that add polish without noise."
+        "tag": "Стиль и аксессуары",
+        "title": "Детали, которые дополняют повседневный образ.",
+        "body": "Аксессуары и практичные вещи с чистым современным дизайном."
       },
       "smart": {
-        "tag": "Smart finds",
-        "title": "Problem-solving pieces with a premium first impression.",
-        "body": "Useful upgrades and clever extras that still belong in an elegant storefront."
+        "tag": "Технологичные находки",
+        "title": "Умные решения с качественной подачей.",
+        "body": "Полезные устройства и аксессуары для повседневных задач."
       }
     },
     "featured": {
@@ -516,35 +516,35 @@
       }
     },
     "use_cases": {
-      "eyebrow": "Shop by feeling",
-      "title": "Built for atmosphere, rituals, daily carry and gifting.",
-      "body": "Show shoppers how the assortment fits into their life, not just which category it belongs to.",
+      "eyebrow": "Покупайте по ситуации",
+      "title": "Для дома, ежедневных привычек, поездок и подарков.",
+      "body": "Показываем не только категорию товара, но и то, как он помогает в реальной жизни.",
       "home": {
-        "kicker": "Set the mood",
-        "title": "Home details that change the room quickly",
-        "body": "Lead with warmth, texture, light and organization so the store feels styled, not generic."
+        "kicker": "Создайте атмосферу",
+        "title": "Детали для дома, которые быстро меняют пространство",
+        "body": "Свет, порядок и полезные акценты помогают сделать дом уютнее."
       },
       "ritual": {
-        "kicker": "Reset",
-        "title": "Beauty and wellness picks for small daily rituals",
-        "body": "Self-care products work best when they feel easy to trust and pleasing to keep close."
+        "kicker": "Забота о себе",
+        "title": "Красота и комфорт для ежедневных привычек",
+        "body": "Понятные и приятные в использовании товары для ухода за собой."
       },
       "carry": {
-        "kicker": "Carry well",
-        "title": "Accessories that travel, layer and gift easily",
-        "body": "Keep the selection concise so shoppers can make a fast yes-or-no decision."
+        "kicker": "Всегда с собой",
+        "title": "Аксессуары для повседневной жизни и путешествий",
+        "body": "Небольшой отобранный ассортимент помогает быстрее сделать выбор."
       },
       "gifting": {
-        "kicker": "Gift beautifully",
-        "title": "Products that already look considered before they are wrapped",
-        "body": "Strong presentation and clear use-case framing make a multi-category store easier to buy from."
+        "kicker": "Дарите красиво",
+        "title": "Товары, которые уже выглядят как продуманный подарок",
+        "body": "Качественная подача и понятное назначение упрощают выбор подарка."
       }
     },
     "testimonials": {
       "eyebrow": "Истории покупателей",
       "title": "Что говорят покупатели",
       "rating": "Оценка пять из пяти",
-      "body": "Premium design matters most when it is backed by clarity, taste and easy support.",
+      "body": "Современный дизайн особенно ценен, когда его поддерживают понятные условия и полезный сервис.",
       "one": {
         "quote": "Отличное качество и понятное описание. Покупка прошла спокойно, а доставка была прозрачной на каждом этапе.",
         "name": "Мария К.",
@@ -562,9 +562,9 @@
       }
     },
     "faq": {
-      "eyebrow": "FAQ",
+      "eyebrow": "Вопросы и ответы",
       "title": "Частые вопросы",
-      "body": "Keep the answers short, visible and easy to understand across desktop and mobile.",
+      "body": "Короткие и понятные ответы доступны на компьютере и телефоне.",
       "one": {
         "question": "Какие товары продаёт Astranova?",
         "answer_html": "<p>Astranova начинает с электроники и современных аксессуаров, а затем расширится товарами для дома, подарками и другими полезными категориями.</p>"
