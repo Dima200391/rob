@@ -7,15 +7,15 @@ Renders delivery, returns and warranty reassurance on a product page.
 
 <div class="astranova-product-trust" {{ block.shopify_attributes }}>
   <div>
-    <span aria-hidden="true">✓</span>
+    <span aria-hidden="true">{{ 'icon-checkmark.svg' | inline_asset_content }}</span>
     <p><strong>{{ 'astranova.product.trust.delivery_title' | t }}</strong><small>{{ product.metafields.custom.delivery.value | default: 'astranova.product.trust.delivery_default' | t }}</small></p>
   </div>
   <div>
-    <span aria-hidden="true">✓</span>
+    <span aria-hidden="true">{{ 'icon-checkmark.svg' | inline_asset_content }}</span>
     <p><strong>{{ 'astranova.product.trust.returns_title' | t }}</strong><small>{{ 'astranova.product.trust.returns_default' | t }}</small></p>
   </div>
   <div>
-    <span aria-hidden="true">✓</span>
+    <span aria-hidden="true">{{ 'icon-checkmark.svg' | inline_asset_content }}</span>
     <p><strong>{{ 'astranova.product.trust.warranty_title' | t }}</strong><small>{{ warranty }}</small></p>
   </div>
 </div>
@@ -45,7 +45,11 @@ Renders delivery, returns and warranty reassurance on a product page.
     border-radius: 50%;
     color: var(--astranova-violet);
     background: var(--astranova-lavender);
-    font-size: 0.75rem;
+  }
+
+  .astranova-product-trust > div > span svg {
+    width: 0.8rem;
+    height: 0.8rem;
   }
 
   .astranova-product-trust p {

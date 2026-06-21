@@ -1,38 +1,138 @@
+{% doc %}
+Renders only product detail accordions that have useful customer-facing content.
+{% enddoc %}
+
 {% assign product = closest.product %}
-{% assign accordion_items = 'details,package,size_materials,care,shipping' | split: ',' %}
+{% assign accordion_items = 'package,size_materials,care,shipping' | split: ',' %}
 
 <div class="astranova-product-accordion-block" {{ block.shopify_attributes }}>
   {% for item in accordion_items %}
-    <details class="astranova-detail" {% if forloop.first %}open{% endif %}>
-      <summary>
-        <span>{{ 'astranova.product.accordion.' | append: item | append: '.title' | t }}</span>
-        <span class="astranova-detail__caret"></span>
-      </summary>
-      <div class="astranova-detail__content astranova-richtext">
-        {% liquid
-          case item
-            when 'details'
-              assign metafield = product.metafields.custom.product_details
-            when 'size_materials'
-              assign metafield = product.metafields.custom.size_and_materials
-            when 'package'
-              assign metafield = product.metafields.custom.package_contents
-            when 'care'
-              assign metafield = product.metafields.custom.care_and_use
-            else
-              assign metafield = product.metafields.custom.shipping_and_returns
-          endcase
+    {% liquid
+      assign metafield = blank
+      assign show_item = false
 
-          if metafield != blank
-            echo metafield | metafield_tag
-          else
-            echo 'astranova.product.accordion.' | append: item | append: '.default_html' | t
+      case item
+        when 'size_materials'
+          assign metafield = product.metafields.custom.size_and_materials
+          if metafield != blank or product.metafields.custom.size != blank or product.metafields.custom.material != blank
+            assign show_item = true
           endif
-        %}
-      </div>
-    </details>
+        when 'package'
+          assign metafield = product.metafields.custom.package_contents
+          if metafield != blank
+            assign show_item = true
+          endif
+        when 'care'
+          assign metafield = product.metafields.custom.care_and_use
+          if metafield != blank
+            assign show_item = true
+          endif
+        else
+          assign metafield = product.metafields.custom.shipping_and_returns
+          assign show_item = true
+      endcase
+    %}
+
+    {% if show_item %}
+      <details class="astranova-detail">
+        <summary>
+          <span>{{ 'astranova.product.accordion.' | append: item | append: '.title' | t }}</span>
+          <span class="astranova-detail__caret" aria-hidden="true"></span>
+        </summary>
+        <div class="astranova-detail__content astranova-richtext">
+          {% if metafield != blank %}
+            {{ metafield | metafield_tag }}
+          {% elsif item == 'size_materials' %}
+            <dl class="astranova-detail__facts">
+              {% if product.metafields.custom.size != blank %}
+                <div>
+                  <dt>{{ 'astranova.product.spec.size' | t }}</dt>
+                  <dd>{{ product.metafields.custom.size.value }}</dd>
+                </div>
+              {% endif %}
+              {% if product.metafields.custom.material != blank %}
+                <div>
+                  <dt>{{ 'astranova.product.spec.material' | t }}</dt>
+                  <dd>{{ product.metafields.custom.material.value }}</dd>
+                </div>
+              {% endif %}
+            </dl>
+          {% else %}
+            {{ 'astranova.product.accordion.shipping.default_html' | t }}
+          {% endif %}
+        </div>
+      </details>
+    {% endif %}
   {% endfor %}
 </div>
+
+{% stylesheet %}
+  .astranova-product-accordion-block {
+    overflow: hidden;
+    border: 1px solid var(--astranova-border);
+    border-radius: var(--astranova-radius-sm);
+    background: #fff;
+  }
+
+  .astranova-product-accordion-block:empty {
+    display: none;
+  }
+
+  .astranova-product-accordion-block .astranova-detail {
+    padding: 1rem 1.1rem;
+  }
+
+  .astranova-product-accordion-block .astranova-detail + .astranova-detail {
+    border-top: 1px solid var(--astranova-border);
+  }
+
+  .astranova-detail__caret {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-right: 2px solid currentcolor;
+    border-bottom: 2px solid currentcolor;
+    transform: rotate(45deg);
+    transition: transform 180ms ease;
+  }
+
+  .astranova-detail[open] .astranova-detail__caret {
+    transform: rotate(225deg);
+  }
+
+  .astranova-detail__content {
+    padding-top: 0.8rem;
+  }
+
+  .astranova-detail__content > :first-child {
+    margin-top: 0;
+  }
+
+  .astranova-detail__content > :last-child {
+    margin-bottom: 0;
+  }
+
+  .astranova-detail__facts {
+    display: grid;
+    gap: 0.5rem;
+    margin: 0;
+  }
+
+  .astranova-detail__facts > div {
+    display: grid;
+    grid-template-columns: minmax(6rem, 0.35fr) 1fr;
+    gap: 0.75rem;
+  }
+
+  .astranova-detail__facts dt {
+    color: var(--astranova-muted);
+  }
+
+  .astranova-detail__facts dd {
+    margin: 0;
+    color: var(--astranova-foreground);
+    font-weight: 600;
+  }
+{% endstylesheet %}
 
 {% schema %}
 {

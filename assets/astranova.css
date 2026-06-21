@@ -252,6 +252,32 @@ h6,
   letter-spacing: -0.055em;
 }
 
+.product-information__media media-gallery {
+  overflow: hidden;
+  border: 1px solid var(--astranova-border);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 75% 20%, rgba(105, 80, 255, 0.08), transparent 15rem),
+    linear-gradient(145deg, #f3f4fb, #fff);
+}
+
+.product-information__media .product-media,
+.product-information__media .product-media-container {
+  background: transparent;
+}
+
+.product-information__media .product-media img {
+  object-fit: contain;
+}
+
+.product-information__details {
+  min-width: 0;
+}
+
+.product-information__details .rte {
+  overflow-wrap: anywhere;
+}
+
 .variant-option__button-label,
 .variant-picker__option label {
   border-radius: 999px;
@@ -346,6 +372,14 @@ h6,
 
   .header-section {
     background: rgba(3, 6, 19, 0.98);
+  }
+
+  .product-information {
+    padding-top: 0.5rem;
+  }
+
+  .product-information__media media-gallery {
+    border-radius: 16px;
   }
 }
 

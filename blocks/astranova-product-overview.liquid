@@ -1,0 +1,78 @@
+{% doc %}
+Renders a clean product overview from structured product details or the native description.
+{% enddoc %}
+
+{% liquid
+  assign product = closest.product
+  assign structured_details = product.metafields.custom.product_details
+  assign has_overview = false
+
+  if structured_details != blank or product.description != blank
+    assign has_overview = true
+  endif
+%}
+
+{% if has_overview %}
+  <section class="astranova-product-overview" {{ block.shopify_attributes }}>
+    <p class="astranova-eyebrow">{{ 'astranova.product.overview_eyebrow' | t }}</p>
+    <h2>{{ 'astranova.product.overview_title' | t }}</h2>
+    <div class="astranova-product-overview__content rte">
+      {% if structured_details != blank %}
+        {{ structured_details | metafield_tag }}
+      {% else %}
+        {{ product.description }}
+      {% endif %}
+    </div>
+  </section>
+{% endif %}
+
+{% stylesheet %}
+  .astranova-product-overview {
+    display: grid;
+    gap: 0.75rem;
+    padding: clamp(1rem, 2vw, 1.35rem);
+    border: 1px solid var(--astranova-border);
+    border-radius: var(--astranova-radius-sm);
+    background: #fff;
+  }
+
+  .astranova-product-overview h2 {
+    margin: 0;
+    color: var(--astranova-foreground);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    letter-spacing: -0.035em;
+  }
+
+  .astranova-product-overview__content {
+    color: var(--astranova-muted);
+    line-height: 1.65;
+  }
+
+  .astranova-product-overview__content > :first-child {
+    margin-top: 0;
+  }
+
+  .astranova-product-overview__content > :last-child {
+    margin-bottom: 0;
+  }
+
+  .astranova-product-overview__content ul {
+    display: grid;
+    gap: 0.45rem;
+    padding-inline-start: 1.2rem;
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Astranova Overview",
+  "tag": null,
+  "settings": [],
+  "presets": [
+    {
+      "name": "Astranova Overview",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

@@ -1,45 +1,87 @@
 {% doc %}
-Renders common product specification metafields when values are present.
+Renders product specification metafields with safe native-field fallbacks.
 {% enddoc %}
 
-{% assign product = closest.product %}
-{% assign specification_keys = 'brand,model,compatibility,material,size,color,power' | split: ',' %}
+{% liquid
+  assign product = closest.product
+  assign selected_variant = product.selected_or_first_available_variant
+  assign specification_keys = 'brand,model,compatibility,material,size,color,power' | split: ','
+  assign has_specifications = false
 
-<div class="astranova-specifications" {{ block.shopify_attributes }}>
-  <h3>{{ 'astranova.product.specifications' | t }}</h3>
-  <dl>
-    {% for key in specification_keys %}
-      {% assign value = product.metafields.custom[key].value %}
-      {% if value != blank %}
+  if product.product_type != blank or selected_variant.sku != blank or product.metafields.custom.technical_specifications != blank
+    assign has_specifications = true
+  endif
+
+  for key in specification_keys
+    if product.metafields.custom[key].value != blank
+      assign has_specifications = true
+      break
+    endif
+  endfor
+%}
+
+{% if has_specifications %}
+  <section class="astranova-specifications" {{ block.shopify_attributes }}>
+    <div class="astranova-specifications__heading">
+      <p class="astranova-eyebrow">{{ 'astranova.product.specifications_eyebrow' | t }}</p>
+      <h2>{{ 'astranova.product.specifications' | t }}</h2>
+    </div>
+    <dl>
+      {% if product.product_type != blank %}
         <div>
-          <dt>{{ 'astranova.product.spec.' | append: key | t }}</dt>
-          <dd>{{ value }}</dd>
+          <dt>{{ 'astranova.product.spec.product_type' | t }}</dt>
+          <dd>{{ product.product_type }}</dd>
         </div>
       {% endif %}
-    {% endfor %}
-  </dl>
-  {% if product.metafields.custom.technical_specifications != blank %}
-    <div class="astranova-specifications__details">
-      {{ product.metafields.custom.technical_specifications | metafield_tag }}
-    </div>
-  {% endif %}
-</div>
+      {% for key in specification_keys %}
+        {% assign value = product.metafields.custom[key].value %}
+        {% if value != blank %}
+          <div>
+            <dt>{{ 'astranova.product.spec.' | append: key | t }}</dt>
+            <dd>{{ value | newline_to_br }}</dd>
+          </div>
+        {% endif %}
+      {% endfor %}
+      {% if selected_variant.sku != blank %}
+        <div>
+          <dt>{{ 'astranova.product.spec.sku' | t }}</dt>
+          <dd>{{ selected_variant.sku }}</dd>
+        </div>
+      {% endif %}
+    </dl>
+    {% if product.metafields.custom.technical_specifications != blank %}
+      <div class="astranova-specifications__details">
+        {{ product.metafields.custom.technical_specifications | metafield_tag }}
+      </div>
+    {% endif %}
+  </section>
+{% endif %}
 
 {% stylesheet %}
   .astranova-specifications {
     display: grid;
-    gap: 0.75rem;
+    gap: 1rem;
+    padding: clamp(1rem, 2vw, 1.35rem);
+    border: 1px solid var(--astranova-border);
+    border-radius: var(--astranova-radius-sm);
+    background: linear-gradient(145deg, #fff, #f7f7ff);
   }
 
-  .astranova-specifications h3,
+  .astranova-specifications h2,
   .astranova-specifications dl,
   .astranova-specifications dd {
     margin: 0;
   }
 
-  .astranova-specifications h3 {
+  .astranova-specifications__heading {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .astranova-specifications h2 {
     color: var(--astranova-foreground);
-    font-size: 1rem;
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    letter-spacing: -0.035em;
   }
 
   .astranova-specifications dl {
@@ -61,11 +103,28 @@ Renders common product specification metafields when values are present.
   .astranova-specifications dd {
     color: var(--astranova-foreground);
     font-weight: 600;
+    overflow-wrap: anywhere;
   }
 
   .astranova-specifications__details {
+    padding-top: 0.25rem;
     color: var(--astranova-muted);
     line-height: 1.6;
+  }
+
+  .astranova-specifications__details > :first-child {
+    margin-top: 0;
+  }
+
+  .astranova-specifications__details > :last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .astranova-specifications dl > div {
+      grid-template-columns: minmax(6.5rem, 0.42fr) 1fr;
+      gap: 0.75rem;
+    }
   }
 {% endstylesheet %}
 

@@ -1570,15 +1570,43 @@
       "support_heading": "Support"
     },
     "product": {
+      "overview_eyebrow": "Toote ülevaade",
+      "overview_title": "Kõik oluline selgelt ja lühidalt",
       "promise_label": "Why you'll love it",
       "promise_default": "A well-chosen piece for everyday living, presented with the clarity and confidence it deserves.",
       "benefit_1": "Elevated look and feel that makes the product easy to want and easy to gift.",
       "benefit_2": "Straightforward details on size, materials, care and delivery before checkout.",
       "benefit_3": "A calmer buying experience with polished support, returns and shipping guidance.",
+      "frequently_bought": "Sageli ostetakse koos",
+      "specifications_eyebrow": "Tooteandmed",
+      "specifications": "Tehnilised andmed",
+      "spec": {
+        "product_type": "Tootekategooria",
+        "brand": "Bränd",
+        "model": "Mudel",
+        "compatibility": "Ühilduvus",
+        "material": "Materjal",
+        "size": "Mõõtmed",
+        "color": "Värv",
+        "power": "Võimsus",
+        "sku": "Tootekood"
+      },
+      "trust": {
+        "delivery_title": "Tarne",
+        "delivery_default": "Jälgitav tarne selgete uuendustega.",
+        "returns_title": "Tagastamine",
+        "returns_default": "Sobivaid tooteid saab tagastada 30 päeva jooksul.",
+        "warranty_title": "Garantii",
+        "warranty_default": "Selle toote garantiitingimused kinnitatakse enne müüki."
+      },
       "accordion": {
         "details": {
           "title": "Product details",
           "default_html": "<p>Add a <strong>custom.product_details</strong> metafield to explain what this item is, how it fits into daily use and why it stands out.</p>"
+        },
+        "package": {
+          "title": "Komplekti sisu",
+          "default_html": "<p>Komplekti sisu täpsustatakse tooteandmetes.</p>"
         },
         "size_materials": {
           "title": "Size & materials",
@@ -1589,8 +1617,8 @@
           "default_html": "<p>Add a <strong>custom.care_and_use</strong> metafield for maintenance steps, usage tips, storage guidance or safety notes.</p>"
         },
         "shipping": {
-          "title": "Shipping & returns",
-          "default_html": "<p>Add a <strong>custom.shipping_and_returns</strong> metafield to summarize dispatch timing, delivery expectations and return guidance.</p>"
+          "title": "Tarne ja tagastamine",
+          "default_html": "<p>Tarneaeg kinnitatakse kassas. Sobivaid tooteid saab tagastuspoliitika kohaselt 30 päeva jooksul tagastada.</p>"
         }
       }
     }

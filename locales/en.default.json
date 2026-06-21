@@ -585,21 +585,26 @@
       "support_heading": "Support"
     },
     "product": {
+      "overview_eyebrow": "Product overview",
+      "overview_title": "Everything important, clearly explained",
       "promise_label": "Why you'll love it",
       "promise_default": "A well-chosen piece for everyday living, presented with the clarity and confidence it deserves.",
       "benefit_1": "Elevated look and feel that makes the product easy to want and easy to gift.",
       "benefit_2": "Straightforward details on size, materials, care and delivery before checkout.",
       "benefit_3": "A calmer buying experience with polished support, returns and shipping guidance.",
       "frequently_bought": "Frequently bought together",
+      "specifications_eyebrow": "Product data",
       "specifications": "Specifications",
       "spec": {
+        "product_type": "Product type",
         "brand": "Brand",
         "model": "Model",
         "compatibility": "Compatibility",
         "material": "Material",
         "size": "Size",
         "color": "Color",
-        "power": "Power"
+        "power": "Power",
+        "sku": "SKU"
       },
       "trust": {
         "delivery_title": "Delivery",
@@ -628,7 +633,7 @@
         },
         "shipping": {
           "title": "Shipping & returns",
-          "default_html": "<p>Add a <strong>custom.shipping_and_returns</strong> metafield to summarize dispatch timing, delivery expectations and return guidance.</p>"
+          "default_html": "<p>Delivery timing is confirmed at checkout. Eligible products can be returned within 30 days according to our returns policy.</p>"
         }
       }
     },
