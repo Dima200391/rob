@@ -24,36 +24,41 @@
         "electronics": {
           "type": "category",
           "settings": {
+            "collection": "smart-gadgets",
             "fallback_key": "electronics",
-            "link": "/collections/electronics"
+            "link": ""
           }
         },
         "accessories": {
           "type": "category",
           "settings": {
+            "collection": "mobile-accessories",
             "fallback_key": "accessories",
-            "link": "/collections/accessories"
+            "link": ""
           }
         },
         "home": {
           "type": "category",
           "settings": {
+            "collection": "home-living",
             "fallback_key": "home",
-            "link": "/collections/home"
+            "link": ""
           }
         },
         "gifts": {
           "type": "category",
           "settings": {
-            "fallback_key": "gifts",
-            "link": "/collections/gifts"
+            "collection": "style-accessories",
+            "fallback_key": "style",
+            "link": ""
           }
         },
         "new_arrivals": {
           "type": "category",
           "settings": {
+            "collection": "new-in",
             "fallback_key": "new_arrivals",
-            "link": "/collections/new-arrivals"
+            "link": ""
           }
         }
       },
@@ -156,6 +161,7 @@
       },
       "block_order": [],
       "settings": {
+        "collection": "all",
         "max_products": 5,
         "layout_type": "carousel",
         "carousel_on_mobile": true,
@@ -175,7 +181,7 @@
     "astranova_why": {
       "type": "astranova-why",
       "settings": {
-        "link": "/pages/about-us",
+        "link": "/pages/about-astranova",
         "section_width": "page-width",
         "color_scheme": "scheme-1",
         "padding_block_start": 28,
@@ -185,6 +191,7 @@
     "astranova_testimonials": {
       "type": "astranova-testimonials",
       "settings": {
+        "show_testimonials": false,
         "section_width": "page-width",
         "color_scheme": "scheme-1",
         "padding_block_start": 28,

@@ -462,10 +462,10 @@
         "title": "Daily rituals that feel elevated and easy to gift.",
         "body": "Self-care, wellness and beauty finds chosen for desirability, not clutter."
       },
-      "style": {
-        "tag": "Style & accessories",
-        "title": "The finishing pieces that complete the look.",
-        "body": "Everyday carry items, fashion extras and details that add polish without noise."
+    "style": {
+      "tag": "Style & accessories",
+      "title": "Style & accessories",
+      "body": "Everyday carry and useful extras"
       },
       "smart": {
         "tag": "Smart finds",
@@ -473,15 +473,19 @@
         "body": "Useful upgrades and clever extras that still belong in an elegant storefront."
       }
     },
-    "featured": {
-      "eyebrow": "Popular picks",
-      "title": "Technology customers keep coming back for.",
-      "view_all": "View all products"
-    },
+  "featured": {
+    "eyebrow": "Popular picks",
+    "title": "Technology customers keep coming back for.",
+    "view_all": "View all products",
+    "empty_kicker": "Launching soon",
+    "empty_title": "The first Astranova products are being prepared.",
+    "empty_body": "We are checking availability, product information and compliance before anything goes on sale.",
+    "empty_cta": "Explore categories"
+  },
     "why": {
       "eyebrow": "Why Astranova",
       "title": "Curated choices. Designed for real life.",
-      "body": "We bring together quality electronics and modern essentials from brands we trust, so you can focus on what matters.",
+    "body": "We select practical electronics and modern essentials, then check the information before they reach the storefront.",
       "cta": "Our story",
       "trust_title": "Trusted every step of the way",
       "payments": {
@@ -637,12 +641,25 @@
         }
       }
     },
-    "cart": {
-      "shipping_remaining_html": "Add <strong>{{ amount }}</strong> for free shipping",
-      "shipping_unlocked": "Free shipping unlocked",
-      "secure": "Secure checkout",
-      "returns": "30-day returns",
-      "support": "Helpful support"
-    }
+  "cart": {
+    "shipping_remaining_html": "Add <strong>{{ amount }}</strong> for free shipping",
+    "shipping_unlocked": "Free shipping unlocked",
+    "secure": "Secure checkout",
+    "returns": "30-day returns",
+    "support": "Helpful support"
+  },
+  "collection": {
+    "empty_eyebrow": "Catalog update",
+    "empty_title": "This collection is being prepared.",
+    "empty_body": "Products will appear here after availability, content and compliance checks are complete.",
+    "empty_cta": "Back to home"
+  },
+  "not_found": {
+    "eyebrow": "Lost in orbit",
+    "title": "This page is out of range.",
+    "body": "The link may be outdated, or the page may have moved. Continue browsing from the Astranova catalog.",
+    "home_cta": "Back to home",
+    "shop_cta": "Explore the catalog"
   }
+}
 }

@@ -202,11 +202,11 @@
 
   @media screen and (max-width: 749px) {
     .astranova-hero {
-      min-height: 48rem;
+      min-height: 43rem;
     }
 
     .astranova-hero__image {
-      height: 58%;
+      height: 54%;
       inset: auto 0 0;
       object-position: 66% bottom;
     }
@@ -218,8 +218,8 @@
 
     .astranova-hero__inner {
       align-items: start;
-      min-height: 48rem;
-      padding-block: 4rem 2rem;
+      min-height: 43rem;
+      padding-block: 2.75rem 1.5rem;
     }
 
     .astranova-hero__content {
@@ -228,16 +228,46 @@
     }
 
     .astranova-hero__title {
-      max-width: 9ch;
-      font-size: clamp(3rem, 14vw, 4.4rem);
+      max-width: 10ch;
+      font-size: clamp(2.45rem, 11.5vw, 3.45rem);
+      line-height: 0.98;
     }
 
     .astranova-hero__copy {
       max-width: 29rem;
+      font-size: 0.96rem;
+      line-height: 1.55;
     }
 
     .astranova-hero__trust {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+      margin-top: 0.25rem;
+      padding-top: 0.9rem;
+    }
+
+    .astranova-hero__trust-item:nth-child(3) {
       display: none;
+    }
+
+    .astranova-hero__trust-item small {
+      display: none;
+    }
+
+    .astranova-hero__trust-icon {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+
+    .astranova-hero__actions {
+      gap: 0.65rem;
+    }
+
+    .astranova-hero__actions .button,
+    .astranova-hero__actions .button-secondary {
+      flex: 1 1 10rem;
+      min-height: 3rem;
     }
   }
 {% endstylesheet %}

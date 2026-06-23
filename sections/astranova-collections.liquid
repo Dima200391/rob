@@ -8,7 +8,10 @@
       <p class="astranova-eyebrow">{{ 'astranova.collections.eyebrow' | t }}</p>
       <h2 class="astranova-section-heading">{{ 'astranova.collections.title' | t }}</h2>
     </div>
-    <a class="astranova-link" href="{{ routes.collections_url }}">{{ 'astranova.collections.view_all' | t }} →</a>
+    <a class="astranova-link" href="{{ routes.collections_url }}">
+      {{ 'astranova.collections.view_all' | t }}
+      <span class="astranova-link__icon" aria-hidden="true">{{ 'icon-arrow.svg' | inline_asset_content }}</span>
+    </a>
   </div>
 
   <div class="astranova-categories__grid">
@@ -31,7 +34,7 @@
         assign fallback_key = block.settings.fallback_key | default: 'electronics'
         assign title_key = 'astranova.collections.' | append: fallback_key | append: '.title'
         assign body_key = 'astranova.collections.' | append: fallback_key | append: '.body'
-        assign category_title = block.settings.title | default: category_collection.title
+        assign category_title = block.settings.title
         case fallback_key
           when 'electronics'
             assign fallback_asset = 'astranova-collection-smart.svg'
@@ -39,6 +42,8 @@
             assign fallback_asset = 'astranova-collection-style.svg'
           when 'home'
             assign fallback_asset = 'astranova-collection-home.svg'
+          when 'style'
+            assign fallback_asset = 'astranova-collection-style.svg'
           when 'gifts'
             assign fallback_asset = 'astranova-collection-beauty.svg'
           else
@@ -77,7 +82,7 @@
               {% endif %}
             </p>
           </div>
-          <span class="astranova-categories__arrow" aria-hidden="true">→</span>
+          <span class="astranova-categories__arrow" aria-hidden="true">{{ 'icon-arrow.svg' | inline_asset_content }}</span>
         </div>
       </a>
     {% endfor %}
@@ -96,6 +101,18 @@
   .astranova-section-head > div {
     display: grid;
     gap: 0.55rem;
+  }
+
+  .astranova-link {
+    display: inline-flex;
+    gap: 0.45rem;
+    align-items: center;
+  }
+
+  .astranova-link__icon,
+  .astranova-categories__arrow svg {
+    width: 0.9rem;
+    height: 0.9rem;
   }
 
   .astranova-categories__grid {
@@ -223,6 +240,7 @@
             { "value": "electronics", "label": "Electronics" },
             { "value": "accessories", "label": "Accessories" },
             { "value": "home", "label": "Home" },
+            { "value": "style", "label": "Style & accessories" },
             { "value": "gifts", "label": "Gifts" },
             { "value": "new_arrivals", "label": "New arrivals" }
           ],

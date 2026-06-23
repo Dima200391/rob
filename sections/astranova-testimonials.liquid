@@ -1,4 +1,5 @@
 {% assign testimonial_items = 'one,two,three' | split: ',' %}
+{% if section.settings.show_testimonials %}
 <section
   class="astranova-testimonials section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
   style="padding-block: {{ section.settings.padding_block_start }}px {{ section.settings.padding_block_end }}px;"
@@ -27,6 +28,7 @@
     {% endfor %}
   </div>
 </section>
+{% endif %}
 
 {% stylesheet %}
   .astranova-testimonials__card {
@@ -98,6 +100,13 @@
 {
   "name": "Astranova Testimonials",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_testimonials",
+      "label": "Show verified testimonials",
+      "info": "Enable only when the displayed reviews are genuine and verified.",
+      "default": false
+    },
     {
       "type": "select",
       "id": "section_width",

@@ -1403,13 +1403,27 @@
     }
   },
   "astranova": {
-    "announcement": "Curated drops | EU shipping | Gift-ready picks | Secure checkout",
-    "hero": {
-      "eyebrow": "Curated modern living",
-      "title": "Astranova gathers the pieces that make everyday life look better.",
-      "body": "A premium storefront for home accents, beauty rituals, accessories and smart finds, styled with a calm editorial touch instead of marketplace noise.",
-      "primary_cta": "Explore the collection",
-      "secondary_cta": "See new arrivals",
+  "announcement": "Tasuta tarne EL-is alates 75 € | 30-päevane tagastus | Turvaline makse",
+  "hero": {
+    "eyebrow": "Tehnoloogia päris eluks",
+    "title": "Tehnoloogia. Iga päev. Uuel tasemel.",
+    "body": "Valitud elektroonika ja moodsad tarbeesemed koju, tööle ja liikumiseks.",
+    "primary_cta": "Vaata elektroonikat",
+    "secondary_cta": "Vaata kõiki",
+    "trust": {
+      "shipping": {
+        "title": "Tasuta tarne",
+        "body": "Tingimustele vastavatele tellimustele"
+      },
+      "returns": {
+        "title": "Lihtne tagastus",
+        "body": "30 päeva jooksul"
+      },
+      "checkout": {
+        "title": "Turvaline makse",
+        "body": "Usaldusväärne ja kaitstud"
+      }
+    },
       "chips": {
         "curated": "Curated drops",
         "shipping": "EU shipping",
@@ -1469,32 +1483,81 @@
         "body": "Fast, human help for product questions, gifting decisions and order follow-up."
       }
     },
-    "collections": {
-      "eyebrow": "Featured worlds",
-      "title": "Four shoppable moods with one consistent point of view.",
-      "body": "This is how Astranova stays broad without feeling random.",
-      "cta": "Shop this world",
-      "home": {
-        "tag": "Home & living",
-        "title": "Soften the room with useful, beautiful details.",
-        "body": "Decor accents, organizers and small upgrades that make a space feel more composed."
+  "collections": {
+    "eyebrow": "Kategooriad",
+    "title": "Leia järgmine kasulik uuendus igaks päevaks.",
+    "body": "Nii püsib Astranova valik selge ka sortimendi kasvades.",
+    "cta": "Vaata kategooriat",
+    "view_all": "Kõik kategooriad",
+    "electronics": {
+      "title": "Elektroonika",
+      "body": "Moodne tehnoloogia igapäevaeluks"
+    },
+    "accessories": {
+      "title": "Aksessuaarid",
+      "body": "Ümbrised, kaablid ja muud tarvikud"
+    },
+    "home": {
+      "tag": "Kodu ja elustiil",
+      "title": "Kodule",
+      "body": "Nutikas elu ja kaunis ruum"
+    },
+    "gifts": {
+      "title": "Kingitused",
+      "body": "Läbimõeldud valikud kõigile"
+    },
+    "new_arrivals": {
+      "title": "Uued tooted",
+      "body": "Värsked saabujad ja esimesed valikud"
       },
       "beauty": {
         "tag": "Beauty & wellness",
         "title": "Daily rituals that feel elevated and easy to gift.",
         "body": "Self-care, wellness and beauty finds chosen for desirability, not clutter."
       },
-      "style": {
-        "tag": "Style & accessories",
-        "title": "The finishing pieces that complete the look.",
-        "body": "Everyday carry items, fashion extras and details that add polish without noise."
+    "style": {
+      "tag": "Style & accessories",
+      "title": "Stiil ja aksessuaarid",
+      "body": "Praktilised detailid igaks päevaks"
       },
       "smart": {
         "tag": "Smart finds",
         "title": "Problem-solving pieces with a premium first impression.",
-        "body": "Useful upgrades and clever extras that still belong in an elegant storefront."
-      }
+      "body": "Useful upgrades and clever extras that still belong in an elegant storefront."
+    }
+  },
+  "featured": {
+    "eyebrow": "Populaarsed valikud",
+    "title": "Tehnoloogia, mille juurde tullakse tagasi.",
+    "view_all": "Kõik tooted",
+    "empty_kicker": "Peagi müügil",
+    "empty_title": "Esimesed Astranova tooted on ettevalmistamisel.",
+    "empty_body": "Enne müüki kontrollime saadavust, tooteinfot ja nõuetele vastavust.",
+    "empty_cta": "Vaata kategooriaid"
+  },
+  "why": {
+    "eyebrow": "Miks Astranova",
+    "title": "Valitud lahendused. Loodud päris eluks.",
+    "body": "Valime praktilisi tehnoloogiatooteid ning avaldame need alles pärast info ja saadavuse kontrollimist.",
+    "cta": "Meie lugu",
+    "trust_title": "Usaldus igal sammul",
+    "payments": {
+      "title": "Turvalised maksed",
+      "body": "Sinu makseandmed on kaitstud."
     },
+    "delivery": {
+      "title": "Selge tarne",
+      "body": "Arusaadavad saatmisajad ja jälgimisinfo."
+    },
+    "returns": {
+      "title": "30-päevane tagastus",
+      "body": "Sobivaid tooteid saab tagastada lihtsalt."
+    },
+    "support": {
+      "title": "Abivalmis tugi",
+      "body": "Praktiline abi enne ja pärast tellimust."
+    }
+  },
     "use_cases": {
       "eyebrow": "Shop by feeling",
       "title": "Built for atmosphere, rituals, daily carry and gifting.",
@@ -1540,43 +1603,51 @@
         "meta": "First order from Estonia"
       }
     },
-    "faq": {
-      "eyebrow": "FAQ",
-      "title": "Answer the practical questions before they interrupt the mood.",
-      "body": "Keep the answers short, visible and easy to understand across desktop and mobile.",
-      "one": {
-        "question": "What kinds of products does Astranova carry?",
-        "answer_html": "<p>Astranova is built as a curated premium store for home living, beauty and wellness, accessories, gifting and smart everyday finds. The mix can grow, but the presentation should always stay selective.</p>"
-      },
-      "two": {
-        "question": "Where does Astranova ship?",
-        "answer_html": "<p>The store is positioned for Estonia first, with clear delivery communication for customers across the wider EU.</p>"
-      },
-      "three": {
-        "question": "Are the products gift-friendly?",
-        "answer_html": "<p>Yes. Many products are chosen because they feel easy to gift, easy to understand and easy to buy with confidence.</p>"
-      },
-      "four": {
-        "question": "How should product pages be structured?",
-        "answer_html": "<p>Lead with a short promise, three benefit bullets, clear product details, size and materials, care guidance and visible shipping or returns information.</p>"
-      }
+  "faq": {
+    "eyebrow": "Küsimused ja vastused",
+    "title": "Korduma kippuvad küsimused",
+    "body": "Lühikesed ja selged vastused arvutis ning telefonis.",
+    "one": {
+      "question": "Milliseid tooteid Astranova müüb?",
+      "answer_html": "<p>Astranova alustab elektroonika ja moodsate tarvikutega ning laieneb hiljem kodu-, kingi- ja elustiilitoodetesse.</p>"
     },
-    "footer": {
-      "eyebrow": "Stay in orbit",
-      "title": "Keep close to new drops, small restocks and the next beautiful find.",
-      "body": "Use the footer to collect email, reinforce trust and make language or currency changes feel effortless.",
-      "submit": "Join list",
-      "shop_heading": "Shop",
-      "support_heading": "Support"
+    "two": {
+      "question": "Kuhu Astranova tarnib?",
+      "answer_html": "<p>Kauplus keskendub Eestile ja Euroopa Liidule. Saadaolevad tarneviisid ning tähtajad kuvatakse kassas.</p>"
+    },
+    "three": {
+      "question": "Kas tooteid saab tellida kingituseks?",
+      "answer_html": "<p>Jah. Paljud tooted sobivad kingituseks; kinkepakendi saadavus kuvatakse ostukorvis või tootelehel.</p>"
+    },
+    "four": {
+      "question": "Kas sobimatu toote saab tagastada?",
+      "answer_html": "<p>Sobivaid tooteid saab tagastada 30 päeva jooksul. Täpsed tingimused ja erandid kuvatakse enne tellimist.</p>"
+    },
+    "five": {
+      "question": "Kas toodetel on garantii?",
+      "answer_html": "<p>Garantiitingimused kuvatakse tootelehel ning võivad erineda brändi ja tootekategooria järgi.</p>"
+    },
+    "six": {
+      "question": "Kuidas klienditoega ühendust võtta?",
+      "answer_html": "<p>Kasuta kontaktilehte või vasta tellimuse e-kirjale. Aitame võimalikult kiiresti ja selgelt.</p>"
+    }
+  },
+  "footer": {
+    "eyebrow": "Püsi ühenduses",
+    "title": "Püsi Astranova orbiidil",
+    "body": "Uued tooted, kasulikud juhendid ja eripakkumised. Ilma liigse mürata.",
+    "submit": "Liitu",
+    "shop_heading": "Pood",
+    "support_heading": "Klienditugi"
     },
     "product": {
       "overview_eyebrow": "Toote ülevaade",
       "overview_title": "Kõik oluline selgelt ja lühidalt",
-      "promise_label": "Why you'll love it",
-      "promise_default": "A well-chosen piece for everyday living, presented with the clarity and confidence it deserves.",
-      "benefit_1": "Elevated look and feel that makes the product easy to want and easy to gift.",
-      "benefit_2": "Straightforward details on size, materials, care and delivery before checkout.",
-      "benefit_3": "A calmer buying experience with polished support, returns and shipping guidance.",
+    "promise_label": "Miks see sulle meeldib",
+    "promise_default": "Praktiline toode igapäevaeluks koos selge info ja ostutingimustega.",
+    "benefit_1": "Moodne disain ja praktiline kasu ilma liigsete lubadusteta.",
+    "benefit_2": "Selged omadused, komplekti sisu ja ühilduvus enne ostu.",
+    "benefit_3": "Läbipaistev tarne, tagastus ja tellimisjärgne tugi.",
       "frequently_bought": "Sageli ostetakse koos",
       "specifications_eyebrow": "Tooteandmed",
       "specifications": "Tehnilised andmed",
@@ -1600,21 +1671,21 @@
         "warranty_default": "Selle toote garantiitingimused kinnitatakse enne müüki."
       },
       "accordion": {
-        "details": {
-          "title": "Product details",
-          "default_html": "<p>Add a <strong>custom.product_details</strong> metafield to explain what this item is, how it fits into daily use and why it stands out.</p>"
+      "details": {
+        "title": "Toote üksikasjad",
+        "default_html": "<p>Lisa metafield <strong>custom.product_details</strong>, et kirjeldada toote kasutust ja peamisi eeliseid.</p>"
         },
         "package": {
           "title": "Komplekti sisu",
           "default_html": "<p>Komplekti sisu täpsustatakse tooteandmetes.</p>"
         },
-        "size_materials": {
-          "title": "Size & materials",
-          "default_html": "<p>Add a <strong>custom.size_and_materials</strong> metafield to show dimensions, fabric, finish, ingredients or material notes here.</p>"
-        },
-        "care": {
-          "title": "Care & use",
-          "default_html": "<p>Add a <strong>custom.care_and_use</strong> metafield for maintenance steps, usage tips, storage guidance or safety notes.</p>"
+      "size_materials": {
+        "title": "Mõõtmed ja materjalid",
+        "default_html": "<p>Lisa metafield <strong>custom.size_and_materials</strong> mõõtmete, materjalide ja viimistluse jaoks.</p>"
+      },
+      "care": {
+        "title": "Kasutamine ja hooldus",
+        "default_html": "<p>Lisa metafield <strong>custom.care_and_use</strong> kasutus-, hoiustamis- ja ohutusjuhiste jaoks.</p>"
         },
         "shipping": {
           "title": "Tarne ja tagastamine",
@@ -1622,5 +1693,25 @@
         }
       }
     }
+  },
+  "cart": {
+    "shipping_remaining_html": "Lisa <strong>{{ amount }}</strong>, et saada tasuta tarne",
+    "shipping_unlocked": "Tasuta tarne on saadaval",
+    "secure": "Turvaline makse",
+    "returns": "30-päevane tagastus",
+    "support": "Abivalmis tugi"
+  },
+  "collection": {
+    "empty_eyebrow": "Kataloogi uuendus",
+    "empty_title": "See kollektsioon on ettevalmistamisel.",
+    "empty_body": "Tooted ilmuvad siia pärast saadavuse, sisu ja nõuetele vastavuse kontrolli.",
+    "empty_cta": "Tagasi avalehele"
+  },
+  "not_found": {
+    "eyebrow": "Orbiidilt väljas",
+    "title": "Seda lehte ei leitud.",
+    "body": "Link võib olla aegunud või leht teisaldatud. Jätka Astranova kataloogis.",
+    "home_cta": "Tagasi avalehele",
+    "shop_cta": "Ava kataloog"
   }
 }

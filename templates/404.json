@@ -42,7 +42,7 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>The link may be incorrect, or the page has been removed. </p>",
+            "text": "<p>The link may be incorrect, or the page has been removed.</p>",
             "width": "100%",
             "max_width": "normal",
             "alignment": "center",
@@ -68,7 +68,7 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Continue shopping",
+            "label": "t:actions.continue_shopping",
             "link": "shopify://collections/all",
             "open_in_new_tab": false,
             "style_class": "button",
@@ -86,6 +86,7 @@
         "button_PAQMwR"
       ],
       "settings": {
+        "use_astranova_content": true,
         "content_direction": "column",
         "section_width": "page-width",
         "section_height": "small",
@@ -99,6 +100,7 @@
     },
     "product_list_iA96Tq": {
       "type": "product-list",
+      "disabled": true,
       "blocks": {
         "static-header": {
           "type": "_product-list-content",

@@ -1,6 +1,11 @@
 {% liquid
   assign max_items = section.settings.max_products
   assign featured_collection = section.settings.collection
+  assign has_featured_products = false
+  if featured_collection != blank and featured_collection.products_count > 0
+    assign has_featured_products = true
+    assign featured_count = featured_collection.products_count | at_most: max_items
+  endif
 %}
 
 <section
@@ -13,13 +18,16 @@
       <p class="astranova-eyebrow">{{ 'astranova.featured.eyebrow' | t }}</p>
       <h2 class="astranova-section-heading">{{ 'astranova.featured.title' | t }}</h2>
     </div>
-    {% if featured_collection != blank %}
-      <a class="astranova-link" href="{{ featured_collection.url }}">{{ 'astranova.featured.view_all' | t }} →</a>
+    {% if has_featured_products %}
+      <a class="astranova-link" href="{{ featured_collection.url }}">
+        {{ 'astranova.featured.view_all' | t }}
+        <span class="astranova-link__icon" aria-hidden="true">{{ 'icon-arrow.svg' | inline_asset_content }}</span>
+      </a>
     {% endif %}
   </div>
 
-  {% capture list_items %}
-    {% if featured_collection != blank and shop.products_count != 0 %}
+  {% if has_featured_products %}
+    {% capture list_items %}
       {% for product in featured_collection.products limit: max_items %}
         <div class="resource-list__item">
           {% # theme-check-disable UniqueStaticBlockId %}
@@ -28,28 +36,88 @@
         </div>
         {% unless forloop.last %}<!--@list/split-->{% endunless %}
       {% endfor %}
-    {% else %}
-      {% for i in (1..max_items) %}
-        <div class="resource-list__item">
-          {% # theme-check-disable UniqueStaticBlockId %}
-            {% content_for 'block', type: '_product-card', id: 'static-product-card', closest.product: null %}
-          {% # theme-check-enable UniqueStaticBlockId %}
-        </div>
-        {% unless forloop.last %}<!--@list/split-->{% endunless %}
-      {% endfor %}
-    {% endif %}
-  {% endcapture %}
+    {% endcapture %}
 
-  {% assign list_items_array = list_items | strip | split: '<!--@list/split-->' %}
-  {% render 'resource-list',
-    list_items: list_items,
-    list_items_array: list_items_array,
-    settings: section.settings,
-    slide_count: max_items,
-    content_type: 'products',
-    test_id: 'astranova-featured-products'
-  %}
+    {% assign list_items_array = list_items | strip | split: '<!--@list/split-->' %}
+    {% render 'resource-list',
+      list_items: list_items,
+      list_items_array: list_items_array,
+      settings: section.settings,
+      slide_count: featured_count,
+      content_type: 'products',
+      test_id: 'astranova-featured-products'
+    %}
+  {% else %}
+    <div class="astranova-featured__empty">
+      <div>
+        <p class="astranova-featured__empty-kicker">{{ 'astranova.featured.empty_kicker' | t }}</p>
+        <h3>{{ 'astranova.featured.empty_title' | t }}</h3>
+        <p>{{ 'astranova.featured.empty_body' | t }}</p>
+      </div>
+      <a class="button-secondary" href="{{ routes.collections_url }}">{{ 'astranova.featured.empty_cta' | t }}</a>
+    </div>
+  {% endif %}
 </section>
+
+{% stylesheet %}
+  .astranova-featured .astranova-link__icon {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  .astranova-featured__empty {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 13rem;
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border: 1px solid var(--astranova-border);
+    border-radius: var(--astranova-radius);
+    background: linear-gradient(135deg, #f7f6ff, #fff);
+  }
+
+  .astranova-featured__empty > div {
+    display: grid;
+    gap: 0.65rem;
+    max-width: 40rem;
+  }
+
+  .astranova-featured__empty-kicker,
+  .astranova-featured__empty h3,
+  .astranova-featured__empty p {
+    margin: 0;
+  }
+
+  .astranova-featured__empty-kicker {
+    color: var(--astranova-violet);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+  }
+
+  .astranova-featured__empty h3 {
+    font-size: clamp(1.45rem, 3vw, 2.25rem);
+    letter-spacing: -0.04em;
+  }
+
+  .astranova-featured__empty p {
+    color: var(--astranova-muted);
+    line-height: 1.65;
+  }
+
+  @media screen and (max-width: 749px) {
+    .astranova-featured__empty {
+      display: grid;
+      min-height: 0;
+    }
+
+    .astranova-featured__empty .button-secondary {
+      width: 100%;
+    }
+  }
+{% endstylesheet %}
 
 {% schema %}
 {

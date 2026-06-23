@@ -58,6 +58,12 @@
       --border-radius: {{ block_settings.border_radius }}px;
     "
   >
+    {% if block_settings.show_astranova_heading %}
+      <h2 class="product-recommendations__astranova-heading">
+        {{ 'astranova.product.frequently_bought' | t }}
+      </h2>
+    {% endif %}
+
     <div class="section-resource-list__content">
       {% content_for 'blocks' %}
     </div>
@@ -191,6 +197,12 @@
   .product-recommendations-wrapper:has(product-recommendations[data-shopify-editor-preview]) {
     width: 100vw;
   }
+
+  .product-recommendations__astranova-heading {
+    margin: 0;
+    font-size: clamp(1.35rem, 2.4vw, 2rem);
+    letter-spacing: -0.035em;
+  }
 {% endstylesheet %}
 
 {% schema %}
@@ -229,6 +241,13 @@
     {
       "type": "paragraph",
       "content": "t:content.complementary_products"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_astranova_heading",
+      "label": "Show localized Astranova heading",
+      "default": false,
+      "visible_if": "{{ block.settings.recommendation_type == 'complementary' }}"
     },
     {
       "type": "header",

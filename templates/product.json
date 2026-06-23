@@ -229,18 +229,11 @@
                 "rows_gap": 16,
                 "icons_style": "arrow",
                 "icons_shape": "circle",
-                "gap": 16
+                "gap": 16,
+                "show_astranova_heading": true
               },
-              "blocks": {
-                "recommendations-header": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<h3>Frequently bought together</h3>",
-                    "type_preset": "h5"
-                  }
-                }
-              },
-              "block_order": ["recommendations-header"]
+              "blocks": {},
+              "block_order": []
             }
           },
           "block_order": [

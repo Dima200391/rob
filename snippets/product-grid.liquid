@@ -102,12 +102,17 @@
   >
     {% if products.size == 0 %}
       <div class="main-collection-grid__empty">
-        <h2 class="main-collection-grid__empty-title h2">
-          {{ 'content.no_products_found' | t }}
-        </h2>
-        <p>
-          {{ 'content.use_fewer_filters_html' | t: link: collection.url, class: 'main-collection-grid__empty-link' }}
-        </p>
+        {% if collection.all_products_count == 0 %}
+          <p class="astranova-eyebrow">{{ 'astranova.collection.empty_eyebrow' | t }}</p>
+          <h2 class="main-collection-grid__empty-title h2">{{ 'astranova.collection.empty_title' | t }}</h2>
+          <p>{{ 'astranova.collection.empty_body' | t }}</p>
+          <a class="button-secondary" href="{{ routes.root_url }}">{{ 'astranova.collection.empty_cta' | t }}</a>
+        {% else %}
+          <h2 class="main-collection-grid__empty-title h2">{{ 'content.no_products_found' | t }}</h2>
+          <p>
+            {{ 'content.use_fewer_filters_html' | t: link: collection.url, class: 'main-collection-grid__empty-link' }}
+          </p>
+        {% endif %}
       </div>
     {% else %}
       {% if enable_infinite_scroll %}
@@ -219,5 +224,16 @@
 
   .main-collection-grid__empty-title {
     margin: 0;
+  }
+
+  .main-collection-grid__empty > p {
+    max-width: 38rem;
+    margin: 0;
+    color: var(--astranova-muted);
+    line-height: 1.65;
+  }
+
+  .main-collection-grid__empty .button-secondary {
+    margin-top: var(--padding-sm);
   }
 {% endstylesheet %}

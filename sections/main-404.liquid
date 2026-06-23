@@ -1,3 +1,20 @@
+{% if section.settings.use_astranova_content %}
+  <div class="section-background color-{{ section.settings.color_scheme }}"></div>
+  <section
+    class="astranova-not-found section section--{{ section.settings.section_width }} color-{{ section.settings.color_scheme }}"
+    style="{% render 'spacing-style', settings: section.settings %}"
+  >
+    <div class="astranova-not-found__panel">
+      <p class="astranova-eyebrow">{{ 'astranova.not_found.eyebrow' | t }}</p>
+      <h1>{{ 'astranova.not_found.title' | t }}</h1>
+      <p>{{ 'astranova.not_found.body' | t }}</p>
+      <div class="astranova-not-found__actions">
+        <a class="button" href="{{ routes.root_url }}">{{ 'astranova.not_found.home_cta' | t }}</a>
+        <a class="button-secondary" href="{{ routes.collections_url }}">{{ 'astranova.not_found.shop_cta' | t }}</a>
+      </div>
+    </div>
+  </section>
+{% else %}
 <div class="section-background color-{{ section.settings.color_scheme }}"></div>
 <div
   class="
@@ -23,6 +40,58 @@
     </div>
   </div>
 </div>
+{% endif %}
+
+{% stylesheet %}
+  .astranova-not-found__panel {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    min-height: 25rem;
+    padding: clamp(2rem, 7vw, 5rem);
+    border: 1px solid var(--astranova-border);
+    border-radius: var(--astranova-radius);
+    background: linear-gradient(145deg, #f4f2ff, #fff);
+    text-align: center;
+  }
+
+  .astranova-not-found__panel h1,
+  .astranova-not-found__panel > p {
+    margin: 0;
+  }
+
+  .astranova-not-found__panel h1 {
+    max-width: 12ch;
+    font-size: clamp(2.5rem, 7vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.065em;
+  }
+
+  .astranova-not-found__panel > p:not(.astranova-eyebrow) {
+    max-width: 36rem;
+    color: var(--astranova-muted);
+    line-height: 1.65;
+  }
+
+  .astranova-not-found__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  @media screen and (max-width: 749px) {
+    .astranova-not-found__panel {
+      min-height: 21rem;
+    }
+
+    .astranova-not-found__actions {
+      display: grid;
+      width: 100%;
+    }
+  }
+{% endstylesheet %}
 
 {% schema %}
 {
@@ -40,6 +109,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "use_astranova_content",
+      "label": "Use Astranova localized content",
+      "default": false
+    },
     {
       "type": "select",
       "id": "content_direction",
