@@ -9,12 +9,13 @@ Renders cart free-shipping progress using the configured cart threshold.
     assign progress = 100
   endif
   assign remaining = threshold | minus: cart.total_price
+  assign remaining_money = remaining | money
 %}
 
 {% if settings.astranova_show_shipping_progress and threshold > 0 %}
   <div class="astranova-shipping-progress">
     {% if remaining > 0 %}
-      <p>{{ 'astranova.cart.shipping_remaining_html' | t: amount: remaining | money }}</p>
+      <p>{{ 'astranova.cart.shipping_remaining_html' | t: amount: remaining_money }}</p>
     {% else %}
       <p>{{ 'astranova.cart.shipping_unlocked' | t }}</p>
     {% endif %}

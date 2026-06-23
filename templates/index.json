@@ -21,10 +21,10 @@
     "astranova_categories": {
       "type": "astranova-collections",
       "blocks": {
-        "electronics": {
+        "audio": {
           "type": "category",
           "settings": {
-            "collection": "smart-gadgets",
+            "collection": "audio",
             "fallback_key": "electronics",
             "link": ""
           }
@@ -37,10 +37,10 @@
             "link": ""
           }
         },
-        "home": {
+        "desk_setup": {
           "type": "category",
           "settings": {
-            "collection": "home-living",
+            "collection": "desk-setup",
             "fallback_key": "home",
             "link": ""
           }
@@ -62,7 +62,7 @@
           }
         }
       },
-      "block_order": ["electronics", "accessories", "home", "gifts", "new_arrivals"],
+      "block_order": ["audio", "accessories", "desk_setup", "gifts", "new_arrivals"],
       "settings": {
         "section_width": "page-width",
         "color_scheme": "scheme-1",
@@ -161,7 +161,7 @@
       },
       "block_order": [],
       "settings": {
-        "collection": "all",
+        "collection": "frontpage",
         "max_products": 5,
         "layout_type": "carousel",
         "carousel_on_mobile": true,

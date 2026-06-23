@@ -16,7 +16,7 @@
       "settings": {
         "shop_menu": "main-menu",
         "support_menu": "footer",
-        "show_localization": true,
+        "show_localization": false,
         "section_width": "page-width",
         "color_scheme": "scheme-5",
         "padding_block_start": 28,

@@ -8,10 +8,12 @@
       <p class="astranova-eyebrow">{{ 'astranova.collections.eyebrow' | t }}</p>
       <h2 class="astranova-section-heading">{{ 'astranova.collections.title' | t }}</h2>
     </div>
-    <a class="astranova-link" href="{{ routes.collections_url }}">
-      {{ 'astranova.collections.view_all' | t }}
-      <span class="astranova-link__icon" aria-hidden="true">{{ 'icon-arrow.svg' | inline_asset_content }}</span>
-    </a>
+    {% unless template.name == 'list-collections' %}
+      <a class="astranova-link" href="{{ routes.collections_url }}">
+        {{ 'astranova.collections.view_all' | t }}
+        <span class="astranova-link__icon" aria-hidden="true">{{ 'icon-arrow.svg' | inline_asset_content }}</span>
+      </a>
+    {% endunless %}
   </div>
 
   <div class="astranova-categories__grid">

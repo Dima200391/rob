@@ -11,6 +11,10 @@
 
 {% liquid
   assign block_settings = block.settings
+  assign cart_title = block_settings.title
+  if cart_title == blank or cart_title == 't:text_defaults.cart'
+    assign cart_title = 'content.cart_title' | t
+  endif
 %}
 
 <div
@@ -22,7 +26,7 @@
     {%- if cart.empty? or force_empty -%}
       {{ 'content.your_cart_is_empty' | t }}
     {%- else -%}
-      {{ block_settings.title }}
+      {{ cart_title }}
       {%- if block_settings.show_count -%}{% render 'cart-bubble' %}{%- endif -%}
     {%- endif -%}
   </h1>

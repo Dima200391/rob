@@ -1668,7 +1668,7 @@
         "returns_title": "Tagastamine",
         "returns_default": "Sobivaid tooteid saab tagastada 30 päeva jooksul.",
         "warranty_title": "Garantii",
-        "warranty_default": "Selle toote garantiitingimused kinnitatakse enne müüki."
+        "warranty_default": "Garantiitingimused sõltuvad tootest; vajaduse korral küsi kinnitust klienditoelt enne tellimist."
       },
       "accordion": {
       "details": {
